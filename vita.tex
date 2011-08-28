@@ -30,7 +30,7 @@
 %%% remove these as needed.
 %%%------------------------------------------------------------------------
 
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 
 %%%------------------------------------------------------------------------
 %%% Metadata
@@ -38,19 +38,19 @@
 
 %% Change as needed. Or just add me as a coauthor. Only some of these are 
 %% used below in the hyperref declaration and address banner section.
-\def\myauthor{Kieran Healy}
+\def\myauthor{James Keirstead}
 \def\mytitle{Vita}
 \def\mycopyright{\myauthor}
 \def\mykeywords{}
 \def\mybibliostyle{plain}
 \def\mybibliocommand{}
 \def\mysubtitle{}
-\def\myaffiliation{Duke University}
-\def\myaddress{Sociology Department}
-\def\myemail{kjhealy@soc.duke.edu}
-\def\myweb{http://www.kieranhealy.org}
-\def\myphone{(919) 660-5737}
-\def\myfax{(919) 660-5623}
+\def\myaffiliation{Imperial College London}
+\def\myaddress{Department of Civil and Environmental Engineering}
+\def\myemail{j.keirstead@imperial.ac.uk}
+\def\myweb{http://www.jameskeirstead.ca}
+\def\myphone{+44 (0) 207 594 6227}
+\def\myfax{+44 (0) 207 594 5934}
 \def\myversion{}
 \def\myrevision{}
 
@@ -66,6 +66,8 @@
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% See vc manual to compile with xelatex -enable-write18 vita
+\immediate\write18{vc.bat}
 \input{vc}
 
 %%%------------------------------------------------------------------------
@@ -80,11 +82,13 @@
 
 %% color for the links 
 \usepackage[usenames,dvipsnames]{color}
+\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
 
 %% hyperlinks
 \usepackage[xetex, 
 	colorlinks=true,
-	urlcolor=BlueViolet,
+	urlcolor=ImperialLightBlue,
 	plainpages=false,
   	pdfpagelabels,
   	bookmarksnumbered,
@@ -105,8 +109,8 @@
 %% and is worth every penny. Any good monospace font will work fine, though.
 %% Consolas or inconsolata are good alternatives.
 \setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
-\setsansfont[Mapping=tex-text,Colour=AA0000]{Myriad Pro}
-\setmonofont[Mapping=tex-text,Scale=0.9]{Pragmata} 
+\setsansfont[Mapping=tex-text,Colour=156a9b]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Lucida Console} % Pragmata
 
 
 %%%------------------------------------------------------------------------
@@ -118,7 +122,7 @@
 %% \vspace element to keep the marginal header pleasingly aligned with the first 
 %% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1.25em}\flushright #1}}}}
 
 
 %% custom ampersand (font consistent with the one chosen above)
@@ -149,8 +153,7 @@
 %%% Address and contact block
 %%%------------------------------------------------------------------------
 \begin{minipage}[t]{2.95in}
- \flushright {\footnotesize \href{http://www.soc.duke.edu}{Department of Sociology} \\ Box 90088, \\ Duke University, \\ \vspace{-0.05in} Durham, \textsc{nc} 27708}  
-  
+\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
 \end{minipage}
 \hfill     
 %\begin{minipage}[t]{0.0in}
@@ -168,7 +171,7 @@
 \medskip
 
 %% Name 
-\noindent{\Large {\textsc{kieran healy}}}
+\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}}
 \reversemarginpar
 
 \medskip       
@@ -177,25 +180,13 @@
 \medskip
 \marginhead{Appointments}
 
-\noindent\emph{Duke University \vspace{0.01in}}
+\noindent\emph{Imperial College \vspace{0.01in}}
 
-\ind 2009--Present. Associate Professor in Sociology and the Kenan Institute for Ethics.      
+\ind 2011--Present. Lecturer.      
 
-\ind 2008--2009. Visiting Associate Professor of Sociology.
+\ind 2009--2011. Research Fellow and Team Leader, BP Urban Energy Systems project.
 
-\medskip
-\noindent\emph{University of Arizona \vspace{0.01in}}
-
-\ind 2008. Associate Professor of Sociology.
-
-\ind 2001--2008. Assistant Professor of Sociology.
-
-\medskip
-
-\noindent\emph{Australian National University \vspace{0.01in}}
-
-\ind 2003--2006. Research Fellow, Social and Political Theory Program,
-Research School of Social Sciences.
+\ind 2006--2009. Research Associate, BP Urban Energy Systems project. \vspace{0.02in}
 
 \bigskip
 
@@ -203,32 +194,23 @@ Research School of Social Sciences.
 
 \marginhead{Education}
 
-\noindent\emph{Princeton University \vspace{0.01in}}
+\noindent\emph{University of Oxford \vspace{0.01in}}
 
-\ind 2001. Ph.D, Sociology. % Dissertation: \emph{Exchange in Blood and
-%   Organs}. %\vspace{-0.1in}  
+\ind 2006.  DPhil, Energy Policy.\\ \emph{Behavioural responses to photovoltaic systems in the UK domestic sector}
 
-% \begin{itemize}
-% 	\item \small Winner of the American Sociological Association's Dissertation
-% 	  Award for 2002.
-% \end{itemize}      
-
-
-\ind 1998. M.A., Sociology. (General Examinations with Distinction.)
-
+\ind 2003.  MSc, Environmental Change and Management (Distinction).
 
 \medskip
-\noindent\emph{National University of Ireland (Cork)\vspace{0.02in}}
 
-\ind 1994. M.A., Sociology. (First Class Honors.) \vspace{0.01in}
+\noindent\emph{Queen's University, Kingston, Ontario, Canada\vspace{0.02in}}
 
-
-\ind 1993. B.A., Sociology and Geography. (Joint First Class Honors.) 
+\ind 2001. BSc Applied Science, Civil Engineering. (First Class Honours.) 
 
 \bigskip
  
 %% Publications
 \marginhead{{\vskip 0.3em}Publications}
+%\marginhead{Publications}
 \medskip
 \noindent\emph{Book \vspace{0.01in}}
 
@@ -237,7 +219,7 @@ Research School of Social Sciences.
 \normalsize
 
 \bigskip
-\noindent\emph{Journal articles \vspace{0.05in}}
+\noindent\emph{Journal articles \vspace{0.01in}} % 0.05
  
 %% Use revnumerate environment if numbered publications are needed. 
 %% (Include it above in the preamble).
