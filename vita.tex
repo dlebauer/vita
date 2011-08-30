@@ -24,7 +24,7 @@
 %%% ------------------------------------------------------------------------
 %%% Note
 %%%------------------------------------------------------------------------
-%%% Because this is a hand-tweaked file, be on the look out for \medksip, 
+%%% Because this is a hand-tweaked file, be on the look out for \medskip, 
 %%% \bigskip and \newpage commands here and there, which are used to balance
 %%% the layout or avoid widows & orphans, etc. You should of course add or 
 %%% remove these as needed.
@@ -122,7 +122,7 @@
 %% \vspace element to keep the marginal header pleasingly aligned with the first 
 %% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1.25em}\flushright #1}}}}
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
 
 
 %% custom ampersand (font consistent with the one chosen above)
@@ -147,7 +147,7 @@
 \rhead{{\scriptsize\thepage}}
 
 %% git revision control footer 
-\rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
 
 %%%------------------------------------------------------------------------
 %%% Address and contact block
@@ -168,19 +168,24 @@
 \end{minipage}
 
 
-\medskip
+\bigskip
+
+\bigskip
 
 %% Name 
 \noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}}
 \reversemarginpar
+\raggedright
 
-\medskip       
+\bigskip
+
+\bigskip
 
 %% Appointments
-\medskip
-\marginhead{Appointments}
 
-\noindent\emph{Imperial College \vspace{0.01in}}
+\noindent\marginhead{Appointments}%
+%
+\emph{Imperial College \vspace{0.01in}}
 
 \ind 2011--Present. Lecturer.      
 
@@ -188,15 +193,21 @@
 
 \ind 2006--2009. Research Associate, BP Urban Energy Systems project. \vspace{0.02in}
 
+\medskip
+
+\emph{Institute of Industrial Science, University of Tokyo \vspace{0.01in}}
+
+\ind October 2011.  Visiting Research Fellow.
+
 \bigskip
 
 %% Education
 
-\marginhead{Education}
+\noindent\marginhead{Education}%
+%
+\emph{University of Oxford \vspace{0.01in}}
 
-\noindent\emph{University of Oxford \vspace{0.01in}}
-
-\ind 2006.  DPhil, Energy Policy.\\ \emph{Behavioural responses to photovoltaic systems in the UK domestic sector}
+\ind 2006.  DPhil, Energy Policy. \emph{Behavioural responses to photovoltaic systems in the UK domestic sector}
 
 \ind 2003.  MSc, Environmental Change and Management (Distinction).
 
@@ -209,284 +220,207 @@
 \bigskip
  
 %% Publications
-\marginhead{{\vskip 0.3em}Publications}
-%\marginhead{Publications}
-\medskip
-\noindent\emph{Book \vspace{0.01in}}
+\noindent\marginhead{Publications}%
+%
+%\medskip
+\noindent\emph{Books \vspace{0.01in}}
 
-\ind  Kieran Healy. 2006. \emph{\href{http://www.lastbestgifts.com}{Last Best Gifts: Altruism and the Market for Human Blood and Organs}}. Chicago:~University of Chicago Press. \vspace{-0.075in}
- 
-\normalsize
+\ind James Keirstead and Nilay Shah (editors). Forthcoming. \emph{Urban energy systems: an integrated approach}. London: Earthscan.
+%\normalsize
 
 \bigskip
-\noindent\emph{Journal articles \vspace{0.01in}} % 0.05
+
+\emph{Journal articles \vspace{0.01in}} % 0.05
  
 %% Use revnumerate environment if numbered publications are needed. 
 %% (Include it above in the preamble).
 %% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
 %% \begin{revnumerate}
 
-\ind Marion Fourcade and Kieran Healy. 2007. ``\href{http://arjournals.annualreviews.org/doi/pdf/10.1146/annurev.soc.33.040406.131642}{Moral Views of Market Society}.'' \emph{Annual Review of Sociology} 33:~285--311. 
+\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. In press. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}. 
 
-\ind Kieran Healy. 2006. ``\href{http://www.kieranhealy.org/files/papers/presumed-consent.pdf}{Do Presumed Consent Laws Raise Organ Procurement Rates?}'' \emph{DePaul Law Review} 55:~1017--1043. 
+\ind James Keirstead and Nilay Shah. 2011. ``\href{http://dx.doi.org/10.1016/j.compenvurbsys.2010.12.005}{Calculating minimum energy urban layouts with mathematical programming and Monte Carlo analysis techniques}.'' \emph{Computers, Environment and Urban Systems} 35(5):~368--377. 
 
-\ind Kieran Healy. 2004. ``\href{http://www.kieranhealy.org/files/papers/asr2004.pdf}{Altruism as an Organizational Problem: The Case of Organ Procurement}.''
- \emph{American Sociological Review} 69:~387--404.
+\ind James Keirstead. 2010. ``\href{http://dx.doi.org/10.1108/14777831011010829}{Applying service niche indicators to London's energy system}'' \emph{Management of Environmental Quality: An International Journal} 21(1):~6--19.
 
-\ind Kieran Healy. 2002. ``\href{http://www.kieranhealy.org/files/papers/jpp.pdf}{Digital Technology and Cultural Goods}.'' \emph{Journal of
-  Political Philosophy} 10:~478--500. 
+\ind James Keirstead and Niels Schulz. 2010. ``\href{http://dx.doi.org/10.1016/j.enpol.2009.07.025}{London and beyond: Taking a closer look at urban energy policy}'' \emph{Energy Policy} 38(9):~4870--4879.
 
-\ind Kieran Healy. 2002. ``\href{http://www.kieranhealy.org/files/papers/culture-newecon.pdf}{What's New for Culture in the New Economy?}'' \emph{Journal
-  of Arts Management, Law and Society} 32:~86--103. 
+\ind James Keirstead. 2009. ``\href{http://dx.doi.org/10.1016/j.eiar.2008.09.001}{Feeling lucky? Using search engines to assess perceptions of urban sustainability}'' \emph{Environmental Impact Assessment Review} 29(2):~87--95.
 
+\ind James Keirstead and Matt Leach.  2008. ``\href{http://dx.doi.org/10.1002/sd.349}{Bridging the gaps between theory and practice: a service niche approach to urban sustainability indicators}'' \emph{Sustainable Development} 16(5):~329--340.
 
-\ind Kieran Healy. 2000. ``\href{http://www.kieranhealy.org/files/papers/embed-alt.pdf}{Embedded Altruism: Blood Collection Regimes and the European
-  Union's Donor Population}.'' \emph{American Journal of Sociology} 105:~1633--\,1657.
+\ind James Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
 
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
 
-\ind Kieran Healy. 1999.  ``\href{http://www.kieranhealy.org/files/papers/ts.pdf}{The Emergence of \textsc{hiv} in the U.S. Blood Supply: Organizations,
-  Obligations and the Management of Uncertainty}.'' \emph{Theory and Society} 28:~529--558.
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2006.08.003}{The UK domestic photovoltaics industry and the role of central government}'' \emph{Energy Policy} 35(4):~2268--2280.
 
+\ind James Keirstead. 2006. ``\href{http://dx.doi.org/10.1016/j.enpol.2005.06.004}{Evaluating the applicability of integrated domestic energy frameworks in the UK} \emph{Energy Policy} 34(17):~3065--3077.
 
-\ind Bruce Western and Kieran Healy. 1999. ``\href{http://www.kieranhealy.org/files/papers/western-healy99.pdf}{Explaining the OECD Wage Slowdown:
-Recession or Labor Decline?}''  \emph{European Sociological Review}
-15:~233--249.
-
-
-\ind  Kieran Healy. 1998.  ``\href{http://www.kieranhealy.org/files/papers/constraint98.pdf}{Conceptualising Constraint: Mouzelis, Archer and the concept of
-  social structure}.'' \emph{Sociology} 32:~509--522. 
-
-%\end{revnumerate}
-%\newpage
 \bigskip
 
-\noindent\emph{Book chapters \vspace{0.05in}}
+\noindent\emph{Book chapters \vspace{0.01in}}
 % \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
 % \begin{revnumerate}
 
-\ind Kieran Healy. Forthcoming. ``Social Structure, Gifts and Norms in \emph{The Story of Qiu Ju},'' in \emph{Norms and Values: The Role of Social Norms as Instruments of Value Realisation}, edited by Michael Baurmann, Geoffrey Brennan, Robert E. Goodin and Nicholas Southwood. Baden Baden: Nomos Verlag.
+%\ind Arnulf Grubler, Xuemei Bai, Thomas Buettner, Shobhakar Dhakal, David Fisk, Toshiaki Ichinose, James Keirstead, Gerd Sammer, David Satterthwaite, Niels Schulz, Nilay Shah, Julia Steinberger, Helga Weisz. Forthcoming. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
 
-\ind Kieran Healy. 2008. ``Lo Scambio di Doni,'' in \emph{L'Altro in Me: Dono del Sangue fra Culture, Pratiche e Identità}, edited by Annamaria Fantauzzi. Milano: \textsc{avis} Nazionale, 36--42. 
+\ind Arnulf Grubler, Xuemei Bai, Thomas Buettner, Shobhakar Dhakal, David Fisk, Toshiaki Ichinose, James Keirstead, Gerd Sammer, David Satterthwaite, Niels Schulz, Nilay Shah, Julia Steinberger, and Helga Weisz. Forthcoming. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
 
-\ind Kieran Healy. 2007. ``Sociology,'' in \emph{A Companion to Contemporary Political Philosophy} (Second Edition), edited by Robert E. Goodin, Philip Pettit and Thomas Pogge. New York: Blackwell, 90--122. 
+\ind James Keirstead and Nilay Shah. Forthcoming. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun, P.M.\ Pardalos, R.\ Enkhbat, S.\ Pistikopoulos.  Springer Series in Optimization and Its Applications.  Springer.
 
-\ind  Kieran Healy. 2004. ``Sacred Markets and Secular Ritual in the Organ Transplant
-Industry,'' in \emph{The Sociology of the Economy}, edited by Frank Dobbin. New
-York: Russell Sage, 336--359.
+\ind Stephen Hammer, James Keirstead, Shobhakar Dhakal, Jeanene Mitchell, Michelle Colley, Richard Gonzalez, Morgan Herve-Mignucci, Lily Parshall, Niels Schulz, Michael Hyams. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig, W.D.\ Solecki, S.A.\ Hammer, S.\ Mehrotra.  Cambridge: Cambridge University Press, 85--112.
 
-\ind Bruce Western and Kieran Healy.  2001.  ``Wage Growth and Labor Decline in the
-Industrialized Democracies, 1965--1993,'' in \emph{Unemployment in the New
-  Europe}, edited by Nancy Bermeo. New York: Cambridge University Press,
-121--144.
+\ind Niels Schulz, Nilay Shah, David Fisk, James Keirstead, Nouri Samsatli, Aruna Sivakumar, C\'{e}line Weber, and Ellin Saunders. 2010. ``Mobilize: The SynCity Urban Energy Systems Model'' in \emph{Ecological Urbanism}, edited by M.\ Mostafavi and G.\ Doherty.  Baden, Lars M\"{u}ller Publishers.
 
- \ind  Kieran Healy. 1998. ``The New Institutionalism and Irish Social Policy,'' in
-\emph{Social Policy in Ireland: Principles, Practice and Problems}, edited by
-Se\'{a}n Healy and Brigid Reynolds. Dublin: Oak Tree Press, 59--83.
+\ind James Keirstead, Nouri Samsatli and Nilay Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
+
+\ind James Keirstead. 2010. ``Total primary energy supply'' in \emph{Green Energy: An A-to-Z Guide}, edited by P.\ Robbins and D.\ Mulvaney.  Berkeley, CA: SAGE Publications, 426--428.
 
 %\end{revnumerate}
 
 \bigskip 
+
+\noindent\emph{Conference papers \vspace{0.01in}}
+
+\ind James Keirstead and Koen van Dam. 2011. ``A survey on the application of conceptualisations in energy systems modelling'' in \emph{Formal Ontologies Meet Industry: Proceedings of the Fifth International Workshop}, edited by P.E.\ Vermass and V.\ Dignum.  Amsterdam: IOS Press, 50--62.
+
+\ind Salvador Acha, Koen van Dam, James Keirstead and Nilay Shah. 2011. ``Integrated modelling of agent-based electric vehicles into optimal power flow studies'' in \emph{Proceedings of the 21st International Conference and Exhibition on Electricity Distribution (CIRED 2011)}.  Frankfurt, 1--4.
+
+\ind Koen van Dam and James Keirstead. 2010. ``Re-use of an ontology for urban energy systems modelling'' in \emph{Proceedings of Next Generation Infrastructures Eco-Cities conference}.  Shenzhen, 1--6.
+
+\ind C\'{e}line Weber, James Keirstead, Nouri Samsatli, Nilay Shah and David Fisk. 2010. ``Trade-offs between Layout of Cities and Design of District Energy Systems'' in \emph{Proceedings of the 23rd International Conference on Efficiency, Cost, Optimization, Simulation and Environmental Impact of Energy Systems}.  Lausanne, 1--8.
+
+\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. 2010. ``The implications of CHP planning restrictions on the efficiency of urban energy systems'' in \emph{Proceedings of the 23rd International Conference on Efficiency, Cost, Optimization, Simulation and Environmental Impact of Energy Systems}.  Lausanne, 1--8.
+
+\ind Michael Kostantindis, Nouri Samsatli, James Keirstead and Nilay Shah. 2010. ``Modelling of integrated municipal solid waste to energy technologies in the urban environment'' in \emph{Proceedings of the 3rd International Conference on Engineering for Waste and Biomass Valorisation}.  Beijing, 1--6.
+
+
+\ind James Keirstead and Koen van Dam. 2010. ``A comparison of two ontologies for agent-based modelling of energy systems'' in \emph{Proceedings of the First International Workshop on Agent Technologies for Energy Systems (ATES 2010)}, edited by A.\ Rogers. Toronto, 1--8. 
+
+\ind James Keirstead, Nouri Samsatli and Nilay Shah ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Proceedings of the 5th Urban Research Symposium}.  Marseilles, 1--19.
+
+\ind James Keirstead, Nouri Samsatli, A.\ Marco Pantaleo, and Nilay Shah. 2009. ``Evaluating integrated urban biomass strategies for a UK eco-town'' in \emph{Proceedings of the European Biomass Conference}.  Hamburg, 2115--2127.
+
+\ind James Keirstead. 2009. ``London's energy system: assessing the quality of urban sustainability indicators using the service niche approach'' in \emph{Proceedings of the Second International Conference on Whole Life Urban Sustainability and its Assessment}, edited by M.\ Horner, A.\ Price, J.\ Bebbington, R.\ Emmanuel.  Loughborough, 471--487.
+
+\ind James Keirstead. 2009. ``London's energy system: prospects for using the service niche approach in current indicator practice'' in \emph{Proceedings of the Second International Conference on Whole Life Urban Sustainability and its Assessment}, edited by M.\ Horner, A.\ Price, J.\ Bebbington, R.\ Emmanuel.  Loughborough, 488--502.
+
+\ind James Keirstead. 2007. ``Selecting sustainability indicators for urban energy systems'' in \emph{Proceedings of the International Conference on Whole Life Urban Sustainability and its Assessment}, edited by M.\ Horner, C.\ 
+Hardcastle, A.\ Price, J.\ Bebbington. Glasgow, 1--20.
+
+\ind James Keirstead. 2005. ``Household behavioural responses to photovoltaic-system monitoring devices'' in \emph{Proceedings of the World Renewable Energy Congress}, edited by M.\ Imbabi and C.\ Mitchell. Aberdeen, 458--463.
+
+\ind James Keirstead. 2005. ``Photovoltaics in the UK domestic sector: a double-dividend?'' in \emph{Proceedings of the ECEEE Summer Study}, edited by F.\ Bartiaux and A.\ Saln{\ae}s. Mandelieu, France, 1249--1258.
+
+\bigskip
  
 %\newpage
 \noindent\emph{Reviews and other occasional writing \vspace{0.05in}}
 
 %\renewcommand{\labelenumi}{\textsc{r}\theenumi.}
 %\begin{revnumerate}
-\ind Kieran Healy. 2009. \href{http://www.journals.uchicago.edu/doi/pdf/10.1086/605757}{Review} of \emph{Pop Finance} by Brooke Harrington. \emph{American Journal of Sociology} 115:~309--12.
 
-\ind Kieran Healy. 2007. ``\href{http://www.kieranhealy.org/files/reviews/socforum-article.pdf}{A Wealth of Notions}.'' Review
-Essay on \emph{Freakonomics} by Steven Levitt and Stephen Dubner. \emph{Sociological Forum} 22:~119--125. 
+\ind James Keirstead. 2010. ``Identifying lessons for energy-efficient cities using an integrated urban energy systems model''.  Working paper prepared for \emph{The Global Energy Assessment}.  Laxenburg, Austria: IIASA, 1--23.
 
-\ind  Kieran Healy. 2006. ``Sacred.'' In \emph{International Encyclopedia of Economic Sociology}, edited by Jens Beckert and Milan Zafirovski. London: Routledge, 588--589. 
+\ind James Keirstead. 2010. ``\href{http://jasss.soc.surrey.ac.uk/13/1/reviews/keirstead.html}{Review} of Ball, Michael and Wietschel, Martin (eds): The Hydrogen Economy: Opportunities and Challenges'' \emph{Journal of Artificial Societies and Social Simulation}, 13(1).
 
-\ind  Kieran Healy. 2005. \href{http://www.kieranhealy.org/files/reviews/klinenberg.pdf}{Review} of \emph{Heat Wave} by Eric Klinenberg. \emph{Imprints} 8:~283--289.
+\ind James Keirstead. 2008--2010.  Contributor to \href{http://www.academicproductivity.com}{www.academicproductivity.com}
 
-\ind  Kieran Healy. 2005. \href{http://www.kieranhealy.org/files/reviews/fox.pdf}{Review} of \emph{An R and S-PLUS Companion to Applied Regression}, by John Fox. \emph{Sociological Methods and Research} 34:~137--140.
+\ind James Keirstead. 2008. ``\href{http://www.stockholm-network.org/downloads/publications/Climate_of_Opinion_10.pdf}{Victims or leaders? Cities and global climate policy}''. \emph{Climate of Opinion}, 10:~4--5.
 
-\ind  Kieran Healy. 2005. ``\href{http://www.kieranhealy.org/files/reviews/henwood.pdf}{After the Ball was Over}.'' Review of \emph{After the New
-  Economy} by Doug Henwood. \emph{European Economic Sociology Newsletter} 6 (3):~37--38.
+\ind James Keirstead. 2007.  \href{http://www3.imperial.ac.uk/pls/portallive/docs/1/24897696.PDF}{\emph{Towards urban energy system indicators}}.  Internal report. London: Imperial College.
 
-\ind  Kieran Healy. 2004. ``The Abundance of the Heart.'' Review of \emph{A Man After His Own Heart} by Charles
-Siebert. \emph{Australian Review of Public Affairs}, October. Reprinted in the
-\emph{Australian Financial Review}, October 22nd.
+\ind James Keirstead. 2005. ``Energy matters: Power from the sun''.  \emph{Geography Review}, September 2005: 17--19.
 
-\ind  Kieran Healy. 2003. \href{http://links.jstor.org/sici?sici=0094-3061%28200303%2932%3A2%3C252%3AAEATOC%3E2.0.CO%3B2-F}{Review} of \emph{Against Essentialism} by Stephan Fuchs.
-\emph{Contemporary Sociology} 32:~252--254.
-
-\ind  Kieran Healy. 2001. Review of \emph{Market Society} by Don Slater and Fran Tonkiss. \emph{European
-      Economic Sociology Newsletter} 3 (1):~31--32.
-
-
-\ind  Kieran Healy. 1999. \href{http://links.jstor.org/sici?sici=0094-3061%28199903%2928%3A2%3C210%3ACPRCAS%3E2.0.CO%3B2-C}{Review} of \emph{Comparative Politics} by Mark Irving Lichbach and Alan S.
-Zuckerman. \emph{Contemporary Sociology} 28:~210--211.
-
-
-\ind  Kieran Healy. 1998. \href{http://www.kieranhealy.org/files/reviews/rule.pdf}{Review} of \emph{Theory and Progress in Social Science} by James Rule.  \emph{Theory
-  and Society}, 27:~435--441.
+\ind James Keirstead. 2004. ``Negotiating lifestyles: understanding lifestyles can help achieve sustainability''. \emph{IISD Alumni Inside}.
 
 % %\end{revnumerate}
  \bigskip
 
 %% Presentations
-\marginhead{{\vskip 0.4em}Invited Talks \newline (Since 2004)}
-\medskip
+\noindent\marginhead{Invited Talks}%
+%
+\ind 2011. ``Approaches, challenges and opportunities in urban energy systems modelling'' IIASA, Laxenburg, Austria. March.
 
-\ind 2009. ``Specialization and Status in Philosophy.'' University of Chicago, Booth School of Business. May.
+\ind 2010. ``Challenges in multi-scale urban energy modelling and data collection: What's `just right' for urban energy data?'' \textsc{iis} seminar, University of Tokyo. November.
 
-\ind 2009. ``Specialization and Status in Philosophy.'' University of California, Berkeley. April. 
+\ind 2010. ``Modelling energy systems with ontologies'' \textsc{iam} seminar, University of Southampton. June.
 
-\ind 2009. ``Specialization and Status in Philosophy.'' University of Michigan, \textsc{icos}. April.
+\ind 2010. ``SynCity: New Tools, Methods and Business Models for future urban sustainability'' Communities for Advanced Distributed Energy Resources, San Diego.  April.
 
-\ind 2009. ``Specialization and Status in Philosophy.'' Columbia University. February. 
+\ind 2010. ``Lessons from SynCity: insights on the modelling of urban energy systems'' Gordon Conference on Industrial Ecology, New London, NH.  July.
 
-\ind 2009. ``The Performativity of Networks.'' Yale University. January.
+\ind 2009. ``The SynCity layout model: exploring the limits of low-carbon urban design'' University of Tokyo, Tokyo.  September.
 
-\ind 2008. ``The Performativity of Networks.'' Stanford University Graduate School of Business. October. 
+\ind 2009. ``Modelling urban energy systems with SynCity'' Nagoya University, Nagoya. February.
 
-\ind 2008. ``The Performativity of Networks.'' Harvard/MIT Joint Seminar in Economic Sociology. March.
+\ind 2008. ``SynCity: an integrated framework for modelling urban energy systems'' Asian Institute of Technology, Bangkok. February.
 
-\ind 2007. ``Specialization and Status in Philosophy.'' University of Notre Dame. November. 
-
-\ind 2007. ``Last Best Gifts: Altruism and the Market for Human Blood and Organs.'' Center for History, Society and Culure, University of California at Davis. November.
-
-\ind 2007. ``Gift Fetishism and the Market for Human Organs.'' Department of Anthropology, University of Arizona. February. 
-
-\ind 2007. ``Presumed Consent Law and Organ Procurement.'' Rogers Program on Law and Society, University of Arizona. January. 
-
-\ind 2006. ``The Political Economy of Presumed Consent.'' Institute for Global
-and International Studies, George Washington University. March.
-
-\ind 2005. ``Last Best Gifts: Altruism and the Market for Human Organs.''
-Columbia University School of Business. November. 
-
-\ind 2005. ``The Political Economy of Presumed Consent.'' University of California, Los Angeles. May.
-
-\ind 2005. ``Last Best Gifts: Altruism and the Market for Human Organs.''
-University of California, Berkeley. April.
-
-\ind 2005. ``Cadaveric Organ Procurement and Presumed Consent Laws.'' DePaul
-Law Review \& Health Law Institute Symposium on \emph{Precious Commodities: The
-Supply and Demand of Body Parts}. Chicago. March. 
-
-\ind 2005. ``Last Best Gifts: Altruism and the Market for Human 
-Organs.'' University of Washington. February. 
-
-\ind 2004. ``The Institutional Context of Organ Procurement.'' Indiana
-University--Purdue University, Indianapolis. November.
-
-\ind 2004. ``The Political Economy of Presumed Consent.'' \textsc{spt} Program,
-Australian National University, \textsc{rsss}. July. 
-
-\ind 2004. ``Organ Procurement in the United States.'' National University of
-Ireland at Maynooth. April. 
-
+\ind 2007. ``Urban Energy Transitions'' National Institute for Environmental Studies, Tsukuba.  March.
 
 %\end{revnumerate}
 
 \bigskip
 
-%\newpage
+\noindent\marginhead{Grants and \newline Awards}%
+%\medskip
+%
+\ind 2011. Biomass system value-chain modelling, Energy Technologies Institute.  Co-investigator (£153,000).
 
-\marginhead{{\vskip 0.4em}Conference \newline Presentations \newline (Since 2004)}
-\medskip
+\ind 2011. Energy systems analysis of South Heaton, Newcastle University.  Co-investigator (£2500).
 
-\ind 2008. Invited speaker, ASA Culture Section 20th Anniversary Symposium, ``Culture and Economy,'' Boston, August.
+\ind 2009. MBA Innovation, Entrepreneurship and Design, Imperial College.  Ideator (30 person-months research time).
 
-\ind 2008. Invited discussant, conference on Norms and Values, ZiF center, University of Bielefeld, Germany. May. 
+\ind 2003--2006.  Commonwealth Scholar, held at University of Oxford.
 
-\ind 2007. ``Economic Categories and the Claims of Neoliberal Society.'' Invited Session on Culture and Markets. Annual Meetings of the American Sociological Association, New York. August.
+\ind 2001--2002.  British Council Chevening Scholar, held at University of Oxford.
 
-\ind 2007. ``The Performativity of Networks.'' Special Session on Money in Movement: Markets, Circuits and Networks. Annual Meetings of the American Sociological Association, New York. August.
+\ind 2001.  Consulting Engineers of Ontario Louanne Smrke Award for excellence in written communication.
 
-\ind 2007. Presider, Regular Session on the Sociology of Knowledge. Annual Meetings of the American Sociological Association, New York. August.
+\ind 2001. \textsc{cw} Marshall Award for excellence in structural engineering, Queen's University.
 
-\ind 2007. Discussant, Book Panel on Steven Levitt and Stephen Dubner's \emph{Freakonomics}. Annual Meetings of the Eastern Sociological Society, Philadelphia. March.
+\ind 2000.  Guinness Book of World Records, longest distance travelled in a solar vehicle (7044 km).
 
-\ind 2006. ``The Political Economy of Presumed Consent.'' Annual Meetings of the American Sociological Association, Montreal. August.
+\ind 2000. One of 125 ``Canadians Shaping the Nation We will Live in Tomorrow'', chosen by \emph{The Globe and Mail}.
 
-\ind 2006. ``Specialization and Status in Philosophy.'' Annual Meetings of the American Sociological Association, Montreal. August.
+\ind 2000.  Fifth Field Company Prize for excellence in hydrology, Queen's University.
 
-\ind 2006. Discussant, Invited Session on Public Sociology. Annual Meetings of the American Sociological Association, Montreal. August.
+\ind 2000. Frederick and Christopher Ansley Award for extra-curriculars and academic excellence, Queen's University.
 
-\ind 2004. Discussant, Regular Session on the Political Economy of the World System. Annual Meetings of the American Sociological Association, San Francisco. August.
+\ind 1999.  \textsc{sn} Graham Award for extra-curriculars and academic excellence, Queen's University.
 
-
-\bigskip
-
-\marginhead{{\vskip 0.4em}Grants and \newline Awards}
-\medskip
-  
-\ind 2008. Honorable Mention, American Sociological Association Section on Economic Sociology, Zelizer Distinguished Scholarship Award.
-
-\ind 2008-09. Residential Fellowship, Center for Advanced Study in the Behavioral Sciences, Stanford University.
-
-\ind 2007. Winner, Association for Research on Nonprofit Organizations and Voluntary Action (\textsc{arnova}) Outstanding Book Prize.
-
-\ind 2007. Finalist, Society for the Study of Social Problems (\textsc{sssp}), C. Wright Mills Award.
-
-\ind 2006. Rogers Program in Law and Society, Faculty Research Award
-(\$3,000), University of Arizona.
-
-\ind 2006. Participant, Summer Institute on \emph{Economy and Society: Trajectories of Capitalism}, Center for Advanced Study in the Behavioral Sciences (July--August).
-
-\ind 2003. University of Arizona \textsc{sbsri}/Center for Applied Spatial
-Analysis. Geographical Information Systems Research Assistance
-Program Award. ``The Geography of Organ Procurement.''
-
-\ind 2002. American Sociological Association Dissertation Award.
-
-\ind 2002. University of Arizona Prop.\,301 Information Technology/Information Science Fund. ``Understanding Open-Source Software Development: Network organizations, innovation and volunteering'' (\$19,500).
-
-\ind 2000. National Science Foundation Doctoral Dissertation Research Improvement Award (\$7,500).
-
-\ind 1998--2000. Graduate Fellow, Fellowship of Woodrow Wilson Scholars. Prize fellowship.
-
-\ind 1998--1999. Noah Cotsen Junior Teaching Fellowship, Princeton University. Prize fellowship.
-
-\ind 1998. Prize Paper, Princeton University Department of Sociology Working Paper Series.
-
-\ind 1998. General Examinations with Distinction, Princeton University.
-
-\ind 1995--1998. Graduate Fellowship, Princeton University.
-
-\ind 1993--1994. Title of College Scholar, University College, Cork.
-
-\ind 1991--1993. College Undergraduate Scholarship, University
-College, Cork.
-
+\ind 1998--2001.  Dean's Scholar for academic excellence, Queen's University.
 
 \bigskip 
 
-\newpage
+\noindent\marginhead{Service to the \newline Profession}%
+%
+\ind 2011. Board member, Sustainable Urban Systems section, International Society for Industrial Ecology.
 
-\marginhead{{\vskip 0.9em}Service to the \newline Profession}
-\medskip
+\ind 2011. Technical advisory panel member, Challenging Lock-in Through Urban Energy Systems EPRSC project.
 
-\medskip
+\ind 2011. Programme committee member, 2nd International Workshop on Agent Technologies for Energy Systems.
 
-\ind Consulting Editor (2009--11), \emph{American Journal of Sociology}.
+\ind 2009. Invited participant.  EPSRC Grand Challenge workshop on Sustainable Urban Environments.
 
-\ind Editorial Board Member (2008--10), \emph{Contexts}. 
+\ind Reviewer, ECOS 2010 and Next Generation Infrastructures 2010 conferences.
 
-\ind Prize Committee, American Sociological Association Section on Economic Sociology, Ronald Burt Prize Paper Award (2007--08).
+\ind Reviewer, Engineering and Physical Sciences Research Council, Economic and Social Research Council.
 
-\ind Elected Council Member, American Sociological Association Section on Economic
-Sociology (2008--2010). 
+\ind Reviewer, \emph{Energy Policy}, \emph{Building Research and Information}, \emph{Technological Forecasting and Social Change}, \emph{Environmental Practice}, \emph{Journal of Artifical Societies and Social Simulation}, \emph{Energy Efficiency}, \emph{Sustainable: Science, Practice and Policy}, \emph{The Energy Journal}, \emph{Journal of Industrial Ecology}, \emph{Computers, Environment and Urban Systems}.
 
-\ind Co-ordinator of the Society for the Advancement of Socio-Economics' research network on Socio-Economic Theory (2006--2008). 
+\ind Consultant, Environmental Change Institute, University of Oxford (Carbon Trust, Department for International Development), Foresight, International Institute for Applied Systems Analysis, EDF/Weber Shandwick, The Economist Group.
+\bigskip
 
-\ind Editorial Board Member (2007--2009), \emph{Socio-Economic Review}.
+\noindent\marginhead{Affliations}%
+%
+\ind 2010--present.  Member and Chartered Energy Engineer, the Energy Institute.
 
-\ind Session organizer, Regular Session on Voluntary and Non-Profit organizations, American Sociological Association Meetings, Philadelphia, August 2005.
+\ind 2010--present.  Member, International Society for Industrial Ecology.
 
-\ind Co-Editor (with Alexandra Kalev), \emph{Accounts}, Newsletter of the American Sociological Association Section on Economic Sociology (2003--2004 and 2004--2005).
+\ind 2009--present.  Member, Higher Education Academy.
 
-\ind Prize committee, American Sociological Association Theory Section, Graduate Student Paper Award (2003--2004).
-
-\ind Reviewer, National Science Foundation, \emph{American
-  Sociological Review}, \emph{American Journal of Sociology},
-\emph{American Journal of Transplantation}, \emph{Administrative
-  Science Quarterly}, \emph{Bioethics}, \emph{Contexts}, \emph{The Information
-  Society}, \emph{Journal of Health Economics}, \emph{Journal of Political Philosophy}, \emph{Journal for the Scientific Study of Religion}, \emph{Social Networks}, \emph{Socio-Economic Review}, \emph{Sociological Forum}, \emph{Transactions of the Institute of British Geographers}, \emph{Social Science \& Medicine}, \emph{Theory and Society}, Cambridge University Press, University of Chicago Press, Duke University Press, Oxford University Press, Polity Press, Sage Publications/Pine Forge Press.
+\ind 2008--present.  Member, British and International Institutes for Energy Economics.
 
 \end{document}
