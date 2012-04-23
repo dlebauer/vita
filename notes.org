@@ -1,0 +1,6 @@
+From Thinking Rock item
+
+Fork from Kieran Healy's
+
+Nearly have VC working see http://www.ericphelps.com/batch/secondry/index.htm
+http://blog.crankybit.com/redirecting-output-to-a-file-in-windows-batch-scripts/ 
