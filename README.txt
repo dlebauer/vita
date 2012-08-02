@@ -7,3 +7,5 @@ Forked from git://github.com/kjhealy/kjh-vita
 There are two files:
 - vita.tex is for a full length CV
 - vita-1pg.tex is for a reduced one page CV
+
+Built by running 'vc' in a shell and then with xelatex
