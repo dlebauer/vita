@@ -82,7 +82,7 @@
 \definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
 \definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
 
-\usepackage[right=0.75in, bottom=1in]{geometry}
+\usepackage[right=0.75in, bottom=1in, top=1in, head=14pt]{geometry}
 %% hyperlinks
 \usepackage[xetex, 
 	colorlinks=true,
@@ -122,7 +122,6 @@
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
 \newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
 
-
 %% custom ampersand (font consistent with the one chosen above)
 \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
 
@@ -147,24 +146,31 @@
 %% git revision control footer 
 \rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
 
+\fancypagestyle{frontpage}{%
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhead{}
+  \fancyfoot{}
+  %  \rhead{{\scriptsize\thepage}}
+  %% git revision control footer 
+  \rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via 
+}
+
+\thispagestyle{frontpage}
+
 %%%------------------------------------------------------------------------
 %%% Address and contact block
 %%%------------------------------------------------------------------------
-\begin{minipage}[t]{2.95in}
+\begin{minipage}[t]{3.95in}
 \flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
 \end{minipage}
 \hfill     
-%\begin{minipage}[t]{0.0in}
-% dummy (needed here)
-%\end{minipage}
-\hfill
-\begin{minipage}[t]{1.7in}
+%\hfill
+\begin{minipage}[t]{1.5in}
   \flushright \footnotesize Phone: \myphone \\ 
   Fax: \myfax  \\ 
   {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
   {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
 \end{minipage}
-
 
 \bigskip
 
@@ -194,7 +200,7 @@
 \medskip
 \emph{Independent consultancy\vspace{0.01in}}
 
-\ind Environmental Change Institute, University of Oxford (for Carbon Trust, Department for International Development), UK Government Foresight, International Institute for Applied Systems Analysis, EDF/Weber Shandwick, The Economist Group, Arup, Energy Technologies Institute.
+\ind Arup, Energy Technologies Institute, The Economist Group, EDF/Weber Shandwick, International Institute for Applied Systems Analysis, UK Government Foresight, University of Oxford (for Carbon Trust, Department for International Development).
 
 \bigskip
 
@@ -222,7 +228,7 @@
 %\medskip
 \noindent\emph{Books \vspace{0.01in}}
 
-\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
+\ind J.\ Keirstead and N.\ Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
 %\normalsize
 
 \bigskip
@@ -239,36 +245,48 @@
 % DisP paper with Carlos
 %
 % Actually published here http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667 ?
-% \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering.
+% \ind A.\ Sivakumar, J.\ Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering.
 
-\ind James Keirstead and Carlos Calderon.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.058}{Capturing spatial effects, technology interactions, and uncertainty in urban energy and carbon models: retrofitting Newcastle as a case-study}.''  \emph{Energy Policy}, 46: 253--267.
+% \ind Stefan Pfenninger, Adam Hawkes, and J.\ Keirstead. In review. ``Energy systems modeling for twenty-..rst century energy policy'' submitted to \emph{Renewable and Sustainable Energy Reviews}.
+%
+% \ind Nouri Samsatli, J.\ Keirstead, and N.\ Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Energy Conversion and Management}.
+%
+\ind J.\ Keirstead and M.\ Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Building and Environment}.  % Energy Economics if that fails?
 
-\ind James Keirstead, Mark Jennings, and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1016/j.rser.2012.02.047}{A review of urban energy system models: approaches, challenges, and opportunities}.'' \emph{Renewable and Sustainable Energy Reviews}, 16(6): 3847--3866.
+\ind J.\ Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.08.063}{Benchmarking urban energy efficiency in the UK}'' \emph{Energy Policy}.  In press.
 
-\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. 2012. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}, 41(1): 93--103. 
+\ind J.\ Keirstead and A.\ Sivakumar. 2012. ``\href{http://dx.doi.org/10.1111/j.1530-9290.2012.00486.x}{Using activity-based modeling to simulate urban resource demands at high spatial and temporal resolutions}''. \emph{Journal of Industrial Ecology}, 16(6): 889--900.
 
-\ind James Keirstead, Nouri Samsatli, A.\ Marco Pantaleo, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.1016/j.biombioe.2012.01.022}{Evaluating biomass energy strategies for a UK eco-town with an MILP optimization model}.'' \emph{Biomass and Bioenergy}, 39: 306--316.
+\ind J.\ Keirstead and C.\ Calderon.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.058}{Capturing spatial effects, technology interactions, and uncertainty in urban energy and carbon models: retrofitting Newcastle as a case-study}.''  \emph{Energy Policy}, 46: 253--267.
 
-\ind James Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
+%\ind J.\ Keirstead, M.\ Jennings, and A.\ Sivakumar. 2012. ``\href{http://dx.doi.org/10.1016/j.rser.2012.02.047}{A review of urban energy system models: approaches, challenges, and opportunities}.'' \emph{Renewable and Sustainable Energy Reviews}, 16(6): 3847--3866.
 
-\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
+\ind J.\ Keirstead, N.\ Samsatli, N.\ Shah and C.\ Weber. 2012. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}, 41(1): 93--103. 
+
+\ind J.\ Keirstead, N.\ Samsatli, A.M.\ Pantaleo, and N.\ Shah. 2012. ``\href{http://dx.doi.org/10.1016/j.biombioe.2012.01.022}{Evaluating biomass energy strategies for a UK eco-town with an MILP optimization model}.'' \emph{Biomass and Bioenergy}, 39: 306--316.
+
+\ind J.\ Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
+
+\ind J.\ Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
 
 \bigskip
 
-\noindent\emph{Book chapters and software\vspace{0.01in}}
+\noindent\emph{Reports, book chapters, and software\vspace{0.01in}}
 % \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
 % \begin{revnumerate
 
-\ind James Keirstead. 2013. ``decctools: tools for accessing UK energy statistics''. R package version 0.1.1, \url{http://cran.r-project.org/web/packages/decctools/}.
+\ind J.\ Keirstead. 2013. ``decctools: tools for accessing UK energy statistics''. R package version 0.1.2, \url{http://cran.r-project.org/web/packages/decctools/}.
+
+\ind N Shah, L Vallejo, \emph{et al}. 2013. ``\href{http://www3.imperial.ac.uk/climatechange/publications/collaborative/halving-global-co2-by-2050}{Halving Global CO2 by 2050: Technologies and Costs}''.  Imperial College London.
 
 %\ind Various chapters in UES book?
-\ind James Keirstead and Nilay Shah. 2013. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun, P.M.\ Pardalos, R.\ Enkhbat, S.\ Pistikopoulos.  Springer Series in Optimization and Its Applications.  Springer.
+\ind J.\ Keirstead and N.\ Shah. 2013. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun \emph{et al}.  Springer Series in Optimization and Its Applications.  Springer.
 
-\ind Arnulf Grubler \emph{et al}. 2012. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
+\ind A.\ Grubler \emph{et al}. 2012. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
 
-\ind Stephen Hammer, James Keirstead, \emph{et al}. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig, W.D.\ Solecki, S.A.\ Hammer, S.\ Mehrotra.  Cambridge: Cambridge University Press, 85--112.
+\ind S.\ Hammer, J.\ Keirstead, \emph{et al}. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig \emph{et al}.  Cambridge: Cambridge University Press, 85--112.
 
-\ind James Keirstead, Nouri Samsatli and Nilay Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
+\ind J.\ Keirstead, N.\ Samsatli and N.\ Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
 
 %\end{revnumerate}
 
@@ -289,16 +307,15 @@
 %% Presentations
 \noindent\marginhead{Recent\\Invited Talks}%
 %
-% TedX London, July 2013
+\ind 2013. ``How do models of urban energy systems account for climate change?''. RCN Virtual Collaboratory Call, October.
+
 \ind 2013. ``Technologies and policies for urban energy systems''.  Global Sustainability Summer School, Potsdam Institute for Climate Impact Research, Potsdam, Germany. July.
 
 \ind 2013. ``What can dynamical systems tell us about urban energy systems?''.  SIAM Conference on the Application of Dynamical Systems, Snowbird, Utah. 
 
 \ind 2012. ``What next for urban energy systems?'' Flexible Energy Delivery Systems seminar series, Cardiff University. October.
 
-\ind 2012. ``Modelling urban energy systems with SynCity'' RCN Workshop on Sustainable Cities, Denver, USA.  August.
-
-\ind 2012. ``Modelling approaches to urban energy systems: optimization, simulation, and more'' Martin Centre seminar series, University of Cambridge, UK. February.
+%\ind 2012. ``Modelling approaches to urban energy systems: optimization, simulation, and more'' Martin Centre seminar series, University of Cambridge, UK. February.
 
 \ind 2011. ``Modelling urban energy systems'' National Academy of Engineering/EU Frontiers of Engineering symposium, Irvine, CA. November.
 
@@ -311,13 +328,13 @@
 %
 % FLIRE?
 %
+\ind 2012--present.  SusLabs NWE, EU Interregio.  Co-investigator (£170,000).
+
 \ind 2012. Smart Thermal Storage Systems, DECC.  Co-investigator (£30,000).
 
-\ind 2012. The cost of 2$^\circ$C, AREVA.  Co-investigator.
+\ind 2012. The cost of 2$^\circ$C, AREVA.  Co-investigator (£5,100).
 
 \ind 2012. Energy Systems Modelling Research Challenge, Imperial College.  Principal investigator (£8,000).
-
-\ind 2011. Biomass system value-chain modelling, Energy Technologies Institute.  Co-investigator.
 
 \ind 2011. Energy systems analysis of South Heaton, Newcastle University.  Co-investigator (£2,500).
 
@@ -325,13 +342,13 @@
 
 \noindent\marginhead{Service to the \newline Profession}%
 %
-\ind 2011--present. Board member, Sustainable Urban Systems section, International Society for Industrial Ecology.
+\ind 2011--present. Board member, Sustainable Urban Systems section, Int.\ Society for Industrial Ecology.
 
 \ind 2011--2012. Technical advisory panel member, Challenging Lock-in Through Urban Energy Systems EPRSC project.
 
-\ind 2011--2013. Technical committee member, three international conferences on energy systems.
+% \ind 2011--2013. Technical committee member, three international conferences on energy systems.
 
-\ind Reviewer, Engineering and Physical Sciences Research Council, Economic and Social Research Council, and more than 25 peer-reviewed energy journals and conferences.
+\ind Reviewer, Engineering and Physical Sciences Research Council, Economic and Social Research Council, US, Canadian research councils, and over 25 peer-reviewed energy journals and conferences.
 
 \bigskip
 
@@ -339,7 +356,7 @@
 %
 \ind 2011--present.  CI{\addfontfeatures{Numbers={Lining}}1-101} Drawing, CI{\addfontfeatures{Numbers={Lining}}1-182} Energy Systems, CI{\addfontfeatures{Numbers={Lining}}9-SD} Sustainable Development MSc module, plus short lectures and modules on urban energy systems at both undergraduate and graduate levels.
  
-\ind 2007--present. Supervised or co-supervised 4 PhD students, 29 MSc projects, 5 MEng projects and internships.
+\ind 2007--present. Supervised or co-supervised 4 PhD students and over 40 MSc/MEng projects and internships.
 
 \bigskip
 

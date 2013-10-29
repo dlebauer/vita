@@ -2,3 +2,6 @@
 *.log
 *.out
 *.aux
+vc.tex
+*.bak
+js/
