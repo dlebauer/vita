@@ -30,6 +30,12 @@
 %%% remove these as needed.
 %%%------------------------------------------------------------------------
 
+% This is a much nicer way of handling all the references, etc.
+% as it will just pull them in from a BibTeX file, which of course I
+% can link to Mendeley
+% 
+% http://robjhyndman.com/hyndsight/cv/
+
 \documentclass[11pt,a4paper]{article}
 
 %%%------------------------------------------------------------------------
@@ -234,26 +240,23 @@
 %% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
 %% \begin{revnumerate}
 % Niels and me with GEA/UK data
-% Stefan's review paper
 % Buildings and Environment with Carlos
 % DisP paper with Carlos
 %
 % Actually published here http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667 ?
 % \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering.
-
+%
 % \ind N.J.\ Graham, K.\ Hellgardt, J.\ Keirstead, Q.\ Majali, K.S.\ Wong. In review. ``Combined hydrogen generation and grey water recycling at household scale'' submitted to \emph{ICE Engineering Sustainability}.
-
+%
 % \ind J.\ Keirstead.  In review.  ``Introducing sustainable development with a mathematical model'' submitted to \emph{ICE Engineering Sustainability}.
-
 %
 % \ind Nouri Samsatli, James Keirstead, and Nilay Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Applied Energy}.
 %
 %\ind James Keirstead and Mark Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Energy Economics}.  % Energy Economics if that fails?
 
-\ind Stefan Pfenninger, Adam Hawkes, and James Keirstead. 2014. ``Energy systems modeling for twenty-first century energy policy'' \emph{Renewable and Sustainable Energy Reviews}, accepted.
+\ind Stefan Pfenninger, Adam Hawkes, and James Keirstead. 2014. ``\href{http://dx.doi.org/10.1016/j.rser.2014.02.003}{Energy systems modeling for twenty-first century energy policy}'' \emph{Renewable and Sustainable Energy Reviews}, 33: 74--86.
 
-
-\ind James Keirstead. 2014. ``Fit for purpose? Rethinking modeling in industrial ecology?'' \emph{Journal of Industrial Ecology}. Accepted.
+\ind James Keirstead. 2014. ``\href{http://dx.doi.org/10.1111/jiec.12093}{Fit for purpose? Rethinking modeling in industrial ecology?}'' \emph{Journal of Industrial Ecology}. Accepted.
 
 \ind James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.08.063}{Benchmarking urban energy efficiency in the UK}'' \emph{Energy Policy}, 63: 575--587.
 
@@ -329,6 +332,7 @@
 % Stefan's IQ-SCENE abstract
 % Stefan's Energy Systems conference abstract
 % Energy Systems conference abstract with Sara Walker
+% IST Conference 5th International Conference on Sustainability Transitions, http://www.uu.nl/faculty/geosciences/EN/IST2014/Pages/default.aspx, led by Najine Ameli
 
 \ind James Keirstead. 2013. ``Introducing sustainable development to engineers with a simple mathematical model''.  Engineering Education for Sustainable Development conference.  Cambridge.
 
@@ -400,7 +404,7 @@ Hardcastle, A.\ Price, J.\ Bebbington. Glasgow, 1--20.
 %% Presentations
 \noindent\marginhead{Invited Talks}%
 %
-% \ind 2013.  ``Title''.  Gordon Research Conference on Industrial Ecology, June.
+% \ind 2014.  ``Title''.  Gordon Research Conference on Industrial Ecology, June.
 
 \ind 2013. ``How do models of urban energy systems account for climate change?''. RCN Virtual Collaboratory Call, October.
 
@@ -450,6 +454,7 @@ Hardcastle, A.\ Price, J.\ Bebbington. Glasgow, 1--20.
 % Climate KIC - Modelling City Systems
 % Climate KIC - Smart Sustainable Districts
 % Chris Kennedy's urban metabolism work
+% Future FM?
 % EPSRC Sponsorship Award?
 % Future Cities Catapult
 % Foresight Cities
@@ -478,26 +483,30 @@ Hardcastle, A.\ Price, J.\ Bebbington. Glasgow, 1--20.
 
 \ind 2001. CW Marshall Award for excellence in structural engineering, Queen's University.
 
-\ind 2000.  Guinness Book of World Records, longest distance travelled in a solar vehicle (7044 km).
+\ind 2000. Guinness Book of World Records, longest distance travelled in a solar vehicle (7044 km).
 
 \ind 2000. One of 125 ``Canadians Shaping the Nation We Will Live in Tomorrow'', chosen by \emph{The Globe and Mail}.
 
-\ind 2000.  Fifth Field Company Prize for excellence in hydrology, Queen's University.
+\ind 2000. Fifth Field Company Prize for excellence in hydrology, Queen's University.
 
 \ind 2000. Frederick and Christopher Ansley Award for extra-curriculars and academic excellence, Queen's University.
 
-\ind 1999.  \textsc{sn} Graham Award for extra-curriculars and academic excellence, Queen's University.
+\ind 1999. \textsc{sn} Graham Award for extra-curriculars and academic excellence, Queen's University.
 
 \ind 1998--2001.  Dean's Scholar for academic excellence, Queen's University.
 
 \bigskip 
 
 \noindent\marginhead{Service to the \newline Profession}%
-% \ind 2013 Invited participant.  EPSRC Engineering Leaders of the Future? October, Outside Birmingham.
+\ind 2014. Associate editor, \emph{Infrastructure Complexity}.
 
-\ind 2013.  Invited participant.  Research Councils UK energy strategy workshop on energy infrastructure.  Birmingham.
+\ind 2014. Programme committee member, First International Workshop on Demand Response (DR2014).
 
-\ind 2013.  Technical committee member.  International Society for Industrial Ecology conference.
+\ind 2013. Invited participant.  EPSRC Engineering Leaders of the Future. October, Hellidon Lakes.
+
+\ind 2013. Invited participant.  Research Councils UK energy strategy workshop on energy infrastructure.  Birmingham.
+
+\ind 2013. Technical committee member.  International Society for Industrial Ecology conference.
 
 \ind 2011--present. Board member, Sustainable Urban Systems section, International Society for Industrial Ecology.
 
@@ -507,9 +516,7 @@ Hardcastle, A.\ Price, J.\ Bebbington. Glasgow, 1--20.
 
 \ind 2011--2013. Programme committee member, 2nd--4th International Workshops on Agent Technologies for Energy Systems (ATES).
 
-\ind 2014.  Programme committee member, First International Workshop on Demand Response (DR2014).
-
-\ind 2010 Reviewer, ECOS and Next Generation Infrastructures conferences.
+\ind 2010. Reviewer, ECOS and Next Generation Infrastructures conferences.
 
 \ind 2009. Invited participant.  EPSRC Grand Challenge workshop on Sustainable Urban Environments.
 
@@ -536,6 +543,10 @@ Hardcastle, A.\ Price, J.\ Bebbington. Glasgow, 1--20.
 \bigskip
 \noindent\marginhead{PhD students}%
 %%
+% Peter North
+% 
+\ind 2014--present.  Honor Brixby. \emph{Urbanisation and non-communicable diseases}.  Joint with Majid Ezzati.
+
 \ind 2012--present.  Stefan Pfenninger. \emph{Multi-scale energy systems}
 
 \ind 2012--present.  Tom Ravalde. \emph{Highly integrated urban resource systems}
