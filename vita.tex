@@ -338,7 +338,1368 @@
 % \ind E.\ Sailer, D.M.G.\ Tabora, Keirstead, J.\ 2015. ``Assessment of Design Procedures for Vertical Borehole Heat Exchangers''.  Stanford Geothermal Workshop.
 %
 % \ind T.\ Ravalde, J.\ Keirstead.  Two papers for ISIE 2015?
+% \ind S.\ Pfenninger, P.\ Gauch%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Kieran Healy <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements (should be included in a modern tex distribution):
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medskip, 
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+% This is a much nicer way of handling all the references, etc.
+% as it will just pull them in from a BibTeX file, which of course I
+% can link to Mendeley
 % 
+% http://robjhyndman.com/hyndsight/cv/
+
+\documentclass[11pt,a4paper]{article}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{James Keirstead}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Imperial College London}
+\def\myaddress{Department of Civil and Environmental Engineering}
+\def\myemail{j.keirstead@imperial.ac.uk}
+\def\myweb{http://www.jameskeirstead.ca}
+\def\myphone{+44 (0) 207 594 6010}
+\def\myfax{+44 (0) 207 594 5934}
+\def\myversion{}
+\def\myrevision{}
+
+\date{} % not used (revision control instead)
+\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
+
+%%%------------------------------------------------------------------------  
+%%% Git version tracking 
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% See vc manual to compile with xelatex -enable-write18 vita
+\immediate\write18{vc.bat}
+\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+\usepackage{url,fancyhdr}
+%%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links 
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
+
+%% hyperlinks
+\usepackage[xetex, 
+	colorlinks=true,
+	urlcolor=ImperialLightBlue,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
+\setsansfont[Mapping=tex-text,Colour=156a9b]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas} % Pragmata, Lucida Console
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
+
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+%% git revision control footer 
+\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize Phone: \myphone \\ 
+  Fax: \myfax  \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+\end{minipage}
+
+
+\bigskip
+
+\bigskip
+
+%% Name 
+\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
+\reversemarginpar
+\raggedright
+
+\bigskip
+
+\bigskip
+
+%% Appointments
+
+\noindent\marginhead{Appointments}%
+%
+\emph{Imperial College London \vspace{0.01in}}
+
+\ind 2011--Present. Lecturer, Dept.\ of Civil and Environmental Engineering.      
+
+\ind 2009--2011. Research Fellow and Team Leader, BP Urban Energy Systems project.
+
+\ind 2006--2009. Research Associate, BP Urban Energy Systems project. \vspace{0.02in}
+
+\medskip
+
+\emph{Institute of Industrial Science, University of Tokyo \vspace{0.01in}}
+
+\ind October 2010.  Visiting Research Fellow.
+
+\bigskip
+
+%% Education
+
+\noindent\marginhead{Education}%
+%
+\emph{University of Oxford \vspace{0.01in}}
+
+\ind 2006.  DPhil, Energy Policy. \emph{Behavioural responses to photovoltaic systems in the UK domestic sector.}
+
+\ind 2002.  MSc, Environmental Change and Management (Distinction).
+
+\medskip
+
+\noindent\emph{Queen's University, Kingston, Ontario, Canada\vspace{0.02in}}
+
+\ind 2001. BSc Applied Science, Civil Engineering. (First Class Honours.) 
+
+\bigskip
+ 
+%% Publications
+\noindent\marginhead{Publications}%
+%
+%\medskip
+\noindent\emph{Books \vspace{0.01in}}
+
+\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
+%\normalsize
+
+\bigskip
+
+\emph{Journal articles \vspace{0.01in}} % 0.05
+ 
+%% Use revnumerate environment if numbered publications are needed. 
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+%
+% \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering. http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667
+%
+% \ind Nouri Samsatli, James Keirstead, and Nilay Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Applied Energy}.
+%
+%\ind James Keirstead and Mark Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Energy Economics}.  
+%
+% \ind James Keirstead and Niels Schulz.  Drafting. ``Scaling laws in urban energy consumption''.
+%
+% \ind C.\ Kennedy, I.\ Stewart, \emph{et al}. 2014. ``Energy and Material Flows of Megacities'' \emph{PNAS}, submitted.
+% 
+%  
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Comparing concentrating solar and nuclear power as baseload providers using the example of South Africa'' \emph{Energy}. Submitted. 
+
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Renewables, nuclear, or fossil fuels? Comparing scenarios for the UK electricity system''.  \emph{Applied Energy}.  Submitted.
+
+\ind R.\ Koppelaar, J.\ Keirstead, J.\ Woods, N.\ Shah. 2014. ``A review of policy analysis purposes and capabilities of electricity system models'' \emph{Renewable and Sustainable Energy Reviews}.  Submitted.
+
+\ind M.\ Chester et al. 2014. ``\href{http://onlinelibrary.wiley.com/enhanced/doi/10.1002/2014EF000253/}{Positioning Infrastructure and Technologies for Low-carbon Urbanization}.'' \emph{Earth's Future}, accepted.
+
+\ind J.\ Keirstead.  2014.  ``\href{http://dx.doi.org/10.1680/ensu.13.00036}{Introducing sustainable development with a mathematical model}'' \emph{ICE Engineering Sustainability}, 167(4): 137--142.
+
+\ind S.\ Pfenninger, A.\ Hawkes, and J.\ Keirstead. 2014. ``\href{http://dx.doi.org/10.1016/j.rser.2014.02.003}{Energy systems modeling for twenty-first century energy policy}'' \emph{Renewable and Sustainable Energy Reviews}, 33: 74--86.
+
+\ind James Keirstead. 2014. ``\href{http://dx.doi.org/10.1111/jiec.12093}{Fit for purpose? Rethinking modeling in industrial ecology?}'' \emph{Journal of Industrial Ecology}. 18(2): 161--163.
+
+\ind James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.08.063}{Benchmarking urban energy efficiency in the UK}'' \emph{Energy Policy}, 63: 575--587.
+
+\ind Clémence Morlet and James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.06.085}{A comparative analysis of urban energy governance in four European cities}'' \emph{Energy Policy}, 61: 852--863.
+
+\ind James Keirstead and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1111/j.1530-9290.2012.00486.x}{Using activity-based modeling to simulate urban resource demands at high spatial and temporal resolutions}''. \emph{Journal of Industrial Ecology}, 16(6): 889--900.
+
+\ind Paul Rutter and James Keirstead.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.072}{A brief history and the possible future of urban energy systems}''. \emph{Energy Policy}, 50: 72--80.
+
+\ind Carlos Calderon and James Keirstead. 2012. ``\href{http://dx.doi.org/10.1080/09613218.2012.680702}{Modelling frameworks for delivering low carbon cities: advocating a normalised practice}''. \emph{Building Research and Information}, 40(4): 504--517.
+
+\ind James Keirstead and Carlos Calderon.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.058}{Capturing spatial effects, technology interactions, and uncertainty in urban energy and carbon models: retrofitting Newcastle as a case-study}.''  \emph{Energy Policy}, 46: 253--267.  Corrigendum published 2014, \href{http://dx.doi.org/10.1016/j.enpol.2014.07.014}{10.1016/j.enpol.2014.07.014}.
+
+\ind James Keirstead, Mark Jennings, and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1016/j.rser.2012.02.047}{A review of urban energy system models: approaches, challenges, and opportunities}.'' \emph{Renewable and Sustainable Energy Reviews}, 16(6): 3847--3866.
+
+\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. 2012. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}, 41(1): 93--103. 
+
+\ind James Keirstead, Nouri Samsatli, A.\ Marco Pantaleo, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.1016/j.biombioe.2012.01.022}{Evaluating biomass energy strategies for a UK eco-town with an MILP optimization model}.'' \emph{Biomass and Bioenergy}, 39: 306--316.
+
+\ind Hao Liang, Weiding Long, James Keirstead, Nouri Samsatli, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.4028/www.scientific.net/AMR.433-440.1338}{Urban Energy System Planning and Chinese Low-Carbon Eco-City Case Study}''. \emph{Advanced Materials Research}, 433--440: 1338--1345. 
+
+\ind James Keirstead and Nilay Shah. 2011. ``\href{http://dx.doi.org/10.1016/j.compenvurbsys.2010.12.005}{Calculating minimum energy urban layouts with mathematical programming and Monte Carlo analysis techniques}.'' \emph{Computers, Environment and Urban Systems} 35(5):~368--377. 
+
+\ind Hao Liang, James Keirstead, Nouri Samsatli, Nilay Shah, and WD Long. 2011. ``Application of a novel, optimisation-based toolkit (`SynCity') for urban energy system design in Shanghai Lingang New City.'' \emph{Energy Education Science and Technology Part A} 28(1):~311--318.
+
+\ind James Keirstead. 2010. ``\href{http://dx.doi.org/10.1108/14777831011010829}{Applying service niche indicators to London's energy system}'' \emph{Management of Environmental Quality: An International Journal} 21(1):~6--19.
+
+\ind James Keirstead and Niels Schulz. 2010. ``\href{http://dx.doi.org/10.1016/j.enpol.2009.07.025}{London and beyond: Taking a closer look at urban energy policy}'' \emph{Energy Policy} 38(9):~4870--4879.
+
+\ind James Keirstead. 2009. ``\href{http://dx.doi.org/10.1016/j.eiar.2008.09.001}{Feeling lucky? Using search engines to assess perceptions of urban sustainability}'' \emph{Environmental Impact Assessment Review} 29(2):~87--95.
+
+\ind James Keirstead and Matt Leach.  2008. ``\href{http://dx.doi.org/10.1002/sd.349}{Bridging the gaps between theory and practice: a service niche approach to urban sustainability indicators}'' \emph{Sustainable Development} 16(5):~329--340.
+
+\ind James Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2006.08.003}{The UK domestic photovoltaics industry and the role of central government}'' \emph{Energy Policy} 35(4):~2268--2280.
+
+\ind James Keirstead. 2006. ``\href{http://dx.doi.org/10.1016/j.enpol.2005.06.004}{Evaluating the applicability of integrated domestic energy frameworks in the UK}'' \emph{Energy Policy} 34(17):~3065--3077.
+
+\bigskip
+
+\noindent\emph{Book chapters \vspace{0.01in}}
+% \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
+% \begin{revnumerate}
+
+%\ind Various chapters in UES book?
+\ind N Shah, L Vallejo, T Cockerill, A Gambhir, A Heyes, T Hills, M Jennings, O Jones, N Kalas, J Keirstead, C Khor, C Mazur, T Napp, A Strapasson, D Tong, J Woods. 2013. ``\href{http://www3.imperial.ac.uk/climatechange/publications/collaborative/halving-global-co2-by-2050}{Halving Global CO2 by 2050: Technologies and Costs}''.  Imperial College London.
+
+\ind James Keirstead and Nilay Shah. 2013. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun, P.M.\ Pardalos, R.\ Enkhbat, S.\ Pistikopoulos.  Springer Series in Optimization and Its Applications.  Springer.
+
+\ind James Keirstead and Nilay Shah. 2012. ``Urban Energy Systems Planning, Design and Implementation'' in \emph{Energizing Sustainable Cities: Assessing Urban Energy}, edited by A.\ Grubler and D.\ Fisk. London: Earthscan/Routledge.
+
+\ind Arnulf Grubler, Xuemei Bai, Thomas Buettner, Shobhakar Dhakal, David Fisk, Toshiaki Ichinose, James Keirstead, Gerd Sammer, David Satterthwaite, Niels Schulz, Nilay Shah, Julia Steinberger, and Helga Weisz. 2012. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
+
+\ind Stephen Hammer, James Keirstead, Shobhakar Dhakal, Jeanene Mitchell, Michelle Colley, Richard Gonzalez, Morgan Herve-Mignucci, Lily Parshall, Niels Schulz, Michael Hyams. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig, W.D.\ Solecki, S.A.\ Hammer, S.\ Mehrotra.  Cambridge: Cambridge University Press, 85--112.
+
+\ind Niels Schulz, Nilay Shah, David Fisk, James Keirstead, Nouri Samsatli, Aruna Sivakumar, C\'{e}line Weber, and Ellin Saunders. 2010. ``Mobilize: The SynCity Urban Energy Systems Model'' in \emph{Ecological Urbanism}, edited by M.\ Mostafavi and G.\ Doherty.  Baden, Lars M\"{u}ller Publishers.
+
+\ind James Keirstead, Nouri Samsatli and Nilay Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
+
+\ind James Keirstead. 2010. ``Total primary energy supply'' in \emph{Green Energy: An A-to-Z Guide}, edited by P.\ Robbins and D.\ Mulvaney.  Berkeley, CA: SAGE Publications, 426--428.
+
+%\end{revnumerate}
+
+\bigskip 
+
+\noindent\emph{Conference papers and posters\vspace{0.01in}}
+%
+%
+% \ind E.\ Sailer, D.M.G.\ Tabora, Keirstead, J.\ 2015. ``Assessment of Design Procedures for Vertical Borehole Heat Exchangers''.  Stanford Geothermal Workshop.
+%
+% \ind T.\ Ravalde, J.\ Keirstead.  Two papers for ISIE 2015?
+% \ind S.\ Pfenninger, P.\ Gauch%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Kieran Healy <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements (should be included in a modern tex distribution):
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medskip, 
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+% This is a much nicer way of handling all the references, etc.
+% as it will just pull them in from a BibTeX file, which of course I
+% can link to Mendeley
+% 
+% http://robjhyndman.com/hyndsight/cv/
+
+\documentclass[11pt,a4paper]{article}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{James Keirstead}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Imperial College London}
+\def\myaddress{Department of Civil and Environmental Engineering}
+\def\myemail{j.keirstead@imperial.ac.uk}
+\def\myweb{http://www.jameskeirstead.ca}
+\def\myphone{+44 (0) 207 594 6010}
+\def\myfax{+44 (0) 207 594 5934}
+\def\myversion{}
+\def\myrevision{}
+
+\date{} % not used (revision control instead)
+\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
+
+%%%------------------------------------------------------------------------  
+%%% Git version tracking 
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% See vc manual to compile with xelatex -enable-write18 vita
+\immediate\write18{vc.bat}
+\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+\usepackage{url,fancyhdr}
+%%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links 
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
+
+%% hyperlinks
+\usepackage[xetex, 
+	colorlinks=true,
+	urlcolor=ImperialLightBlue,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
+\setsansfont[Mapping=tex-text,Colour=156a9b]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas} % Pragmata, Lucida Console
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
+
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+%% git revision control footer 
+\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize Phone: \myphone \\ 
+  Fax: \myfax  \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+\end{minipage}
+
+
+\bigskip
+
+\bigskip
+
+%% Name 
+\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
+\reversemarginpar
+\raggedright
+
+\bigskip
+
+\bigskip
+
+%% Appointments
+
+\noindent\marginhead{Appointments}%
+%
+\emph{Imperial College London \vspace{0.01in}}
+
+\ind 2011--Present. Lecturer, Dept.\ of Civil and Environmental Engineering.      
+
+\ind 2009--2011. Research Fellow and Team Leader, BP Urban Energy Systems project.
+
+\ind 2006--2009. Research Associate, BP Urban Energy Systems project. \vspace{0.02in}
+
+\medskip
+
+\emph{Institute of Industrial Science, University of Tokyo \vspace{0.01in}}
+
+\ind October 2010.  Visiting Research Fellow.
+
+\bigskip
+
+%% Education
+
+\noindent\marginhead{Education}%
+%
+\emph{University of Oxford \vspace{0.01in}}
+
+\ind 2006.  DPhil, Energy Policy. \emph{Behavioural responses to photovoltaic systems in the UK domestic sector.}
+
+\ind 2002.  MSc, Environmental Change and Management (Distinction).
+
+\medskip
+
+\noindent\emph{Queen's University, Kingston, Ontario, Canada\vspace{0.02in}}
+
+\ind 2001. BSc Applied Science, Civil Engineering. (First Class Honours.) 
+
+\bigskip
+ 
+%% Publications
+\noindent\marginhead{Publications}%
+%
+%\medskip
+\noindent\emph{Books \vspace{0.01in}}
+
+\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
+%\normalsize
+
+\bigskip
+
+\emph{Journal articles \vspace{0.01in}} % 0.05
+ 
+%% Use revnumerate environment if numbered publications are needed. 
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+%
+% \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering. http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667
+%
+% \ind Nouri Samsatli, James Keirstead, and Nilay Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Applied Energy}.
+%
+%\ind James Keirstead and Mark Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Energy Economics}.  
+%
+% \ind James Keirstead and Niels Schulz.  Drafting. ``Scaling laws in urban energy consumption''.
+%
+% \ind C.\ Kennedy, I.\ Stewart, \emph{et al}. 2014. ``Energy and Material Flows of Megacities'' \emph{PNAS}, submitted.
+% 
+%  
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Comparing concentrating solar and nuclear power as baseload providers using the example of South Africa'' \emph{Energy}. Submitted. 
+
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Renewables, nuclear, or fossil fuels? Comparing scenarios for the UK electricity system''.  \emph{Applied Energy}.  Submitted.
+
+\ind R.\ Koppelaar, J.\ Keirstead, J.\ Woods, N.\ Shah. 2014. ``A review of policy analysis purposes and capabilities of electricity system models'' \emph{Renewable and Sustainable Energy Reviews}.  Submitted.
+
+\ind M.\ Chester et al. 2014. ``\href{http://onlinelibrary.wiley.com/enhanced/doi/10.1002/2014EF000253/}{Positioning Infrastructure and Technologies for Low-carbon Urbanization}.'' \emph{Earth's Future}, accepted.
+
+\ind J.\ Keirstead.  2014.  ``\href{http://dx.doi.org/10.1680/ensu.13.00036}{Introducing sustainable development with a mathematical model}'' \emph{ICE Engineering Sustainability}, 167(4): 137--142.
+
+\ind S.\ Pfenninger, A.\ Hawkes, and J.\ Keirstead. 2014. ``\href{http://dx.doi.org/10.1016/j.rser.2014.02.003}{Energy systems modeling for twenty-first century energy policy}'' \emph{Renewable and Sustainable Energy Reviews}, 33: 74--86.
+
+\ind James Keirstead. 2014. ``\href{http://dx.doi.org/10.1111/jiec.12093}{Fit for purpose? Rethinking modeling in industrial ecology?}'' \emph{Journal of Industrial Ecology}. 18(2): 161--163.
+
+\ind James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.08.063}{Benchmarking urban energy efficiency in the UK}'' \emph{Energy Policy}, 63: 575--587.
+
+\ind Clémence Morlet and James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.06.085}{A comparative analysis of urban energy governance in four European cities}'' \emph{Energy Policy}, 61: 852--863.
+
+\ind James Keirstead and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1111/j.1530-9290.2012.00486.x}{Using activity-based modeling to simulate urban resource demands at high spatial and temporal resolutions}''. \emph{Journal of Industrial Ecology}, 16(6): 889--900.
+
+\ind Paul Rutter and James Keirstead.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.072}{A brief history and the possible future of urban energy systems}''. \emph{Energy Policy}, 50: 72--80.
+
+\ind Carlos Calderon and James Keirstead. 2012. ``\href{http://dx.doi.org/10.1080/09613218.2012.680702}{Modelling frameworks for delivering low carbon cities: advocating a normalised practice}''. \emph{Building Research and Information}, 40(4): 504--517.
+
+\ind James Keirstead and Carlos Calderon.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.058}{Capturing spatial effects, technology interactions, and uncertainty in urban energy and carbon models: retrofitting Newcastle as a case-study}.''  \emph{Energy Policy}, 46: 253--267.  Corrigendum published 2014, \href{http://dx.doi.org/10.1016/j.enpol.2014.07.014}{10.1016/j.enpol.2014.07.014}.
+
+\ind James Keirstead, Mark Jennings, and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1016/j.rser.2012.02.047}{A review of urban energy system models: approaches, challenges, and opportunities}.'' \emph{Renewable and Sustainable Energy Reviews}, 16(6): 3847--3866.
+
+\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. 2012. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}, 41(1): 93--103. 
+
+\ind James Keirstead, Nouri Samsatli, A.\ Marco Pantaleo, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.1016/j.biombioe.2012.01.022}{Evaluating biomass energy strategies for a UK eco-town with an MILP optimization model}.'' \emph{Biomass and Bioenergy}, 39: 306--316.
+
+\ind Hao Liang, Weiding Long, James Keirstead, Nouri Samsatli, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.4028/www.scientific.net/AMR.433-440.1338}{Urban Energy System Planning and Chinese Low-Carbon Eco-City Case Study}''. \emph{Advanced Materials Research}, 433--440: 1338--1345. 
+
+\ind James Keirstead and Nilay Shah. 2011. ``\href{http://dx.doi.org/10.1016/j.compenvurbsys.2010.12.005}{Calculating minimum energy urban layouts with mathematical programming and Monte Carlo analysis techniques}.'' \emph{Computers, Environment and Urban Systems} 35(5):~368--377. 
+
+\ind Hao Liang, James Keirstead, Nouri Samsatli, Nilay Shah, and WD Long. 2011. ``Application of a novel, optimisation-based toolkit (`SynCity') for urban energy system design in Shanghai Lingang New City.'' \emph{Energy Education Science and Technology Part A} 28(1):~311--318.
+
+\ind James Keirstead. 2010. ``\href{http://dx.doi.org/10.1108/14777831011010829}{Applying service niche indicators to London's energy system}'' \emph{Management of Environmental Quality: An International Journal} 21(1):~6--19.
+
+\ind James Keirstead and Niels Schulz. 2010. ``\href{http://dx.doi.org/10.1016/j.enpol.2009.07.025}{London and beyond: Taking a closer look at urban energy policy}'' \emph{Energy Policy} 38(9):~4870--4879.
+
+\ind James Keirstead. 2009. ``\href{http://dx.doi.org/10.1016/j.eiar.2008.09.001}{Feeling lucky? Using search engines to assess perceptions of urban sustainability}'' \emph{Environmental Impact Assessment Review} 29(2):~87--95.
+
+\ind James Keirstead and Matt Leach.  2008. ``\href{http://dx.doi.org/10.1002/sd.349}{Bridging the gaps between theory and practice: a service niche approach to urban sustainability indicators}'' \emph{Sustainable Development} 16(5):~329--340.
+
+\ind James Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2006.08.003}{The UK domestic photovoltaics industry and the role of central government}'' \emph{Energy Policy} 35(4):~2268--2280.
+
+\ind James Keirstead. 2006. ``\href{http://dx.doi.org/10.1016/j.enpol.2005.06.004}{Evaluating the applicability of integrated domestic energy frameworks in the UK}'' \emph{Energy Policy} 34(17):~3065--3077.
+
+\bigskip
+
+\noindent\emph{Book chapters \vspace{0.01in}}
+% \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
+% \begin{revnumerate}
+
+%\ind Various chapters in UES book?
+\ind N Shah, L Vallejo, T Cockerill, A Gambhir, A Heyes, T Hills, M Jennings, O Jones, N Kalas, J Keirstead, C Khor, C Mazur, T Napp, A Strapasson, D Tong, J Woods. 2013. ``\href{http://www3.imperial.ac.uk/climatechange/publications/collaborative/halving-global-co2-by-2050}{Halving Global CO2 by 2050: Technologies and Costs}''.  Imperial College London.
+
+\ind James Keirstead and Nilay Shah. 2013. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun, P.M.\ Pardalos, R.\ Enkhbat, S.\ Pistikopoulos.  Springer Series in Optimization and Its Applications.  Springer.
+
+\ind James Keirstead and Nilay Shah. 2012. ``Urban Energy Systems Planning, Design and Implementation'' in \emph{Energizing Sustainable Cities: Assessing Urban Energy}, edited by A.\ Grubler and D.\ Fisk. London: Earthscan/Routledge.
+
+\ind Arnulf Grubler, Xuemei Bai, Thomas Buettner, Shobhakar Dhakal, David Fisk, Toshiaki Ichinose, James Keirstead, Gerd Sammer, David Satterthwaite, Niels Schulz, Nilay Shah, Julia Steinberger, and Helga Weisz. 2012. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
+
+\ind Stephen Hammer, James Keirstead, Shobhakar Dhakal, Jeanene Mitchell, Michelle Colley, Richard Gonzalez, Morgan Herve-Mignucci, Lily Parshall, Niels Schulz, Michael Hyams. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig, W.D.\ Solecki, S.A.\ Hammer, S.\ Mehrotra.  Cambridge: Cambridge University Press, 85--112.
+
+\ind Niels Schulz, Nilay Shah, David Fisk, James Keirstead, Nouri Samsatli, Aruna Sivakumar, C\'{e}line Weber, and Ellin Saunders. 2010. ``Mobilize: The SynCity Urban Energy Systems Model'' in \emph{Ecological Urbanism}, edited by M.\ Mostafavi and G.\ Doherty.  Baden, Lars M\"{u}ller Publishers.
+
+\ind James Keirstead, Nouri Samsatli and Nilay Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
+
+\ind James Keirstead. 2010. ``Total primary energy supply'' in \emph{Green Energy: An A-to-Z Guide}, edited by P.\ Robbins and D.\ Mulvaney.  Berkeley, CA: SAGE Publications, 426--428.
+
+%\end{revnumerate}
+
+\bigskip 
+
+\noindent\emph{Conference papers and posters\vspace{0.01in}}
+%
+%
+% \ind E.\ Sailer, D.M.G.\ Tabora, Keirstead, J.\ 2015. ``Assessment of Design Procedures for Vertical Borehole Heat Exchangers''.  Stanford Geothermal Workshop.
+%
+% \ind T.\ Ravalde, J.\ Keirstead.  Two papers for ISIE 2015?
+% \ind S.\ Pfenninger, P.\ Gauch%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Kieran Healy <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements (should be included in a modern tex distribution):
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medskip, 
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+% This is a much nicer way of handling all the references, etc.
+% as it will just pull them in from a BibTeX file, which of course I
+% can link to Mendeley
+% 
+% http://robjhyndman.com/hyndsight/cv/
+
+\documentclass[11pt,a4paper]{article}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{James Keirstead}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Imperial College London}
+\def\myaddress{Department of Civil and Environmental Engineering}
+\def\myemail{j.keirstead@imperial.ac.uk}
+\def\myweb{http://www.jameskeirstead.ca}
+\def\myphone{+44 (0) 207 594 6010}
+\def\myfax{+44 (0) 207 594 5934}
+\def\myversion{}
+\def\myrevision{}
+
+\date{} % not used (revision control instead)
+\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
+
+%%%------------------------------------------------------------------------  
+%%% Git version tracking 
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% See vc manual to compile with xelatex -enable-write18 vita
+\immediate\write18{vc.bat}
+\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+\usepackage{url,fancyhdr}
+%%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links 
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
+
+%% hyperlinks
+\usepackage[xetex, 
+	colorlinks=true,
+	urlcolor=ImperialLightBlue,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
+\setsansfont[Mapping=tex-text,Colour=156a9b]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas} % Pragmata, Lucida Console
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
+
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+%% git revision control footer 
+\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize Phone: \myphone \\ 
+  Fax: \myfax  \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+\end{minipage}
+
+
+\bigskip
+
+\bigskip
+
+%% Name 
+\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
+\reversemarginpar
+\raggedright
+
+\bigskip
+
+\bigskip
+
+%% Appointments
+
+\noindent\marginhead{Appointments}%
+%
+\emph{Imperial College London \vspace{0.01in}}
+
+\ind 2011--Present. Lecturer, Dept.\ of Civil and Environmental Engineering.      
+
+\ind 2009--2011. Research Fellow and Team Leader, BP Urban Energy Systems project.
+
+\ind 2006--2009. Research Associate, BP Urban Energy Systems project. \vspace{0.02in}
+
+\medskip
+
+\emph{Institute of Industrial Science, University of Tokyo \vspace{0.01in}}
+
+\ind October 2010.  Visiting Research Fellow.
+
+\bigskip
+
+%% Education
+
+\noindent\marginhead{Education}%
+%
+\emph{University of Oxford \vspace{0.01in}}
+
+\ind 2006.  DPhil, Energy Policy. \emph{Behavioural responses to photovoltaic systems in the UK domestic sector.}
+
+\ind 2002.  MSc, Environmental Change and Management (Distinction).
+
+\medskip
+
+\noindent\emph{Queen's University, Kingston, Ontario, Canada\vspace{0.02in}}
+
+\ind 2001. BSc Applied Science, Civil Engineering. (First Class Honours.) 
+
+\bigskip
+ 
+%% Publications
+\noindent\marginhead{Publications}%
+%
+%\medskip
+\noindent\emph{Books \vspace{0.01in}}
+
+\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
+%\normalsize
+
+\bigskip
+
+\emph{Journal articles \vspace{0.01in}} % 0.05
+ 
+%% Use revnumerate environment if numbered publications are needed. 
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+%
+% \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering. http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667
+%
+% \ind Nouri Samsatli, James Keirstead, and Nilay Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Applied Energy}.
+%
+%\ind James Keirstead and Mark Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Energy Economics}.  
+%
+% \ind James Keirstead and Niels Schulz.  Drafting. ``Scaling laws in urban energy consumption''.
+%
+% \ind C.\ Kennedy, I.\ Stewart, \emph{et al}. 2014. ``Energy and Material Flows of Megacities'' \emph{PNAS}, submitted.
+% 
+%  
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Comparing concentrating solar and nuclear power as baseload providers using the example of South Africa'' \emph{Energy}. Submitted. 
+
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Renewables, nuclear, or fossil fuels? Comparing scenarios for the UK electricity system''.  \emph{Applied Energy}.  Submitted.
+
+\ind R.\ Koppelaar, J.\ Keirstead, J.\ Woods, N.\ Shah. 2014. ``A review of policy analysis purposes and capabilities of electricity system models'' \emph{Renewable and Sustainable Energy Reviews}.  Submitted.
+
+\ind M.\ Chester et al. 2014. ``\href{http://onlinelibrary.wiley.com/enhanced/doi/10.1002/2014EF000253/}{Positioning Infrastructure and Technologies for Low-carbon Urbanization}.'' \emph{Earth's Future}, accepted.
+
+\ind J.\ Keirstead.  2014.  ``\href{http://dx.doi.org/10.1680/ensu.13.00036}{Introducing sustainable development with a mathematical model}'' \emph{ICE Engineering Sustainability}, 167(4): 137--142.
+
+\ind S.\ Pfenninger, A.\ Hawkes, and J.\ Keirstead. 2014. ``\href{http://dx.doi.org/10.1016/j.rser.2014.02.003}{Energy systems modeling for twenty-first century energy policy}'' \emph{Renewable and Sustainable Energy Reviews}, 33: 74--86.
+
+\ind James Keirstead. 2014. ``\href{http://dx.doi.org/10.1111/jiec.12093}{Fit for purpose? Rethinking modeling in industrial ecology?}'' \emph{Journal of Industrial Ecology}. 18(2): 161--163.
+
+\ind James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.08.063}{Benchmarking urban energy efficiency in the UK}'' \emph{Energy Policy}, 63: 575--587.
+
+\ind Clémence Morlet and James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.06.085}{A comparative analysis of urban energy governance in four European cities}'' \emph{Energy Policy}, 61: 852--863.
+
+\ind James Keirstead and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1111/j.1530-9290.2012.00486.x}{Using activity-based modeling to simulate urban resource demands at high spatial and temporal resolutions}''. \emph{Journal of Industrial Ecology}, 16(6): 889--900.
+
+\ind Paul Rutter and James Keirstead.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.072}{A brief history and the possible future of urban energy systems}''. \emph{Energy Policy}, 50: 72--80.
+
+\ind Carlos Calderon and James Keirstead. 2012. ``\href{http://dx.doi.org/10.1080/09613218.2012.680702}{Modelling frameworks for delivering low carbon cities: advocating a normalised practice}''. \emph{Building Research and Information}, 40(4): 504--517.
+
+\ind James Keirstead and Carlos Calderon.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.058}{Capturing spatial effects, technology interactions, and uncertainty in urban energy and carbon models: retrofitting Newcastle as a case-study}.''  \emph{Energy Policy}, 46: 253--267.  Corrigendum published 2014, \href{http://dx.doi.org/10.1016/j.enpol.2014.07.014}{10.1016/j.enpol.2014.07.014}.
+
+\ind James Keirstead, Mark Jennings, and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1016/j.rser.2012.02.047}{A review of urban energy system models: approaches, challenges, and opportunities}.'' \emph{Renewable and Sustainable Energy Reviews}, 16(6): 3847--3866.
+
+\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. 2012. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}, 41(1): 93--103. 
+
+\ind James Keirstead, Nouri Samsatli, A.\ Marco Pantaleo, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.1016/j.biombioe.2012.01.022}{Evaluating biomass energy strategies for a UK eco-town with an MILP optimization model}.'' \emph{Biomass and Bioenergy}, 39: 306--316.
+
+\ind Hao Liang, Weiding Long, James Keirstead, Nouri Samsatli, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.4028/www.scientific.net/AMR.433-440.1338}{Urban Energy System Planning and Chinese Low-Carbon Eco-City Case Study}''. \emph{Advanced Materials Research}, 433--440: 1338--1345. 
+
+\ind James Keirstead and Nilay Shah. 2011. ``\href{http://dx.doi.org/10.1016/j.compenvurbsys.2010.12.005}{Calculating minimum energy urban layouts with mathematical programming and Monte Carlo analysis techniques}.'' \emph{Computers, Environment and Urban Systems} 35(5):~368--377. 
+
+\ind Hao Liang, James Keirstead, Nouri Samsatli, Nilay Shah, and WD Long. 2011. ``Application of a novel, optimisation-based toolkit (`SynCity') for urban energy system design in Shanghai Lingang New City.'' \emph{Energy Education Science and Technology Part A} 28(1):~311--318.
+
+\ind James Keirstead. 2010. ``\href{http://dx.doi.org/10.1108/14777831011010829}{Applying service niche indicators to London's energy system}'' \emph{Management of Environmental Quality: An International Journal} 21(1):~6--19.
+
+\ind James Keirstead and Niels Schulz. 2010. ``\href{http://dx.doi.org/10.1016/j.enpol.2009.07.025}{London and beyond: Taking a closer look at urban energy policy}'' \emph{Energy Policy} 38(9):~4870--4879.
+
+\ind James Keirstead. 2009. ``\href{http://dx.doi.org/10.1016/j.eiar.2008.09.001}{Feeling lucky? Using search engines to assess perceptions of urban sustainability}'' \emph{Environmental Impact Assessment Review} 29(2):~87--95.
+
+\ind James Keirstead and Matt Leach.  2008. ``\href{http://dx.doi.org/10.1002/sd.349}{Bridging the gaps between theory and practice: a service niche approach to urban sustainability indicators}'' \emph{Sustainable Development} 16(5):~329--340.
+
+\ind James Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2006.08.003}{The UK domestic photovoltaics industry and the role of central government}'' \emph{Energy Policy} 35(4):~2268--2280.
+
+\ind James Keirstead. 2006. ``\href{http://dx.doi.org/10.1016/j.enpol.2005.06.004}{Evaluating the applicability of integrated domestic energy frameworks in the UK}'' \emph{Energy Policy} 34(17):~3065--3077.
+
+\bigskip
+
+\noindent\emph{Book chapters \vspace{0.01in}}
+% \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
+% \begin{revnumerate}
+
+%\ind Various chapters in UES book?
+\ind N Shah, L Vallejo, T Cockerill, A Gambhir, A Heyes, T Hills, M Jennings, O Jones, N Kalas, J Keirstead, C Khor, C Mazur, T Napp, A Strapasson, D Tong, J Woods. 2013. ``\href{http://www3.imperial.ac.uk/climatechange/publications/collaborative/halving-global-co2-by-2050}{Halving Global CO2 by 2050: Technologies and Costs}''.  Imperial College London.
+
+\ind James Keirstead and Nilay Shah. 2013. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun, P.M.\ Pardalos, R.\ Enkhbat, S.\ Pistikopoulos.  Springer Series in Optimization and Its Applications.  Springer.
+
+\ind James Keirstead and Nilay Shah. 2012. ``Urban Energy Systems Planning, Design and Implementation'' in \emph{Energizing Sustainable Cities: Assessing Urban Energy}, edited by A.\ Grubler and D.\ Fisk. London: Earthscan/Routledge.
+
+\ind Arnulf Grubler, Xuemei Bai, Thomas Buettner, Shobhakar Dhakal, David Fisk, Toshiaki Ichinose, James Keirstead, Gerd Sammer, David Satterthwaite, Niels Schulz, Nilay Shah, Julia Steinberger, and Helga Weisz. 2012. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
+
+\ind Stephen Hammer, James Keirstead, Shobhakar Dhakal, Jeanene Mitchell, Michelle Colley, Richard Gonzalez, Morgan Herve-Mignucci, Lily Parshall, Niels Schulz, Michael Hyams. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig, W.D.\ Solecki, S.A.\ Hammer, S.\ Mehrotra.  Cambridge: Cambridge University Press, 85--112.
+
+\ind Niels Schulz, Nilay Shah, David Fisk, James Keirstead, Nouri Samsatli, Aruna Sivakumar, C\'{e}line Weber, and Ellin Saunders. 2010. ``Mobilize: The SynCity Urban Energy Systems Model'' in \emph{Ecological Urbanism}, edited by M.\ Mostafavi and G.\ Doherty.  Baden, Lars M\"{u}ller Publishers.
+
+\ind James Keirstead, Nouri Samsatli and Nilay Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
+
+\ind James Keirstead. 2010. ``Total primary energy supply'' in \emph{Green Energy: An A-to-Z Guide}, edited by P.\ Robbins and D.\ Mulvaney.  Berkeley, CA: SAGE Publications, 426--428.
+
+%\end{revnumerate}
+
+\bigskip 
+
+\noindent\emph{Conference papers and posters\vspace{0.01in}}
+%
+%
+% \ind E.\ Sailer, D.M.G.\ Tabora, Keirstead, J.\ 2015. ``Assessment of Design Procedures for Vertical Borehole Heat Exchangers''.  Stanford Geothermal Workshop.
+%
+% \ind T.\ Ravalde, J.\ Keirstead.  Two papers for ISIE 2015?
+% \ind S.\ Pfenninger, P.\ Gauch%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Kieran Healy <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements (should be included in a modern tex distribution):
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medskip, 
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+% This is a much nicer way of handling all the references, etc.
+% as it will just pull them in from a BibTeX file, which of course I
+% can link to Mendeley
+% 
+% http://robjhyndman.com/hyndsight/cv/
+
+\documentclass[11pt,a4paper]{article}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are 
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{James Keirstead}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Imperial College London}
+\def\myaddress{Department of Civil and Environmental Engineering}
+\def\myemail{j.keirstead@imperial.ac.uk}
+\def\myweb{http://www.jameskeirstead.ca}
+\def\myphone{+44 (0) 207 594 6010}
+\def\myfax{+44 (0) 207 594 5934}
+\def\myversion{}
+\def\myrevision{}
+
+\date{} % not used (revision control instead)
+\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
+
+%%%------------------------------------------------------------------------  
+%%% Git version tracking 
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% See vc manual to compile with xelatex -enable-write18 vita
+\immediate\write18{vc.bat}
+\input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+\usepackage{url,fancyhdr}
+%%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links 
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
+
+%% hyperlinks
+\usepackage[xetex, 
+	colorlinks=true,
+	urlcolor=ImperialLightBlue,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
+\setsansfont[Mapping=tex-text,Colour=156a9b]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas} % Pragmata, Lucida Console
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
+
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+%% git revision control footer 
+\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize Phone: \myphone \\ 
+  Fax: \myfax  \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+\end{minipage}
+
+
+\bigskip
+
+\bigskip
+
+%% Name 
+\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
+\reversemarginpar
+\raggedright
+
+\bigskip
+
+\bigskip
+
+%% Appointments
+
+\noindent\marginhead{Appointments}%
+%
+\emph{Imperial College London \vspace{0.01in}}
+
+\ind 2011--Present. Lecturer, Dept.\ of Civil and Environmental Engineering.      
+
+\ind 2009--2011. Research Fellow and Team Leader, BP Urban Energy Systems project.
+
+\ind 2006--2009. Research Associate, BP Urban Energy Systems project. \vspace{0.02in}
+
+\medskip
+
+\emph{Institute of Industrial Science, University of Tokyo \vspace{0.01in}}
+
+\ind October 2010.  Visiting Research Fellow.
+
+\bigskip
+
+%% Education
+
+\noindent\marginhead{Education}%
+%
+\emph{University of Oxford \vspace{0.01in}}
+
+\ind 2006.  DPhil, Energy Policy. \emph{Behavioural responses to photovoltaic systems in the UK domestic sector.}
+
+\ind 2002.  MSc, Environmental Change and Management (Distinction).
+
+\medskip
+
+\noindent\emph{Queen's University, Kingston, Ontario, Canada\vspace{0.02in}}
+
+\ind 2001. BSc Applied Science, Civil Engineering. (First Class Honours.) 
+
+\bigskip
+ 
+%% Publications
+\noindent\marginhead{Publications}%
+%
+%\medskip
+\noindent\emph{Books \vspace{0.01in}}
+
+\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
+%\normalsize
+
+\bigskip
+
+\emph{Journal articles \vspace{0.01in}} % 0.05
+ 
+%% Use revnumerate environment if numbered publications are needed. 
+%% (Include it above in the preamble).
+%% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
+%% \begin{revnumerate}
+%
+% \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering. http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667
+%
+% \ind Nouri Samsatli, James Keirstead, and Nilay Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Applied Energy}.
+%
+%\ind James Keirstead and Mark Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Energy Economics}.  
+%
+% \ind James Keirstead and Niels Schulz.  Drafting. ``Scaling laws in urban energy consumption''.
+%
+% \ind C.\ Kennedy, I.\ Stewart, \emph{et al}. 2014. ``Energy and Material Flows of Megacities'' \emph{PNAS}, submitted.
+% 
+%  
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Comparing concentrating solar and nuclear power as baseload providers using the example of South Africa'' \emph{Energy}. Submitted. 
+
+\ind S.\ Pfenninger and J.\ Keirstead. 2014. ``Renewables, nuclear, or fossil fuels? Comparing scenarios for the UK electricity system''.  \emph{Applied Energy}.  Submitted.
+
+\ind R.\ Koppelaar, J.\ Keirstead, J.\ Woods, N.\ Shah. 2014. ``A review of policy analysis purposes and capabilities of electricity system models'' \emph{Renewable and Sustainable Energy Reviews}.  Submitted.
+
+\ind M.\ Chester et al. 2014. ``\href{http://onlinelibrary.wiley.com/enhanced/doi/10.1002/2014EF000253/}{Positioning Infrastructure and Technologies for Low-carbon Urbanization}.'' \emph{Earth's Future}, accepted.
+
+\ind J.\ Keirstead.  2014.  ``\href{http://dx.doi.org/10.1680/ensu.13.00036}{Introducing sustainable development with a mathematical model}'' \emph{ICE Engineering Sustainability}, 167(4): 137--142.
+
+\ind S.\ Pfenninger, A.\ Hawkes, and J.\ Keirstead. 2014. ``\href{http://dx.doi.org/10.1016/j.rser.2014.02.003}{Energy systems modeling for twenty-first century energy policy}'' \emph{Renewable and Sustainable Energy Reviews}, 33: 74--86.
+
+\ind James Keirstead. 2014. ``\href{http://dx.doi.org/10.1111/jiec.12093}{Fit for purpose? Rethinking modeling in industrial ecology?}'' \emph{Journal of Industrial Ecology}. 18(2): 161--163.
+
+\ind James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.08.063}{Benchmarking urban energy efficiency in the UK}'' \emph{Energy Policy}, 63: 575--587.
+
+\ind Clémence Morlet and James Keirstead. 2013. ``\href{http://dx.doi.org/10.1016/j.enpol.2013.06.085}{A comparative analysis of urban energy governance in four European cities}'' \emph{Energy Policy}, 61: 852--863.
+
+\ind James Keirstead and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1111/j.1530-9290.2012.00486.x}{Using activity-based modeling to simulate urban resource demands at high spatial and temporal resolutions}''. \emph{Journal of Industrial Ecology}, 16(6): 889--900.
+
+\ind Paul Rutter and James Keirstead.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.072}{A brief history and the possible future of urban energy systems}''. \emph{Energy Policy}, 50: 72--80.
+
+\ind Carlos Calderon and James Keirstead. 2012. ``\href{http://dx.doi.org/10.1080/09613218.2012.680702}{Modelling frameworks for delivering low carbon cities: advocating a normalised practice}''. \emph{Building Research and Information}, 40(4): 504--517.
+
+\ind James Keirstead and Carlos Calderon.  2012. ``\href{http://dx.doi.org/10.1016/j.enpol.2012.03.058}{Capturing spatial effects, technology interactions, and uncertainty in urban energy and carbon models: retrofitting Newcastle as a case-study}.''  \emph{Energy Policy}, 46: 253--267.  Corrigendum published 2014, \href{http://dx.doi.org/10.1016/j.enpol.2014.07.014}{10.1016/j.enpol.2014.07.014}.
+
+\ind James Keirstead, Mark Jennings, and Aruna Sivakumar. 2012. ``\href{http://dx.doi.org/10.1016/j.rser.2012.02.047}{A review of urban energy system models: approaches, challenges, and opportunities}.'' \emph{Renewable and Sustainable Energy Reviews}, 16(6): 3847--3866.
+
+\ind James Keirstead, Nouri Samsatli, Nilay Shah and C\'{e}line Weber. 2012. ``\href{http://dx.doi.org/10.1016/j.energy.2011.06.011}{The impact of CHP (combined heat and power) planning restrictions on the efficiency of urban energy systems}.'' \emph{Energy}, 41(1): 93--103. 
+
+\ind James Keirstead, Nouri Samsatli, A.\ Marco Pantaleo, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.1016/j.biombioe.2012.01.022}{Evaluating biomass energy strategies for a UK eco-town with an MILP optimization model}.'' \emph{Biomass and Bioenergy}, 39: 306--316.
+
+\ind Hao Liang, Weiding Long, James Keirstead, Nouri Samsatli, and Nilay Shah. 2012. ``\href{http://dx.doi.org/10.4028/www.scientific.net/AMR.433-440.1338}{Urban Energy System Planning and Chinese Low-Carbon Eco-City Case Study}''. \emph{Advanced Materials Research}, 433--440: 1338--1345. 
+
+\ind James Keirstead and Nilay Shah. 2011. ``\href{http://dx.doi.org/10.1016/j.compenvurbsys.2010.12.005}{Calculating minimum energy urban layouts with mathematical programming and Monte Carlo analysis techniques}.'' \emph{Computers, Environment and Urban Systems} 35(5):~368--377. 
+
+\ind Hao Liang, James Keirstead, Nouri Samsatli, Nilay Shah, and WD Long. 2011. ``Application of a novel, optimisation-based toolkit (`SynCity') for urban energy system design in Shanghai Lingang New City.'' \emph{Energy Education Science and Technology Part A} 28(1):~311--318.
+
+\ind James Keirstead. 2010. ``\href{http://dx.doi.org/10.1108/14777831011010829}{Applying service niche indicators to London's energy system}'' \emph{Management of Environmental Quality: An International Journal} 21(1):~6--19.
+
+\ind James Keirstead and Niels Schulz. 2010. ``\href{http://dx.doi.org/10.1016/j.enpol.2009.07.025}{London and beyond: Taking a closer look at urban energy policy}'' \emph{Energy Policy} 38(9):~4870--4879.
+
+\ind James Keirstead. 2009. ``\href{http://dx.doi.org/10.1016/j.eiar.2008.09.001}{Feeling lucky? Using search engines to assess perceptions of urban sustainability}'' \emph{Environmental Impact Assessment Review} 29(2):~87--95.
+
+\ind James Keirstead and Matt Leach.  2008. ``\href{http://dx.doi.org/10.1002/sd.349}{Bridging the gaps between theory and practice: a service niche approach to urban sustainability indicators}'' \emph{Sustainable Development} 16(5):~329--340.
+
+\ind James Keirstead. 2008. ``\href{http://dx.doi.org/10.1016/j.enpol.2008.09.019}{What changes, if any, would increased levels of low-carbon decentralised energy have on the built environment?}'' \emph{Energy Policy} 36(12):~4518--4521.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2007.02.019}{Behavioural responses to photovoltaic systems in the UK domestic sector}'' \emph{Energy Policy} 35(8):~4128--4141.
+
+\ind James Keirstead. 2007. ``\href{http://dx.doi.org/10.1016/j.enpol.2006.08.003}{The UK domestic photovoltaics industry and the role of central government}'' \emph{Energy Policy} 35(4):~2268--2280.
+
+\ind James Keirstead. 2006. ``\href{http://dx.doi.org/10.1016/j.enpol.2005.06.004}{Evaluating the applicability of integrated domestic energy frameworks in the UK}'' \emph{Energy Policy} 34(17):~3065--3077.
+
+\bigskip
+
+\noindent\emph{Book chapters \vspace{0.01in}}
+% \renewcommand{\labelenumi}{\textsc{c}\theenumi.}
+% \begin{revnumerate}
+
+%\ind Various chapters in UES book?
+\ind N Shah, L Vallejo, T Cockerill, A Gambhir, A Heyes, T Hills, M Jennings, O Jones, N Kalas, J Keirstead, C Khor, C Mazur, T Napp, A Strapasson, D Tong, J Woods. 2013. ``\href{http://www3.imperial.ac.uk/climatechange/publications/collaborative/halving-global-co2-by-2050}{Halving Global CO2 by 2050: Technologies and Costs}''.  Imperial College London.
+
+\ind James Keirstead and Nilay Shah. 2013. ``The changing role of optimization in urban planning'' in \emph{Optimization, Simulation and Control}, edited by A.\ Chinchuluun, P.M.\ Pardalos, R.\ Enkhbat, S.\ Pistikopoulos.  Springer Series in Optimization and Its Applications.  Springer.
+
+\ind James Keirstead and Nilay Shah. 2012. ``Urban Energy Systems Planning, Design and Implementation'' in \emph{Energizing Sustainable Cities: Assessing Urban Energy}, edited by A.\ Grubler and D.\ Fisk. London: Earthscan/Routledge.
+
+\ind Arnulf Grubler, Xuemei Bai, Thomas Buettner, Shobhakar Dhakal, David Fisk, Toshiaki Ichinose, James Keirstead, Gerd Sammer, David Satterthwaite, Niels Schulz, Nilay Shah, Julia Steinberger, and Helga Weisz. 2012. ``Urban Energy Systems'' in \emph{The Global Energy Assessment}. Cambridge: Cambridge University Press.
+
+\ind Stephen Hammer, James Keirstead, Shobhakar Dhakal, Jeanene Mitchell, Michelle Colley, Richard Gonzalez, Morgan Herve-Mignucci, Lily Parshall, Niels Schulz, Michael Hyams. 2011. ``Climate Change and Urban Energy Systems'' in \emph{Climate Change and Cities: First Assessment Report of the Urban Climate Change Research Network}, edited by C.\ Rosenzweig, W.D.\ Solecki, S.A.\ Hammer, S.\ Mehrotra.  Cambridge: Cambridge University Press, 85--112.
+
+\ind Niels Schulz, Nilay Shah, David Fisk, James Keirstead, Nouri Samsatli, Aruna Sivakumar, C\'{e}line Weber, and Ellin Saunders. 2010. ``Mobilize: The SynCity Urban Energy Systems Model'' in \emph{Ecological Urbanism}, edited by M.\ Mostafavi and G.\ Doherty.  Baden, Lars M\"{u}ller Publishers.
+
+\ind James Keirstead, Nouri Samsatli and Nilay Shah. 2010. ``SynCity: an integrated tool kit for urban energy systems modelling'' in \emph{Energy Efficient Cities: Assessment Tools and Benchmarking Practices}, edited by R.\ Bose.  Washington: World Bank, 21--42.
+
+\ind James Keirstead. 2010. ``Total primary energy supply'' in \emph{Green Energy: An A-to-Z Guide}, edited by P.\ Robbins and D.\ Mulvaney.  Berkeley, CA: SAGE Publications, 426--428.
+
+%\end{revnumerate}
+
+\bigskip 
+
+\noindent\emph{Conference papers and posters\vspace{0.01in}}
+%
+%
+% \ind E.\ Sailer, D.M.G.\ Tabora, Keirstead, J.\ 2015. ``Assessment of Design Procedures for Vertical Borehole Heat Exchangers''.  Stanford Geothermal Workshop.
+%
+% \ind T.\ Ravalde, J.\ Keirstead.  Two papers for ISIE 2015?
+%
+% \ind S.\ Pfenninger, P.\ Gauché, J.\ Keirstead. 2015.  ``Comparing the whole-system costs of baseload power from CSP and nuclear power plants under high renewables scenarios for the case of South Africa''. IAEE 2015.
 %
 % \ind Mijic, A., Cazorla, J.R., Keirstead, J. 2014. ``Water-energy links in cities: the urban metabolism of London''.  AGU Fall Meeting, San Francisco.
 %
