@@ -14,5 +14,5 @@ lines <- lapply(talks, function(x) {
 })
 
 out.file <- "../templates/talks.tex"
-file.remove(out.file)
+if (file.exists(out.file)) file.remove(out.file)
 invisible(lapply(lines, write, file=out.file, append=TRUE))
