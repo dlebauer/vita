@@ -38,6 +38,8 @@
 
 \documentclass[11pt,a4paper]{article}
 
+\usepackage{cv}
+
 %%%------------------------------------------------------------------------
 %%% Metadata
 %%%------------------------------------------------------------------------
@@ -88,8 +90,13 @@
 \definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
 \definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
 
+% Bibliography stuff
+\bibliography{../content/papers}
+\addtocategory{papers}{Keirstead_2013}
+
+
 %% hyperlinks
-\usepackage[xetex, 
+\hypersetup{xetex, 
 	colorlinks=true,
 	urlcolor=ImperialLightBlue,
 	plainpages=false,
@@ -99,7 +106,7 @@
   	pagebackref,
   	pdfauthor={\myauthor},
   	pdfkeywords={\mykeywords}
-  	]{hyperref}
+  	}
 
 %%%------------------------------------------------------------------------
 %%% Document
@@ -232,6 +239,10 @@
 %\normalsize
 
 \bigskip
+
+\begin{publications}
+\printbib{papers}
+\end{publications}
 
 \emph{Journal articles \vspace{0.01in}} % 0.05
  
