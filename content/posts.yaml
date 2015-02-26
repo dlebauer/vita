@@ -1,0 +1,16 @@
+posts:
+  - employer: Imperial College London
+    roles:
+      - start: 2006
+        end: 2009
+        title: Research Associate, BP Urban Energy Systems Project
+      - start: 2009
+        end: 2011
+        title: Research Fellow and Team Leader, BP Urban Energy Systems project
+      - start: 2011
+        end: present
+        title: Lecturer, Dept of Civil and Environmental Engineering
+  - employer: Institute of Industrial Science, University of Tokyo
+    roles:
+      - start: October 2010
+        title: Visiting Research Fellow

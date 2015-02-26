@@ -1,0 +1,108 @@
+grants:
+  - start: 2014
+    end: present
+    title: Future FM
+    funder: EPSRC
+    role: Co-investigator
+    value: £600,000
+  - start: 2014
+    end: present
+    title: Smart Sustainable Districts
+    funder: Climate KIC
+    role: Co-investigator
+    value: £68,000
+  - start: 2014
+    end: present
+    title: Modeling City Systems
+    funder: Climate KIC
+    role: Co-investigator
+    value: unknown
+  - start: 2014
+    end: present
+    title: "Sponsorship Award: Urban-scale Building Energy Network"
+    funder: EPSRC
+    role: Principal investigator
+    value: £23,300
+  - start: 2014
+    end: present
+    title: Downscaling urban metabolism
+    funder: Enel Foundation/University of Toronto
+    role: Principal investigator
+    value: £10,000
+  - start: 2012
+    end: present
+    title: SusLab NWE
+    funder: EU Interregio
+    role: Co-investigator
+    value: £170,000
+  - start: 2012
+    end: 2012
+    title: Smart Thermal Storage Systems
+    funder: DECC
+    role: Co-investigator
+    value: £30,000
+  - start: 2012
+    end: 2013 (?)
+    title: "Halving global CO2 by 2050: Technologies and Costs"
+    funder: AREVA
+    role: Co-investigator
+    value: unknown
+  - start: 2012
+    end: 2012
+    title: Energy Futures Lab Research Challenge
+    funder: Imperial College London
+    role: Principal investigator
+    value: £8,000
+  - start: 2011
+    end: 2011
+    title: Energy systems analysis of South Heaton
+    funder: Newcastle University
+    role: Co-investigator
+    value: £2,500
+  - start: 2009
+    end: 2009
+    title: MBA Innovation, Entrepreneurship and Design
+    funder: Imperial College London
+    role: Ideator
+    value: 30 person-months
+awards:
+  - start: 2003
+    end: 2006
+    title: Commonwealth Scholar
+    other: held at University of Oxford
+  - start: 2001
+    end: 2002
+    title: British Council Chevening Scholar
+    other: held at University of Oxford
+  - start: 2001
+    end: 2001
+    title: Consulting Engineers of Ontario Louanne Smrke Award
+    other: for excellence in written communication
+  - start: 2001
+    end: 2001
+    title: CW Marshall Award
+    other: "for excellence in structural engineering, Queen's University"
+  - start: 2000
+    end: 2000
+    title: Guinness World Record
+    other: longest distance travelled in a solar vehicle (7044 km)
+  - start: 2000
+    end: 2000
+    title: "One of 125 'Canadians Shaping the Nation We Will Live in Tomorrow'"
+    other: chosen by The Globe and Mail
+  - start: 2000
+    end: 2000
+    title: Fifth Field Company Prize
+    other: "for excellence in hydrology, Queen's University"
+  - start: 2000
+    end: 2000
+    title: Frederick and Christopher Ansley Award
+    other: "for extra-curriculars and academic excellence, Queen's University"
+  - start: 1999
+    end: 1999
+    title: SN Graham Award 
+    other: "for extra-curriculars and academic excellence, Queen's University"
+  - start: 1998
+    end: 2001
+    title: "Dean's Scholar"
+    other: "for academic excellence, Queen's University"
