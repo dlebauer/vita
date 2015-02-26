@@ -30,12 +30,6 @@
 %%% remove these as needed.
 %%%------------------------------------------------------------------------
 
-% This is a much nicer way of handling all the references, etc.
-% as it will just pull them in from a BibTeX file, which of course I
-% can link to Mendeley
-% 
-% http://robjhyndman.com/hyndsight/cv/
-
 \documentclass[11pt,a4paper]{article}
 
 \usepackage{cv}
@@ -91,7 +85,8 @@
 
 % Bibliography stuff
 \bibliography{../content/papers}
-\addtocategory{papers}{Keirstead_2013}
+\addtocategory{books}{Keirstead2013a}
+\addtocategory{papers}{Keirsteada}
 
 
 %% hyperlinks
@@ -232,15 +227,16 @@
 \begin{publications}
 %
 %\medskip
-\noindent\emph{Books \vspace{0.01in}}
-
-\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
+\printbib{books}
+%\noindent\emph{Books \vspace{0.01in}}
+%
+%\ind James Keirstead and Nilay Shah (editors).  2013. \emph{Urban Energy Systems: an Integrated Approach}. London: Routledge/Earthscan.
 %\normalsize
-
-\bigskip
-
-
-
+%
+%\bigskip
+%
+%%
+%
 %\emph{Journal articles \vspace{0.01in}} % 0.05
 
 \printbib{papers}
