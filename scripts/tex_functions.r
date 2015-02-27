@@ -77,7 +77,7 @@ format_grants <- function(l) {
 
 
 format_awards <- function(l) {
-    tmp <- l[[2]]
+    tmp <- l[[1]]
 
     ## Sort by year order
     ord <- order(unlist(lapply(tmp, function(x) x$start)))

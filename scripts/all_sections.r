@@ -14,7 +14,7 @@ process_yaml("../content/grants.yaml",
              "../templates/grants.tex",
              "format_grants")
 
-process_yaml("../content/grants.yaml",
+process_yaml("../content/awards.yaml",
              "../templates/awards.tex",
              "format_awards")
 
