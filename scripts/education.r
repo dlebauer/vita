@@ -1,30 +1,32 @@
-## Test for parsing YAML
+#' Process the education files
+source("yaml.r")
 
-library(yaml)
+f <- function(l) {
 
-## Load the talks
-talks <- yaml.load_file("../content/education.yaml")[[1]]
+    tmp <- l[[1]]
 
-## Sort by year order
-ord <- order(unlist(lapply(talks, function(x) x$year)))
-talks <- talks[ord]
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$year)))
+    tmp <- tmp[ord]
 
-lines <- lapply(talks, function(x) {
+    lines <- lapply(tmp, function(x) {
 
-    post <- ""
-    
-    if ("thesis" %in% names(x)) 
-        post <- paste0(post, sprintf("\\emph{%s}", x$thesis))
-    
+        post <- ""
+        
+        if ("thesis" %in% names(x)) 
+            post <- paste0(post, sprintf("\\emph{%s}", x$thesis))
+        
+        
+        if ("award" %in% names (x)) 
+            post <- paste0(post, sprintf("%s", x$award))
+        
+        if (nchar(post)>0) post <- paste0(post, ".")
+        
+        with(x, sprintf("\\ind %d. %s, %s. %s\n", year, degree, university, post))
+    })
 
-    if ("award" %in% names (x)) 
-        post <- paste0(post, sprintf("%s", x$award))
-    
-    if (nchar(post)>0) post <- paste0(post, ".")
-    
-    with(x, sprintf("\\ind %d. %s, %s. %s\n", year, degree, university, post))
-})
+    return(lines)
+}
 
-out.file <- "../templates/education.tex"
-if (file.exists(out.file)) file.remove(out.file)
-invisible(lapply(lines, write, file=out.file, append=TRUE))
+process_yaml("../content/education.yaml",
+             "../templates/education.tex", f)
