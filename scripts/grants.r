@@ -1,45 +1,49 @@
-## Test for parsing YAML
+#' Process the grants
 
-library(yaml)
+source("yaml.r")
 
-## Load the talks
-data <- yaml.load_file("../content/grants.yaml")[[1]]
+process_grants <- function(l) {
+    tmp <- l[[1]]
 
-## Sort by year order
-ord <- order(unlist(lapply(data, function(x) x$start)))
-data <- data[ord]
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
 
-lines <- lapply(data, function(x) {
-    if (x$start==x$end) {
-        with(x, sprintf("\\ind %s. %s, %s. %s (%s).\n",
-                        start, title, funder, role, value))
-    } else {
-        with(x, sprintf("\\ind %s--%s. %s, %s. %s (%s).\n",
-                        start, end, title, funder, role, value))
-    }
-})
+    lines <- lapply(tmp, function(x) {
+        if (x$start==x$end) {
+            with(x, sprintf("\\ind %s. %s, %s. %s (%s).\n",
+                            start, title, funder, role, value))
+        } else {
+            with(x, sprintf("\\ind %s--%s. %s, %s. %s (%s).\n",
+                            start, end, title, funder, role, value))
+        }
+    })
+    return(lines)
+}
 
-out.file <- "../templates/grants.tex"
-if (file.exists(out.file)) file.remove(out.file)
-invisible(lapply(lines, write, file=out.file, append=TRUE))
 
-## Load the talks
-data <- yaml.load_file("../content/grants.yaml")[[2]]
+process_awards <- function(l) {
+    tmp <- l[[2]]
 
-## Sort by year order
-ord <- order(unlist(lapply(data, function(x) x$start)))
-data <- data[ord]
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
 
-lines <- lapply(data, function(x) {
-    if (x$start==x$end) {
-        with(x, sprintf("\\ind %s. %s, %s.\n",
-                        start, title, other))
-    } else {
-        with(x, sprintf("\\ind %s--%s. %s, %s.\n",
-                        start, end, title, other))
-    }
-})
+    lines <- lapply(tmp, function(x) {
+        if (x$start==x$end) {
+            with(x, sprintf("\\ind %s. %s, %s.\n",
+                            start, title, other))
+        } else {
+            with(x, sprintf("\\ind %s--%s. %s, %s.\n",
+                            start, end, title, other))
+        }
+    })
 
-out.file <- "../templates/awards.tex"
-if (file.exists(out.file)) file.remove(out.file)
-invisible(lapply(lines, write, file=out.file, append=TRUE))
+    return(lines)
+}
+
+
+process_yaml("../content/grants.yaml",
+             "../templates/grants.tex", process_grants)
+process_yaml("../content/grants.yaml",
+             "../templates/awards.tex", process_awards)
