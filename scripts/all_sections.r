@@ -1,38 +1,39 @@
 source("yaml.r")
 source("tex_functions.r")
 
+var <- "affiliations"
 process_yaml("../content/affiliations.yaml", 
              "../templates/affiliations.tex",
-             format_affiliations)
+             paste0("format_", var))
 
 process_yaml("../content/education.yaml",
              "../templates/education.tex",
-             format_education)
+             "format_education")
 
 process_yaml("../content/grants.yaml",
              "../templates/grants.tex",
-             process_grants)
+             "format_grants")
 
 process_yaml("../content/grants.yaml",
              "../templates/awards.tex",
-             process_awards)
+             "format_awards")
 
 process_yaml("../content/posts.yaml",
              "../templates/posts.tex",
-             format_posts)
+             "format_posts")
 
 process_yaml("../content/service.yaml",
              "../templates/service.tex",
-             format_service)
+             "format_service")
 
 process_yaml("../content/students.yaml",
              "../templates/students.tex",
-             format_students)
+             "format_students")
 
 process_yaml("../content/talks.yaml",
              "../templates/talks.tex",
-             format_talks)
+             "format_talks")
 
 process_yaml("../content/teaching.yaml",
              "../templates/teaching.tex",
-             format_teaching)
+             "format_teaching")

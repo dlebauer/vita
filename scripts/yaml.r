@@ -6,9 +6,9 @@ library(yaml)
 #'
 #' @param input a character giving the YAML file
 #' @param output a character giving the output file name
-#' @param f a function describing how to parse the YAML file.  It
-#' should take a list of YAML data and process appropriately,
-#' returning a list of output lines
+#' @param f a character giving the name of the function describing how
+#' to parse the YAML file.  It should take a list of YAML data and
+#' process appropriately, returning a list of output lines
 #'
 #' @return NULL
 process_yaml <- function(input, output, f) {
@@ -19,7 +19,7 @@ process_yaml <- function(input, output, f) {
     
     data <- yaml.load_file(input)
 
-    lines <- f(data)
+    lines <- eval(call(f, data))
 
     if (file.exists(output)) file.remove(output)
     invisible(lapply(lines, write, file=output, append=TRUE))
