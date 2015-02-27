@@ -1,18 +1,19 @@
-## Test for parsing YAML
+#' Process the students
+source("yaml.r")
 
-library(yaml)
+f <- function(l) {
+    tmp <- l[[1]]
+    
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
 
-## Load the talks
-talks <- yaml.load_file("../content/students.yaml")[[1]]
+    lines <- lapply(tmp, function(x) {
+        with(x, sprintf("\\ind %d--%s.  %s, \\emph{%s}.\n", start, end, name, title))
+    })
 
-## Sort by year order
-ord <- order(unlist(lapply(talks, function(x) x$start)))
-talks <- talks[ord]
+    return(lines)
+}
 
-lines <- lapply(talks, function(x) {
-    with(x, sprintf("\\ind %d--%s.  %s, \\emph{%s}.\n", start, end, name, title))
-})
-
-out.file <- "../templates/students.tex"
-if (file.exists(out.file)) file.remove(out.file)
-invisible(lapply(lines, write, file=out.file, append=TRUE))
+process_yaml("../content/students.yaml",
+             "../templates/students.tex", f)
