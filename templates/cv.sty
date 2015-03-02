@@ -46,12 +46,53 @@
 }
 \vspace*{0.2cm}}
 
+% A fudge from http://tex.stackexchange.com/questions/19200/titlesec-remove-space-after-empty-margin-section
+
+\makeatletter
+\newif\ifaftersec\aftersecfalse
+
+\newcommand\setsubskip{%
+    \global\aftersectrue
+    \everypar{%
+        \global\aftersecfalse
+        \if@noskipsec
+            \global\@noskipsecfalse
+            \clubpenalty\@M
+            \hskip-\parindent
+            \begingroup
+                \@svsechd\unskip{\hspace{\@tempskipb}}%
+            \endgroup
+        \else
+            \clubpenalty\@clubpenalty\everypar{}%
+        \fi}}
+
+\newcommand\subskip{%
+  \ifaftersec
+     \removelastskip%         EDIT 2
+     \vspace{-\baselineskip}% EDIT 2 ??????????????
+  \fi
+  \global\aftersecfalse}
+
+\titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
+\titlespacing*{\section}{2cm}{2.5ex}{0.5cm}
+
+\titleformat{\subsection}{\subskip\itshape}{}{0pt}{}[]
+\titlespacing*{\subsection}{0pt}{2ex}{1ex}
+
+\raggedbottom
+\makeatother
+
 
 % Section headings
-\titlelabel{}
-\titlespacing{\section}{0pt}{2ex}{1ex}
-\titleformat*{\section}{\itshape}
-\titlespacing{\subsection}{0pt}{1ex}{0.5ex}
+%\titlelabel{}
+
+%\titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{}{}
+%\titlespacing*{\section}{2.5cm}{2ex}{0ex}
+
+%%\titleformat{\section}[leftmargin]{\itshape}{}{}{}
+%%\titleformat{\section}[leftmargin]{\scshape \footnotesize}{10pt}{}{}
+%\titleformat{\subsection}{\itshape}{}{}{}
+%\titlespacing{\subsection}{0pt}{-2ex}{0ex}
 
 % Miscellaneous dimensions
 \setlength{\parskip}{0ex}
@@ -89,7 +130,7 @@
   \printtext{\bibstring{in}\intitlepunct}}}
 
 % Bibliography categories
-\def\makebibcategory#1#2{\DeclareBibliographyCategory{#1}\defbibheading{#1}{\section*{#2}}}
+\def\makebibcategory#1#2{\DeclareBibliographyCategory{#1}\defbibheading{#1}{\subsection*{#2}}}
 \makebibcategory{books}{Books}
 \makebibcategory{papers}{Journal articles}
 \makebibcategory{chapters}{Book chapters}
@@ -116,8 +157,9 @@
 {\bibitem}
 
 % \section{\LARGE Publications}
-\newenvironment{publications}{\noindent\marginhead{Publications}\label{papersstart}%\vspace*{0.2cm}%
-\titlespacing{\section}{0pt}{1.5ex}{1ex}\itemsep=0.00cm}{\label{papersend}\addtocounter{sumpapers}{-1}\refstepcounter{sumpapers}\label{sumpapers}}
+\newenvironment{publications}{\section{Publications}\label{papersstart}%\vspace*{0.2cm}%
+%\titlespacing{\section}{0pt}{1.5ex}{1ex}\itemsep=0.00cm
+}{\label{papersend}\addtocounter{sumpapers}{-1}\refstepcounter{sumpapers}\label{sumpapers}}
 
 \def\printbib#1{\printbibliography[category=#1,heading=#1]\lastref{sumpapers}}
 \renewcommand{\bibfont}{\normalfont\fontsize{11}{13.4}\rmfamily}
