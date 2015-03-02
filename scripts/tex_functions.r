@@ -101,7 +101,7 @@ format_posts <- function(l) {
     tmp <- l[[1]]
 
     lines <- lapply(tmp, function(x) {
-        topline <- sprintf("\\emph{%s}\n", x$employer)
+        topline <- sprintf("\\subsection*{%s}\n", x$employer)
 
         roles <- lapply(x$roles, function(x) {
             if ("end" %in% names(x)) {
@@ -111,11 +111,10 @@ format_posts <- function(l) {
             }
         })
         
-        c(list(topline), roles, list("\\medskip\n"))
+        c(list(topline), roles)
     })
     
-    lines <- head(unlist(lines), -1)
-    return(lines)
+    return(unlist(lines))
 }
 
 
