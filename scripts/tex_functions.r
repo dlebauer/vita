@@ -177,7 +177,7 @@ format_teaching <- function(l) {
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
-        with(x, sprintf("\\ind %d--%s.  %s.\n", start, end, title))
+        with(x, sprintf("\\ind %d--%s.  {\\addfontfeature{Numbers={Proportional, Lining}}%s}.\n", start, end, title))
     })
 
     return(lines)
