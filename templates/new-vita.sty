@@ -68,69 +68,48 @@
 \def\tel#1{\def\@tel{#1}}
 \def\postnoms#1{\def\@postnoms{#1}}
 \def\address#1{\def\@address{#1}}
-\def\mykeywords{}
-\def\myaffiliation{Imperial College London}
-\def\myaddress{Department of Civil and Environmental Engineering}
+\def\subject#1{\def\@subject{#1}}
 
 \date{} % not used (revision control instead)
-\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
 
 %% hyperlinks
-\AtBeginDocument{\hypersetup{xetex, 
-	colorlinks=true,
-	urlcolor=ImperialBlue,
-	plainpages=false,
-  	pdfpagelabels,
-  	bookmarksnumbered,
-  	pdftitle={Vita},
-  	pagebackref,
-  	pdfauthor={\@name},
-  	pdfkeywords={\mykeywords}
-  	}}
-
-
-% Header box
-\newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
+\AtBeginDocument{%
+  \def\keywords{\@name, Vita, CV, Resume, \@subject}
+  \hypersetup{xetex, 
+    colorlinks=true,
+    urlcolor=ImperialBlue,
+    plainpages=false,
+    pdfpagelabels,
+    bookmarksnumbered,
+    pdftitle={Vita},
+    pagebackref,
+    pdfauthor={\@name},
+    pdfkeywords={\keywords}
+  }
+}
 
 \def\maketitle{
-\thispagestyle{plain}
-\vspace*{-1.4cm}
-\shadebox[0.9]{17.3cm}{\sf\color[rgb]{.6,0,0}
-\hbox to 17cm{\begin{tabular}{p{7.4cm}}
-\LARGE\textbf{\@name}\\[0.3cm]
-\Large\textbf{Curriculum Vitae}\\[0.6cm]
-\normalsize\today
-\end{tabular}
-\hfill\hbox{\fontsize{9}{12}\sf
-}}
+  \thispagestyle{plain}
+
+  \begin{minipage}[t]{2.95in}
+    \flushright {\footnotesize \@address} 
+  \end{minipage}
+  \hfill     
+  \hfill
+  \begin{minipage}[t]{1.7in}
+    \flushright \footnotesize Phone: \@tel \\ 
+    {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
+    {\scriptsize  \texttt{\href{\@www}{\@www}}}
+  \end{minipage}
+
+  \bigskip
+  \bigskip
+
+  %% Name 
+  \noindent{\LARGE\scshape{\@title\ \@name}} {\scriptsize \textsc{\@postnoms}}\\
+
 }
-\vspace*{0.2cm}}
 
-\newcommand{\makeheader}{%
-%%%------------------------------------------------------------------------
-%%% Address and contact block
-%%%------------------------------------------------------------------------
-\begin{minipage}[t]{2.95in}
-\flushright {\footnotesize \@address} 
-\end{minipage}
-\hfill     
-\hfill
-\begin{minipage}[t]{1.7in}
-  \flushright \footnotesize Phone: \@tel \\ 
-  {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
-  {\scriptsize  \texttt{\href{\@www}{\@www}}}
-\end{minipage}
-
-
-\bigskip
-
-\bigskip
-
-%% Name 
-\noindent{\Large\scshape{\@title\ \@name}} {\scriptsize \textsc{\@postnoms}}\\
-%\reversemarginpar
-\raggedright
-}
 
 %%------------------------------------------------------------------------
 %% Section styling
