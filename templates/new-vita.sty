@@ -112,11 +112,14 @@
 \def\maketitle{
   \thispagestyle{myplain}
 
-  \begin{minipage}[t]{2.95in}
+  % Pull header block up
+  \vspace*{-6em}
+
+
+  \begin{minipage}[t]{3.5in}
     \flushright {\footnotesize \@address} 
   \end{minipage}
   \hfill     
-  \hfill
   \begin{minipage}[t]{1.7in}
     \flushright \footnotesize Phone: \@tel \\ 
     {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
@@ -128,6 +131,8 @@
 
   %% Name 
   \noindent{\LARGE\scshape{\@title\ \@name}} {\scriptsize \textsc{\@postnoms}}\\
+  \bigskip
+  \bigskip
 
 }
 
