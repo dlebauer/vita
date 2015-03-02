@@ -8,24 +8,91 @@
 %%  - http://kjhealy.github.com/kjh-vita
 %%
 
+%%  Load required packages
+%%  ------------------------------------------------------------------------
 \usepackage{paralist,ragged2e,datetime}
 \usepackage{hyperref,fancyhdr,enumitem,color}
 \usepackage[a4paper,centering]{geometry}
 \usepackage[compact,small,sf,bf]{titlesec}
 %\usepackage{kpfonts,dsfont}
 
-\RaggedRight
-\sloppy
 
-% Header and footer
+%% ------------------------------------------------------------------------
+%% Fonts and colours
+%% ------------------------------------------------------------------------
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links 
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
+
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe. 
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
+\setsansfont[Mapping=tex-text,Colour=ImperialBlue]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Avenir Next Condensed Regular} % Consolas, Pragmata, Lucida Console
+
+%% ------------------------------------------------------------------------
+%% Header and footer
+%% ------------------------------------------------------------------------
 \pagestyle{fancy}
 \lhead{\sf Curriculum Vitae: \@name}
 \rhead{\sf\thepage}
 \cfoot{}
 
-% Date format
-\newdateformat{rjh}{\monthname~\THEYEAR}
-\rjh
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+%% git revision control footer 
+\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
+%%------------------------------------------------------------------------
+%% Basic name functions and title box
+%%------------------------------------------------------------------------
+
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{James Keirstead}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{Imperial College London}
+\def\myaddress{Department of Civil and Environmental Engineering}
+\def\myemail{j.keirstead@imperial.ac.uk}
+\def\myweb{http://www.jameskeirstead.ca}
+\def\myphone{+44 (0) 207 594 6010}
+\def\myfax{+44 (0) 207 594 5934}
+\def\myversion{}
+\def\myrevision{}
+
+\date{} % not used (revision control instead)
+\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
+
+%% hyperlinks
+\hypersetup{xetex, 
+	colorlinks=true,
+	urlcolor=ImperialBlue,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	}
+
 
 % Header box
 \def\name#1{\def\@name{#1}}
@@ -48,6 +115,39 @@
 }
 \vspace*{0.2cm}}
 
+\newcommand{\makeheader}{%
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{2.95in}
+\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
+\end{minipage}
+\hfill     
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize Phone: \myphone \\ 
+  Fax: \myfax  \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+\end{minipage}
+
+
+\bigskip
+
+\bigskip
+
+%% Name 
+\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
+\reversemarginpar
+\raggedright
+}
+
+%%------------------------------------------------------------------------
+%% Section styling
+%%------------------------------------------------------------------------
 % A fudge from http://tex.stackexchange.com/questions/19200/titlesec-remove-space-after-empty-margin-section
 
 \makeatletter
@@ -96,17 +196,9 @@
 %\titleformat{\subsection}{\itshape}{}{}{}
 %\titlespacing{\subsection}{0pt}{-2ex}{0ex}
 
-% Miscellaneous dimensions
-\setlength{\parskip}{0ex}
-\setlength{\parindent}{0em}
-\setlength{\headheight}{15pt}
-\setlength{\tabcolsep}{0.15cm}
-\clubpenalty = 10000
-\widowpenalty = 10000
-\setlist{itemsep=1pt}
-\setdescription{labelwidth=1.2cm,leftmargin=1.5cm,labelindent=1.5cm,font=\rm}
-
-% Bibliography formatting
+%%%------------------------------------------------------------------------
+%%%  Bibliography formatting
+%%%------------------------------------------------------------------------
 
 \usepackage[sorting=ynt,bibstyle=authoryear-comp,defernumbers=true,maxnames=20,firstinits=true, uniquename=init,dashed=false,doi=false,isbn=false,backend=biber]{biblatex}
 
@@ -173,26 +265,6 @@
 % Add all papers in the bib file.
 \nocite{*}
 
-%% used below in the hyperref declaration and address banner section.
-\def\myauthor{James Keirstead}
-\def\mytitle{Vita}
-\def\mycopyright{\myauthor}
-\def\mykeywords{}
-\def\mybibliostyle{plain}
-\def\mybibliocommand{}
-\def\mysubtitle{}
-\def\myaffiliation{Imperial College London}
-\def\myaddress{Department of Civil and Environmental Engineering}
-\def\myemail{j.keirstead@imperial.ac.uk}
-\def\myweb{http://www.jameskeirstead.ca}
-\def\myphone{+44 (0) 207 594 6010}
-\def\myfax{+44 (0) 207 594 5934}
-\def\myversion{}
-\def\myrevision{}
-
-\date{} % not used (revision control instead)
-\def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
-
 %%%------------------------------------------------------------------------  
 %%% Git version tracking 
 %%%------------------------------------------------------------------------
@@ -208,14 +280,6 @@
 %%%------------------------------------------------------------------------
 %%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
 
-%% needed for xelatex to work
-\usepackage{fontspec}
-\usepackage{xunicode}
-
-%% color for the links 
-\usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
-\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
 
 % Bibliography stuff
 \bibliography{../content/papers}
@@ -225,44 +289,11 @@
 \addtocategory{conferences}{Giarola2013, Keirstead2011d, VanDam2011, VanDam2010, Weber2010, Keirstead2010d, Kostantinidis2010, Keirstead2010e, Keirstead2009g, Keirstead2009e, Keirstead2009c, Keirstead2009a, Keirstead2007, Keirstead2005b, Keirstead2005a, Baldock2015, Mijic2014, Sailer2015, Ravalde2014, Baedeker2014,  Pfenninger2014d, Walker2014, Pfenninger2014c, Pfenninger2014b, Keirstead2013b, Calderon2012a, Graham2012}
 \addtocategory{other}{Keirstead2013c, Keirstead2013d, Keirstead2010a, Keirstead2008b, Keirstead2007a, Keirstead2005, Keirstead2010f, Keirstead2004, Keirstead2014b, Keirstead2014c, Keirstead2008c} 
 
-%% hyperlinks
-\hypersetup{xetex, 
-	colorlinks=true,
-	urlcolor=ImperialBlue,
-	plainpages=false,
-  	pdfpagelabels,
-  	bookmarksnumbered,
-  	pdftitle={\mytitle},
-  	pagebackref,
-  	pdfauthor={\myauthor},
-  	pdfkeywords={\mykeywords}
-  	}
-
-%% Choose fonts for use with xelatex
-%% Minion and Myriad are widely available, from Adobe. 
-%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
-%% and is worth every penny. Any good monospace font will work fine, though.
-%% Consolas or inconsolata are good alternatives.
-\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro} 
-\setsansfont[Mapping=tex-text,Colour=ImperialBlue]{Myriad Pro}
-\setmonofont[Mapping=tex-text,Scale=0.9]{Avenir Next Condensed Regular} % Consolas, Pragmata, Lucida Console
 
 
 %%%------------------------------------------------------------------------
 %%% Local commands
 %%%------------------------------------------------------------------------
-
-%% Marginal header
-%% Note: as the document goes on you may need to introduce a (gradually increasing)
-%% \vspace element to keep the marginal header pleasingly aligned with the first 
-%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
-%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
-
-
-%% custom ampersand (font consistent with the one chosen above)
-\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
-
 %% No bullets on labels
 \renewcommand{\labelitemi}{~} 
 
@@ -272,44 +303,35 @@
 \def\labelitemi{~}
 \renewcommand{\labelitemii}{~}
 
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+% \newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
+
+
+%% custom ampersand (font consistent with the one chosen above)
+%\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
 %%%------------------------------------------------------------------------
-%%% Page layout
+%% Geometry stuff
 %%%------------------------------------------------------------------------
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0pt}
-\fancyhead{}
-\fancyfoot{}
-\rhead{{\scriptsize\thepage}}
 
-%% git revision control footer 
-\rfoot{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+\RaggedRight
+\sloppy
 
-\newcommand{\makeheader}{%
-%%%------------------------------------------------------------------------
-%%% Address and contact block
-%%%------------------------------------------------------------------------
-\begin{minipage}[t]{2.95in}
-\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
-\end{minipage}
-\hfill     
-%\begin{minipage}[t]{0.0in}
-% dummy (needed here)
-%\end{minipage}
-\hfill
-\begin{minipage}[t]{1.7in}
-  \flushright \footnotesize Phone: \myphone \\ 
-  Fax: \myfax  \\ 
-  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
-  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
-\end{minipage}
+% Date format
+\newdateformat{rjh}{\monthname~\THEYEAR}
+\rjh
 
-
-\bigskip
-
-\bigskip
-
-%% Name 
-\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
-\reversemarginpar
-\raggedright
-}
+% Miscellaneous dimensions
+\setlength{\parskip}{0ex}
+\setlength{\parindent}{0em}
+\setlength{\headheight}{15pt}
+\setlength{\tabcolsep}{0.15cm}
+\clubpenalty = 10000
+\widowpenalty = 10000
+\setlist{itemsep=1pt}
+\setdescription{labelwidth=1.2cm,leftmargin=1.5cm,labelindent=1.5cm,font=\rm}
