@@ -8,14 +8,23 @@
 %%  - http://kjhealy.github.com/kjh-vita
 %%
 
+%% ------------------------------------------------------------------------
 %%  Load required packages
 %%  ------------------------------------------------------------------------
 \usepackage{paralist,ragged2e,datetime}
 \usepackage{hyperref,fancyhdr,enumitem,color}
 \usepackage[a4paper,centering]{geometry}
 \usepackage[compact,small,sf,bf]{titlesec}
-%\usepackage{kpfonts,dsfont}
 
+%% ------------------------------------------------------------------------  
+%%  Git version tracking 
+%% ------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+%% See vc manual to compile with xelatex -enable-write18 vita
+\immediate\write18{vc.bat}
+\input{vc}
 
 %% ------------------------------------------------------------------------
 %% Fonts and colours
@@ -29,7 +38,6 @@
 \definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
 \definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
 
-
 %% Choose fonts for use with xelatex
 %% Minion and Myriad are widely available, from Adobe. 
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
@@ -42,11 +50,6 @@
 %% ------------------------------------------------------------------------
 %% Header and footer
 %% ------------------------------------------------------------------------
-\pagestyle{fancy}
-\lhead{\sf Curriculum Vitae: \@name}
-\rhead{\sf\thepage}
-\cfoot{}
-
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
@@ -70,6 +73,10 @@
 \def\address#1{\def\@address{#1}}
 \def\subject#1{\def\@subject{#1}}
 
+%% Date format (if you wanted to include the date but you'll see below
+%% I just use the version control info instead
+% \newdateformat{rjh}{\monthname~\THEYEAR}
+% \rjh
 \date{} % not used (revision control instead)
 
 %% hyperlinks
@@ -110,11 +117,13 @@
 
 }
 
-
 %%------------------------------------------------------------------------
 %% Section styling
 %%------------------------------------------------------------------------
-% A fudge from http://tex.stackexchange.com/questions/19200/titlesec-remove-space-after-empty-margin-section
+
+%% This includes a fudge from the following link in order to get the
+%% subsection to align with a section
+%% http://tex.stackexchange.com/questions/19200/titlesec-remove-space-after-empty-margin-section
 
 \makeatletter
 \newif\ifaftersec\aftersecfalse
@@ -141,30 +150,20 @@
   \fi
   \global\aftersecfalse}
 
+% Section styling
 \titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
 \titlespacing*{\section}{2cm}{2.5ex}{0.5cm}
 
+% Subsection styling
 \titleformat{\subsection}{\subskip\itshape}{}{0pt}{}[]
 \titlespacing*{\subsection}{0pt}{2ex}{1ex}
 
 \raggedbottom
 \makeatother
 
-
-% Section headings
-%\titlelabel{}
-
-%\titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{}{}
-%\titlespacing*{\section}{2.5cm}{2ex}{0ex}
-
-%%\titleformat{\section}[leftmargin]{\itshape}{}{}{}
-%%\titleformat{\section}[leftmargin]{\scshape \footnotesize}{10pt}{}{}
-%\titleformat{\subsection}{\itshape}{}{}{}
-%\titlespacing{\subsection}{0pt}{-2ex}{0ex}
-
-%%%------------------------------------------------------------------------
-%%%  Bibliography formatting
-%%%------------------------------------------------------------------------
+%% ------------------------------------------------------------------------
+%%   Bibliography formatting
+%% ------------------------------------------------------------------------
 
 \usepackage[sorting=ynt,bibstyle=authoryear-comp,defernumbers=true,maxnames=20,firstinits=true, uniquename=init,dashed=false,doi=false,isbn=false,backend=biber]{biblatex}
 
@@ -216,10 +215,8 @@
 {\endlist}
 {\bibitem}
 
-% \section{\LARGE Publications}
-\newenvironment{publications}{\section{Publications}\label{papersstart}%\vspace*{0.2cm}%
-%\titlespacing{\section}{0pt}{1.5ex}{1ex}\itemsep=0.00cm
-}{\label{papersend}\addtocounter{sumpapers}{-1}\refstepcounter{sumpapers}\label{sumpapers}}
+\newenvironment{publications}{\section{Publications}\label{papersstart}}%
+{\label{papersend}\addtocounter{sumpapers}{-1}\refstepcounter{sumpapers}\label{sumpapers}}
 
 \def\printbib#1{\printbibliography[category=#1,heading=#1]\lastref{sumpapers}}
 \renewcommand{\bibfont}{\normalfont\fontsize{11}{13.4}\rmfamily}
@@ -231,32 +228,6 @@
 % Add all papers in the bib file.
 \nocite{*}
 
-%%%------------------------------------------------------------------------  
-%%% Git version tracking 
-%%%------------------------------------------------------------------------
-
-%% If you don't use git or the vc package (from CTAN), comment this out.
-%% If you comment it out, be sure to remove the \rfoot comment below, too.
-%% See vc manual to compile with xelatex -enable-write18 vita
-\immediate\write18{vc.bat}
-\input{vc}
-
-%%%------------------------------------------------------------------------
-%%% Required style files
-%%%------------------------------------------------------------------------
-%%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
-
-
-% Bibliography stuff
-\bibliography{../content/papers}
-\addtocategory{books}{Keirstead2013a}
-\addtocategory{papers}{Chester2014, Keirstead2014, Keirstead2014a, Keirsteada, Morlet_Keirstead_2013, Keirstead2011b, Rutter2012, Calderon2012, Keirstead2012b, Keirstead, Keirstead2011c, Keirstead2012a, Liang2012, Keirstead2010c, Liang2011, Keirstead2010b, Keirstead2009h, Keirstead2009b, Keirstead2008a, Keirstead2008, Keirstead2007b, Keirstead2007c, Keirstead2006a, Pfenninger2014a, Pfenninger2014, Pfenninger2013, Koppelaar2014}
-\addtocategory{chapters}{Shah2012, Keirstead2013, Keirstead2012c, Grubler2011, Hammer2011, Schulzb, Keirstead2009f, Keirstead2010}
-\addtocategory{conferences}{Giarola2013, Keirstead2011d, VanDam2011, VanDam2010, Weber2010, Keirstead2010d, Kostantinidis2010, Keirstead2010e, Keirstead2009g, Keirstead2009e, Keirstead2009c, Keirstead2009a, Keirstead2007, Keirstead2005b, Keirstead2005a, Baldock2015, Mijic2014, Sailer2015, Ravalde2014, Baedeker2014,  Pfenninger2014d, Walker2014, Pfenninger2014c, Pfenninger2014b, Keirstead2013b, Calderon2012a, Graham2012}
-\addtocategory{other}{Keirstead2013c, Keirstead2013d, Keirstead2010a, Keirstead2008b, Keirstead2007a, Keirstead2005, Keirstead2010f, Keirstead2004, Keirstead2014b, Keirstead2014c, Keirstead2008c} 
-
-
-
 %%%------------------------------------------------------------------------
 %%% Local commands
 %%%------------------------------------------------------------------------
@@ -265,32 +236,16 @@
 
 %% Custom hanging indent for vita items
 \def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
-%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
 \def\labelitemi{~}
 \renewcommand{\labelitemii}{~}
-
-
-%% Marginal header
-%% Note: as the document goes on you may need to introduce a (gradually increasing)
-%% \vspace element to keep the marginal header pleasingly aligned with the first 
-%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
-%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-% \newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize #1}}}}
-
-
-%% custom ampersand (font consistent with the one chosen above)
-%\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
 
 %%%------------------------------------------------------------------------
 %% Geometry stuff
 %%%------------------------------------------------------------------------
 
+% This command allows hyphenation, where \raggedright does not
 \RaggedRight
 \sloppy
-
-% Date format
-\newdateformat{rjh}{\monthname~\THEYEAR}
-\rjh
 
 % Miscellaneous dimensions
 \setlength{\parskip}{0ex}
