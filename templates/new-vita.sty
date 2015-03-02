@@ -61,42 +61,35 @@
 %%------------------------------------------------------------------------
 
 %% used below in the hyperref declaration and address banner section.
-\def\myauthor{James Keirstead}
-\def\mytitle{Vita}
-\def\mycopyright{\myauthor}
+\def\title#1{\def\@title{#1}}
+\def\name#1{\def\@name{#1}}
+\def\www#1{\def\@www{#1}}
+\def\email#1{\def\@email{#1}}
+\def\tel#1{\def\@tel{#1}}
+\def\postnoms#1{\def\@postnoms{#1}}
+\def\address#1{\def\@address{#1}}
 \def\mykeywords{}
-\def\mybibliostyle{plain}
-\def\mybibliocommand{}
-\def\mysubtitle{}
 \def\myaffiliation{Imperial College London}
 \def\myaddress{Department of Civil and Environmental Engineering}
-\def\myemail{j.keirstead@imperial.ac.uk}
-\def\myweb{http://www.jameskeirstead.ca}
-\def\myphone{+44 (0) 207 594 6010}
-\def\myfax{+44 (0) 207 594 5934}
-\def\myversion{}
-\def\myrevision{}
 
 \date{} % not used (revision control instead)
 \def\mykeywords{James, Keirstead, James Keirstead, Vita, CV, Resume, Engineering}
 
 %% hyperlinks
-\hypersetup{xetex, 
+\AtBeginDocument{\hypersetup{xetex, 
 	colorlinks=true,
 	urlcolor=ImperialBlue,
 	plainpages=false,
   	pdfpagelabels,
   	bookmarksnumbered,
-  	pdftitle={\mytitle},
+  	pdftitle={Vita},
   	pagebackref,
-  	pdfauthor={\myauthor},
+  	pdfauthor={\@name},
   	pdfkeywords={\mykeywords}
-  	}
+  	}}
 
 
 % Header box
-\def\name#1{\def\@name{#1}}
-\def\info#1{\def\@info{#1}}
 \newcommand{\shadebox}[3][.9]{\fcolorbox[gray]{0}{#1}{\parbox{#2}{#3}}}
 
 \def\maketitle{
@@ -109,9 +102,7 @@
 \normalsize\today
 \end{tabular}
 \hfill\hbox{\fontsize{9}{12}\sf
-\begin{tabular}{@{}rp{7.2cm}@{}}
-\@info
-\end{tabular}}}
+}}
 }
 \vspace*{0.2cm}}
 
@@ -120,18 +111,14 @@
 %%% Address and contact block
 %%%------------------------------------------------------------------------
 \begin{minipage}[t]{2.95in}
-\flushright {\footnotesize \href{http://www.imperial.ac.uk/civilengineering}{Department of Civil \& Env.\ Engineering} \\ Imperial College London \\ London, UK\\ \vspace{-0.04in} SW7 2AZ}   
+\flushright {\footnotesize \@address} 
 \end{minipage}
 \hfill     
-%\begin{minipage}[t]{0.0in}
-% dummy (needed here)
-%\end{minipage}
 \hfill
 \begin{minipage}[t]{1.7in}
-  \flushright \footnotesize Phone: \myphone \\ 
-  Fax: \myfax  \\ 
-  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
-  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+  \flushright \footnotesize Phone: \@tel \\ 
+  {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
+  {\scriptsize  \texttt{\href{\@www}{\@www}}}
 \end{minipage}
 
 
@@ -140,8 +127,8 @@
 \bigskip
 
 %% Name 
-\noindent{\Large {D\textsc{r} J\textsc{ames} K\textsc{eirstead}}} {\scriptsize \textsc{CEng MEI}}
-\reversemarginpar
+\noindent{\Large\scshape{\@title\ \@name}} {\scriptsize \textsc{\@postnoms}}\\
+%\reversemarginpar
 \raggedright
 }
 
