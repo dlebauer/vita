@@ -145,7 +145,7 @@ generate_cv <- function(content, style, outdir="output") {
     file.copy(from=config$publications$bib_file,
               to=file.path(outdir, basename(config$publications$bib_file)))
     ## TODO fix this hack
-    file.copy(from="../templates/vc.tex", to=file.path(outdir, "vc.tex"))
+    file.copy(from="../vc.tex", to=file.path(outdir, "vc.tex"))
     
     ## Create the tex file in the right place
     outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt), collapse="")
