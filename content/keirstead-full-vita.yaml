@@ -1,0 +1,118 @@
+# Configuration for full CV
+person:
+  first_name: James
+  last_name: Keirstead
+  title: Dr
+  postnoms: CEng MEI
+  tel: +44 (0) 207 594 6010
+  email: j.keirstead@imperial.ac.uk
+  web: http://www.jameskeirstead.ca
+  subject: "energy, engineering"
+  address:
+    line1: Department of Civil & Environmental Engineering
+    line2: Imperial College London
+    line3: London, UK
+    postcode: SW7 2AZ
+publications:
+  bib_file: papers.bib
+  sections:
+    books:
+      - Keirstead2013a
+    papers:
+      - Chester2014
+      - Keirstead2014
+      - Keirstead2014a
+      - Keirsteada
+      - Morlet_Keirstead_2013
+      - Keirstead2011b
+      - Rutter2012
+      - Calderon2012
+      - Keirstead2012b
+      - Keirstead
+      - Keirstead2011c
+      - Keirstead2012a
+      - Liang2012
+      - Keirstead2010c
+      - Liang2011
+      - Keirstead2010b
+      - Keirstead2009h
+      - Keirstead2009b
+      - Keirstead2008a
+      - Keirstead2008
+      - Keirstead2007b
+      - Keirstead2007c
+      - Keirstead2006a
+      - Pfenninger2014a
+      - Pfenninger2014
+      - Pfenninger2013
+      - Koppelaar2014  
+    chapters:
+      - Shah2012
+      - Keirstead2013
+      - Keirstead2012c
+      - Grubler2011
+      - Hammer2011
+      - Schulzb
+      - Keirstead2009f
+      - Keirstead2010
+    conferences:
+      - Giarola2013
+      - Keirstead2011d
+      - VanDam2011
+      - VanDam2010
+      - Weber2010
+      - Keirstead2010d
+      - Kostantinidis2010
+      - Keirstead2010e
+      - Keirstead2009g
+      - Keirstead2009e
+      - Keirstead2009c
+      - Keirstead2009a
+      - Keirstead2007
+      - Keirstead2005b
+      - Keirstead2005a
+      - Baldock2015
+      - Mijic2014
+      - Sailer2015
+      - Ravalde2014
+      - Baedeker2014
+      - Pfenninger2014d
+      - Walker2014
+      - Pfenninger2014c
+      - Pfenninger2014b
+      - Keirstead2013b
+      - Calderon2012a
+      - Graham2012
+    other:
+      - Keirstead2013c
+      - Keirstead2013d
+      - Keirstead2010a
+      - Keirstead2008b
+      - Keirstead2007a
+      - Keirstead2005
+      - Keirstead2010f
+      - Keirstead2004
+      - Keirstead2014b
+      - Keirstead2014c
+      - Keirstead2008c
+sections:
+  - title: Appointments
+    file: posts.yaml
+  - title: Education
+    file: education.yaml
+  - title: # This field is unused
+    file: BIBTEX
+  - title: Invited talks
+    file: talks.yaml
+  - title: Grants
+    file: grants.yaml
+  - title: Awards
+    file: awards.yaml
+  - title: Service to the Profession
+    file: service.yaml
+  - title: Teaching
+    file: teaching.yaml
+  - title: PhD Students
+    file: students.yaml
+  - title: Affiliations
+    file: affiliations.yaml

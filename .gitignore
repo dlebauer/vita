@@ -13,3 +13,4 @@ bak/
 *.run.xml
 *.tex
 !templates/vita.tex
+*/output/*
