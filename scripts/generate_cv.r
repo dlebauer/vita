@@ -2,6 +2,7 @@
 library(yaml)
 library(stringr)
 library(tools)
+vc_dir <- "../style"
 
 #' Processes a specified YAML file to create outputs
 #'
@@ -144,11 +145,17 @@ generate_cv <- function(content, style, outdir="output") {
     file.copy(from=style, to=file.path(outdir, style_file))
     file.copy(from=config$publications$bib_file,
               to=file.path(outdir, basename(config$publications$bib_file)))
-    ## TODO fix this hack
-    file.copy(from="../vc.tex", to=file.path(outdir, "vc.tex"))
+
+    ## Run the version control script and copy result to build directory
+    cwd <- getwd()
+    setwd(vc_dir)
+    system2("./vc.sh")
+    setwd(cwd)
+    file.copy(from=file.path(vc_dir, "vc.tex"), to=file.path(outdir, "vc.tex"))
     
     ## Create the tex file in the right place
-    outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt), collapse="")
+    outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt),
+                      collapse="")
     outfile <- file.path(outdir, outfile)
     if (file.exists(outfile)) file.remove(outfile)
     invisible(lapply(lines, write, file=outfile, append=TRUE))
