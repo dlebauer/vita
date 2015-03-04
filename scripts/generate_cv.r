@@ -17,7 +17,7 @@ vc_dir <- "../style"
 #' \code{format_functions.r}.  The default is "tex"
 #' 
 #' @return NULL
-process_yaml <- function(section, input_dir="../content", output_dir="../templates", format="tex") {
+process_yaml <- function(section, input_dir="../content", output_dir="output", format="tex") {
 
     input <- file.path(input_dir, paste0(section, ".yaml"))
     output <- file.path(output_dir, paste0(section, ".", format))
@@ -56,6 +56,16 @@ sanitize <- function(l) {
    str_replace(l, "\\&", "\\\\&")
 }
 
+#' Formats the address for printing
+#'
+#' @param address a list of address lines.
+#' @return a character including lines breaks for TeX
+format_address <- function(address) {
+    top_lines <- paste0(address[1:3], collapse="\\\\")
+    postcode <- sprintf("\\vspace{-0.04in}\\addfontfeature{Numbers={Proportional, Lining}}%s", address$postcode)
+    paste0(c(top_lines, postcode), collapse="\\\\")
+}
+
 #' Generates a CV from given content and style files
 #'
 #' @param content a character giving the name of the YAML file
@@ -77,12 +87,12 @@ generate_cv <- function(content, style, outdir="output") {
     message("Processing YAML files...", appendLF=FALSE)
     config <- yaml.load_file(content)
 
-    ## Start with the document header
+    ## Start with the document header    
     header <- with(config, c(
         sprintf("\\title{%s}", person$title),
         sprintf("\\name{%s %s}", person$first_name, person$last_name),
         sprintf("\\postnoms{%s}", person$postnoms),
-        sprintf("\\address{%s}", paste0(unlist(person$address), collapse="\\\\")),
+        sprintf("\\address{%s}", format_address(person$address)),
         sprintf("\\www{%s}", person$web),
         sprintf("\\email{%s}", person$email),
         sprintf("\\tel{%s}", person$tel),

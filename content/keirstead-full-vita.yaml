@@ -12,7 +12,7 @@ person:
     line1: Department of Civil & Environmental Engineering
     line2: Imperial College London
     line3: London, UK
-    line4: SW7 2AZ
+    postcode: SW7 2AZ
 publications:
   bib_file: "../content/papers.bib"
   sections:
