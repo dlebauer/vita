@@ -101,7 +101,7 @@ generate_cv <- function(content, style, outdir="output") {
 
     ## Then add the bibliography stuff
     bibinfo <- with(config$publications, c(
-        sprintf("\\bibliography{%s}", file_path_sans_ext(basename(bib_file))),
+        sprintf("\\bibliography{%s}", file_path_sans_ext(bib_file)),
         unlist(lapply(1:length(sections), function(i) {
             sprintf("\\addtocategory{%s}{%s}",
                     names(sections)[i],
@@ -153,7 +153,7 @@ generate_cv <- function(content, style, outdir="output") {
     ## Copy in the bib file and package
     style_file <- basename(style)
     file.copy(from=style, to=file.path(outdir, style_file))
-    file.copy(from=config$publications$bib_file,
+    file.copy(from=file.path(dirname(content), config$publications$bib_file),
               to=file.path(outdir, basename(config$publications$bib_file)))
 
     ## Run the version control script and copy result to build directory

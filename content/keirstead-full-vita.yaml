@@ -14,7 +14,7 @@ person:
     line3: London, UK
     postcode: SW7 2AZ
 publications:
-  bib_file: "../content/papers.bib"
+  bib_file: papers.bib
   sections:
     books:
       - Keirstead2013a
