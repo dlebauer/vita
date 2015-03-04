@@ -5,3 +5,12 @@
 vc.tex
 *.bak
 js/
+bak/
+.DS_Store
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.tex
+!templates/vita.tex
+*/output/*
