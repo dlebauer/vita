@@ -1,0 +1,90 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{jk-vita}
+
+\title{Dr}
+\name{James Keirstead}
+\address{Dept of Civil \& Environmental Engineering\\Imperial College London\\London, UK\\\vspace{-0.04in}\addfontfeature{Numbers={Proportional, Lining}}SW7 2AZ}
+\www{http://www.jameskeirstead.ca}
+\email{j.keirstead@imperial.ac.uk}
+\tel{+44 (0) 207 594 6010}
+\postnoms{CEng MEI}
+\subject{Energy, Engineering}
+
+% Bibliography stuff
+\bibliography{../content/papers}
+\addtocategory{books}{Keirstead2013a}
+\addtocategory{papers}{Chester2014, Keirstead2014, Keirstead2014a, Keirsteada, Morlet_Keirstead_2013, Keirstead2011b, Rutter2012, Calderon2012, Keirstead2012b, Keirstead, Keirstead2011c, Keirstead2012a, Liang2012, Keirstead2010c, Liang2011, Keirstead2010b, Keirstead2009h, Keirstead2009b, Keirstead2008a, Keirstead2008, Keirstead2007b, Keirstead2007c, Keirstead2006a, Pfenninger2014a, Pfenninger2014, Pfenninger2013, Koppelaar2014}
+\addtocategory{chapters}{Shah2012, Keirstead2013, Keirstead2012c, Grubler2011, Hammer2011, Schulzb, Keirstead2009f, Keirstead2010}
+\addtocategory{conferences}{Giarola2013, Keirstead2011d, VanDam2011, VanDam2010, Weber2010, Keirstead2010d, Kostantinidis2010, Keirstead2010e, Keirstead2009g, Keirstead2009e, Keirstead2009c, Keirstead2009a, Keirstead2007, Keirstead2005b, Keirstead2005a, Baldock2015, Mijic2014, Sailer2015, Ravalde2014, Baedeker2014,  Pfenninger2014d, Walker2014, Pfenninger2014c, Pfenninger2014b, Keirstead2013b, Calderon2012a, Graham2012}
+\addtocategory{other}{Keirstead2013c, Keirstead2013d, Keirstead2010a, Keirstead2008b, Keirstead2007a, Keirstead2005, Keirstead2010f, Keirstead2004, Keirstead2014b, Keirstead2014c, Keirstead2008c} 
+
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+%% Appointments
+\section*{Appointments}%
+\input{posts}
+
+%% Education
+\section*{Education}%
+\input{education}
+ 
+%% Publications
+\begin{publications}
+\printbib{books}
+\printbib{papers}
+% \ind Aruna Sivakumar, James Keirstead, JW Polak. 2012. ``Integrated Modelling of the Demand \& Supply Vectors in Urban Energy Systems: Conceptual and Modelling Frameworks for the Development of a New Toolkit'', Computer-Aided Civil and Infrastructure Engineering. http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-8667
+%
+% \ind Nouri Samsatli, James Keirstead, and Nilay Shah. In review. ``A Generic MILP Model for the Design of Urban Energy Systems'' submitted to \emph{Applied Energy}.
+%
+%\ind James Keirstead and Mark Jennings. In review. ``Calculating carbon abatement costs for the global buildings sector with a regionally-disaggregated hybrid model'' submitted to \emph{Energy Economics}.  
+%
+% \ind James Keirstead and Niels Schulz.  Drafting. ``Scaling laws in urban energy consumption''.
+%
+% \ind I.\ Horta and J.\ Keirstead. 2015.  ``Downscaling'' JIE.
+%
+% \ind T.\ Ravalde and J.\ Keirstead. 2015. ``Metrics of metabolism.'' JCP.
+%
+% \ind C.\ Kennedy, I.\ Stewart, \emph{et al}. 2014. ``Energy and Material Flows of Megacities'' \emph{PNAS}, submitted.
+%  
+\printbib{chapters}
+%\ind Various chapters in UES book?
+\printbib{conferences}
+%
+% \ind T.\ Ravalde, J.\ Keirstead.  2015. ``Measuring the efficiency of urban metabolism'' ISIE oral presentation.  
+%
+% \ind T.\ Ravalde, J.\ Keirstead.  2015. ``Forecasting urban metabolism: scanning the horizon of urban processes.'' ISIE conference poster.  
+%
+% \ind S.\ Pfenninger, P.\ Gauché, J.\ Keirstead. 2015.  ``Comparing the whole-system costs of baseload power from CSP and nuclear power plants under high renewables scenarios for the case of South Africa''. IAEE 2015.
+%
+\printbib{other}
+\end{publications}
+
+%% Presentations
+\section*{Invited Talks}%
+\input{talks}
+
+\section*{Grants}%
+\input{grants}
+
+\section*{Awards}%
+\input{awards}
+
+\section*{Service to the Profession}%
+\input{service}
+
+\section*{Teaching}%
+\input{teaching}
+
+\section*{PhD students}%
+\input{students}
+
+\section*{Affiliations}%
+\input{affiliations}
+
+\end{document}
