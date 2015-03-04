@@ -1,5 +1,43 @@
+#' Load the required libraries
 library(yaml)
 library(stringr)
+library(tools)
+
+#' Processes a specified YAML file to create outputs
+#'
+#' @param section a character giving the name of the section to
+#' process.  There must be a corresponding \code{section.yaml} file in
+#' the input directory and \code{format_section} function in the
+#' formats file.  The function should take a YAML parsed list as input
+#' and returned a list of lines in the correct format.
+#' @param input_dir the input directory (no trailing /)
+#' @param output_dir the output directory (no trailing /)
+#' @param format a character giving a file name of the format
+#' \code{format_functions.r}.  The default is "tex"
+#' 
+#' @return NULL
+process_yaml <- function(section, input_dir="../content", output_dir="../templates", format="tex") {
+
+    input <- file.path(input_dir, paste0(section, ".yaml"))
+    output <- file.path(output_dir, paste0(section, ".", format))
+    source(paste0(format, "_functions.r"))
+    
+    if (!file.exists(input)) stop(sprintf("Unable to find input file '%s'", input))
+
+    message(sprintf("Processing '%s'...", input), appendLF=FALSE)
+    
+    data <- yaml.load_file(input)
+
+    f <- paste0("format_", section)
+    lines <- eval(call(f, data))
+
+    if (file.exists(output)) file.remove(output)
+    invisible(lapply(lines, write, file=output, append=TRUE))
+    message("done")    
+}
+    
+
+
 
 #' Creates a section break
 #'
@@ -24,14 +62,16 @@ sanitize <- function(l) {
 #' @param content a character giving the name of the YAML file
 #' containing the vita content
 #'
-#' @param style a character giving the name of the style file.  This
-#' should not include the extension
+#' @param style a character giving the name of the style file.  
 #'
-#' @param outfile name of the output file
-#' 
 #' @return NULL
-generate_cv <- function(content, style, outfile) {
+generate_cv <- function(content, style, outdir="output") {
 
+    ## Prepare the output directory
+    if (!file.exists(outdir)) dir.create(outdir)
+
+    fmt <- "tex"
+    
     if (!file.exists(content))
         stop(sprintf("Unable to find content file '%s'", content))
 
@@ -51,7 +91,7 @@ generate_cv <- function(content, style, outfile) {
 
     ## Then add the bibliography stuff
     bibinfo <- with(config$publications, c(
-        sprintf("\\bibliography{%s}", bib_file),
+        sprintf("\\bibliography{%s}", file_path_sans_ext(basename(bib_file))),
         unlist(lapply(1:length(sections), function(i) {
             sprintf("\\addtocategory{%s}{%s}",
                     names(sections)[i],
@@ -68,17 +108,23 @@ generate_cv <- function(content, style, outfile) {
               "\\end{publications}", "")
                      
         } else {
-            # TODO process YAML file
+            file_root <- file_path_sans_ext(x$file)
+
+            ## Process the YAML file
+            invisible(process_yaml(file_root, format=fmt, output_dir=outdir))
+
+            ## Return the lines
             c(sprintf("\\section*{%s}", x$title),
-              sprintf("\\input{%s}", str_sub(x$file, end=-6)),
+              sprintf("\\input{%s}", file_root),
               "")
+
         }
     }))
 
     ## Build the entire document
     lines <- c("\\documentclass[11pt, a4paper]{article}",
                "",
-               sprintf("\\usepackage{%s}", style),
+               sprintf("\\usepackage{%s}", file_path_sans_ext(basename(style))),
                "",
                section_break("Personal information"),
                header,
@@ -92,6 +138,18 @@ generate_cv <- function(content, style, outfile) {
                sections,
                "\\end{document}")
 
+
+    ## Copy in the bib file and package
+    style_file <- basename(style)
+    file.copy(from=style, to=file.path(outdir, style_file))
+    file.copy(from=config$publications$bib_file,
+              to=file.path(outdir, basename(config$publications$bib_file)))
+    ## TODO fix this hack
+    file.copy(from="../templates/vc.tex", to=file.path(outdir, "vc.tex"))
+    
+    ## Create the tex file in the right place
+    outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt), collapse="")
+    outfile <- file.path(outdir, outfile)
     if (file.exists(outfile)) file.remove(outfile)
     invisible(lapply(lines, write, file=outfile, append=TRUE))
 
