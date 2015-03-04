@@ -25,8 +25,6 @@ process_yaml <- function(section, input_dir="../content", output_dir="../templat
     
     if (!file.exists(input)) stop(sprintf("Unable to find input file '%s'", input))
 
-    message(sprintf("Processing '%s'...", input), appendLF=FALSE)
-    
     data <- yaml.load_file(input)
 
     f <- paste0("format_", section)
@@ -34,7 +32,7 @@ process_yaml <- function(section, input_dir="../content", output_dir="../templat
 
     if (file.exists(output)) file.remove(output)
     invisible(lapply(lines, write, file=output, append=TRUE))
-    message("done")    
+
 }
     
 
@@ -76,6 +74,7 @@ generate_cv <- function(content, style, outdir="output") {
     if (!file.exists(content))
         stop(sprintf("Unable to find content file '%s'", content))
 
+    message("Processing YAML files...", appendLF=FALSE)
     config <- yaml.load_file(content)
 
     ## Start with the document header
@@ -138,8 +137,9 @@ generate_cv <- function(content, style, outdir="output") {
                "",
                sections,
                "\\end{document}")
+    message("done")
 
-
+    message(sprintf("Copying source files to '%s'...", outdir), appendLF=FALSE)
     ## Copy in the bib file and package
     style_file <- basename(style)
     file.copy(from=style, to=file.path(outdir, style_file))
@@ -159,8 +159,10 @@ generate_cv <- function(content, style, outdir="output") {
     outfile <- file.path(outdir, outfile)
     if (file.exists(outfile)) file.remove(outfile)
     invisible(lapply(lines, write, file=outfile, append=TRUE))
-
+    message("done")
+           
     ## Build the pdf
+    message("Building the PDF...")
     commands <- c("xelatex", "biber", "xelatex", "xelatex")
     tex_file <- file_path_sans_ext(basename(content))
     setwd(outdir)
