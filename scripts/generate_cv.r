@@ -160,4 +160,21 @@ generate_cv <- function(content, style, outdir="output") {
     if (file.exists(outfile)) file.remove(outfile)
     invisible(lapply(lines, write, file=outfile, append=TRUE))
 
+    ## Build the pdf
+    commands <- c("xelatex", "biber", "xelatex", "xelatex")
+    tex_file <- file_path_sans_ext(basename(content))
+    setwd(outdir)
+    codes <- unlist(lapply(commands, function(x) system2(x, args=tex_file, stdout=NULL)))
+    if (all(codes==0)) {
+        all_files <- list.files()
+        all_files <- all_files[-grep("\\.pdf", all_files)]
+        lapply(all_files, file.remove)
+        message(sprintf("CV successfully built at '%s'",
+                        file.path(outdir, paste0(tex_file, ".pdf"))))
+        
+    } else {
+        warning(sprintf("Error building CV.  All source files left in '%s'", outdir))
+    }
+    setwd(cwd)
+    
 }
