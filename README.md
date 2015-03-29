@@ -27,18 +27,18 @@ Creating a new CV is relatively simple.
 3) Write an overall CV file in YAML.  There are a couple of gotchas to
    be careful of here.
      
-	* In the `publications` section, each of the named sections must
-      correspond to a declared biblatex section in the style file,
-      e.g. `jk-vita.sty`.
+   * In the `publications` section, each of the named sections must
+     correspond to a declared biblatex section in the style file,
+     e.g. `jk-vita.sty`.
 	   
-	* In the `sections` section, the file field should contain the
-      name of a YAML file describing that section's content.  **There
-      must be a corresponding `format_section` function in the
-      `style_functions.r` file that specifies how to display the
-      information.** For example, if you have a section file called
-      `awards.yaml` and you wish to generate a `tex` output document,
-      then the `tex_functions.r` file must contain a `format_awards`
-      function.
+   * In the `sections` section, the file field should contain the
+     name of a YAML file describing that section's content.  **There
+     must be a corresponding `format_{section}` function in the
+     `{style}_functions.r` file that specifies how to display the
+     information.** For example, if you have a section file called
+     `awards.yaml` and you wish to generate a `tex` output document,
+     then the `tex_functions.r` file must contain a `format_awards`
+     function.
 
 4) Define a style file.  At the moment, only LaTeX formats are
    supported so modify the `jk-vita.sty` file as appropriate.  The
