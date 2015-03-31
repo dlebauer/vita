@@ -1,0 +1,59 @@
+# Configuration for full CV
+person:
+  first_name: David
+  last_name: LeBauer
+  title: Dr.
+  tel: (217) 300-0266
+  email: dlebauer@illinois.edu
+  web: http://www.dlebauer.com
+  subject: "agriculture, ecology, biogeochemistry"
+  address:
+    line1: Institute for Genomic Biology
+    line2: National Center for Supercomputing Applications
+    line3: University of Illinois at Urbana-Champaign
+    postcode: SW7 2AZ
+publications:
+  bib_file: papers.bib
+  sections:
+    books:
+    papers:
+    - davis2014llf
+    - wang2013pys
+    - lebauer2013ffb
+    - dietze2013oic
+    - lebauer2013tpd
+    - lebauer2010ldr
+    - wang2010qrc
+    - allison2009lln
+    - lebauer2008nln
+    - okano2004art
+    - dietze2014qat
+    - wang2013est
+    - davis2015tsl
+    - wang2015pbm
+    - zhu2015pis
+    chapters:
+      - isikhuemhen2004gpt
+    conferences:
+    other:
+sections:
+  - title: Appointments
+    file: posts.yaml
+  - title: Education
+    file: education.yaml
+  - title: # This field is unused
+    file: BIBTEX
+  - title: Invited talks
+    file: talks.yaml
+  - title: Grants
+    file: grants.yaml
+  - title: Awards
+    file: awards.yaml
+  - title: Service to the Profession
+    file: service.yaml
+  - title: Teaching
+    file: teaching.yaml
+  - title: PhD Students
+    file: students.yaml
+  - title: Affiliations
+    file: affiliations.yaml
