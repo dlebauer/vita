@@ -3,6 +3,7 @@ person:
   first_name: David
   last_name: LeBauer
   title: Dr.
+  postnoms: PhD
   tel: (217) 300-0266
   email: dlebauer@illinois.edu
   web: http://www.dlebauer.com
@@ -11,11 +12,11 @@ person:
     line1: Institute for Genomic Biology
     line2: National Center for Supercomputing Applications
     line3: University of Illinois at Urbana-Champaign
-    postcode: SW7 2AZ
+    postcode: 61801
 publications:
   bib_file: papers.bib
   sections:
-    books:
+#    books:
     papers:
     - davis2014llf
     - wang2013pys
@@ -34,8 +35,8 @@ publications:
     - zhu2015pis
     chapters:
       - isikhuemhen2004gpt
-    conferences:
-    other:
+#    conferences:
+#    other:
 sections:
   - title: Appointments
     file: posts.yaml

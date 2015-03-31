@@ -1,5 +1,5 @@
 %% Curriculum Vitae style file
-%% 
+%%
 %% David LeBauer
 %% Last updated: 30 March 2015
 %%
@@ -15,9 +15,9 @@
 \usepackage{hyperref,fancyhdr,enumitem,color}
 \usepackage[a4paper,centering]{geometry}
 \usepackage[compact,small,sf,bf]{titlesec}
-
-%% ------------------------------------------------------------------------  
-%%  Git version tracking 
+\usepackage{fontspec}
+%% ------------------------------------------------------------------------
+%%  Git version tracking
 %% ------------------------------------------------------------------------
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
@@ -33,18 +33,18 @@
 \usepackage{fontspec}
 \usepackage{xunicode}
 
-%% color for the links 
+%% color for the links
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
 \definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
 
 %% Choose fonts for use with xelatex
-%% Minion and Myriad are widely available, from Adobe. 
+%% Minion and Myriad are widely available, from Adobe.
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
 %% and is worth every penny. Any good monospace font will work fine, though.
 %% Consolas or inconsolata are good alternatives.
-\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Palatino} %  Minion Pro 
-\setsansfont[Mapping=tex-text,Colour=ImperialBlue]{Helvetica}
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Latin Modern Roman} %  Minion Pro, Palatino
+\setsansfont[Mapping=tex-text,Colour=ImperialBlue]{FreeSans}
 \setmonofont[Mapping=tex-text,Scale=0.9]{Monaco} % Consolas, Pragmata, Lucida Console
 
 %% ------------------------------------------------------------------------
@@ -96,7 +96,7 @@
 %% hyperlinks
 \AtBeginDocument{%
   \def\keywords{\@name, Vita, CV, Resume, \@subject}
-  \hypersetup{xetex, 
+  \hypersetup{xetex,
     colorlinks=true,
     urlcolor=ImperialBlue,
     plainpages=false,
@@ -117,11 +117,11 @@
 
 
   \begin{minipage}[t]{3.5in}
-    \flushright {\footnotesize \@address} 
+    \flushright {\footnotesize \@address}
   \end{minipage}
-  \hfill     
+  \hfill
   \begin{minipage}[t]{1.7in}
-    \flushright \footnotesize Phone: \@tel \\ 
+    \flushright \footnotesize Phone: \@tel \\
     {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
     {\scriptsize  \texttt{\href{\@www}{\@www}}}
   \end{minipage}
@@ -129,7 +129,7 @@
   \bigskip
   \bigskip
 
-  %% Name 
+  %% Name
   \noindent{\LARGE\scshape{\@title\ \@name}} {\scriptsize \textsc{\@postnoms}}\\
   \bigskip
   \bigskip
@@ -251,7 +251,7 @@
 %%% Local commands
 %%%------------------------------------------------------------------------
 %% No bullets on labels
-\renewcommand{\labelitemi}{~} 
+\renewcommand{\labelitemi}{~}
 
 %% Custom hanging indent for vita items
 \def\ind{\hangindent=1 true cm\hangafter=1 \noindent}

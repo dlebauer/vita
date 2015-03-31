@@ -14,8 +14,14 @@ The project consists of:
  * a `style` directory that contains the overall LaTeX style, as well
    as scripts for inserting version control information
    
- * a `scripts` directory that contains R scripts for building the CV.
- 
+
+## Install
+
+```{r eval = FALSE}
+library(devtools)
+install_github("dlebauer/vita")
+```
+
 ## How to build a CV
 
 Creating a new CV is relatively simple.
@@ -49,10 +55,23 @@ Creating a new CV is relatively simple.
 5) Build the CV.  This is easy.  Simply open up R, change into the
    `scripts` directory and run the following commands:
 
-```r
-> source("generate_cv.r")
-> generate_cv("../path/to/my-cv.yaml", "../path/to/my-style.sty", "output_directory")
+
+
+
+
+```{r}
+# Load the required libraries
+install()
+library(vita)
+
+myCV.yaml <-  system.file("content/dlebauer-full-vita.yaml", package = "vita")
+myCV.sty <- system.file("style/dl-vita.sty", package = "vita")
+debugonce(generate_cv)
+generate_cv(content = myCV.yaml,
+            style = myCV.sty,
+            outdir = "outdir")
 ```	   
+
 
    The compiling process will build a PDF and place it in the
    specified output directory.  Compilation uses xelatex and biber so

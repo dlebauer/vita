@@ -15,3 +15,6 @@ bak/
 !templates/vita.tex
 */output/*
 TODO.org
+.Rproj.user
+.Rhistory
+.RData

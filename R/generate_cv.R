@@ -9,14 +9,16 @@
 #' @param output_dir the output directory (no trailing /)
 #' @param format a character giving a file name of the format
 #' \code{format_functions.r}.  The default is "tex"
-#' 
+#'
 #' @return NULL
-process_yaml <- function(section, input_dir="../content", output_dir="output", format="tex") {
+process_yaml <- function(section,
+                         input_dir = system.file("content", package = 'vita'),
+                         output_dir="output",
+                         format="tex") {
 
     input <- file.path(input_dir, paste0(section, ".yaml"))
     output <- file.path(output_dir, paste0(section, ".", format))
-    source(paste0(format, "_functions.r"))
-    
+
     if (!file.exists(input)) stop(sprintf("Unable to find input file '%s'", input))
 
     data <- yaml.load_file(input)
@@ -28,7 +30,7 @@ process_yaml <- function(section, input_dir="../content", output_dir="output", f
     invisible(lapply(lines, write, file=output, append=TRUE))
 
 }
-    
+
 
 #' Creates a section break
 #'
@@ -43,7 +45,7 @@ section_break <- function(name, width=80) {
 }
 
 #' Tidies lines for LaTeX.  Currently only escapes ampersands
-#' 
+#'
 sanitize <- function(l) {
    str_replace(l, "\\&", "\\\\&")
 }
@@ -63,7 +65,7 @@ format_address <- function(address) {
 #' @param content a character giving the name of the YAML file
 #' containing the vita content
 #'
-#' @param style a character giving the name of the style file.  
+#' @param style a character giving the name of the style file.
 #'
 #' @return NULL
 generate_cv <- function(content, style, outdir="output") {
@@ -72,14 +74,14 @@ generate_cv <- function(content, style, outdir="output") {
     if (!file.exists(outdir)) dir.create(outdir)
 
     fmt <- "tex"
-    
+
     if (!file.exists(content))
         stop(sprintf("Unable to find content file '%s'", content))
 
     message("Processing YAML files...", appendLF=FALSE)
     config <- yaml.load_file(content)
 
-    ## Start with the document header    
+    ## Start with the document header
     header <- with(config, c(
         sprintf("\\title{%s}", person$title),
         sprintf("\\name{%s %s}", person$first_name, person$last_name),
@@ -101,14 +103,14 @@ generate_cv <- function(content, style, outdir="output") {
         }))))
 
     ## Then add the other sections
-    sections <- unlist(lapply(config$sections, function(x) {
+    config_fn <- function(x){
         if (x$file=="BIBTEX") {
-            # INSERT Publications
+            ## INSERT Publications
             c("\\begin{publications}",
               lapply(names(config$publications$sections),
                      function(x) sprintf("\\printbib{%s}", x)),
               "\\end{publications}", "")
-                     
+
         } else {
             file_root <- file_path_sans_ext(x$file)
 
@@ -121,11 +123,12 @@ generate_cv <- function(content, style, outdir="output") {
               "")
 
         }
-    }))
+    }
+    sections <- unlist(lapply(config$sections, config_fn))
 
     ## Build the entire document
     lines <- c("\\documentclass[11pt, a4paper]{article}",
-               "",
+               "\\usepackage{fontspec}",
                sprintf("\\usepackage{%s}", file_path_sans_ext(basename(style))),
                "",
                section_break("Personal information"),
@@ -143,42 +146,230 @@ generate_cv <- function(content, style, outdir="output") {
 
     message(sprintf("Copying source files to '%s'...", outdir), appendLF=FALSE)
     ## Copy in the bib file and package
-    style_file <- basename(style)
-    file.copy(from=style, to=file.path(outdir, style_file))
-    file.copy(from=file.path(dirname(content), config$publications$bib_file),
-              to=file.path(outdir, basename(config$publications$bib_file)))
+    files <- list.files(path = system.file(c("content", "style"), package = "vita"),
+                        full.names = TRUE)
 
-    ## Run the version control script and copy result to build directory
+    sapply(files, function(x) file.copy(from = x,
+                                        to = file.path(outdir, basename(x)),
+                                        overwrite = TRUE, copy.mode = TRUE))
+
     cwd <- getwd()
-    setwd(vc_dir)
-    system2("./vc.sh")
+    setwd(outdir)
+    system("bash vc.sh")
     setwd(cwd)
-    file.copy(from=file.path(vc_dir, "vc.tex"), to=file.path(outdir, "vc.tex"))
-    
+    ## Run the version control script and copy result to build directory
+
     ## Create the tex file in the right place
     outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt),
                       collapse="")
     outfile <- file.path(outdir, outfile)
-    if (file.exists(outfile)) file.remove(outfile)
+    if(file.exists(outfile)) file.remove(outfile, showWarnings = FALSE)
     invisible(lapply(lines, write, file=outfile, append=TRUE))
     message("done")
-           
+
     ## Build the pdf
     message("Building the PDF...")
-    commands <- c("xelatex", "biber", "xelatex", "xelatex")
-    tex_file <- file_path_sans_ext(basename(content))
     setwd(outdir)
-    codes <- unlist(lapply(commands, function(x) system2(x, args=tex_file, stdout=NULL)))
-    if (all(codes==0)) {
-        all_files <- list.files()
-        all_files <- all_files[-grep("\\.pdf", all_files)]
-        lapply(all_files, file.remove)
-        message(sprintf("CV successfully built at '%s'",
-                        file.path(outdir, paste0(tex_file, ".pdf"))))
-        
-    } else {
-        warning(sprintf("Error building CV.  All source files left in '%s'", outdir))
-    }
+    system("make")
+    ## commands <- c("xelatex", "biber", "xelatex", "xelatex")
+    ## tex_file <- file_path_sans_ext(basename(content))
+
+    ## compile_cv <- function(x){
+    ##     system2(x, args=tex_file, stdout=NULL)
+    ## }
+    ## codes <- unlist(lapply(commands, compile_cv))
+    ## if (all(codes==0)) {
+    ##     all_files <- list.files()
+    ##     all_files <- all_files[-grep("\\.pdf", all_files)]
+    ##     lapply(all_files, file.remove)
+    ##     message(sprintf("CV successfully built at '%s'",
+    ##                     file.path(outdir, paste0(tex_file, ".pdf"))))
+
+    ## } else {
+    ##     warning(sprintf("Error building CV.  All source files left in '%s'", outdir))
+    ## }
     setwd(cwd)
-    
+
 }
+
+
+format_talks <- function(l) {
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$year)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+        with(x, sprintf("\\ind %d ``%s''. %s, %s. %s.\n", year, title, event, city, month))
+    })
+    return(lines)
+}
+
+format_affiliations <- function(l) {
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+        with(x, sprintf("\\ind %d--%s.  %s, \\emph{%s}.\n", start, end, status, org))
+    })
+    return(lines)
+}
+
+format_education <- function(l) {
+
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$year)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+
+        post <- ""
+
+        if ("thesis" %in% names(x))
+            post <- paste0(post, sprintf("\\emph{%s}", x$thesis))
+
+
+        if ("award" %in% names (x))
+            post <- paste0(post, sprintf("%s", x$award))
+
+        if (nchar(post)>0) post <- paste0(post, ".")
+
+        with(x, sprintf("\\ind %d. %s, %s. %s\n", year, degree, university, post))
+    })
+
+    return(lines)
+}
+
+format_grants <- function(l) {
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+        if (x$start==x$end) {
+            with(x, sprintf("\\ind %s. %s, %s. %s (%s).\n",
+                            start, title, funder, role, value))
+        } else {
+            with(x, sprintf("\\ind %s--%s. %s, %s. %s (%s).\n",
+                            start, end, title, funder, role, value))
+        }
+    })
+    return(lines)
+}
+
+
+format_awards <- function(l) {
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+        if (x$start==x$end) {
+            with(x, sprintf("\\ind %s. %s, %s.\n",
+                            start, title, other))
+        } else {
+            with(x, sprintf("\\ind %s--%s. %s, %s.\n",
+                            start, end, title, other))
+        }
+    })
+
+    return(lines)
+}
+
+
+format_posts <- function(l) {
+    tmp <- l[[1]]
+
+    lines <- lapply(tmp, function(x) {
+        topline <- sprintf("\\subsection*{%s}\n", x$employer)
+
+        roles <- lapply(x$roles, function(x) {
+            if ("end" %in% names(x)) {
+                with(x, sprintf("\\ind %s--%s.  %s.\n", start, end, title))
+            } else {
+                with(x, sprintf("\\ind %s.  %s.\n", start, title))
+            }
+        })
+
+        c(list(topline), roles)
+    })
+
+    return(unlist(lines))
+}
+
+
+
+format_service <- function(l) {
+
+    tmp <- l[[1]]
+
+    ## First process the committees etc
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    comms <- tmp[ord]
+
+    comm.lines <- lapply(comms, function(x) {
+        if ("end" %in% names(x)) {
+            with(x, sprintf("\\ind %d--%s.  %s, %s.\n", start, end, role, entity))
+        } else {
+            with(x, sprintf("\\ind %d.  %s, %s.\n", start, role, entity))
+        }
+    })
+
+    ## Then grant reviews
+    grants <- paste0("\\ind Research proposal reviewer for ",
+                     paste0(l[[2]], collapse=", "), "\n")
+
+    ## Then journal reviews
+    journals <- paste0("\\ind Journal reviewer for ",
+                       paste0(paste("\\emph{", l[[3]], "}", sep=""), collapse=", "), "\n")
+
+    journals <- str_replace(journals, "&", "\\\\&")
+
+    ## Then consultancy
+    consultancy <- paste0("\\ind Independent consultancy for ",
+                          paste0(l[[4]], collapse=", "), "\n")
+
+    lines <- c(comm.lines, grants, journals, consultancy)
+    return(lines)
+}
+
+format_students <- function(l) {
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+        with(x, sprintf("\\ind %d--%s.  %s, \\emph{%s}.\n", start, end, name, title))
+    })
+
+    return(lines)
+}
+
+format_teaching <- function(l) {
+
+    tmp <- l[[1]]
+
+    ## Sort by year order
+    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    tmp <- tmp[ord]
+
+    lines <- lapply(tmp, function(x) {
+        with(x, sprintf("\\ind %d--%s.  {\\addfontfeature{Numbers={Proportional, Lining}}%s}.\n", start, end, title))
+    })
+
+    return(lines)
+}
+
