@@ -1,0 +1,13 @@
+Package: vita
+Title: Generate CV
+Version: 0.0.0.9000
+Authors@R: person("David", "LeBauer", , "dlebauer@gmail.com", role = c("aut",
+    "cre"))
+Description: Writes a CV
+Depends:
+    R (>= 3.1.2),
+    yaml,
+    stringr,
+    tools
+License: MIT + file LICENSE
+LazyData: true

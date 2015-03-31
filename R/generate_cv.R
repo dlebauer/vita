@@ -1,9 +1,3 @@
-#' Load the required libraries
-library(yaml)
-library(stringr)
-library(tools)
-vc_dir <- "../style"
-
 #' Processes a specified YAML file to create outputs
 #'
 #' @param section a character giving the name of the section to
@@ -35,8 +29,6 @@ process_yaml <- function(section, input_dir="../content", output_dir="output", f
 
 }
     
-
-
 
 #' Creates a section break
 #'
