@@ -1,16 +1,19 @@
 posts:
-  - employer: Imperial College London
+  - employer: Energy Biosciences Institute, University of Illinois at Urbana-Champaign
     roles:
-      - start: 2006
-        end: 2009
-        title: Research Associate, BP Urban Energy Systems Project
       - start: 2009
-        end: 2011
-        title: Research Fellow and Team Leader, BP Urban Energy Systems project
-      - start: 2011
+        end: 2012
+        title: Postdoctoral Researcher
+      - start: 2012
         end: present
-        title: Lecturer, Dept of Civil and Environmental Engineering
-  - employer: Institute of Industrial Science, University of Tokyo
+        title: Research Scientist and Ecosystem Modeling Program Lead
+  - employer: National Center for Supercomputing Applications
     roles:
-      - start: October 2010
-        title: Visiting Research Fellow
+      - start: 2014
+        end: present
+        title: Faculty Fellow
+  - employer: Global Change Solutions, LLC
+    roles:
+      - start: 2013
+        end: present
+        title: Lead developer

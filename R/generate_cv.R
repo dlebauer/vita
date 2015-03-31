@@ -21,6 +21,7 @@ process_yaml <- function(section,
 
     if (!file.exists(input)) stop(sprintf("Unable to find input file '%s'", input))
 
+    message(paste("processing yaml file ", input))
     data <- yaml.load_file(input)
 
     f <- paste0("format_", section)

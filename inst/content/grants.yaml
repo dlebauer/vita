@@ -1,67 +1,24 @@
 grants:
-  - start: 2014
-    end: present
-    title: Future FM
-    funder: EPSRC
-    role: Co-investigator
-    value: £600,000
-  - start: 2014
-    end: present
-    title: Smart Sustainable Districts
-    funder: Climate KIC
-    role: Co-investigator
-    value: £68,000
-  - start: 2014
-    end: present
-    title: Modeling City Systems
-    funder: Climate KIC
-    role: Co-investigator
-    value: unknown
-  - start: 2014
-    end: present
-    title: "Sponsorship Award: Urban-scale Building Energy Network"
-    funder: EPSRC
-    role: Principal investigator
-    value: £23,300
-  - start: 2014
-    end: present
-    title: Downscaling urban metabolism
-    funder: Enel Foundation/University of Toronto
-    role: Principal investigator
-    value: £10,000
   - start: 2012
-    end: present
-    title: SusLab NWE
-    funder: EU Interregio
-    role: Co-investigator
-    value: £170,000
-  - start: 2012
-    end: 2012
-    title: Smart Thermal Storage Systems
-    funder: DECC
-    role: Co-investigator
-    value: £30,000
-  - start: 2012
-    end: 2013 (?)
-    title: "Halving global CO2 by 2050: Technologies and Costs"
-    funder: AREVA
-    role: Co-investigator
-    value: unknown
-  - start: 2012
-    end: 2012
-    title: Energy Futures Lab Research Challenge
-    funder: Imperial College London
-    role: Principal investigator
-    value: £8,000
+    end: 2015
+    title: Feedstock and Ecosystem Service Modeling Program
+    role: Lead author #with Stephen Long (PI), Evan DeLucia, and Carl Bernacchi
+    funder: Energy Biosciences Institute
+    value: \$2,460,000
   - start: 2011
-    end: 2011
-    title: Energy systems analysis of South Heaton
-    funder: Newcastle University
-    role: Co-investigator
-    value: £2,500
-  - start: 2009
-    end: 2009
-    title: MBA Innovation, Entrepreneurship and Design
-    funder: Imperial College London
-    role: Ideator
-    value: 30 person-months
+    end: 2014
+    title: Model-data synthesis and forecasting across the upper Midwest; Partitioning uncertainty and environmental heterogeneity in ecosystem carbon.
+    funder: NSF Advances in Bioinformatics Infrastructure
+    role: Co-author
+    value: \$770,653
+
+#\textit{Grassland Carbon Dynamics along Nitrogen and Depth Gradients}  \years{2005-2007}\\
+#Kearney Soil Science Foundation Graduate Student Fellowship: \$34,000 \\ 
+
+#\textit{Decomposition responses to nitrogen in a California grassland} \years{2006}\\
+#NRS Mildred E. Mathias Graduate Student Research Grant Program: \$1,000  \\
+
+#\textit{Graduate Fellowship} \years{2004-2005}\\
+#UCI Department of Earth System Science: \$32,000\\
+
+#\textit{Establishment of a landscaped mushroom garden}  \years{1998} \\ Duke University Benenson Award in the Arts: \$1,500

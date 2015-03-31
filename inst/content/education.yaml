@@ -1,14 +1,12 @@
 degrees:
-  - degree: DPhil
-    year: 2006
-    university: University of Oxford
-    thesis: Behavioural responses to photovoltaic systems in the UK domestic sector
-  - degree: MSc Environmental Change and Management
-    year: 2002
-    university: University of Oxford
-    award: Distinction
-  - degree: BSc Applied Science (Civil Engineering)
-    year: 2001
-    university: "Queen's University, Kingston, Ontario, Canada"
-    award: First Class Honours
+  - degree: PhD Earth System Science
+    year: 2008
+    university: University of California at Irvine\\
+    thesis: Carbon Balance of Ecosystems Under Nitrogen Enrichment
+  - degree: MS Ecology, Agriculture conc.
+    year: 2003
+    university: University of California at Davis
+  - degree: BS Biology
+    year: 1998
+    university: Duke University
 
