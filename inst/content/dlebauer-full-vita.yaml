@@ -2,7 +2,7 @@
 person:
   first_name: David
   last_name: LeBauer
-  title: Dr.
+  title: ''
   postnoms: PhD
   tel: (217) 300-0266
   email: dlebauer@illinois.edu
@@ -38,23 +38,23 @@ publications:
 #    conferences:
 #    other:
 sections:
-  - title: Appointments
+  - title: Employment
     file: posts.yaml
   - title: Education
     file: education.yaml
   - title: # This field is unused
     file: BIBTEX
-  - title: Invited talks
-    file: talks.yaml
+#  - title: Invited talks
+#    file: talks.yaml
   - title: Grants
     file: grants.yaml
   - title: Awards
     file: awards.yaml
   - title: Service to the Profession
     file: service.yaml
-  - title: Teaching
-    file: teaching.yaml
-  - title: PhD Students
-    file: students.yaml
-  - title: Affiliations
-    file: affiliations.yaml
+#  - title: Teaching
+#    file: teaching.yaml
+#  - title: PhD Students
+#    file: students.yaml
+#  - title: Affiliations
+#    file: affiliations.yaml

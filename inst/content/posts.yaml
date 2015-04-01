@@ -1,19 +1,18 @@
 posts:
-  - employer: Energy Biosciences Institute, University of Illinois at Urbana-Champaign
+  - employer: University of Illinois at Urbana-Champaign
     roles:
+      - start: 2015
+        end: present
+        title: Modeling Development and Data Management Lead, Realizing Increased Photosynthetic Efficiency
+      - start: 2012
+        end: 2015
+        title: Research Scientist and Ecosystem Modeling Program Lead, Energy Biosciences Institute
       - start: 2009
         end: 2012
-        title: Postdoctoral Researcher
-      - start: 2012
-        end: present
-        title: Research Scientist and Ecosystem Modeling Program Lead
+        title: Postdoctoral Researcher, Energy Biosciences Institute
   - employer: National Center for Supercomputing Applications
     roles:
       - start: 2014
         end: present
         title: Faculty Fellow
-  - employer: Global Change Solutions, LLC
-    roles:
-      - start: 2013
-        end: present
-        title: Lead developer
+
