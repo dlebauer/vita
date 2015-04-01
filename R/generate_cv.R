@@ -132,6 +132,8 @@ generate_cv <- function(content, style, outdir="output") {
                "\\usepackage{fontspec}",
                sprintf("\\usepackage{%s}", file_path_sans_ext(basename(style))),
                "",
+               sprintf("\\makeauthorbold{%s}", config$person$last_name),
+               "",
                section_break("Personal information"),
                header,
                "",
