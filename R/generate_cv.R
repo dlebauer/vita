@@ -198,7 +198,7 @@ format_talks <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$year)))
+    ord <- order(unlist(lapply(tmp, function(x) x$year)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
@@ -211,7 +211,7 @@ format_affiliations <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
@@ -225,7 +225,7 @@ format_education <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$year)))
+    ord <- order(unlist(lapply(tmp, function(x) x$year)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
@@ -251,7 +251,7 @@ format_grants <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
@@ -271,7 +271,7 @@ format_awards <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
@@ -316,7 +316,7 @@ format_service <- function(l) {
 
     ## First process the committees etc
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     comms <- tmp[ord]
 
     comm.lines <- lapply(comms, function(x) {
@@ -349,7 +349,7 @@ format_students <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
@@ -364,7 +364,7 @@ format_teaching <- function(l) {
     tmp <- l[[1]]
 
     ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)))
+    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
