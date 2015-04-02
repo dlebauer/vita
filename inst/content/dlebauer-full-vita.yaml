@@ -50,7 +50,7 @@ sections:
     file: grants.yaml
   - title: Awards
     file: awards.yaml
-  - title: Service to the Profession
+  - title: Service
     file: service.yaml
 #  - title: Teaching
 #    file: teaching.yaml

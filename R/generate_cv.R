@@ -173,23 +173,6 @@ generate_cv <- function(content, style, outdir="output") {
     message("Building the PDF...")
     setwd(outdir)
     system("make")
-    ## commands <- c("xelatex", "biber", "xelatex", "xelatex")
-    ## tex_file <- file_path_sans_ext(basename(content))
-
-    ## compile_cv <- function(x){
-    ##     system2(x, args=tex_file, stdout=NULL)
-    ## }
-    ## codes <- unlist(lapply(commands, compile_cv))
-    ## if (all(codes==0)) {
-    ##     all_files <- list.files()
-    ##     all_files <- all_files[-grep("\\.pdf", all_files)]
-    ##     lapply(all_files, file.remove)
-    ##     message(sprintf("CV successfully built at '%s'",
-    ##                     file.path(outdir, paste0(tex_file, ".pdf"))))
-
-    ## } else {
-    ##     warning(sprintf("Error building CV.  All source files left in '%s'", outdir))
-    ## }
     setwd(cwd)
 
 }
@@ -289,6 +272,34 @@ format_awards <- function(l) {
 }
 
 
+format_service <- function(l) {
+    tmp <- l[[1]]
+
+    lines <- lapply(tmp, function(x) {
+        topline <- list()
+        topline <- sprintf("\\subsection*{%s}\n", x$context)
+        roles <- list()
+        if(x$context == "Departmental"){
+            for(i in 1:length(x$roles)){
+                r <- x$roles[[i]]
+                roles[[i]] <- paste0("\\ind ", r$start, "--", r$end, ". ", r$title, ". ",  r$entity, ". \n")
+            }
+        } else if (grepl("Workshops", x$context)) {
+            for(i in 1:length(x$roles)){
+                r <- x$roles[[i]]
+                roles[[i]] <- paste0("\\ind ", r$date, ". ", r$role, ". ",  r$title, ". ", r$location, ". \n")
+            }
+            
+        } else {
+            roles[[1]] <- paste(unlist(x$roles), collapse = ", ")
+        }
+
+        c(list(topline), roles)
+    })
+
+    return(unlist(lines))
+}
+
 format_posts <- function(l) {
     tmp <- l[[1]]
 
@@ -310,41 +321,6 @@ format_posts <- function(l) {
 }
 
 
-
-format_service <- function(l) {
-
-    tmp <- l[[1]]
-
-    ## First process the committees etc
-    ## Sort by year order
-    ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
-    comms <- tmp[ord]
-
-    comm.lines <- lapply(comms, function(x) {
-        if ("end" %in% names(x)) {
-            with(x, sprintf("\\ind %d--%s.  %s, %s.\n", start, end, role, entity))
-        } else {
-            with(x, sprintf("\\ind %d.  %s, %s.\n", start, role, entity))
-        }
-    })
-
-    ## Then grant reviews
-    grants <- paste0("\\ind Research proposal reviewer for ",
-                     paste0(l[[2]], collapse=", "), "\n")
-
-    ## Then journal reviews
-    journals <- paste0("\\ind Journal reviewer for ",
-                       paste0(paste("\\emph{", l[[3]], "}", sep=""), collapse=", "), "\n")
-
-    journals <- str_replace(journals, "&", "\\\\&")
-
-    ## Then consultancy
-    consultancy <- paste0("\\ind Independent consultancy for ",
-                          paste0(l[[4]], collapse=", "), "\n")
-
-    lines <- c(comm.lines, grants, journals, consultancy)
-    return(lines)
-}
 
 format_students <- function(l) {
     tmp <- l[[1]]

@@ -1,61 +1,76 @@
 service:
-    - start: 2012
-      end: present
-      role: Campus Representative
-      entity: National Ecological Observatory Network (NEON)
-#     - start: 2014
-#       role: Steering group member
-#       entity: Energy Research Partnership Cities project
-    # - start: 2014
-    #   role: Programme committee member
-    #   entity: First International Workshop on Demand Response (DR2014).
-    # - start: 2013
-    #   role: Invited participant
-    #   entity: EPSRC Engineering Leaders of the Future. October, Hellidon Lakes.
-    # - start: 2013
-    #   role: Invited participant
-    #   entity: Research Councils UK energy strategy workshop on energy infrastructure.  Birmingham.
-    # - start: 2013
-    #   role: Technical committee member
-    #   entity: International Society for Industrial Ecology conference
-    # - start: 2015
-    #   role: Technical committee member
-    #   entity: International Society for Industrial Ecology conference
-    # - start: 2011
-    #   end: present
-    #   role: Board member
-    #   entity: Sustainable Urban Systems section, International Society for Industrial Ecology.
-    # - start: 2011
-    #   end: 2012
-    #   role: Technical advisory panel member
-    #   entity: Challenging Lock-in Through Urban Energy Systems EPRSC project
-    # - start: 2011
-    #   end: 2012
-    #   role: Technical committee member
-    #   entity: CIBSE ASHRAE Technical Symposium      
-    # - start: 2011
-    #   end: 2013
-    #   role: Programme committee member
-    #   entity: 2nd--4th International Workshops on Agent Technologies for Energy Systems (ATES)
-    # - start: 2010
-    #   role: Reviewer
-    #   entity: ECOS and Next Generation Infrastructures conferences
-    # - start: 2009
-    #   role: Invited participant
-    #   entity: EPSRC Grand Challenge workshop on Sustainable Urban Environments
-grant_reviews:
-  - US National Science Foundation
-journal_reviews:
-  - Applied Soil Ecology
-  - Ecology
-  - Ecology Letters               
-  - Ecological Applications  
-  - Global Change Biology
-  - Global Change Biology - Bioenergy
-  - Geophysical Research Letters
-  - Nature Climate Change
-  - New Phytologist
-  - Plant Soil
-consultancy:
-  - Global Change Solutions, LLC
-  - British Petroleum Lignocellulosic Biofuels
+  - context: Departmental
+    roles:
+      - start: 2012
+        end: present
+        title: Campus Representative
+        entity: National Ecological Observatory Network (NEON)
+      - start: 2009
+        end: 2011
+        title: Expert for Climate Science Experts Referal Service
+        entity: American Geophysical Union
+      - start: 2006
+        end: 2007
+        title: Graduate Student Representative
+        entity: UCI Department of Earth System Science
+      - start: 2005
+        end: 2006
+        title: Graduate Student Seminar Organizer
+        entity: UCI Department of Earth System Science
+  - context: Workshops
+    roles:
+      - date: March 2014
+        role: Chair and Organizer
+        title: Advancing Software for Ecological Forecasting
+        location: Urbana, IL
+        website: http://conferences.igb.illinois.edu/ecological_forecasting/
+      - date: August 2014
+        role: Symposium Co-Organizer
+        title: Challenges and Advances in Statistical Software For Ecology.
+        location: Ecological Society of America Annual Meetings, Sacramento, CA
+        website: http://eco.confex.com/eco/2014/webprogram/Session9692.html
+      - date: November 2014
+        role: Organizer
+        title: Soil Carbon Cycle Super-Modeling
+        location: Biosphere 2, Oracle, AZ
+        website: http://soil-metamodel.github.io/
+  - context: Grant Reviews
+    roles:
+      - role: US National Science Foundation
+  - context: Journal Reviewer
+    roles:
+    - role: Applied Soil Ecology
+    - role: Ecology
+    - role: Ecology Letters               
+    - role: Ecological Applications  
+    - role: Global Change Biology
+    - role: Global Change Biology 
+    - role: Bioenergy
+    - role: Geophysical Research Letters
+    - role: Nature Climate Change
+    - role: New Phytologist
+    - role: Plant Soil
+  - context: Consultancy
+    roles:
+      - role: Global Change Solutions, LLC
+      - role: British Petroleum Lignocellulosic Biofuels
+
+
+## Log of Reviews (incomplete) 
+## APSOIL
+# APSOIL-D-09-00091R1
+# APSOIL-D-09-00379
+# APSOIL-D-11-00166
+# APSOIL-D-12-00268R1
+## https://mail.google.com/mail/ca/u/0/#search/Thank+you+for+the+review+of+APSOIL
+## Ecology 
+# 07-1104
+# 08-0792
+# 09-0935
+# 10-1558
+# 11-1398
+# https://mail.google.com/mail/ca/u/0/#search/#22Review+Received+by+Ecology#22 
+## GRL 
+# #2008GL033983
+## New Phytologist
+# NPH-MS-2012-14400
