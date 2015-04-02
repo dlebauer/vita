@@ -15,7 +15,7 @@
 \usepackage{hyperref,fancyhdr,enumitem,color}
 \usepackage[a4paper,centering]{geometry}
 \usepackage[compact,small,sf,bf]{titlesec}
-\usepackage{fontspec}
+%\usepackage{smallcaps}
 %% ------------------------------------------------------------------------
 %%  Git version tracking
 %% ------------------------------------------------------------------------
@@ -35,16 +35,16 @@
 
 %% color for the links
 \usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
-\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
-
+%\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
+%\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
+\definecolor{MediumGray}{gray}{0.3}
 %% Choose fonts for use with xelatex
 %% Minion and Myriad are widely available, from Adobe.
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
 %% and is worth every penny. Any good monospace font will work fine, though.
 %% Consolas or inconsolata are good alternatives.
 \setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Times New Roman}% Minion Pro, Palatino
-\setsansfont[Mapping=tex-text,Colour=ImperialBlue]{FreeSans}
+\setsansfont[Mapping=tex-text,Colour=MediumGray]{FreeSans}
 \setmonofont[Mapping=tex-text,Scale=0.9]{FreeMono} % Consolas, Pragmata, Lucida Console
 
 %% ------------------------------------------------------------------------
@@ -97,8 +97,8 @@
 \AtBeginDocument{%
   \def\keywords{\@name, Vita, CV, Resume, \@subject}
   \hypersetup{xetex,
-    colorlinks=true,
-    urlcolor=ImperialBlue,
+%    colorlinks=false,
+%    urlcolor=White,
     plainpages=false,
     pdfpagelabels,
     bookmarksnumbered,
@@ -115,9 +115,13 @@
   % Pull header block up
   \vspace*{-6em}
 
-
+  \bigskip
+  %% Name
+  \noindent{\Large\scshape{\@title\ \@name}} {\Large \textsc{, \@postnoms}}\\
+  \bigskip
+  
   \begin{minipage}[t]{3.5in}
-    \flushright {\footnotesize \@address}
+    \flushleft {\footnotesize \@address}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{1.7in}
@@ -125,14 +129,7 @@
     {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
     {\scriptsize  \texttt{\href{\@www}{\@www}}}
   \end{minipage}
-
-  \bigskip
-  \bigskip
-
-  %% Name
-  \noindent{\LARGE\scshape{\@title\ \@name}} {\LARGE \textsc{, \@postnoms}}\\
-  \bigskip
-  \bigskip
+ 
 
 }
 
@@ -170,7 +167,7 @@
   \global\aftersecfalse}
 
 % Section styling
-\titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
+\titleformat{\section}[leftmargin]{\raggedleft\scshape\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
 \titlespacing*{\section}{2cm}{2.5ex}{0.5cm}
 
 % Subsection styling
@@ -183,8 +180,14 @@
 %% ------------------------------------------------------------------------
 %%   Bibliography formatting
 %% ------------------------------------------------------------------------
-
-\usepackage[sorting=ynt,bibstyle=authoryear-comp,defernumbers=true,maxnames=20,firstinits=true, uniquename=init,dashed=false,doi=false,isbn=false,backend=biber]{biblatex}
+%% documentation: 
+%% http://ctan.mirrorcatalogs.com/macros/latex/exptl/biblatex/doc/biblatex.pdf
+\usepackage[sorting=ydnt,%rev. chronological; use ynt for chronological
+ bibstyle=authoryear-comp,
+ defernumbers=true,maxnames=20,
+ firstinits=true,uniquename=init,
+ dashed=false,doi=false,isbn=false,
+ backend=biber]{biblatex}
 
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
@@ -222,27 +225,21 @@
 \makebibcategory{other}{Reviews, software \& other writing}
 
 \setlength{\bibitemsep}{2.5pt}
-\setlength{\bibhang}{.8cm}
-%\renewcommand{\bibfont}{\fontsize{12}{14}}
+\setlength{\bibhang}{.4cm}
 
-\renewcommand*{\bibitem}{\addtocounter{papers}{1}\item \mbox{}\hskip-0.85cm\hbox to 0.85cm{\hfill\arabic{papers}.~~}}
-\defbibenvironment{bibliography}
-{\list{}
-  {\setlength{\leftmargin}{\bibhang}%
-   \setlength{\itemsep}{\bibitemsep}%
-   \setlength{\parsep}{\bibparsep}}}
-{\endlist}
-{\bibitem}
+%\renewcommand*{\bibitem}{\item \mbox{} \\}
+%\defbibenvironment{bibliography}
+%{\list{}
+%  {\setlength{\leftmargin}{\bibhang}%
+%   \setlength{\itemsep}{\bibitemsep}%
+%   \setlength{\parsep}{\bibparsep}}}
+%{\endlist}
+%{\bibitem}
 
-\newenvironment{publications}{\section{Publications}\label{papersstart}}%
-{\label{papersend}\addtocounter{sumpapers}{-1}\refstepcounter{sumpapers}\label{sumpapers}}
+\newenvironment{publications}{\section{Publications}}
 
-\def\printbib#1{\printbibliography[category=#1,heading=#1]\lastref{sumpapers}}
-\renewcommand{\bibfont}{\normalfont\fontsize{11}{13.4}\rmfamily}
-% Counters for keeping track of papers
-\newcounter{papers}\setcounter{papers}{0}
-\newcounter{sumpapers}\setcounter{sumpapers}{0}
-\def\lastref#1{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
+\def\printbib#1{\printbibliography[category=#1,heading=#1]}
+%\renewcommand{\bibfont}{\normalfont\fontsize{11}{13.4}\rmfamily}
 
 % Add all papers in the bib file.
 \nocite{*}
@@ -290,3 +287,4 @@
     }%
 }%
 }
+

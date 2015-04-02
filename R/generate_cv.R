@@ -129,7 +129,6 @@ generate_cv <- function(content, style, outdir="output") {
 
     ## Build the entire document
     lines <- c("\\documentclass[11pt, a4paper]{article}",
-               "\\usepackage{fontspec}",
                sprintf("\\usepackage{%s}", file_path_sans_ext(basename(style))),
                "",
                sprintf("\\makeauthorbold{%s}", config$person$last_name),
