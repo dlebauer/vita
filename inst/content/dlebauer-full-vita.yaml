@@ -6,13 +6,13 @@ person:
   postnoms: PhD
   tel: (217) 300-0266
   email: dlebauer@illinois.edu
-  web: http://www.dlebauer.com
+  web: dlebauerlab.org
   subject: "agriculture, ecology, biogeochemistry"
   address:
-    line1: Institute for Genomic Biology
-    line2: National Center for Supercomputing Applications
-    line3: University of Illinois at Urbana-Champaign
-    postcode: 61801
+    line1: University of Illinois
+    line2: Institute for Genomic Biology
+    line3: 1206 West Gregory Drive
+    postcode: Urbana, Illinois, 61801
 publications:
   bib_file: papers.bib
   sections:
