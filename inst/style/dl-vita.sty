@@ -15,6 +15,8 @@
 \usepackage{hyperref,fancyhdr,enumitem,color}
 \usepackage[a4paper,centering]{geometry}
 \usepackage[compact,small,sf,bf]{titlesec}
+\usepackage{marvosym}
+\usepackage{fontawesome}
 %\usepackage{smallcaps}
 %% ------------------------------------------------------------------------
 %%  Git version tracking
@@ -23,8 +25,8 @@
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
 %% See vc manual to compile with xelatex -enable-write18 vita
-%VC \immediate\write18{vc.sh}
-%VC \input{vc}
+\immediate\write18{vc.sh}
+\input{vc}
 
 %% ------------------------------------------------------------------------
 %% Fonts and colours
@@ -37,7 +39,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 %\definecolor{ImperialBlue}{rgb}{0.082,0.416,0.608}
 %\definecolor{ImperialLightBlue}{rgb}{0.545,0.682,0.8}
-\definecolor{MediumGray}{gray}{0.3}
+\definecolor{MediumGray}{gray}{0.4}
 %% Choose fonts for use with xelatex
 %% Minion and Myriad are widely available, from Adobe.
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
@@ -54,7 +56,7 @@
 % git revision info inserted via external script -- see docs for vc
 % package for details. comment out this line if you're not using vc,
 % and also remove the \input{vc} line above.
-%VC \newcommand{\gitinfo}{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}}
+\newcommand{\gitinfo}{\textcolor{Gray}{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}}}
 
 % Style for the front page
 \fancypagestyle{myplain}{%
@@ -70,7 +72,7 @@
 \fancyhead{}
 \fancyfoot{}
 \rhead{{\scriptsize\thepage}}
-%%VC \rfoot{\gitinfo}
+\rfoot{\gitinfo}
 
 
 %%------------------------------------------------------------------------
@@ -117,17 +119,18 @@
 
   \bigskip
   %% Name
-  \noindent{\Large\scshape{\@title\ \@name}} {\Large \textsc{, \@postnoms}}\\
-  \bigskip
   
-  \begin{minipage}[t]{3.5in}
-    \flushleft {\footnotesize \@address}
+
+  \flushleft{\Large\scshape{\@title\ \@name}} {\Large \textsc{, \@postnoms}}\\
+  
+  \begin{minipage}[t]{3.6in}
+    \flushright{\footnotesize \@address}
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{1.7in}
-    \flushright \footnotesize Phone: \@tel \\
-    {\scriptsize  \texttt{\href{mailto:\@email}{\@email}}} \\
-    {\scriptsize  \texttt{\href{\@www}{\@www}}}
+  \begin{minipage}[t]{2in}
+    \flushright \footnotesize   \@tel \\
+    {\footnotesize   \texttt{\@email}} \\
+    {\footnotesize   \texttt{\@www}}
   \end{minipage}
  
 
@@ -167,13 +170,12 @@
   \global\aftersecfalse}
 
 % Section styling
-\titleformat{\section}[leftmargin]{\raggedleft\scshape\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
+\titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
 \titlespacing*{\section}{2cm}{2.5ex}{0.5cm}
 
 % Subsection styling
-\titleformat{\subsection}{\subskip\itshape}{}{0pt}{}[]
+\titleformat{\subsection}{\subskip\slshape}{}{}{}[]
 \titlespacing*{\subsection}{0pt}{2ex}{1ex}
-
 \raggedbottom
 \makeatother
 
