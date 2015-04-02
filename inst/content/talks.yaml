@@ -1,128 +1,19 @@
 talks:
   - year: 2015
     title: What is an urban energy system?
-    event: CASA Seminar Series
-    city: University College London
-    month: February
-  - year: 2014
-    title: What is an urban energy system?
-    event: Imperial College Energy Society seminar
-    city: London
-    month: December
-  - year: 2014
-    title: Benchmarking urban energy efficiency in the UK
-    event: "Benchmarking Energy Sustainability in Cities JRC-EC Scientific Workshop"
-    city: Turin
-    month: November
-  - year: 2014
-    title: "Smart Urban Energy Systems: From Grand Visions to Everyday Reality"
-    event:  "Cities, Energy, and Climate Change Mitigation conference"
-    city: Leeds
-    month: July
-  - year: 2014
-    title: Metabolic Impacts of the London Congestion Charge
-    event:  Gordon Research Conference on Industrial Ecology
-    city: Barga
-    month: June
-  - year: 2014
-    title: "A review of urban energy systems models: what role for weather and climate data?"
-    event: "University of Reading,  Meteorology Dept"
-    city: Reading
+    event: Developing, Maintaining, and Employing Large Computational Frameworks in the Ecological Sciences
+    city: Durham, NC
     month: April
-  - year: 2013
-    title: "How do models of urban energy systems account for climate change?"
-    event: RCN Virtual Collaboratory Call
-    city: online
-    month: October
-  - year: 2013
-    title: Technologies and policies for urban energy systems
-    event:  Global Sustainability Summer School
-    city: "Potsdam Institute for Climate Impact Research, Potsdam, Germany"
-    month: July
-  - year: 2013
-    title: "Fit for purpose?  A comparison of urban resource demand simulation techniques"
-    event: ISIE Conference
-    city: Ulsan, South Korea
-    month: June
-  - year: 2013
-    title: What can dynamical systems tell us about urban energy systems?
-    event: SIAM Conference on the Application of Dynamical Systems
-    city: Snowbird, Utah
-    month: May
-  - year: 2012
-    title: What next for urban energy systems?
-    event:  Flexible Energy Delivery Systems seminar series
-    city: Cardiff University
-    month: October
-  - year: 2012
-    title: Modelling urban energy systems with SynCity
-    event:  RCN Workshop on Sustainable Cities
-    city: "Denver, USA"
+  - year: 2014
+    title: Modeling the Productivity and Ecosystem Services of Sugarcane
+    event: Global Sustainable Bioenergy / FAPESP annual meeting
+    city: Piracicaba, Brazil
     month: August
-  - year: 2012
-    title: Modelling urban energy systems
-    event:  GreenBridge seminar series
-    city: University of Cambridge, UK
-    month: March
-  - year: 2012
-    title: "Modelling approaches to urban energy systems: optimization, simulation, and more"
-    event:  Martin Centre seminar series
-    city: University of Cambridge, UK
-    month: February
-  - year: 2011
-    title: Modelling urban energy systems
-    event:  National Academy of Engineering/EU Frontiers of Engineering symposium
-    city: Irvine, CA
-    month: November
-  - year: 2011
-    title: Modelling urban energy transitions
-    event:  Grantham Institute
-    city: Imperial College, London
-    month: September
-  - year: 2011
-    title: Approaches, challenges and opportunities in urban energy systems modelling
-    event:  IIASA
-    city: Laxenburg, Austria
-    month: March
+  - year: 2013
+    title: Reducing uncertainty through data-driven model development
+    event: Ecological Society of America Meetings
+    city: Minneapolis, MN
   - year: 2010
-    title: "Challenges in multi-scale urban energy modelling and data collection: What's 'just right' for urban energy data?"
-    event:  IIS seminar
-    city: University of Tokyo
-    month: November
-  - year: 2010
-    title: Modelling energy systems with ontologies
-    event: IAM seminar
-    city: University of Southampton
-    month: June
-  - year: 2010
-    title: "SynCity: New Tools, Methods and Business Models for future urban sustainability"
-    event:  Communities for Advanced Distributed Energy Resources
-    city: San Diego
-    month: April
-  - year: 2010
-    title: "Lessons from SynCity: insights on the modelling of urban energy systems"
-    event: Gordon Conference on Industrial Ecology
-    city: "New London, NH"
-    month: July
-  - year: 2009
-    title: "The SynCity layout model: exploring the limits of low-carbon urban design"
-    event:  University of Tokyo
-    city: Tokyo
-    month: September
-  - year: 2009
-    title: Modelling urban energy systems with SynCity
-    event: GCP Workshop
-    venue: Nagoya University
-    city: Nagoya
-    month: February
-  - year: 2008
-    title: "SynCity: an integrated framework for modelling urban energy systems"
-    event:  Asian Institute of Technology
-    city: Bangkok
-    month: February
-  - year: 2007
-    title: Urban Energy Transitions
-    event:  National Institute for Environmental Studies
-    city: Tsukuba
-    month: March
-
+    title: PEcAn, a workflow management tool for real-time data assimilation and forecasting
+    event: Ecological Society of America Meetings
+    city: Pittsburgh, PA
