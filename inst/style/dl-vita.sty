@@ -45,9 +45,18 @@
 %% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
 %% and is worth every penny. Any good monospace font will work fine, though.
 %% Consolas or inconsolata are good alternatives.
-\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Times New Roman}% Minion Pro, Palatino
-\setsansfont[Mapping=tex-text,Colour=MediumGray]{FreeSans}
-\setmonofont[Mapping=tex-text,Scale=0.9]{FreeMono} % Consolas, Pragmata, Lucida Console
+%\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Times New Roman}% Minion Pro, Palatino
+%\setsansfont[Mapping=tex-text,Colour=MediumGray]{FreeSans}
+%\setmonofont[Mapping=tex-text,Scale=0.9]{FreeMono} % Consolas, Pragmata, Lucida Console
+
+% \setmainfont[Mapping=tex-text,Numbers=OldStyle]{TeX Gyre Pagella}
+% \setsansfont[Mapping=tex-text,Numbers=OldStyle,Scale=MatchLowercase]{TeX Gyre Heros}
+% \setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Inconsolata}
+
+% http://tex.stackexchange.com/a/43627/1783
+\setromanfont[Ligatures=TeX, Colour=MediumGray]{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{TeX Gyre Heros}
+\setmonofont[Scale=MatchLowercase]{Inconsolata}
 
 %% ------------------------------------------------------------------------
 %% Header and footer
@@ -170,7 +179,7 @@
   \global\aftersecfalse}
 
 % Section styling
-\titleformat{\section}[leftmargin]{\raggedleft\sffamily\footnotesize}{}{0pt}{}[\setsubskip]
+\titleformat{\section}[leftmargin]{\raggedleft\sffamily}{}{0pt}{}[\setsubskip]
 \titlespacing*{\section}{2cm}{2.5ex}{0.5cm}
 
 % Subsection styling
