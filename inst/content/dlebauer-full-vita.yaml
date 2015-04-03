@@ -16,11 +16,15 @@ person:
 publications:
   bib_file: papers.bib
   sections:
-#    books:
+    monographs:
+    - lebauer2013ffb
+    inpress:
+    - wang2015pbm
+    - zhu2015pis
+    - davis2015tsl
     papers:
     - davis2014llf
     - wang2013pys
-    - lebauer2013ffb
     - dietze2013oic
     - lebauer2013tpd
     - lebauer2010ldr
@@ -30,13 +34,16 @@ publications:
     - okano2004art
     - dietze2014qat
     - wang2013est
-    - davis2015tsl
-    - wang2015pbm
-    - zhu2015pis
     chapters:
       - isikhuemhen2004gpt
-#    conferences:
-#    other:
+    conferences:
+      - kooper2013ecological
+      - lin2015hwd
+    software:
+      - betydb
+      - pecan
+      - biocro
+      - ghgvc
 sections:
   - title: Employment
     file: posts.yaml
@@ -44,16 +51,16 @@ sections:
     file: education.yaml
   - title: # This field is unused
     file: BIBTEX
-#  - title: Invited talks
-#    file: talks.yaml
+  - title: Invited talks
+    file: talks.yaml
   - title: Grants
     file: grants.yaml
   - title: Awards
     file: awards.yaml
   - title: Service
     file: service.yaml
-#  - title: Teaching
-#    file: teaching.yaml
+  - title: Teaching
+    file: teaching.yaml
 #  - title: PhD Students
 #    file: students.yaml
 #  - title: Affiliations

@@ -1,6 +1,6 @@
 talks:
   - year: 2015
-    title: Software for Ecological Inference and Prediction: What We Have and What We Need
+    title: "Software for Ecological Inference and Prediction: What We Have and What We Need"
     event: Developing, Maintaining, and Employing Large Computational Frameworks in the Ecological Sciences
     city: Durham, NC
     month: April
@@ -10,11 +10,12 @@ talks:
     city: Piracicaba, Brazil
     month: August
   - year: 2013
-    title: Modeling Bioenergy Feedstock Productivity and Ecosystem Services     event: Global Bioenergy Crop Modeling Workshop, Oak Ridge National Laboratory
+    title: Modeling Bioenergy Feedstock Productivity and Ecosystem Services
+    event: Global Bioenergy Crop Modeling Workshop, Oak Ridge National Laborator
     city: Oak Ridge, TN 
   - year: 2013
     title: Reducing uncertainty through data-driven model development
-    event: Uncertainty Analysis: ACritical Step in Ecological Synthesis, Organized Oral Session, Ecological Society of America Meetings
+    event: "Uncertainty Analysis: A Critical Step in Ecological Synthesis, Organized Oral Session, Ecological Society of America Meetings"
     city: Minneapolis, MN
   - year: 2010
     title: PEcAn, a workflow management tool for real-time data assimilation and forecasting

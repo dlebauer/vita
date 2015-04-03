@@ -184,9 +184,9 @@ format_talks <- function(l) {
     ## Sort by year order
     ord <- order(unlist(lapply(tmp, function(x) x$year)), decreasing = TRUE)
     tmp <- tmp[ord]
-
+    month <- ""
     lines <- lapply(tmp, function(x) {
-        with(x, sprintf("\\ind %d ``%s''. %s, %s. %s.\n", year, title, event, city, month))
+        with(x, sprintf("\\ind  %s \\textit{%s}. %s, %s.\n", year, title, event, city))
     })
     return(lines)
 }
@@ -343,9 +343,13 @@ format_teaching <- function(l) {
     ## Sort by year order
     ord <- order(unlist(lapply(tmp, function(x) x$start)), decreasing = TRUE)
     tmp <- tmp[ord]
+    end <- ""
 
     lines <- lapply(tmp, function(x) {
-        with(x, sprintf("\\ind %d--%s.  {\\addfontfeature{Numbers={Proportional, Lining}}%s}.\n", start, end, title))
+        with(x,
+             ifelse(end == "",
+                    sprintf("\\ind %d.  {\\addfontfeature{Numbers={Proportional, Lining}}%s}.\n", start, title),
+                    sprintf("\\ind %d--%s.  {\\addfontfeature{Numbers={Proportional, Lining}}%s}.\n", start, end, title)))
     })
 
     return(lines)

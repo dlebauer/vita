@@ -20,7 +20,7 @@ service:
   - context: Workshops
     roles:
       - date: March 2014
-        role: Chair and Organizer
+        role: Workshop Chair and Co-Organizer
         title: Advancing Software for Ecological Forecasting
         location: Urbana, IL
         website: http://conferences.igb.illinois.edu/ecological_forecasting/
@@ -30,7 +30,7 @@ service:
         location: Ecological Society of America Annual Meetings, Sacramento, CA
         website: http://eco.confex.com/eco/2014/webprogram/Session9692.html
       - date: November 2014
-        role: Organizer
+        role: Workshop Co-Organizer
         title: Soil Carbon Cycle Super-Modeling
         location: Biosphere 2, Oracle, AZ
         website: http://soil-metamodel.github.io/

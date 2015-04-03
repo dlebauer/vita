@@ -17,6 +17,7 @@
 \usepackage[compact,small,sf,bf]{titlesec}
 \usepackage{marvosym}
 \usepackage{fontawesome}
+\usepackage{marginnote}%\reversemarginpar %marginnotes on left 
 %\usepackage{smallcaps}
 %% ------------------------------------------------------------------------
 %%  Git version tracking
@@ -54,10 +55,14 @@
 % \setmonofont[Mapping=tex-text,Scale=MatchLowercase]{Inconsolata}
 
 % http://tex.stackexchange.com/a/43627/1783
-\setromanfont[Ligatures=TeX, Colour=MediumGray]{TeX Gyre Pagella}
-\setsansfont[Ligatures=TeX,Scale=MatchLowercase]{TeX Gyre Heros}
+\setromanfont[Ligatures=TeX]{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX,Colour=MediumGray]{TeX Gyre Heros}
 \setmonofont[Scale=MatchLowercase]{Inconsolata}
 
+% match old cv
+% http://tex.stackexchange.com/a/43627/1783
+% \setmainfont[Ligatures={Common}, Numbers={OldStyle}]{Fontin}
+% \setsansfont{Fontin Sans}
 %% ------------------------------------------------------------------------
 %% Header and footer
 %% ------------------------------------------------------------------------
@@ -110,6 +115,7 @@
   \hypersetup{xetex,
 %    colorlinks=false,
 %    urlcolor=White,
+    hidelinks,
     plainpages=false,
     pdfpagelabels,
     bookmarksnumbered,
@@ -193,12 +199,18 @@
 %% ------------------------------------------------------------------------
 %% documentation: 
 %% http://ctan.mirrorcatalogs.com/macros/latex/exptl/biblatex/doc/biblatex.pdf
-\usepackage[sorting=ydnt,%rev. chronological; use ynt for chronological
- bibstyle=authoryear-comp,
- defernumbers=true,maxnames=20,
- firstinits=true,uniquename=init,
- dashed=false,doi=false,isbn=false,
- backend=biber]{biblatex}
+\usepackage[
+ sorting = ydnt,%rev. chronological; use ynt for chronological
+ style = authoryear,
+ natbib = true,
+ defernumbers = true,
+ maxnames = 20,
+ firstinits = true,
+ uniquename = init,
+ dashed = false,
+ doi = true,
+ isbn = false,
+ backend = biber]{biblatex}
 
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
@@ -223,10 +235,13 @@
 
 % Bibliography categories
 \def\makebibcategory#1#2{\DeclareBibliographyCategory{#1}\defbibheading{#1}{\subsection*{#2}}}
+\makebibcategory{monographs}{Monograph}
 \makebibcategory{books}{Books}
 \makebibcategory{papers}{Journal articles}
-\makebibcategory{chapters}{Book chapters}
-\makebibcategory{conferences}{Conference papers \& posters}
+\makebibcategory{inpress}{in press}
+\makebibcategory{chapters}{Book chapter}
+\makebibcategory{conferences}{Conference Proceedings}
+\makebibcategory{software}{Software}
 \makebibcategory{techreports}{Unpublished working papers}
 \makebibcategory{bookreviews}{Book reviews}
 \makebibcategory{editorials}{Editorials}
@@ -234,6 +249,7 @@
 \makebibcategory{subpapers}{Submitted papers}
 \makebibcategory{curpapers}{Current projects}
 \makebibcategory{other}{Reviews, software \& other writing}
+
 
 \setlength{\bibitemsep}{2.5pt}
 \setlength{\bibhang}{.4cm}
