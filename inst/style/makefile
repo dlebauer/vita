@@ -25,14 +25,11 @@ all: dlebauer-full-vita.pdf
 # -pdf tells latexmk to generate PDF directly (instead of DVI).
 # -pdflatex="" tells latexmk to call a specific backend with specific options.
 # -use-make tells latexmk to call make for generating missing files.
-
 # -interactive=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
 dlebauer-full-vita.pdf: dlebauer-full-vita.tex
 	latexmk -pdf -pdflatex="xelatex -interactive=nonstopmode" dlebauer-full-vita.tex
-
-#xelatex  -interaction=nonstopmode "\input" dlebauer-full-vita.tex
 
 clean:
 	latexmk -CA

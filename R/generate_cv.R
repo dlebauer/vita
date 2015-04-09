@@ -127,6 +127,7 @@ generate_cv <- function(content, style, outdir="output") {
     }
     sections <- unlist(lapply(config$sections, config_fn))
 
+    sections[grepl("software", sections)] <- "\\section{Other}\\printbib{software}"
     ## Build the entire document
     lines <- c("\\documentclass[english, 9pt, a4paper]{article}",
                sprintf("\\usepackage{%s}", file_path_sans_ext(basename(style))),
@@ -144,6 +145,8 @@ generate_cv <- function(content, style, outdir="output") {
                "",
                sections,
                "\\end{document}")
+
+
     message("done")
 
     message(sprintf("Copying source files to '%s'...", outdir), appendLF=FALSE)
@@ -227,7 +230,6 @@ format_education <- function(l) {
 
         with(x, sprintf("\\ind %d. %s, %s. %s\n", year, degree, university, post))
     })
-
     return(lines)
 }
 

@@ -12,16 +12,17 @@ person:
     line1: University of Illinois
     line2: Institute for Genomic Biology
     line3: 1206 West Gregory Drive
-    postcode: Urbana, Illinois, 61801
+    postcode: bana, Illinois, 61801
 publications:
   bib_file: papers.bib
   sections:
     monographs:
     - lebauer2013ffb
-    papers:
+    inpress:
     - wang2015pbm
     - zhu2015pis
     - davis2015tsl
+    papers:
     - davis2014llf
     - wang2013pys
     - dietze2013oic
@@ -33,16 +34,16 @@ publications:
     - okano2004art
     - dietze2014qat
     - wang2013est
-    software:
-      - betydb
-      - pecan
-      - biocro
-      - ghgvc
     chapters:
       - isikhuemhen2004gpt
     conferences:
       - kooper2013ecological
       - lin2015hwd
+    software:
+      - betydb
+      - pecan
+      - biocro
+      - ghgvc
 sections:
   - title: Employment
     file: posts.yaml
