@@ -3,6 +3,10 @@ awards:
     end: present
     title: Faculty Fellow
     other: National Center for Supercomputing Applications (\$25,000)
+  - start: 2006
+    title: Mildred E. Mathias Graduate Research Grant, UC Natural Reserve System 
+    other: Decomposition responses to nitrogen in a California grassland (\$1,000)
+    url: http://nrs.ucop.edu/grants/mathias/mathias_05.htm
   - start: 2005
     end: 2007
     title: Graduate Fellowship
@@ -18,4 +22,7 @@ awards:
   - start: 1998
     end: 1998
     title: Benenson Award in the Arts 
+    other: Duke University (\$1,500)
+  - start: 1997
+    title: Undergraduate Research Support
     other: Duke University (\$1,500)
