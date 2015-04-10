@@ -1,0 +1,637 @@
+% $Id$ -*-LaTeX-*-
+
+% Purpose: Full Curriculum Vitae
+% URL: 
+% http://dust.ess.uci.edu/job/cv/cv.pdf
+% http://dust.ess.uci.edu/job/cv/cv.html
+
+% Usage (see also end of file):
+% cd ~/job;make -W cv.tex cv.pdf;cd -
+
+\documentclass[10pt,twoside]{article}
+
+% Standard packages
+\usepackage{ifpdf} % Define \ifpdf
+\ifpdf % PDFLaTeX
+\usepackage[pdftex]{graphicx} % Defines \includegraphics*
+\pdfcompresslevel=9
+\usepackage{thumbpdf} % Generate thumbnails
+\else % !PDFLaTeX
+\usepackage{graphicx} % Defines \includegraphics*
+\fi % !PDFLaTeX
+%\usepackage{bibunits} % Multiple bibliographies in single article
+\usepackage{array} % Table and array extensions, e.g., column formatting
+\usepackage[dayofweek]{datetime} % \xxivtime, \ordinal
+\usepackage{mdwlist} % Compact list formats \itemize*, \enumerate*
+\usepackage{revnum} % Reverse enumerate
+\usepackage{times} % Postscript Times-Roman font KoD99 p. 375
+\usepackage{url} % Typeset URLs and e-mail addresses
+
+% hyperref is last package since it redefines other packages' commands
+% hyperref options, assumed true unless =false is specified:
+% backref       List citing sections after bibliography entries
+% baseurl       Make all URLs in document relative to this
+% bookmarksopen Unknown
+% breaklinks    Wrap links onto newlines
+% colorlinks    Use colored text for links, not boxes
+% hyperindex    Link index to text
+% plainpages=false Suppress warnings caused by duplicate page numbers
+% pdftex        Conform to pdftex conventions
+% Colors used when colorlinks=true:
+% linkcolor     Color for normal internal links
+% anchorcolor   Color for anchor text
+% citecolor     Color for bibliographic citations in text
+% filecolor     Color for URLs which open local files
+% menucolor     Color for Acrobat menu items
+% pagecolor     Color for links to other pages
+% urlcolor      Color for linked URLs
+\ifpdf % PDFLaTeX
+\usepackage[backref,breaklinks,colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue,hyperindex,plainpages=false,pdftex]{hyperref} % Hyper-references
+\usepackage{fancyhdr}
+\pdfcompresslevel=9
+\else % !PDFLaTeX
+\usepackage[backref=false,breaklinks,colorlinks=false,hyperindex,plainpages=false]{hyperref} % Hyper-references
+\fi % !PDFLaTeX
+\hypersetup{
+letterpaper,
+colorlinks,
+urlcolor=black,
+pdfpagemode=none,
+pdftitle={Curriculum Vitae},
+pdfauthor={David Shaner LeBauer},
+pdfsubject={Curriculum Vitae},
+pdfkeywords={Biogeochemistry, Fungi, mushroom, nitrogen, carbon, global change, earth system science,}
+}
+% Personal packages
+\usepackage{csz} % Library of personal definitions
+\usepackage{abc} % Alphabet as three letter macros
+\usepackage{chm} % Commands generic to chemistry
+\usepackage{hyp} % Hyphenation exception list
+
+% Margins
+%\topmargin 0in \headheight 0pt \headsep 0pt % No headers
+\topmargin -0.25in \headheight 0.125in \headsep 0.125in % Margin compensates for any headers so that body can still be nine inches
+\textheight 9in \textwidth 6.5in
+\oddsidemargin 0in \evensidemargin 0in
+\marginparwidth 0pt \marginparsep 0pt
+%\footskip 0pt
+\footskip 0.25in
+\footnotesep=0pt
+
+% Commands which must be executed in preamble
+% \DeclareFixedFont{command}{code}{family}{series}{shape}{size}
+\DeclareFixedFont{\xiirn}{OT1}{cmr}{m}{n}{12}
+\DeclareFixedFont{\xiitiit}{OT1}{cmti}{m}{it}{12}
+\makecompactlist{revnumerate*}{revnumerate}
+
+% Horizontal space 
+\setlength{\parindent}{0mm}
+
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{fancy}
+\lhead{\textsc{David~S. LeBauer}}
+\chead{}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\newcommand{\dslnote}{\csznote}
+%\pagestyle{empty}
+%\pagestyle{plain}
+\thispagestyle{plain}
+
+\begin{center}
+%{\small Web: \url{https:///netfiles.uiuc.edu/dlebauer/www/cv.pdf} \hfill Updated: \shortdate\today}\\
+%{\hfill Updated: \shortdate\today}\\
+{\textit{Curriculum Vitae}}\\
+%{\xiirn \scshape CHARLES~S. (CHARLIE) ZENDER}\\
+{\large\textsc{David~S. LeBauer}}\\
+\end{center}
+
+Energy Biosciences Institute \hfill Voice: (919)\thinspace 275-0360\\
+University of Illinois \hfill Fax:   \\
+Urbana, IL~~61801 \hfill Email: dlebauer@illinois.edu\\
+
+\bigskip\bigskip
+
+\textbf{EDUCATION}
+\begin{table}[h]
+\begin{tabular}{ l l l l } 
+University of California at Irvine & Earth System Science & Ph.D. & 2008\\
+University of California at Davis & Agricultural Ecology & M.S. & 2003 \\
+Duke University, Durham~NC & Biology & B.S. Hon. & 1998 \\
+\end{tabular}
+\end{table}
+
+
+\textbf{PROFESSIONAL APPOINTMENTS}
+\begin{table}[h]
+\begin{tabular}{>{\raggedright}p{35.0em}<{} l }
+  Research Scientist, University of Illinois, Urbana-Champaign &2012--present \\ 
+  Postdoctoral Research Associate, University of Illinois, Urbana-Champaign &2009--2012 \\ 
+  Instructor, CA State Summer School for Science and Math & 2008, 2009\\
+  , University of California at Irvine & 2004--2008\\ 
+  Laboratory Manager and Extension Educator, University of North Carolina A\&T & 2003--2004\\
+  Graduate Research \& Teaching Assistant, University of California at Davis &2001--2003 \\
+  Laboratory and Field Technician, Duke University & 1997--2001 \\
+\end{tabular}
+\end{table}
+
+\dslnote{
+\textbf{TEACHING AND RESEARCH OVERVIEW}
+\par\medskip
+%for NEON Biometeorologist position 20100810
+My research focuses on the response of terrestrial biogeochemistry to anthropogenic change, including the indirect eutrophication of the biosphere and the direct management of land for food and fuel production. My goal is to develop scientific assessments that promote integration of science into policy and management decision making. 
+\dslnote{%left out of NEON statement 
+For example,  the  develop tools to improve understanding and prediction of ecosystem functioning, with the aim ofmore ecologically informed approaches to agriculture, forestry, and urban development. } % end dslnote   
+To accomplish this
+goal, I combine model development with data assimilation to refine and improve the accuracy of ecological
+forecasts. This work benefits from collaboration with agronomists, atmospheric scientists, hydrologists,
+statisticians, and computer scientists. On a global scale, my goal is to predict global consequences of anthropogenic
+change. On a local and regional scale, my primary objective is to develop models that farmers,
+foresters, and urban planners can use to predict the ecological consequences of local and regional managment
+decisions. Furthermore, I value and enjoy the opportunity to educate students. My approach to science
+education is to engage students in the process of scientific discovery. One objective of this approach is to
+enable students to collect data that will become long term records of ecosystem functioning. These records
+could be used to test and parametrize predictive models. By engaging participants from a diversity of fields
+and settings, it will be possible to promote scientific literacy outside of academia and thereby foster the use
+of science at all levels of learning and decision making.
+\dslnote{%CSZ's statement
+I educate, train students, and conduct research at UC Irvine.
+My teaching includes undergraduate and graduate courses on climate and 
+physics, and graduate seminars on physical climate modeling.
+Our research group studies the energy and trace species that pass
+through Earth's atmosphere.    
+We model the microphysics of trace gas, aerosol, and surface
+interactions with Earth's radiative, thermodynamic, and chemical
+budgets.    
+We then (often) parameterize these effects in climate models.
+The model simulations, combined with lab, field, and satellite data,
+help us predict and attribute features of climate and climate change.
+Current research includes mineral dust, meteoric, and carbonaceous 
+aerosols, snow lifecycle and albedo, aerosol impacts on ocean
+biogeochemistry, wind-driven surface energy/mass exchange,
+climate-disease links, and terascale data analysis. 
+Our aerosol generation, radiative transfer, and data processing models
+are freely available and are used in geoscience research institutions
+world-wide.
+} % end dslnote
+\par\bigskip
+} % end dslnote
+\csznote{
+\textbf{PROFESSIONAL INTERESTS}
+\par\medskip
+\dslnote{ % CSZ's professional interests
+My research focuses on two complementary areas: terrigenic mineral
+dust aerosol and the disposition of solar radiation in the climate
+system. 
+Currently I am examining Earth's radiative and photochemical responses
+to mineral dust aerosol.   
+Related interests are the roles of dust particles in air quality, 
+ice crystal nucleation, paleoclimate, and fertilization of remote
+ecosystems.     
+My studies combine satellite, field, and laboratory observations of
+aerosols, clouds, trace gases, soil types, and surface properties with 
+radiative transfer and large scale climate system models.  
+The ultimate goal of these studies is to improve our understanding
+andprediction of climate and climate change.   
+\par\medskip
+
+\begin{itemize*}
+\item[] Mineral dust aerosol---its distribution, source and sink mechanisms,
+direct and indirect radiative forcing, and impact on tropospheric
+processes.
+
+\item[] Radiation and climate---closing the surface shortwave energy
+budget, using field observations to investigate causal mechanisms of
+excess shortwave absorption, using GCMs to study the effect of
+aerosols and clouds on climate.
+\end{itemize*}
+
+% Expertise keywords sent 20091219 to Round Table Group (RTG)
+Climate Change, Physics, Meteorology, Supercomputing, Pollution,
+Arctic, Snow, Dust, Black Carbon, Light
+
+% Profile sent 20090806 to Jerry Schubel for LBAOP profile
+% Profile sent 20091219 to Round Table Group (RTG)
+Charlie Zender is an atmospheric physicist and educator at UC Irvine.
+He has led the Climate, Health, Aerosols, Radiation, and Microphysics
+(CHARM) group in their Department of Earth System Science since 1999.
+CHARM studies the distribution and fluxes of energy and trace species
+that interact with Earth's atmosphere. Their current research includes
+mineral dust and carbonaceous aerosols, snow/firn evolution, aerosol
+impacts on ocean biogeochemistry, wind-driven energy exchange, and
+terascale data analysis.  Zender actively peer-reviews mansuscripts
+and proposals for professional organizations and agencies (NSF, NASA)
+and journals. His governmental service includes the California Climate
+Change Advisory Committee, and his testimony before Congress on the
+effects of aerosols on Arctic climate.  Zender also consults pro bono
+for several non-governmental organizations dedicated to clean air and
+healthy environments.  Prior to joining UCI in 1999, Zender studied at
+Harvard (AB 1990), the University of Colorado, Boulder (PhD 1996), and
+the National Center for Atmospheric Research (postdoc).
+
+% Profile (30-words) sent 20100205 to Corinne Kisner for Asilomar
+My group studies dust, snow, fire, wind, and their interactions with 
+climate and health. I also teach undergraduates about geoengineering.
+We discuss scientific, technical, economic, and ethical issues.
+It's provocative!
+
+% Profile sent 20100316 to Edward Patte for GAFOS profile
+I studied physics and astronomy at Harvard, before finding my true
+passion for climate and atmospheric physics in Boulder where I
+completed my doctoral work (University of Colorado) and stayed for a 
+postdoc at the National Center for Atmospheric Research.
+I joined the Department of Earth System Science at UC Irvine in 1999.
+What most fascinates me is the effect of previously neglected physical
+processes on climate. My Climate, Health, Aerosols, Radiation, and
+Microphysics (CHARM) group studies the distribution and fluxes of
+energy and trace species that interact with Earth's atmosphere. 
+Our current research includes desert dust and carbonaceous aerosols,
+snow/firn evolution, aerosol impacts on ocean biogeochemistry,
+wind-driven energy exchange, and terascale data analysis. 
+I try to give back to society by serving government, e.g., the
+California Climate Change Advisory Committee, and giving testimony
+before Congress on the effects of aerosols on Arctic climate.  
+I also consult pro bono for several non-governmental organizations
+dedicated to clean air and healthy environments. Recently I have
+become interested in geoengineering methods to cool Earth.
+
+% Profile sent 20090427 to Edward Patte for GAFOS profile
+% Profile sent 20090511 to Linda Brown for LBAOP profile
+% Profile sent 20100121 to Linda Cain for SACC profile
+Professor Zender is an atmospheric physicist and educator.  
+He leads the Climate, Health, Aerosols, Radiation, and Microphysics
+(CHARM) group in the Department of Earth System Science at UC Irvine.
+They study the distribution and fluxes of energy and trace species
+in Earth's atmosphere.  Their current research includes desert dust
+and combustion aerosols, snow/firn evolution, particulate impacts on
+ocean nutrient cycling, wind-driven energy exchange, and terascale
+data analysis.  Prior to joining UCI in 1999, Zender studied at
+Harvard (AB 1990), the University of Colorado, Boulder (PhD 1996), and
+the National Center for Atmospheric Research (postdoc).
+
+% Profile sent 20071013 to Gary Robbins for OCR profile
+% Profile sent 20090311 to Isabella Velicogna for UC CIRSI proposal
+Research: I study the roles of clouds, gases, and aerosols in
+the global energy budget and in climate.
+My group has active research in snow physics, desert dust, polar
+climate, biomass burning-El Nino interactions, and air-surface
+exchange, and large scale data analysis.   
+We often construct detailed microphysical computer simulations of
+complex environmental processes (e.g., dust storms, snow aging). 
+To improve these predictions they use measurements from 
+remote meteorological stations, ocean buoys, aircraft, satellites, and
+laboratory and in~situ instruments. 
+These results feed into the climate models that estimate the global
+effects of clouds, dust, soot, and wind in past, present, and future
+climates.       
+We also create software used world-wide to efficiently analyze the
+large datasets produced by supercomputer simulations and satellite
+observations.  
+Noteworthy: I participate in International Polar Year (IPY) activities
+and he recently testified to Congress on the causes of Arctic warming.   
+} % end dslnote
+} % end csznote
+
+%\clearpage % fxm need better way to keep title and list on same page
+
+\csznote{ % 20100520: How to generate CV TOC?
+% Option 1: Redefine \section 
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection{\underline{#1}}}
+\section{Manuscripts in Peer-Review}\label{sxn:mpr}
+
+% Option 2: Manually add sections to TOC
+\addtocontents{toc}{MANUSCRIPTS IN PEER-REVIEW}
+
+% Required: Following line generates TOC:
+\tableofcontents
+} % end csznote on CV TOC
+
+\dslnote{ %no manuscripts in peer review
+\textbf{MANUSCRIPTS IN PEER-REVIEW}
+
+} % end dslnote
+
+\textbf{PEER-REVIEWED JOURNAL ARTICLES}
+\begin{itemize*}
+%\renewcommand{\labelenumi}{PJ\arabic{enumi}.} % KoD99 p. 70
+% Begin Refereed articles
+% Update protocol: Add here upon transition to "In Press"
+% Reverse chronological in order of acceptance, i.e., transition to "In Press"
+% This is because accepted publications should be on academic addenda
+% Final publication dates may or may not be chronological
+% This depends on lag between acceptance and publication
+% fxm: Find DOIs on publications 1--7.
+% Articles not retrieved by "Zender, CS" search on Thompson ISI Web of Knowledge:
+% http://www.isiwebofknowledge.com
+% HMZ08 (under "Zender, C" not "Zender, CS"), ZMT04 (no Eos)
+% Journal Impact Factors (IFs) from Journal Citation Reports (JCR):
+% http://admin-apps.isiknowledge.com/JCR/JCR
+
+% EST: Environ. Sci. Technol. = Environmental Science & Technology
+% GBC: 4.33 (2007)
+% GMD: fxm (2009) % First issue in 2008, not ranked yet
+% GRL: 2.74 (2007)
+% JGR: 3.08 (2009)
+% Science: 28.3 (2007)
+
+
+\item \noindent Wang, D., \textbf{D.S.~LeBauer}, and M.C.~Dietze MC 201-. Predicted yields of short-rotation hybrid poplar (Populus spp.) for the contiguous US. Ecological Applications, \textit{in review}
+
+\item \noindent% dlebauer2011fbm
+
+
+\item \noindent% dlebauer2010ldr
+\textbf{LeBauer, D.~S.} 2010. Litter degradation rate and beta-glucosidase activity increase with fungal diversity. \textit{Can.\ J.\ For.\ Res.}, 40(6): 1076–-1085
+\ifpdf % PDFLaTeX
+(\href{https://netfiles.uiuc.edu/dlebauer/www/lebauer2010ldr.pdf}{PDF})
+\fi % !PDFLaTeX
+
+\item \noindent% wang2010qrc
+Wang, D., \textbf{D.~S. LeBauer} and M.~C. Dietze. 2010. A quantitative review comparing the yield of
+switchgrass in monocultures and mixtures in relation to climate and management factors. \textit{Glob.
+Change Biol. Bioenergy}, 2(1):16--25
+\ifpdf % PDFLaTeX
+(\href{https://netfiles.uiuc.edu/dlebauer/www/wang2010qrc.pdf}{PDF})
+\fi % !PDFLaTeX
+
+\item \noindent% allison2009qrc
+Allison, S.~D, \textbf{D.~S. LeBauer}, M.~R. Ofrecio, R. Reyes, A.~M. Ta, and T.~M. Tran. 2008. Low levels of
+nitrogen addition stimulate decomposition by boreal forest fungi. \textit{Soil Bio. Biochem.}, 41:293--302
+\ifpdf % PDFLaTeX
+(\href{https://netfiles.uiuc.edu/dlebauer/www/allison2009qrc.pdf}{PDF})
+\fi % !PDFLaTeX
+
+\item \noindent% lebauer2008nln
+\textbf{LeBauer, D.~S.} and K.~K. Treseder. 2008. Nitrogen Limitation of Net Primary Productivity in
+Terrestrial Ecosystems is Globally Distributed. \textit{Ecology}, 89(2): 371--379
+\ifpdf % PDFLaTeX
+(\href{https://://netfiles.uiuc.edu/dlebauer/www/lebauer2008nln.pdf}{PDF})
+\fi % !PDFLaTeX
+
+\item \noindent% 
+Okano, Y., K.R.~Hirstova, C.M.~Leutenegger, L.E.~Jackson, R.F.~Denison, B.~Gebreyesus, \textbf{D.S.~LeBauer}, and K.M.~Scow. 2004. Effects of ammonium on the population size of ammonia-oxidizing bacteria in soil- Application of real-time PCR. \textit{Appl. Environ. Microb.}, 70:1008--1016
+\ifpdf % PDFLaTeX
+(\href{https://://netfiles.uiuc.edu/dlebauer/www/okano2004art.pdf}{PDF})
+\fi % !PDFLaTeX
+\end{itemize*}
+% end REFEREED PUBLICATIONS
+
+
+
+
+
+\textbf{FUNDING}
+\begin{itemize*}
+%\renewcommand{\labelenumi}{G\arabic{enumi}.} % KoD99 p. 70
+\item NSF Advances in Bioinformatics Infrastructure: \$770,653 5/2011--04/2013\\
+``Model-data synthesis and forecasting across the upper Midwest: Partitioning uncertainty and environmental heterogeneity in ecosystem carbon''  (co-author with M. Dietze, A. Desai, and P. Bajscy)
+  
+\item Kearney Soil Science Foundation Graduate Student Fellowship:  \$34,000, 5/2005--4/2007 \\ 
+``Grassland Carbon Dynamics along Nitrogen and Depth Gradients'' 
+\item NRS Mildred E. Mathias Graduate Student Research Grant Program: \$1000, 2006 \\
+``Decomposition responses to nitrogen in a California grassland'' 
+\item UCI Earth System Science Departmental Fellowship: \$32,000, 2004--05
+\item UCI Ecology and Evolutionary Biology Departmental Fellowship: \$32,000, declined
+%\item ``Construction of a landscaped mushroom garden''\\ Benenson Award in the Arts, \$1500, 1998
+\end{itemize*}
+\newpage
+\textbf{SOFTWARE}
+\vspace{-0.5em}
+\begin{itemize*}
+\item  Lead developer: Biofuel Ecophysiological Traits and Yields Database (BETYdb): Database of plant traits and yield data, used to synthesize previous and ongoing research, to support model parameterization and validation, and to provide a central data clearinghouse for biofuel research. \\\texttt{www.betydb.org}
+\item  Lead developer: Predictive Ecosystem Analyzer (PEcAn): analytical toolbox and workflow to support management of model parameterization, execution, and analysis.  \\\texttt{www.pecanproject.org}
+\end{itemize*}
+
+\textbf{INVITED PRESENTATIONS}
+\begin{itemize*}
+%\renewcommand{\labelenumi}{IE\arabic{enumi}.} %
+% NB: These presentations are generally given as seminars
+% to audiences who regularly gather to hear one person speak.
+% The seminar normally disbands after the presentation
+% These presentations are all invited and given by me
+% Some of these were more "self-invited" than "invited"
+% However, the spirit of the category seems to include both kinds
+% Those to which others solicited me first have "invited" commented-out
+% Update protocol: Add to MyData profile once presentation is "Past"
+%\item \textit{Upcoming and subject to change:}\\
+
+\item \textbf{LeBauer, D.~S.}, D.~Wang, X.~Feng, and M.~C. Dietze (2010):
+PECAn, a workflow management tool for real-time data assimilation and forecasting: evaluation of a switchgrass (Panicum virgatum) cropping system.
+Presented to the Combining Experiments, Process Studies, and Models to Forecast the Future of Ecosystems, Communities, and Populations Organized Oral Session at the Ecological Society of America Meeting,
+Pittsburgh,~PA, August~5, 2010.
+\ifpdf % PDFLaTeX
+(\href{http://eco.confex.com/eco/2010/techprogram/S5662.HTM}{WEB})
+\fi % !PDFLaTeX
+\item Dietze, M.~C., \textbf{D.~S. LeBauer}, P.~R. Moorcroft, A.~D. Richardson, and D. Wang. Beyond MCMC: Data-constraint and error propagation in a dynamic terrestrial biosphere model through Bayesian model emulation. AGU, San Francisco, CA, December 2009
+\ifpdf % PDFLaTeX
+(\href{http://adsabs.harvard.edu/abs/2009AGUFM.B44A..02D}{WEB})
+\fi % !PDFLaTeX
+\item \textbf{LeBauer, D.~S.}, Ecological data availability and management. Presented to Wolfram-Alpha researchers, Wolfram, Champaign, IL, August 2009
+\item \textbf{LeBauer, D.~S.}, E.~W. Seabloom, W.~S. Harpole:
+Grassland carbon balance under nitrogen enrichment.
+Presented to the Genomic Ecology of Global Change Theme of the Institute for Genomic Biology, University of Illinois at Urbana-Champaign, 
+Urbana,~IL, April 2009.
+%\item \textbf{LeBauer, D.~S.} and O.~S. Isikhuemhen. Small farm mushroom production for food and medicine (Workshop).
+%CFSA Sustainable Agriculture Conference, Rock Hill,~SC, November 2003.
+\end{itemize*}
+% end INVITED PRESENTATIONS
+
+\textbf{CONTRIBUTED PRESENTATIONS}\\
+\begin{itemize*}
+%\renewcommand{\labelenumi}{CM\arabic{enumi}.} % KoD99 p. 70
+%\item \textit{Upcoming and subject to change:}\\
+%\item \textit{Past:}\\ \noindent% AlZ09 
+%\item Wang, D., M. Maughan, \textbf{D.~S. LeBauer}, X. Feng, J. Sun, M.~C. Dietze 2010. Impact of canopy nitrogen allocation on growth and photosynthetic properties of switchgrass (\textit{Panicum virgatum}) and miscanthus (\textit{Miscanthus x giganteus}). ESA, Pittsburgh, PA
+%\item Feng, X., D. Wang, \textbf{D.~S. LeBauer}, and M.~C. Dietze 2010. Assessing the biofuel potential of tall-grass prairie: Model parameterization and error analysis via Bayesian meta-analysis. ESA, Pittsburgh, PA 
+\item \textbf{LeBauer, D.~S.}, D. Wang, M. Xeri, C. Bernacchi, and M.C. Dietze 2011. Plant trait meta-analysis and flux data assimilation constraints on parameterizations of ecosystem models. ESA, Austin, TX
+David LeBauer, University of Illinois; Mike Dietze, University of Illinois
+%\item Allison, S.~D., \textbf{D.~S. LeBauer}, M.~R. Ofrecio, R. Reyes, T.~M. Tran 2008. Nitrogen addition stimulates decomposition by boreal forest fungi. ESA, Milwaukee, WI
+\item  \textbf{LeBauer, D.~S.}, and K.~K. Treseder 2007. Nitrogen deposition reduces nitrogen limitation of terrestrial net primary production, ESA, San Jose, CA
+\item \textbf{LeBauer, D.~S.}, and K.~K. Treseder 2006. Nitrogen limitation of terrestrial net primary production: global patterns from field studies with nitrogen fertilization, AGU, San Francisco, CA
+\item \textbf{LeBauer, D.~S.}, and K.~K. Treseder 2006. Grassland carbon dynamics along nitrogen and depth gradients. ESA, Memphis, TN
+\item Mohan, J~.E., \textbf{D.~S. LeBauer}, and W.~H. Schlesinger 2002. Do evolutionary legacies impact ecosystem functioning? Genetic variation in decomposition responses to atmospheric CO$_2$. ESA, Tucson, AZ
+\item \textbf{LeBauer, D.~S.}, Y. Okano, K.~M. Scow, and L.~E. Jackson 2002. Correlating gross nitrification rates with population dynamics of ammonia oxidizers in soil. ESA, Tucson, AZ
+
+\end{itemize*}
+% end OTHER PRESENTATIONS AT PROFESSIONAL MEETINGS \& WORKSHOPS
+
+
+\textbf{BOOK CHAPTER}
+\begin{itemize*}
+\item \noindent 
+Isikhuemhen, O.~S. and \textbf{D.~S. LeBauer} 2004. Growing Pleurotus tuberregium. p270-281 in Mushroom
+Grower's Handbook 1: Oyster Mushroom Cultivation. MushWorld. Seoul, Korea.
+\ifpdf % PDFLaTeX
+(\href{https://netfiles.uiuc.edu/dlebauer/www/IsikhuemhenLeBauer2004GrowingPleurotustuberregium.pdf}{PDF}) 
+\fi % !PDFLaTeX
+\end{itemize*}
+
+\textbf{NEWS ARTICLES}
+% NB: Articles I wrote
+% Articles about me are in uci_tnr.tex
+\begin{itemize*}
+%\renewcommand{\labelenumi}{N\arabic{enumi}.} % KoD99 p. 70
+\item \noindent
+\textbf{LeBauer, D.~S.} 2008. Nitrogen Pollution Boosts Plant Growth. Scitizen.com, France
+\ifpdf %PDFLaTeX
+(\href{http://scitizen.com/biodiversity/nitrogen-pollution-boost-plant-growth_a-22-1526.html}{WEB})
+\fi %! PDFLaTeX
+\item \noindent%
+ \textbf{LeBauer, D.~S.} 2004. Consider Shiitake Cultivation! Stewardship News, Carolina Farm Stewardship Association. Pittsboro, NC. 24(2):8-11.
+\ifpdf % PDFLaTeX
+(\href{https://netfiles.uiuc.edu/dlebauer/www/LeBauer_2004_Consider_Shiitake_Cultivation.pdf}{PDF}) 
+\fi % !PDFLaTeX
+
+\end{itemize*}
+% end NEWSPAPERS, MAGAZINES, TRADE JOURNALS
+%}
+
+% end SPONSORED RESEARCH PROJECTS
+\newpage
+
+\textbf{TEACHING}
+
+\hspace{0.5em} {\small \textbf{COURSES TAUGHT}}
+
+\begin{itemize*}
+\item{Instructor} COSMOS, Global Change Biology, Summer~2009
+\item{TA} BIO~100LW (TA), Experimental Biology Laboratory, UCI Fall~2008
+\item COSMOS  Atmospheric and Environmental Sciences (TA), Summer~2008
+\item ESS~134 (TA), GIS for Environmental Science, UCI, Winter~2006, 2008
+\item ESS~13 (TA), Global Change Biology, UCI, Spring 2007
+\item PLP~140 (TA), Mushroom Cultivation, UCD, Winter 2003
+\item Duke~TIP (TA), Archaeology and Geology, Duke, Summer 1997
+\item HsC~79.17 (Co-leader), Project WILD Outdoor Experiential Education Course, Duke, Spring~1996
+\end{itemize*}
+% end COURSES TAUGHT
+\hspace{0.5em}{\small\textbf{UNDERGRADUATE RESEARCH SUPERVISION}}
+
+\begin{itemize*}
+\renewcommand{\labelenumi}{U\arabic{enumi}.} % KoD99 p. 70
+\item Sen Lu, UIUC, IB 490 Independent Research, Fall~2009 
+\item Mary Greas, UCI, Kearney Undergraduate Fellow, 2006--2009  %, UCI Excellence in Research Program)
+\item Dori Chandler, UCI, Kearney Undergraduate Fellow, Summer~2008
+\end{itemize*}
+
+\textbf{PROFESSIONAL TRAINING AND ADDITIONAL COURSEWORK}
+\begin{itemize*}
+\item Ecosystem Demography model workshop, Paul Moorcroft, Harvard University, January~2012 
+\item R Development Master Class, Hadley Wickham, Revolution Analytics, New York, NY, December~2011
+\item Flux Measurement and Modeling, Niwot Ridge, CO, July 2010  
+\item Plant Functional Traits, NCEAS Distributed Graduate Seminar, Winter~2008
+\item Bayesian Statistics, UCI Statistics Dept, Winter~2007
+\item Radiocarbon in Ecology and Earth System Science, UCI, July~2004
+\item Sustainable Agriculture, Central Carolina Community College, Winter~1999 
+\end{itemize*}
+
+\textbf{SKILLS}
+\vspace{0.5em}
+
+\begin{itemize*}
+\item{\textbf{General:}}  Mentoring, Management, Writing, Statistics, Data Visualization;
+\item{\textbf{Lab/Field:}}  Plant and Soil Chemistry, Isotopic Analysis, GC/MS, Flux Measurements (Eddy Covariance, Photosynthesis, Respiration), Microscopy, Spectroscopy, Enzyme Analyses, Sterile Culture, Plant and Fungal Identification;
+\item{\textbf{Computer}} \textit{(literate:)} bash, BUGS, emacs, \LaTeX, Linux, Microsoft, R, Redmine, SQL; \textit{(familiar:)} ArcGIS, FORTRAN, MATLAB 
+\end{itemize*}
+
+\textbf{MEMBERSHIPS}
+\begin{itemize*}
+%\renewcommand{\labelenumi}{M\arabic{enumi}.} % KoD99 p. 70
+\item American Geophysical Union (AGU), 2005--present
+\item Ecological Society of America (ESA), 2002--present
+\item Sigma Xi, 2005--present
+\end{itemize*}
+% end MEMBERSHIPS
+
+%\dslnote{ %can move consulting here
+%\textbf{MYCOLOGICAL CONSULTING}
+%\begin{itemize*}
+%\item Cultivation of oyster mushroom (\textit{Pleurotus ostreatus}) on tomato (\textit{Lycopersicon esculentum}) %pomace, for Dr. Annie King and Dr. Jamal Assi, UC Davis 2003
+%\item Cultivation and Education Crabtree Valley Farms, Chatanooga, TN. 2000; Wildflower Organics, Dawsonville, Ga%., 1999-2000; Sustenance Farm, Bear Creek, NC., 1999
+%\item Mycological Landscaping, Sarah P. Duke Gardens, Durham, NC. Summer 1998, 1999
+%%\renewcommand{\labelenumi}{C\arabic{enumi}.} % KoD99 p. 70
+%\end{itemize*}
+%% end CONSULTING ACTIVITIES
+%} %end dslnote
+
+\textbf{SERVICE}
+\begin{itemize*}
+%\renewcommand{\labelenumi}{SP\arabic{enumi}.} 
+\item Scientific Advisor: Prairie Sugar Collective, Urbana, IL
+\item Member: American Geophysical Union (AGU) Climate Science Experts Referral \href{http://www.agu.org/news/press/pr_archives/2010/2010-14.shtml}{Service}, 2009--2011
+%\item Editorial Board Member, Journal of Waste Conversion, Bioproducts and Biotechnology,  June 2010--present.
+\item Reviewer: Ecology, Ecology Letters, Geophysical Research Letters,  Plant Soil, Applied Soil Ecology % need to maintain official count
+\item Graduate Student Representative: Dept. of Earth System Science, UCI, 2006--2007
+\item Graduate Student Seminar Organizer: Earth System Science, University of California at Irvine, 2005-2006
+%\item Mentor: FARMS Leadership, Inc. 2003, Sacramento, CA.
+\item Guest Teacher: Scientists in the Classroom, Sigma Xi, Durham, NC. 1998-99
+\end{itemize*}
+% end SERVICE TO PROFESSIONAL SOCIETIES AND CONFERENCE ORGANIZATION
+
+
+%\pagebreak
+\dslnote{ %default should be to include references, alt. could have Refs avail. upon request
+\textbf{REFERENCES for David~S. LeBauer (available upon request)}
+} %end dslnote
+\dslnote{
+\textbf{REFERENCES for David~S. LeBauer}
+\begin{itemize*}
+
+\item Professor~Susan~E. Trumbore\\
+Director, Department of Biogeochemical Processes\\
+Max-Planck Institute for Biogeochemistry\\
+Hans-kn\"{o}ll-Str. 10\\
+07745 Jena\\
+Germany\\
+Phone: +49 3641 576110, E-mail: trumbore@bgc-jena.mpg.de
+
+\item Dr. Michael~C. Dietze\\
+Department of Plant Biology\\
+University of Illinois at Urbana-Champaign\\
+126 IGB MC-116\\
+Urbana,~IL~~61801-\\
+Phone: (217) 333-6177, E-mail: mcdietze@illinois.edu
+
+\item Dr.~W.~Stanley Harpole\\
+Assistant Professor, Department of Ecology, Evolution, and Organismal Biology\\
+Iowa State University\\
+133 Bessey Hall\\
+Ames,~IA~~50011 \\
+Phone: (515) 294-7253, E-mail: harpole@iastate.edu
+
+\item Dr.~Omoanghe.~S. Isikhuemhen\\
+Associate Professor, \\
+Department of Natural Resources and Environmental Design\\
+North Carolina A\&T State University\\
+Greensboro,~NC~~27411\\
+Phone: (336) 334-7259, E-mail: omon@ncat.edu
+\end{itemize*}
+}
+
+
+\csznote{ 
+% Usage: Place usage here at end of file so comment character % not needed
+cd ~/job;make -W cv.tex cv.dvi cv.ps cv.pdf cv.txt;cd -
+scp ${HOME}/job/cv.dvi ${DATA}/ps/cv.pdf ${DATA}/ps/cv.ps ${HOME}/job/cv.tex ${HOME}/job/cv.txt dust.ess.uci.edu:/var/www/html/job/cv
+
+# NB: latex2html works well on cv.tex
+# latex2html -dir /var/www/html/job/cv cv.tex
+# NB: tth chokes on cv.tex
+# cd ${HOME}/job;tth -a -Lcv -p./:${TEXINPUTS}:${BIBINPUTS} < ${HOME}/job/cv.tex > cv.html
+# scp cv.html dust.ess.uci.edu:/var/www/html/job/cv
+# NB: tex4ht works well on cv.tex
+cd ${HOME}/job;htlatex cv.tex
+scp cv*.css cv*.html dust.ess.uci.edu:/var/www/html/job/cv
+# NB: tex4moz works well on cv.tex
+cd ${HOME}/job;/usr/share/tex4ht/mzlatex cv.tex
+scp cv*.css cv*.html cv*.xml dust.ess.uci.edu:/var/www/html/job/cv
+% $: re-balance syntax highlighting
+} % end csznote on usage
+
+\end{document}
