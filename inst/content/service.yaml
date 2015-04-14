@@ -63,11 +63,13 @@ service:
     - role: Plant Soil
   - context: Consultancy
     roles:
+      - role: Smithsonian Institution# CTFS-ForestGEO Ecosystems & Climate Initiative 
       - role: Global Change Solutions, LLC #2011 - present
       - role: British Petroleum Lignocellulosic Biofuels #2011 - present
       - role: Wildflower Organics, Dawsonville, GA #1999-2000
       - role: Crabtree Valley Farms, Chatanooga, TN #2000
       - role: Sustenance Farm, Bear Creek, NC #1999
+      - role: Smithsonian Institution 
 
 ## Log of Reviews (incomplete) 
 ## APSOIL
