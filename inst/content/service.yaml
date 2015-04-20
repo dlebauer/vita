@@ -1,5 +1,5 @@
 service:
-  - context: Departmental
+  - context: Academic
     roles:
       - start: 2012
         end: present
@@ -10,6 +10,10 @@ service:
         title: Expert for Climate Science Experts Referal Service
         entity: American Geophysical Union
       - start: 2006
+        end: 2008
+        title: Judge
+        entity: California State Science Fair
+      - start: 2006
         end: 2007
         title: Graduate Student Representative
         entity: UCI Department of Earth System Science
@@ -17,6 +21,13 @@ service:
         end: 2006
         title: Graduate Student Seminar Organizer
         entity: UCI Department of Earth System Science
+      - start: 2003
+        title: Project Mentor
+        entity: FARMS Leadership, Inc. and Sacramento Public Schools
+      - start: 1998
+        end: 1999
+        title: Guest Teacher, K-12
+        entity: Sigma Xi, Scientists in the Classroom
   - context: Workshops
     roles:
       - date: March 2014
@@ -52,9 +63,13 @@ service:
     - role: Plant Soil
   - context: Consultancy
     roles:
-      - role: Global Change Solutions, LLC
-      - role: British Petroleum Lignocellulosic Biofuels
-
+      - role: Smithsonian Institution# CTFS-ForestGEO Ecosystems & Climate Initiative 
+      - role: Global Change Solutions, LLC #2011 - present
+      - role: British Petroleum Lignocellulosic Biofuels #2011 - present
+      - role: Wildflower Organics, Dawsonville, GA #1999-2000
+      - role: Crabtree Valley Farms, Chatanooga, TN #2000
+      - role: Sustenance Farm, Bear Creek, NC #1999
+      - role: Smithsonian Institution 
 
 ## Log of Reviews (incomplete) 
 ## APSOIL

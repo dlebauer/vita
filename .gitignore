@@ -11,7 +11,6 @@ bak/
 *.bcf
 *.blg
 *.run.xml
-*.tex
 !templates/vita.tex
 */output/*
 outdir/*
@@ -19,3 +18,4 @@ TODO.org
 .Rproj.user
 .Rhistory
 .RData
+history.txt

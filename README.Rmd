@@ -1,5 +1,7 @@
 # Vita
 
+Paradoxically, my vita is not here. But everything required to build it is.
+
 This is an R package for automatically building my academic CV.  It's based on the idea that content and style should be separate and that a person might want different CVs for different purposes.  Inspiration came from [Kieran Healy](https://github.com/kjhealy/kjh-vita) and for the formatting of the CV itself, [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for the use of Biblatex to manage the publications list, and [James Keirstead's jk-vita repository](https://github.com/jkeirstead/jk-vita) from which this one is forked.
 
 ## Project layout
@@ -52,14 +54,15 @@ Creating a new CV is relatively simple.
    publications using biblatex, but there are also settings for fonts,
    colours, and other details.
    
-5) Build the CV.  This is easy.  Simply open up R, change into the
-   `scripts` directory and run the following commands:
+5) Build the CV.  This is easy.  Simply open up the terminal, change to the
+   repository directory, and run the following command:
 
 
 ```sh
 ./write_cv.R
 ```
 
+Which contains:
 
 ```{r eval = FALSE}
 # Load the required libraries
