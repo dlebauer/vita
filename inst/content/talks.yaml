@@ -10,7 +10,7 @@ talks:
     city: Piracicaba, Brazil
     month: August
   - year: 2014
-    title: PEcAn: A probabilistic modeling workflow for deterministic models 
+    title: "PEcAn: A probabilistic modeling workflow for deterministic models"
     event: FACE-IT Workshop, Computation Institute, University of Chicago
     city: Chicago, IL
   - year: 2013

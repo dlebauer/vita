@@ -241,7 +241,7 @@ format_grants <- function(l) {
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
-        if (x$start==x$end) {
+        if (x$start == x$end) {
             with(x, sprintf("\\ind %s. %s, %s. %s (%s).\n",
                             start, title, funder, role, value))
         } else {
@@ -261,7 +261,7 @@ format_awards <- function(l) {
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
-        if (x$start==x$end) {
+        if (x$start == x$end) {
             with(x, sprintf("\\ind %s. %s, %s.\n",
                             start, title, other))
         } else {

@@ -6,7 +6,8 @@ person:
   postnoms: PhD
   tel: (217) 300-0266
   email: dlebauer@illinois.edu
-  web: dlebauerlab.org
+  web: ""
+#dlebauerlab.org
   subject: "agriculture, ecology, biogeochemistry, ecoinformatics"
   address:
     line1: University of Illinois
