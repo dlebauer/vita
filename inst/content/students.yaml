@@ -1,11 +1,20 @@
-phd:
-  - start:  2014
-    end: present
-    name: Peter North
-    title: Heat energy strategy for London
+#phd:
 #  - start:  2014
 #    end: present
-#    name: Honor Brixby
-#    title: Urbanisation and non-communicable diseases
-#    note: Joint with Majid Ezzati
-
+#    name: Peter North
+#    title: Heat energy strategy for London
+undergraudate:
+  - start: 2009
+    end: 2009
+    name: Sen Lu 
+    title: Meta-analysis of nitrogen fertilization effects on productivity over time.
+    note: Independent Study
+  - start: 2008
+    end: 2008
+    title: Minimally invasive monitoring of grassland carbon inputs in a long term nitrogen addition experiment 
+    note: Kearney Undergraduate Fellowship (\$3,000), faculty advisor Sue Trumbore
+  - start: 2007 
+    end: 2007
+    title: The Effects of Nitrogen Addition at Different Stages of Decomposition (UCI Honors Thesis)
+    note: Kearney Undergraduate Fellowship (\$3,000): faculty advisor Kathleen Treseder
+# http://kearney.ucdavis.edu/Approved%20Undergrad%20Fellowships.html
