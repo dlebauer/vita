@@ -55,8 +55,7 @@ service:
     - role: Ecology Letters               
     - role: Ecological Applications  
     - role: Global Change Biology
-    - role: Global Change Biology 
-    - role: Bioenergy
+    - role: Global Change Biology - Bioenergy
     - role: Geophysical Research Letters
     - role: Nature Climate Change
     - role: New Phytologist
