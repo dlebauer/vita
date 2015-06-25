@@ -6,9 +6,7 @@ person:
   postnoms: PhD
   tel: (217) 300-0266
   email: dlebauer@illinois.edu
-  web: ""
-#dlebauerlab.org
-  subject: "agriculture, ecology, biogeochemistry, ecoinformatics"
+  subject: "agriculture, ecology, biogeochemistry"
   address:
     line1: University of Illinois
     line2: Institute for Genomic Biology
@@ -19,10 +17,11 @@ publications:
   sections:
     monographs:
     - lebauer2013ffb
-    papers:
+    inpress:
     - wang2015pbm
     - zhu2015pis
     - davis2015tsl
+    papers:
     - davis2014llf
     - wang2013pys
     - dietze2013oic
@@ -34,16 +33,17 @@ publications:
     - okano2004art
     - dietze2014qat
     - wang2013est
+    chapters:
+      - isikhuemhen2004gpt
+      - BPwaterbook
+    conferences:
+      - kooper2013ecological
+      - lin2015hwd
     software:
       - betydb
       - pecan
       - biocro
       - ghgvc
-    chapters:
-      - isikhuemhen2004gpt
-    conferences:
-      - kooper2013ecological
-      - lin2015hwd
 sections:
   - title: Employment
     file: posts.yaml

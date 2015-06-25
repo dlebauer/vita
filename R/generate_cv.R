@@ -27,7 +27,7 @@ process_yaml <- function(section,
     f <- paste0("format_", section)
     lines <- eval(call(f, data))
 
-#    if (file.exists(output)) file.remove(output, showWarnings = FALSE)
+    if (file.exists(output)) file.remove(output, showWarnings = FALSE)
     invisible(lapply(lines, write, file=output, append=TRUE))
 
 }
@@ -168,7 +168,7 @@ generate_cv <- function(content, style, outdir="output") {
     outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt),
                       collapse="")
     outfile <- file.path(outdir, outfile)
-#    if(file.exists(outfile)) file.remove(outfile, showWarnings = FALSE)
+    if(file.exists(outfile)) file.remove(outfile, showWarnings = FALSE)
     invisible(lapply(lines, write, file = outfile, append = TRUE))
     message("done")
 
@@ -272,8 +272,6 @@ format_awards <- function(l) {
 
     return(lines)
 }
-
-
 format_service <- function(l) {
     tmp <- l[[1]]
 
@@ -281,15 +279,23 @@ format_service <- function(l) {
         topline <- list()
         topline <- sprintf("\\subsection*{%s}\n", x$context)
         roles <- list()
-        if(x$context == "Departmental"){
+        if(x$context == "Academic"){
             for(i in 1:length(x$roles)){
                 r <- x$roles[[i]]
-                roles[[i]] <- paste0("\\ind ", r$start, "--", r$end, ". ", r$title, ". ",  r$entity, ". \n")
+                roles[[i]] <- paste0("\\ind ", r$start,
+                                    ifelse(!is.null(r$end), paste0("--", r$end), ""),
+                                     ". ", r$title, ". ",  r$entity, ". \n")
             }
         } else if (grepl("Workshops", x$context)) {
             for(i in 1:length(x$roles)){
                 r <- x$roles[[i]]
                 roles[[i]] <- paste0("\\ind ", r$date, ". ", r$role, ". ",  r$title, ". ", r$location, ". \n")
+            }
+            
+        } else if (x$context == "Consultancy") {
+            for(i in 1:length(x$roles)){
+                r <- x$roles[[i]]
+                roles[[i]] <- paste0("\\ind ", r$start, ifelse(!is.null(r$end), paste0("--", r$end), ""), ". ", r$role,"\n")
             }
             
         } else {
