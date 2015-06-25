@@ -27,7 +27,7 @@ process_yaml <- function(section,
     f <- paste0("format_", section)
     lines <- eval(call(f, data))
 
-    if (file.exists(output)) file.remove(output)
+#    if (file.exists(output)) file.remove(output, showWarnings = FALSE)
     invisible(lapply(lines, write, file=output, append=TRUE))
 
 }
@@ -79,7 +79,7 @@ generate_cv <- function(content, style, outdir="output") {
     if (!file.exists(content))
         stop(sprintf("Unable to find content file '%s'", content))
 
-    message("Processing YAML files...", appendLF=FALSE)
+    message("Processing YAML files...", appendLF = FALSE)
     config <- yaml.load_file(content)
 
     ## Start with the document header
@@ -168,8 +168,8 @@ generate_cv <- function(content, style, outdir="output") {
     outfile <- paste0(c(file_path_sans_ext(basename(content)), ".", fmt),
                       collapse="")
     outfile <- file.path(outdir, outfile)
-    if(file.exists(outfile)) file.remove(outfile, showWarnings = FALSE)
-    invisible(lapply(lines, write, file=outfile, append=TRUE))
+#    if(file.exists(outfile)) file.remove(outfile, showWarnings = FALSE)
+    invisible(lapply(lines, write, file = outfile, append = TRUE))
     message("done")
 
     ## Build the pdf

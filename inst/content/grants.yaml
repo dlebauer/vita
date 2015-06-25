@@ -1,8 +1,20 @@
 grants:
+  - start: 2015
+    end: 2019
+    title: A Reference Phenotyping System for Energy Sorghum
+    funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
+    role: Co-PI
+    value: \$8,000,000
+  - start: 2015
+    end: 2017
+    title: TERRA-MEPP (Mobile Energy-crop Phenotyping Platform)
+    funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
+    role: Co-PI
+    value: \$3,100,000
   - start: 2012
     end: 2015
     title: Feedstock and Ecosystem Service Modeling Program
-    role: Lead author #with Stephen Long (PI), Evan DeLucia, and Carl Bernacchi
+    role: Lead author and research manager  #with Stephen Long (PI), Evan DeLucia, and Carl Bernacchi
     funder: Energy Biosciences Institute
     value: \$2,460,000
   - start: 2011
