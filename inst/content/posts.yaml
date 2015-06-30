@@ -3,10 +3,10 @@ posts:
     roles:
       - start: 2015
         end: present
-        title: Modeling Development and Data Management Lead, Realizing Increased Photosynthetic Efficiency
-      - start: 2014
-        end: present
-        title: Faculty Fellow, National Center for Supercomputing Applications
+        title: Modeling Development and Data Management Lead, Realizing Increased Photosynthetic Efficiency Program
+#      - start: 2014
+#        end: present
+#        title: Faculty Fellow, National Center for Supercomputing Applications
       - start: 2012
         end: 2015
         title: Research Scientist and Ecosystem Modeling Program Lead, Energy Biosciences Institute

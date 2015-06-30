@@ -1,7 +1,17 @@
 talks:
+#  - year: 2015 
+#    title: "Big data and open computing for high-throughput phenotyping"
+#    event: Agronomy / Crop Science / Soil Science Society of America Meetings
+#    city: Minneapolis, MN
+#    month: November
+  - year: 2015
+    title: "An open-access platform for quantification of plant traits from big sensor data"
+    event: Informatics for Reproducibility in Earth and Environmental Science Research, American Geophysical Union
+    city: San Francisco, CA
+    month: December
   - year: 2015
     title: "Software for Ecological Inference and Prediction: What We Have and What We Need"
-    event: Developing, Maintaining, and Employing Large Computational Frameworks in the Ecological Sciences
+    event: Developing, Maintaining, and Employing Large Computational Frameworks in the Ecological Sciences. Statistical and Applied Mathematical Sciences Institute
     city: Durham, NC
     month: April
   - year: 2014
