@@ -4,13 +4,19 @@ grants:
     title: A Reference Phenotyping System for Energy Sorghum
     funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
     role: Co-PI
-    value: \$8,000,000
+    value: '$1.7m of $8.4m' #$8,421,417
   - start: 2015
     end: 2017
     title: TERRA-MEPP (Mobile Energy-crop Phenotyping Platform)
     funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
     role: Co-PI
-    value: \$3,100,000
+    value: "131k of 3.4m" #"$\131,906 of \$3,444,962"
+  - start: 2015
+    end: 2019
+    title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
+    role: Co-Investigator
+    funder: "NSF Division of Biological Infrastructure Award 1458021"
+    value: '$0 of $487,862'
   - start: 2012
     end: 2015
     title: Feedstock and Ecosystem Service Modeling Program
