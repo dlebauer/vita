@@ -4,7 +4,7 @@ grants:
     title: A Reference Phenotyping System for Energy Sorghum
     funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
     role: Co-PI
-    value: '$1.7m of $8.4m' #$8,421,417
+    value: '$1.7$m of $8.4$m' #$8,421,417
   - start: 2015
     end: 2017
     title: TERRA-MEPP (Mobile Energy-crop Phenotyping Platform)
@@ -16,7 +16,6 @@ grants:
     title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
     role: Co-Investigator
     funder: "NSF Division of Biological Infrastructure Award 1458021"
-    value: '$0 of $487,862'
   - start: 2012
     end: 2015
     title: Feedstock and Ecosystem Service Modeling Program
@@ -28,7 +27,6 @@ grants:
     title: Model-data synthesis and forecasting across the upper Midwest; Partitioning uncertainty and environmental heterogeneity in ecosystem carbon.
     funder: NSF Advances in Bioinformatics Infrastructure
     role: Co-author
-    value: \$770,653
 
 #\textit{Grassland Carbon Dynamics along Nitrogen and Depth Gradients}  \years{2005-2007}\\
 #Kearney Soil Science Foundation Graduate Student Fellowship: \$34,000 \\ 
