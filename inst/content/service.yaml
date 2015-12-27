@@ -1,6 +1,10 @@
 service:
   - context: Academic
     roles:
+      - start: 2015
+        end: 2016
+        title: Reviewer
+        entity: EarthCube Architecture Conceptual Design
       - start: 2012
         end: present
         title: Campus Representative
@@ -52,8 +56,8 @@ service:
     roles:
     - role: Applied Soil Ecology
     - role: Ecology
-    - role: Ecology Letters               
-    - role: Ecological Applications  
+    - role: Ecology Letters
+    - role: Ecological Applications
     - role: Global Change Biology
     - role: Global Change Biology - Bioenergy
     - role: Geophysical Research Letters
@@ -69,32 +73,29 @@ service:
       - role: "Global Change Solutions, LLC, Urbana, IL"
         start: 2011
         end: 2014
-      - role: "British Petroleum International, Ltd"
-        start: 2011
-        end: 2012
-      - role: Wildflower Organics, Dawsonville, GA 
+      - role: Wildflower Organics, Dawsonville, GA
         start: 1999
         end: 2000
-      - role: Crabtree Valley Farms, Chatanooga, TN 
+      - role: Crabtree Valley Farms, Chatanooga, TN
         start: 2000
-      - role: Sustenance Farm, Bear Creek, NC 
+      - role: Sustenance Farm, Bear Creek, NC
         start: 1999
 
-## Log of Reviews (incomplete) 
+## Log of Reviews (incomplete)
 ## APSOIL
 # APSOIL-D-09-00091R1
 # APSOIL-D-09-00379
 # APSOIL-D-11-00166
 # APSOIL-D-12-00268R1
 ## https://mail.google.com/mail/ca/u/0/#search/Thank+you+for+the+review+of+APSOIL
-## Ecology 
+## Ecology
 # 07-1104
 # 08-0792
 # 09-0935
 # 10-1558
 # 11-1398
-# https://mail.google.com/mail/ca/u/0/#search/#22Review+Received+by+Ecology#22 
-## GRL 
+# https://mail.google.com/mail/ca/u/0/#search/#22Review+Received+by+Ecology#22
+## GRL
 # #2008GL033983
 ## New Phytologist
 # NPH-MS-2012-14400

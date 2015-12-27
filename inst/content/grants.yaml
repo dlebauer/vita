@@ -16,6 +16,7 @@ grants:
     title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
     role: Co-Investigator
     funder: "NSF Division of Biological Infrastructure Award 1458021"
+    value: ""
   - start: 2012
     end: 2015
     title: Feedstock and Ecosystem Service Modeling Program
@@ -27,6 +28,7 @@ grants:
     title: Model-data synthesis and forecasting across the upper Midwest; Partitioning uncertainty and environmental heterogeneity in ecosystem carbon.
     funder: NSF Advances in Bioinformatics Infrastructure
     role: Co-author
+    value: ""
 
 #\textit{Grassland Carbon Dynamics along Nitrogen and Depth Gradients}  \years{2005-2007}\\
 #Kearney Soil Science Foundation Graduate Student Fellowship: \$34,000 \\ 
