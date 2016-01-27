@@ -30,21 +30,25 @@ service:
         entity: Sigma Xi, Scientists in the Classroom
   - context: Workshops
     roles:
-      - date: March 2014
-        role: Workshop Chair and Co-Organizer
-        title: Advancing Software for Ecological Forecasting
-        location: Urbana, IL
-        website: http://conferences.igb.illinois.edu/ecological_forecasting/
-      - date: August 2014
-        role: Symposium Co-Organizer
-        title: Challenges and Advances in Statistical Software For Ecology.
-        location: Ecological Society of America Annual Meetings, Sacramento, CA
-        website: http://eco.confex.com/eco/2014/webprogram/Session9692.html
+      - date: August 2016
+        role: Session Co-Organizer and Moderator
+        title: "Hacking Ecology 2.0, a showcase of open tools for data-driven ecology"
+        location: Ecological Society of America Annual Meetings, Fort Lauderdale, FL
       - date: November 2014
         role: Workshop Co-Organizer
         title: Soil Carbon Cycle Super-Modeling
         location: Biosphere 2, Oracle, AZ
         website: http://soil-metamodel.github.io/
+      - date: August 2014
+        role: Symposium Co-Organizer
+        title: Challenges and Advances in Statistical Software For Ecology.
+        location: Ecological Society of America Annual Meetings, Sacramento, CA
+        website: http://eco.confex.com/eco/2014/webprogram/Session9692.html
+      - date: March 2014
+        role: Workshop Chair and Co-Organizer
+        title: Advancing Software for Ecological Forecasting
+        location: Urbana, IL
+        website: http://conferences.igb.illinois.edu/ecological_forecasting/
   - context: Grant Reviews
     roles:
       - role: US National Science Foundation
