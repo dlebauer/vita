@@ -1,9 +1,14 @@
 talks:
-#  - year: 2015 
-#    title: "Big data and open computing for high-throughput phenotyping"
-#    event: Agronomy / Crop Science / Soil Science Society of America Meetings
-#    city: Minneapolis, MN
-#    month: November
+  - year: 2016 #April 7, 2016
+    title: "Opportunities to Improve Cropping Systems with Data"
+    event: "International Food Security at Illinois Symposium: Using Big Data to Improve International Food Security"
+    city: Urbana, IL
+    month: April
+  - year: 2016 #April 5, 2016
+    title: "Demonstration of The TERRA Phenotyping Reference Platform"
+    event: "5th National Data Service Consortium Workshop"
+    city: Chapel Hill, NC
+    month: April
   - year: 2015
     title: "An open-access platform for quantification of plant traits from big sensor data"
     event: Informatics for Reproducibility in Earth and Environmental Science Research, American Geophysical Union
