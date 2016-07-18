@@ -1,4 +1,14 @@
 talks:
+  - year: 2016 #July 7 http://plantimaging.cast.uark.edu/
+    title: "Building Open Access Data, Computing, and Software Infrastructure for High Throughput Phenomics"
+    event: "Plant Imaginge Consortium Annual Meeting"
+    city: University of Arkansas, Fayetteville, AK
+    month: July
+  - year: 2016 #https://pecanproject.github.io/pecan_workshop.html
+    title: "Uncertainty Analysis in the Predictive Ecosystem Analyzer (PEcAn)"
+    event: "PEcAn 2 Terrestrial Model Informatics Workshop"
+    city: Boston University, Boston, MA
+    month: July
   - year: 2016 #April 7, 2016 http://intlprograms.aces.illinois.edu/content/international-food-security-illinois-symposium-april-7-8-2016
     title: "Opportunities to Improve Cropping Systems with Data"
     event: "International Food Security at Illinois Symposium: Using Big Data to Improve International Food Security"
