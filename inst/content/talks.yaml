@@ -4,7 +4,7 @@ talks:
     event: "Plant Imaginge Consortium Annual Meeting, University of Arkansas"
     city: Fayetteville, AK
     month: July
-  - year: 2016#https://illinois.edu/calendar/detail/772/33229248
+  - year: 2016 #https://illinois.edu/calendar/detail/772/33229248
     title: "An open access crop observatory and computing platform for plant breeding"
     event: "ROGER Users Meeting, National Center for Supercomputing Applications"
     city: Urbana, IL
