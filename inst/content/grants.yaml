@@ -1,22 +1,22 @@
 grants:
   - start: 2016
     end: 2019
-    title: "Global	Sustainable	Bioenergy	Initiative: Geospatial	&	environmental	analysis of pastureland	intensification	for bioenergy"
-    funder: "FAPESP (Fundac\~{a}o de Amparo \`{a} Pesquisa do Estado de S\~{a}o Paulo)"
+    title: "Global	Sustainable	Bioenergy	Initiative: Geospatial and environmental analysis of pastureland	intensification	for bioenergy"
+    funder: "FAPESP (Fundacao de Amparo a Pesquisa do Estado de Sao Paulo)"
     role: Co-PI
-    value: "$200k"
+    value: "200k"
   - start: 2015
     end: 2019
     title: A Reference Phenotyping System for Energy Sorghum
     funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
     role: Co-PI
-    value: '$1.7$m of $8.4$m' #$8,421,417
+    value: '1.7m of 8.4m' #8,421,417
   - start: 2015
     end: 2017
     title: TERRA-MEPP (Mobile Energy-crop Phenotyping Platform)
     funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
     role: Co-PI
-    value: "131k of 3.4m" #"$\131,906 of \$3,444,962"
+    value: "131k of 3.4m" #"\131,906 of \3,444,962"
   - start: 2015
     end: 2019
     title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
@@ -28,7 +28,7 @@ grants:
     title: Feedstock and Ecosystem Service Modeling Program
     role: Lead author and research manager  #with Stephen Long (PI), Evan DeLucia, and Carl Bernacchi
     funder: Energy Biosciences Institute
-    value: \$2,460,000
+    value: "2,460,000"
   - start: 2011
     end: 2014
     title: Model-data synthesis and forecasting across the upper Midwest; Partitioning uncertainty and environmental heterogeneity in ecosystem carbon.
@@ -37,10 +37,10 @@ grants:
     value: ""
 
 #\textit{Grassland Carbon Dynamics along Nitrogen and Depth Gradients}  \years{2005-2007}\\
-#Kearney Soil Science Foundation Graduate Student Fellowship: \$34,000 \\ 
+#Kearney Soil Science Foundation Graduate Student Fellowship: \34,000 \\
 
 #\textit{Decomposition responses to nitrogen in a California grassland} \years{2006}\\
-#NRS Mildred E. Mathias Graduate Student Research Grant Program: \$1,000  \\
+#NRS Mildred E. Mathias Graduate Student Research Grant Program: \1,000  \\
 
 #\textit{Graduate Fellowship} \years{2004-2005}\\
 #UCI Department of Earth System Science: \$32,000\\

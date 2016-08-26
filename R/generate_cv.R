@@ -105,6 +105,7 @@ generate_cv <- function(content, style, outdir="output") {
 
     ## Then add the other sections
     config_fn <- function(x){
+      print(x$file)
         if (x$file=="BIBTEX") {
             ## INSERT Publications
             c("\\begin{publications}",
@@ -291,13 +292,13 @@ format_service <- function(l) {
                 r <- x$roles[[i]]
                 roles[[i]] <- paste0("\\ind ", r$date, ". ", r$role, ". ",  r$title, ". ", r$location, ". \n")
             }
-            
+
         } else if (x$context == "Consultancy") {
             for(i in 1:length(x$roles)){
                 r <- x$roles[[i]]
                 roles[[i]] <- paste0("\\ind ", r$start, ifelse(!is.null(r$end), paste0("--", r$end), ""), ". ", r$role,"\n")
             }
-            
+
         } else {
             roles[[1]] <- paste(unlist(x$roles), collapse = ", ")
         }

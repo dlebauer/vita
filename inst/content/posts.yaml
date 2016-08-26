@@ -1,15 +1,12 @@
 posts:
   - employer: University of Illinois at Urbana-Champaign
     roles:
-      - start: 2015
-        end: present
-        title: Modeling Development and Data Management Lead, Realizing Increased Photosynthetic Efficiency Program
-#      - start: 2014
-#        end: present
-#        title: Faculty Fellow, National Center for Supercomputing Applications
       - start: 2012
-        end: 2015
-        title: Research Scientist and Ecosystem Modeling Program Lead, Energy Biosciences Institute
+        end: present
+        title: Research Scientist, Carl R. Woese Institute for Genomic Biology
+    #  - start: 2012
+    #    end: 2015
+    #    title: Research Scientist, Energy Biosciences Institute
       - start: 2009
         end: 2012
         title: Postdoctoral Researcher, Energy Biosciences Institute
@@ -17,10 +14,9 @@ posts:
     roles:
       - start: 2003
         end: 2004
-        title: Lab Manager, Agricultural Extension Educator in Mushroom Biology and Fungal Biotechnology Laboratory
+        title: Lab Manager, Mushroom Biology and Fungal Biotechnology Laboratory
   - employer: Duke University
     roles:
       - start: 1996
         end: 2001
-        title: Laboratory and Field Technician
-
+        title: Laboratory and Field Technician, Biogeochemistry and Community Ecology Labs

@@ -19,7 +19,7 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
-    - andersonteixeira2016cdm
+    - AndersonTeixeira2016cdm
     - zhu2015pis
     - wang2015pbm
     - davis2015tsl
@@ -34,16 +34,20 @@ publications:
     - okano2004art
     - dietze2014qat
     - wang2013est
-    chapters:
-      - isikhuemhen2004gpt
     conferences:
       - kooper2013ecological
       - lin2015hwd
+    inpress:
+      - hart2016ten
+    submitted:
+      - lebauer2016byt
     software:
       - betydb
       - pecan
       - biocro
       - ghgvc
+    chapters:
+      - isikhuemhen2004gpt
 sections:
   - title: Education
     file: education.yaml
@@ -51,12 +55,12 @@ sections:
     file: posts.yaml
   - title: # This field is unused
     file: BIBTEX
-  - title: Invited talks
-    file: talks.yaml
   - title: Grants
     file: grants.yaml
   - title: Awards
     file: awards.yaml
+  - title: Invited talks
+    file: talks.yaml
   - title: Service
     file: service.yaml
   - title: Teaching

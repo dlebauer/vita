@@ -72,8 +72,10 @@ service:
     roles:
       - role: "Agrible, Inc., Urbana, IL"
         start: 2015
+        end: present
       - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"
         start: 2015
+        end: present
       - role: "Global Change Solutions, LLC, Urbana, IL"
         start: 2011
         end: 2014
