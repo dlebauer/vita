@@ -1,4 +1,9 @@
 talks:
+  - year: 2017
+    title: "Integrating Diverse Environmental Data Streams for Phenomic Analysis and Crop Modeling"
+    event: "Phenome 2017"
+    city: Tucson, AZ
+    month: February
   - year: 2016 #July 7 http://plantimaging.cast.uark.edu/
     title: "Building Open Access Data, Computing, and Software Infrastructure for High Throughput Phenomics"
     event: "Plant Imaginge Consortium Annual Meeting, University of Arkansas"

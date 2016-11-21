@@ -6,7 +6,7 @@ service:
         title: Reviewer
         entity: EarthCube Architecture Conceptual Design
       - start: 2012
-        end: present
+        end: 2016
         title: Campus Representative
         entity: National Ecological Observatory Network (NEON)
       - start: 2009
@@ -34,8 +34,20 @@ service:
         entity: Sigma Xi, Scientists in the Classroom
   - context: Workshops
     roles:
+      - date: February 2016
+        role: Workshop Co-organizer
+        title: "Using TERRA REF phenotyping data"
+        location: Phenome 2017, Tucson, AZ
+      - date: January 2016
+        role: Invited Participant
+        title: "Moving Field Phenomics From Theory to Practice"
+        location: US-UK Phenomics Workshop, Maricopa, AZ
+      - date: October 2016
+        role: Invited Participant
+        title: "Plant Science Cyberinfrastructure Initiative"
+        location: Plant Science Research Network, Washington, DC
       - date: August 2016
-        role: Session Co-Organizer and Moderator
+        role: Session Co-Organizer
         title: "Hacking Ecology 2.0, a showcase of open tools for data-driven ecology"
         location: Ecological Society of America Annual Meetings, Fort Lauderdale, FL
       - date: November 2014
@@ -65,14 +77,14 @@ service:
     - role: Global Change Biology
     - role: Global Change Biology - Bioenergy
     - role: Geophysical Research Letters
+    - role: Journal of Geophysical Research
+    - role: Journal of Geophysical Research - Biogeosciences
     - role: Nature Climate Change
+    - role: Nature Scientific Reports
     - role: New Phytologist
     - role: Plant Soil
   - context: Consultancy
     roles:
-      - role: "Agrible, Inc., Urbana, IL"
-        start: 2015
-        end: present
       - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"
         start: 2015
         end: present

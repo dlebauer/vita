@@ -10,7 +10,7 @@ person:
   subject: "agriculture, ecology, biogeochemistry"
   address:
     line1: University of Illinois
-    line2: Institute for Genomic Biology
+    line2: Carl R Woese Institute for Genomic Biology
     line3: 1206 West Gregory Drive
     postcode: Urbana, Illinois, 61801
 publications:
@@ -19,6 +19,8 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - lebauer2016byt
+    - hart2016ten
     - AndersonTeixeira2016cdm
     - zhu2015pis
     - wang2015pbm
@@ -38,9 +40,8 @@ publications:
       - kooper2013ecological
       - lin2015hwd
     inpress:
-      - hart2016ten
     submitted:
-      - lebauer2016byt
+      - jaiswal2017bse
     software:
       - betydb
       - pecan
