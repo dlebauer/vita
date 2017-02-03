@@ -1,10 +1,15 @@
 teaching:
-  - start: 2015 
+  - start: 2017
+    title: Instructor, Computational Mathematics Bootcamp, Program for Interdisciplinary and Industrial Internships at Illinois, Urbana, IL
+  - start: 2017
+    title: Introduction to the TERRA Reference Phenotyping Dataset, Phenome 2017, Tucson, AZ
+  - start: 2015
+    end: present
     title: Software Carpentry Instructor
   - start: 2015
-    title: Cultivating Shiitake on Logs, Land Connection Workshop
+    title: Cultivating Shiitake on Logs, Land Connection Workshop, Urbana, IL
 #  - start: 2013
-#    end: present
+#    end: presnet
 #    title: Ecology for Food Producers, Common Ground Food Cooperative 
   - start: 2013
     end: 2014
@@ -16,9 +21,9 @@ teaching:
     url: "https://sites.google.com/site/bio100lwlab14/"
   - start: 2008
     title: Atmospheric and Environmental Sciences, California Summer School for Science and Math
-  - start: 2006
-    title: TA, GIS for Environmental Science, UC Irvine 
   - start: 2008
+    title: TA, GIS for Environmental Science, UC Irvine 
+  - start: 2006
     title: TA, GIS for Environmental Science, UC Irvine 
   - start: 2007
     title: TA, Global Change Biology, UC Irvine
