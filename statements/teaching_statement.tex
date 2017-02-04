@@ -1,0 +1,127 @@
+\documentclass[english]{tufte-handout}
+%\usepackage[backgroundcolor=white,linecolor=gray,bordercolor=gray]{todonotes}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage{babel}
+\usepackage{todonotes}
+\usepackage{enumitem}
+\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+% Tell Latex not to have widows / orphans http://tex.stackexchange.com/a/30409/1783
+\usepackage[all]{nowidow}
+
+%%% Margins
+% For US letter paper
+\geometry{
+  left=2cm, % left margin
+  bottom=2cm,
+  top=2cm}
+
+%%% Sections
+% change section spacing https://groups.google.com/forum/#!topic/tufte-latex/b5Aj7sWeaBU
+\titlespacing*{\section}{-0.5em}{8pt}{5pt} 
+\titlespacing*{\subsection}{-0.5em}{8pt}{5pt} 
+
+%http://tex.stackexchange.com/a/4387/1783
+\providecommand\mynewthought[1]{%
+   \addvspace{0.5em}%1.0\baselineskip} plus 0.5ex minus 0.2ex}%
+   \noindent\hspace{-0.5em}\textsc{#1} % small caps text out
+}
+
+
+\makeatletter
+% keep running title w/ wider text: http://tex.stackexchange.com/a/236057/1783
+%\newgeometry{left=0.12\paperwidth,top=2cm,headsep=2\baselineskip, bottom=2cm,
+%    textwidth=0.75\paperwidth,marginparsep=1ex,marginparwidth=0.0\paperwidth,
+%    textheight=44\baselineskip,headheight=\baselineskip}
+%\geometry{textwidth=.8\paperwidth,margin=2cm}
+\title[LeBauer Teaching Statement]{Teaching Statement}
+\author{David LeBauer}\date{\today}
+
+\makeatother
+
+\begin{document}
+\maketitle
+
+
+\begin{fullwidth}
+\vspace{1.15em}
+
+\begin{abstract}
+
+I show students how to use scientific methods, work collaboratively, make decisions in the face of uncertainty, and solve problems that require the integration of complex information. 
+I enjoy teaching students and watching them apply their new knowledge and skills.
+My goal is to provide students with actionable skills that enable them to interpret observations and develop solutions to real-world problems.
+They develop into scientifically and technologically sophisticated farmers, land managers, scientists, citizens, and policymakers.
+\end{abstract}
+
+%\section{Approach}
+ % Using simulation to scale data from genes to ecosystems teaches students how to use and extend existing knowledge to construct hypotheses, evaluate understanding, predict, and optimize crop and cropping systems.
+ % Models of biological and agricultural system processes allow students to explore, experiment, and grasp concepts as individuals and in groups within the duration of a class, course, or semester project to a depth rarely possible in a field or laboratory practical course.
+ % In this respect, modeling provides a unique teaching tool to complement other courses in the crop sciences curricula.
+
+\section{Experience}
+
+ \mynewthought{Teaching Assistantships:} Experiential education is central to my pedagogy, and I learned this method as an undergraduate from a course that I took and then taught on the subject.
+ I served as a TA for summer field courses aimed at high school students. As an undergraduate I taught geology and archaeology on a field trip to the southwest, and as a graduate student I taught a course in atmospheric chemistry and global change biology.
+ As a graduate student, I was a TA for lab courses in Mushroom Cultivation, GIS for Environmental Sciences, and Experimental Biology. 
+ In addition, I was a TA for courses evolution and global change biology. 
+
+\mynewthought{Course Development:} As a graduate student, I developed a lab- and field-based summer course on global change biology that included field trips to farming systems in southern California.
+I have also taught model-data synthesis to graduate students and faculty throughone-on-one instruction as well as through two workshops at the Ecological Society of America meetings and the NSF Statistics and Applied Mathematical Sciences Institute.
+
+\mynewthought{Mentoring:} 
+\textsc{As an undergraduate}, I advanced from learning to census saplings as a sophomore to leading a team of technicians.
+This experience helped me understand the value of including undergraduates in research. 
+In addition, I learned to allocate responsibility and develop commitment, sense of purpose, and leadership among my employees.
+\textsc{As a graduate student}, I taught my undergraduate assistants how to develop research plans and write proposals, leading to two successful undergraduate fellowships from Kearney Foundation, one internal grant, and one undergraduate honors thesis.
+\textsc{As a postdoc} I developed a team of undergraduate and graduate students working on data entry, analysis, and web programming.
+\textsc{As the manager of the EBI modeling program}, I grew this team to include postdocs, graduate students, undergraduates, and software developers.
+This group has included three undergraduates supported by the NCSA Students Pushing Innovation (SPIN) program and four math graduate students supported by the NSF Program for Interdisciplinary and Industrial Internships at Illinois (PI4).
+
+\mynewthought{Outreach and Extension} activities allow me to teach science alongside practical skills to many students who would not otherwise have had the opportunity to learn these subjects.
+I taught shiitake cultivation to hundreds of farmers through workshops that have been organized by Extension agents in North Carolina as well as through the Carolina Farm Stewardship Association in North Carolina, the Land Connection in Illinois, and farms across these and other states.
+I also teach math lessons each week for pre-kindergarden children, and teach ecology and microbial biogeochemistry through classes at the Common Ground Food Coop in Urbana. 
+
+\mynewthought{Scientific Computing:}
+ In conjunction with an NCSA effort to coordinate the NSF-funded Midwest Big Data hub, the NCSA education outreach committee seeks to establish the University of Illinois and NCSA as a regional training hub for computational science. 
+ I am on this committee, and our objective is to teach the Software Carpentry and Data Carpentry curricula of best practices to scientists across campus as well as to train instructors who will teach at other educational institutions and companies throughout the midwest.
+ I am also a software carpentry instructor, and have trained researchers at NCSA and SAMSI.
+
+\section{Courses I will Develop}
+
+I can teach many of the topics in the Crop Sciences core curriculum, from soil science and ecology to informatics, biological modeling, applied data analysis, and statistical inference. 
+In addition, there are specific courses that I would develop at the undergraduate and graduate levels.
+
+
+\mynewthought{Undergraduate Level:} \emph{Coding to Understand Data} will train undergraduates in data analysis and scientific computing, providing them with skills required for careers in agricultural research and technology.
+ This course will be organized around a scientific workflow that begins with raw data and converts it into meaningful representations of processes that control yield and ecosystem services at different scales.
+ I will teach students exploratory data analysis, visualization, semantics, management, and distribution.
+ In addition, students use the software langauge R, version control and other basic tools for collaborative and reproducible research.
+
+ After taking this course, students will have technical skills and scientific understanding that will enable them to focus on key statistical and modeling concepts taught in higher level courses, and skills that can be applied to academic and industrial research.
+ This course would be aimed at attracting students from biology, math, engineering, computer science, and statistics.
+ The examples and context of the class will engage student interest in sustainable food production and global change. 
+
+\mynewthought{Graduate Level:} I will teach a course in \emph{Agronomic Analysis and Prediction} aimed at early career graduate students. 
+This course will cover the use of data synthesis, statistical inference, and simulation modeling within a Bayesian framework.
+The syllabus will include methods to investigate plant and ecosystem level processes.
+ The objective of this course is to train students to leverage data streams that can inform crop management and improvement.
+
+ I will teach my students to evaluate and provide decision support for production systems based on observations at the plant, farm, and regional scales.
+ The course will include group projects that allow students from different departments to explore problems related to their own field of interest.
+ My goal is to provide students with opportunities to initiate or augment their thesis research and scientific publications.
+ The course will be aimed at students from crop sciences as well as math, statistics, computer science, and engineering.
+
+\section{Conclusion}
+
+Teaching is one of my core responsibilities as a scientist, and it is also a great opportunity.
+ The key crop science innovations of the 21st century will produce food more sustainably using precision management, real-time forecasting, advanced breeding, and genetic engineering.
+ Informatics and analysis of crops and cropping systems will provide opportunities to develop and assess future adaptation to the increasing population, temperature, and drought severity while protecting natural resources and biodiversity.
+ I will train students who can collaborate across specialized scientific domains and contribute to this effort.
+
+\end{fullwidth}
+\end{document}
+
