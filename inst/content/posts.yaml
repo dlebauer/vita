@@ -1,12 +1,17 @@
 posts:
+  - employer: Agrible, Inc.
+    roles: 
+      - start: 2015
+        end: present
+        title: Senior Scientific Advisor
   - employer: University of Illinois at Urbana-Champaign
     roles:
       - start: 2012
         end: present
         title: Research Scientist, Carl R. Woese Institute for Genomic Biology
-    #  - start: 2012
-    #    end: 2015
-    #    title: Research Scientist, Energy Biosciences Institute
+      - start: 2012
+        end: 2015
+        title: Scientific Research Manager, Ecosystem Modeling Program, Energy Biosciences Institute
       - start: 2009
         end: 2012
         title: Postdoctoral Researcher, Energy Biosciences Institute
