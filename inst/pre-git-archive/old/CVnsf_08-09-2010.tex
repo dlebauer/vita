@@ -1,0 +1,306 @@
+ % cv-us.tex 
+% $Id: cv-us.tex,v 1.28 2006/12/12 22:53:52 jrblevin Exp $
+%
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2006 Jason Blevins
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents, however, I do ask that you
+% please leave this notice and the above URL in the source code if you
+% choose to redistribute this file.
+%
+% Jason R. Blevins «jrblevin@sdf.lonestar.org»
+% http://jrblevin.freeshell.org
+% Durham, December 12, 2006
+%
+%%---------------------------------------------------------------------------%
+%
+% Notes:
+%
+% * Don't forget to change `pdfauthor' and `keywords' in the \hypersetup
+% section below.
+%
+% * To create a new page use: \newpage \opening
+%
+% * res.cls includes an \address{} command which can be used up to twice,
+% but my address is too long for the format it uses.
+%
+% * Alternate documentclass statement to put headings in margin:
+% \documentclass[margin,line,11pt,final]{res}
+%
+% * Can divide publication/presentation list into subsections by year:
+% \section{\bf\small\hspace{8mm}2006}
+%
+%%----------------------------------------------------------------------------%
+\documentclass[overlapped,line,letterpaper,10pt]{res}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex]{hyperref}
+\else
+\usepackage[hypertex]{hyperref}
+\fi
+\hypersetup{
+letterpaper,
+colorlinks,
+urlcolor=black,
+pdfpagemode=none,
+pdftitle={Curriculum Vitae},
+pdfauthor={David Shaner LeBauer},
+pdfsubject={Curriculum Vitae},
+pdfkeywords={Biogeochemistry, Fungi, mushroom, nitrogen, carbon, global change, earth system science,}
+}
+%%===========================================================================%%
+%---------------------------------------------------------------------------
+% Document Specific Customizations
+% Make lists without bullets and with no indentation
+\setlength{\leftmargini}{0em}
+\renewcommand{\labelitemi}{}
+% Use large bold font for printed name at top of pages
+\renewcommand{\namefont}{\large\textbf}
+%---------------------------------------------------------------------------
+\name{David LeBauer}
+\begin{document}
+
+\begin{resume}
+\begin{ncolumn}{2}
+Energy Biosciences Institute & Phone: (919) 275-0360\\
+Institute for Genomic Biology &  {\tt dlebauer@illinois.edu}\\
+University of Illinois at Urbana-Champaign & \\
+\end{ncolumn}
+%---------------------------------------------------------------------------
+\vspace{-0.6cm}
+\section{Professional Preparation}\vspace{0.1cm}
+
+
+\begin{format}
+\location{l}
+\title{l}\dates{r}\\
+\employer{l}\location{r}\\
+\end{format}
+\title{Ph.D.} \dates{2004--2008} \employer{Department of Earth System Science} \location{University of California at Irvine}
+\begin{position} \end{position} \vspace{-0.6cm}
+
+\title{M.S.} \dates{2001--2003} \employer{Ecology Graduate Group, Agriculture emphasis} \location{University of California at Davis}
+\begin{position} \end{position} \vspace{-0.6cm}
+
+\title{B.S. \textit{Honors}} \dates{1994--1998} \employer{Biology, Ecology concentration} \location{Duke University}
+\begin{position} \end{position} \vspace{-0.7cm}
+%---------------------------------------------------------------------------
+\section{Research Experience}\vspace{0.1cm}
+\begin{format}
+\title{l}\dates{r}\\
+\employer{l}\location{r}\\
+\end{format}
+
+\title{Postdoctoral Research Associate}
+\employer{Dr.Mike Dietze}
+\location{University of Illinois at Urbana-Champaign}
+\dates{2009-present}
+\begin{position}
+I am utilizing an ecophysiological model to understand and predict the implications of different potential biofuel crop species for regional and global carbon, nitrogen, and water cycling.
+\end{position}
+\title{PhD. Candidate}
+\employer{Dr. Kathleen Treseder}
+\location{University of California at Irvine}
+\dates{2004-2008}
+\begin{position}
+Investigated the impact of nitrogen on global plant production, net ecosystem carbon balance, and the effects of biodiveristy on decomposition.
+\end{position}
+\title{Laboratory and Operations Manager}
+\employer{Dr. Omon Isikhuemhen}
+\location{N.C. A\&T State University}
+\dates{2003--2004}
+\begin{position} Managed research program focused on agricultural, industrial, and medicinal applications of white-rot fungi, advised student members of the lab, coordinated extension activities.
+\end{position}
+\title{Research Assistant}
+\employer{Dr. Louise Jackson and Dr. Kate Scow}
+\location{University of California at Davis}
+\dates{2001--2003}
+\begin{position} Investigated the effect of mycorrhizal fungi and N addition on the C, N, and P content of organic canning tomatoes, and the response of nitrifier bacteria communities to N in agricultural fields.
+\end{position}
+\title{Visiting Researcher}
+\employer{Dr. Omon Isikhuemhen}
+\location{Mikrobiologizky Ustav, Prague}
+\dates{1998}
+\begin{position}
+Investigated ligninolytic enzyme production in white rot fungi, cultivation of \textit{Pleurotis tuberregium}.
+\end{position}\vspace{-0.2cm}
+\title{Independent Research}
+\employer{Dr. Rytas Vilgalys}
+\location{Duke University}
+\dates{1998--2001}
+\begin{position}
+Establishment of a landscaped mushroom garden in the Sarah P. Duke Gardens, isolation and cultivation of local fungi, teaching.
+\end{position}
+\title{Independent Research}
+\employer{Dr. Janis Antonovics}
+\location{Duke University}
+\dates{1997--1998}
+\begin{position}
+Honors Thesis: "Mycorrhizally mediated competition between two host plants"
+\end{position}
+\title{Labratory and Field Technician}
+\employer{Dr. Jacqueline Mohan\\ Dr. James Clark and Dr. William Schlesinger}
+\location{Duke University}
+\dates{1997--2001}
+\begin{position} Research assistant, plant community response to free-air CO$_2$ enrichment (Duke-FACE), effects of the environment on seedling establishment and recruitment.
+\end{position}
+%%---------------------------------------------------------------------------%%
+\newpage
+\opening
+
+\section{Teaching Experience}\vspace{0.1cm}
+\begin{format}
+\title{l}\dates{r}\\
+\employer{l}\location{r}\\
+\end{format}
+
+\title{Teaching Assistant}
+	\employer{BIO 100LW: Experimental Biology Laboratory}
+	\location{UC Irvine}
+	\dates{Fall 2008}
+	\begin{position}\end{position} \vspace{-0.5cm}
+
+\title{Teaching Assistant / Instructor}
+	\employer{CA State Summer School for Math and Science}
+	\location{UC Irvine}
+	\dates{Summer 2008 / 2009}
+	\begin{position} \end{position} \vspace{-0.5cm}
+
+\title{Teaching Assistant}
+	\employer{ESS 134: GIS for Environmental Science}
+	\location{UC Irvine}
+	\dates{Winter 2006, 2008}
+	\begin{position} \end{position} \vspace{-0.5cm}
+
+\title{Teaching Assistant}
+ \employer{ESS 13: Global Change Biology}
+ \location{UC Irvine}
+ \dates{Spring 2007}
+ \begin{position} \end{position} \vspace{-0.5cm}
+
+\title{Agricultural Extension Instructor}
+	\employer{Log Cultivation of Shiitake Mushrooms}
+	\location{NC A\& T SU}
+	\dates{Fall 2003- Spring 2004}
+	\begin{position} \end{position} \vspace{-0.5cm}
+
+\title{Teaching Assistant}
+	\employer{PLP 140: Mushroom Cultivation}
+	\dates{Winter 2003}
+	\location{UC Davis}
+	\begin{position} \end{position} \vspace{-0.5cm}
+
+\title{Co-leader}
+	\employer{HsC 79.17: Project WILD Outdoor Experiential Education Course}
+	\dates{Spring 1996}
+	\location{Duke University}
+	\begin{position} \end{position}\vspace{-0.25cm}
+
+%%---------------------------------------------------------------------------%%
+\section{Funding}\vspace{0.1cm}
+\begin{format}
+\title{l}\dates{r}\\
+\employer{l}\location{r}\\
+\end{format}
+
+\title{Graduate Student Fellowship} 
+	\dates{2005-2007}
+	\employer{Kearney Soil Science Foundation, Davis, CA.}
+	\location{\$33,580}
+	\begin{position} \end{position}\vspace{-0.5cm}
+
+\title{Mildred E. Mathias Graduate Research Grant} 
+	\employer{UC Natural Reserve System}
+	\dates{2006}
+	\location{\$1000}
+	\begin{position} \end{position}\vspace{-0.5cm}
+
+\title{Departmental Fellowship} 
+	\employer{Earth System Science, UC Irvine} 
+	\dates{2004-2005}
+	\location{\$32,000}
+	\begin{position} \end{position}\vspace{-0.5cm}
+
+\title{Benenson Award in the Arts}
+	\employer{Duke University} \location{\$1500}
+	\dates{1998}
+	\begin{position} \end{position}\vspace{-0.5cm}
+
+%-------
+\section{Publications}\vspace{0.5cm}
+\begin{itemize}
+\item{\bf{Journal Articles}}
+\item LeBauer, D.S. Litter degradation rate and beta-glucosidase increase with fungal diversity. 2010. Canadian Journal of Forest Research, \textit{in press}.
+\item Wang, D., D.S. LeBauer and M.C. Dietze. 2010. A quantitative review comparing the yield of switchgrass in monocultures and mixtures in relation to climate and management factors. Global Change Biology Bioenergy. \textit{in press}
+\item Allison, S.D, D.S. LeBauer, M.R. Ofrecio, R. Reyes, A.M. Ta, and T.M. Tran. 2008. Low levels of nitrogen addition stimulate decomposition by boreal forest fungi. Soil Bio. Biochem 41:293-302. 
+\item LeBauer, D.S. and K.K. Treseder. 2008. Nitrogen Limitation of Net Primary Productivity in Terrestrial Ecosystems is Globally Distributed. Ecology 89 (2): 371-379
+\item Okano, Y., K.R. Hirstova, C.M. Leutenegger, L.E. Jackson, R.F. Denison, B. Gebreyesus, D.S. LeBauer, and K.M. Scow. (2004) Effects of ammonium on the population size of ammonia-oxidizing bacteria in soil- Application of real-time PCR. Applied and Environmental Microbiology 70:1008-1016.
+
+%\item{\bf{Thesis chapter}} \textit{in prep}
+%\item LeBauer, D.S., E.W. Seabloom, and W.S Harpole. Ecosystem responses to a gradient of nitrogen fertilization in Southern California grassland.
+
+\newpage \opening
+\section{Other Publications}%\vspace{0.5cm}
+\item{\textbf{Book Chapter}}
+\item Isikhuemhen, O.S. and D.S. LeBauer. 2004. Growing \textit{Pleurotus tuberregium}. p270-281 in Mushroom Grower's Handbook 1: Oyster Mushroom Cultivation. MushWorld. Seoul, Korea.
+\item{\textbf{Technical Document}}
+\item LeBauer, D.S., D. Wang, X. Feng, and M.C. Dietze. 2010. The EBI Biofuel Crop Traits Database: Database Description and Users Guide ver 0.1
+\item{\textbf{News Articles}}
+\item LeBauer, D.S. 2008. Nitrogen Pollution Boosts Plant Growth. Scitizen.com, France
+\item LeBauer, D.S. 2004. Consider Shiitake Cultivation! Stewardship News, Carolina Farm Stewardship Association. Pittsboro, NC. 24(2):8-11.
+\end{itemize}
+%----------------------
+\section{Selected Presentations}\vspace{0.5cm} 
+\begin{itemize}
+\item LeBauer, D.S., and K.K. Treseder 2007. Nitrogen deposition reduces nitrogen limitation of terrestrial net primary production, ESA, San Jose, CA
+\item LeBauer, D.S., and K.K. Treseder 2006. Nitrogen Limitation of Terrestrial Net Primary Production: Global Patterns From Field Studies with Nitrogen Fertilization, AGU, San Francisco, CA
+\item LeBauer, D.S., and K.K. Treseder 2006. Grassland carbon dynamics along nitrogen and depth gradients. ESA, Memphis, TN
+\item LeBauer, D.S. and O.S. Isikhuemhen. 2003. Small farm mushroom production for food and medicine. (Workshop) CFSA Sustainable Agriculture Conference, Rock Hill, SC
+\end{itemize}
+%%---------------------------------------------------------------------------%%
+\section{Mycological Consulting}\vspace{0.5cm}
+\begin{itemize}
+\item{Cultivation,} Oyster mushroom (\textit{Pleurotus ostreatus}) on tomato (\textit{Lycopersicon esculentum}) pomace, for Dr. Annie King and Dr. Jamal Assi, UC Davis 2003
+\item{Cultivation and Education,} Crabtree Valley Farms, Chatanooga, TN. 2000; Wildflower Organics, Dawsonville, Ga., 1999-2000; Sustenance Farm, Bear Creek, NC., 1999
+\item{Mycological Landscaping,} Sarah P. Duke Gardens, Durham, NC. Summer 1998, 1999
+\end{itemize}
+%------------------------------------------------------------------------------
+\vspace{-0.25cm}
+\section{Professional Affiliations}\vspace{0.5cm}
+\begin{itemize}
+\item{Ecological and Mycological Societies of America, American Geophysical Union, Sigma Xi}
+\end{itemize}
+
+%---------------------------------------------------------------------------g
+\vspace{-0.25cm}
+\section{Service}
+\begin{itemize}
+\item Graduate Student Representative, Department of Earth System Science, University of California at Irvine, 2006-2007
+\item Judge, California State Science Fair, 2006-2009
+\item Ad hoc reviewer: Geophysical Research Letters, Ecology, Plant and Soil
+\item Graduate Student Seminar Organizer, Earth System Science, University of California at Irvine, 2005-2006
+\item Mentor, FARMS Leadership, Inc. 2003. 8th grade science project to investigate soil quality and mycorrhizal colonization levels in gardens. Sacramento, CA.
+\item Guest Teacher, K-12, 1998-99. Scientists 
+in the Classroom, Sigma Xi, Durham, NC.
+\end{itemize}
+%%%RESEARCH INTERESTS: COMMENTED OUT FOR NOW%%%
+%\vspace{-0.25cm}
+%\section{Research Interests}\vspace{0.5cm}
+%\begin{itemize}
+%\item{Biogeochemistry} understanding ecosystem functions as observed in transformations, flows, and fates of nutrients; particular focus on the role of fungi and microorganisms in nutrient cycling and soil function.
+%\item{Plant-mycorrhizal interactions} Nutrient cycling in natural and managed ecosystems; evolution of symbiosis; models of plant-fungal resource trade.
+%\item{Decomposer fungi} Application of fungi to sustainability through conversion of ligno-cellulosic waste into food and medicine and through Stametsian bioremediation.
+%\end{itemize}
+%\section{Additional Coursework}
+%\begin{itemize}
+%\item Plant Functional Traits, NCEAS Distributed Graduate Seminar, 2008
+%\item Probability, Bayesian Statistics, UCI Statistics Dept, 2007;
+%\item Sustainable Agriculture, Central Carolina Community College, 1999 
+%\end{itemize}
+%%---------------------------------------------------------------------------%%
+\end{resume}
+\end{document}
+%%===========================================================================%%

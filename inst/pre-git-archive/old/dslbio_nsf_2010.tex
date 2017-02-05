@@ -1,0 +1,259 @@
+% $Id$
+
+% Purpose: Biographical Sketch in two page NSF format
+% URL (NSF Bio): http://dust.ess.uci.edu/job/bio_nsf/bio_nsf.pdf
+% URL (NSF C&P): http://dust.ess.uci.edu/job/cp/cp.pdf
+
+% Usage: 
+% cd ~/job;make -W bio_nsf.tex bio_nsf.dvi bio_nsf.ps bio_nsf.pdf bio_nsf.txt;cd -
+% scp ${HOME}/job/bio_nsf.dvi ${DATA}/ps/bio_nsf.pdf ${DATA}/ps/bio_nsf.ps ${HOME}/job/bio_nsf.tex ${HOME}/job/bio_nsf.txt dust.ess.uci.edu:/var/www/html/job/bio_nsf
+% chmod a+r ${DATA}/ps/cp.pdf;scp ${DATA}/ps/cp.pdf dust.ess.uci.edu:/var/www/html/job/cp
+% /bin/cp ${DATA}/ps/bio_nsf.pdf ${DATA}/prp/prp_esdr/prp_esdr_cv_zender.pdf
+% /bin/cp ${DATA}/ps/cp.pdf ${DATA}/prp/prp_esdr/prp_esdr_cp_zender.pdf
+
+% # NB: latex2html works well on bio_nsf.tex
+% latex2html -dir /var/www/html/job/bio_nsf bio_nsf.tex
+% # NB: tth chokes on bio_nsf.tex
+% cd ${HOME}/job;tth -a -Lbio_nsf -p./:${TEXINPUTS}:${BIBINPUTS} < ${HOME}/job/bio_nsf.tex > bio_nsf.html
+% scp bio_nsf.html dust.ess.uci.edu:/var/www/html/job/bio_nsf
+% # NB: tex4ht works well on bio_nsf.tex
+% cd ${HOME}/job;htlatex bio_nsf.tex
+% scp bio_nsf*.css bio_nsf*.html dust.ess.uci.edu:/var/www/html/job/bio_nsf
+% # NB: tex4moz works well on bio_nsf.tex
+% cd ${HOME}/job;/usr/share/tex4ht/mzlatex bio_nsf.tex
+% scp bio_nsf*.css bio_nsf*.html bio_nsf*.xml dust.ess.uci.edu:/var/www/html/job/bio_nsf
+
+\documentclass[12pt]{article}
+
+% Standard packages
+\usepackage{ifpdf} % Define \ifpdf
+\ifpdf % PDFLaTeX
+\usepackage[pdftex]{graphicx} % Defines \includegraphics*
+\pdfcompresslevel=9
+\usepackage{thumbpdf} % Generate thumbnails
+\else % !PDFLaTeX
+\usepackage{graphicx} % Defines \includegraphics*
+\fi % !PDFLaTeX
+\usepackage{array} % Table and array extensions, e.g., column formatting
+\usepackage[dayofweek]{datetime} % \xxivtime, \ordinal
+\usepackage{mdwlist} % Compact list formats \itemize*, \enumerate*
+\usepackage{revnum} % Reverse enumerate
+\usepackage{times} % Postscript Times-Roman font KoD99 p. 375
+\usepackage{url} % Typeset URLs and e-mail addresses
+
+% hyperref is last package since it redefines other packages' commands
+% hyperref options, assumed true unless =false is specified:
+% backref       List citing sections after bibliography entries
+% baseurl       Make all URLs in document relative to this
+% bookmarksopen Unknown
+% breaklinks    Wrap links onto newlines
+% colorlinks    Use colored text for links, not boxes
+% hyperindex    Link index to text
+% plainpages=false Suppress warnings caused by duplicate page numbers
+% pdftex        Conform to pdftex conventions
+% Colors used when colorlinks=true:
+% linkcolor     Color for normal internal links
+% anchorcolor   Color for anchor text
+% citecolor     Color for bibliographic citations in text
+% filecolor     Color for URLs which open local files
+% menucolor     Color for Acrobat menu items
+% pagecolor     Color for links to other pages
+% urlcolor      Color for linked URLs
+\ifpdf % PDFLaTeX
+\usepackage[backref,breaklinks,colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue,hyperindex,plainpages=false,pdftex]{hyperref} % Hyper-references
+\pdfcompresslevel=9
+\else % !PDFLaTeX
+\usepackage[backref=false,breaklinks,colorlinks=false,hyperindex,plainpages=false]{hyperref} % Hyper-references
+\fi % !PDFLaTeX
+
+% Personal packages
+\usepackage{csz} % Library of personal definitions
+\usepackage{abc} % Alphabet as three letter macros
+\usepackage{chm} % Commands generic to chemistry
+\usepackage{hyp} % Hyphenation exception list
+
+% Margins
+\topmargin 0in \headheight 0pt \headsep 0pt
+\textheight 9in \textwidth 6.5in
+\oddsidemargin 0in \evensidemargin 0in
+\marginparwidth 0pt \marginparsep 0pt
+\footskip 0pt
+\footnotesep=0pt
+
+% \DeclareFixedFont{command}{code}{family}{series}{shape}{size}
+\DeclareFixedFont{\xiirn}{OT1}{cmr}{m}{n}{12}
+\DeclareFixedFont{\xiitiit}{OT1}{cmti}{m}{it}{12}
+
+\setlength{\parindent}{0mm}
+
+\begin{document}
+\pagestyle{myheadings}
+\markright{David~S. LeBauer}
+
+\begin{center}
+%{\small Web: \url{http://dust.ess.uci.edu/job/bio_nsf/bio_nsf.pdf} \hfill Updated: \shortdate\today}\\
+{\textit{Biographical Sketch}}\\
+%{\xiirn \scshape CHARLES~S. (CHARLIE) ZENDER}\\
+{\large\textsc{David~S. LeBauer}}\\
+\end{center}
+
+Energy Biosciences Institute \hfill \\
+University of Illinois, Urbana-Champaign \hfill \url{dlebauer@illinois.edu}  \\
+Urbana, IL~~61801 \hfill Voice/Fax: (949)\thinspace 433-7410/(217)\thinspace 244-3637\\
+
+\csznote{ % fxm: Squeeze Post-doc into this section
+(a) Professional Preparation
+A list of the individual's undergraduate and graduate education and
+postdoctoral training as indicated below: 
+Undergraduate Institution(s) Major    Degree & Year
+Graduate Institution(s)      Major    Degree & Year
+Postdoctoral Institution(s)  Area     Inclusive Dates (years)
+} % csznote
+\textbf{i. PROFESSIONAL PREPARATION}
+\begin{table}[h]
+\begin{tabular}{ l l l r } 
+Duke University, Durham~NC & Biology & B.S. Ho. & 1998 \\
+University of California at Davis & Agricultural Ecology & M.S. & 2003 \\
+University of California at Irvine & Earth System Science & Ph.D. & 2008\\
+University of Illinois & Ecosystem Modeling & Postdoc & 2009--present\\
+\end{tabular}
+\end{table}
+
+\csznote{
+(b) Appointments
+A list, in reverse chronological order, of all the individual's
+academic/professional appointments beginning with the current
+appointment.  
+} % csznote
+\textbf{ii. APPOINTMENTS}
+\begin{table}[h]
+\begin{tabular}{ l >{\raggedright}p{35.0em}<{} l }
+8/09-- & Postdoctoral Research Associate, University of Illinois, Urbana-Champaign (UCI) & \\ 
+6/08--7/08 & Instructor, CA State Summer School for Science and Math & \\
+9/04--12/08 & Graduate Research \& Teaching Assistant, University of California at Irvine & \\ 
+7/03--7/04 & Laboratory and Extension Operations Manager, University of North Carolina A\&T & \\
+8/01--6/03 & Graduate Research \& Teaching Assistant, University of California at Davis & \\
+\end{tabular}
+\end{table}
+
+\csznote{
+(c) Publications
+A list of: (i) up to 5 publications most closely related to the
+proposed project; and (ii) up to 5 other significant publications,
+whether or not related to the proposed project. Each publication
+identified must include the names of all authors (in the same sequence
+in which they appear in the publication), the article and journal
+title, book title, volume number, page numbers, and year of
+publication. If the document is available electronically, the Website
+address also should be identified.  For unpublished manuscripts, list
+only those submitted or accepted for publication (along with most
+likely date of publication). Patents, copyrights and software systems
+developed may be substituted for publications.  Additional lists of
+publications, invited lectures, etc., must not be included. Only the
+list of 10 will be used in the review of the proposal.
+} % csznote
+
+%\textbf{iii. (a). FIVE PUBLICATIONS RELATED TO PROPOSED TOPIC}
+\textbf{iii. FIVE PUBLICATIONS RELATED TO PROPOSED TOPIC}
+% ($^{*}$grad.\ stud., $^{\dagger}$post-doc)
+% NB: Change these entries at will---full list of juicy articles follows below
+\setlength{\parindent}{-0.3em}
+\par\bigskip
+\textbf{LeBauer, D.~S.} 2010. Litter degradation rate and beta-glucosidase activity increase with fungal diversity. \textit{Can.\ J.\ For.\ Res.}, \textbf{40}(6): 1076–-1085
+\par
+Wang, D., \textbf{D.~S. LeBauer} and M.~C. Dietze. 2010. A quantitative review comparing the yield of
+switchgrass in monocultures and mixtures in relation to climate and management factors. \textit{Glob.
+Change Biol. Bioenergy}, \textbf{2}(1):16--25
+\par
+Allison, S.~D, \textbf{D.~S. LeBauer}, M.~R. Ofrecio, R. Reyes, A.~M. Ta, and T.~M. Tran. 2008. Low levels of
+nitrogen addition stimulate decomposition by boreal forest fungi. \textit{Soil Bio. Biochem.}, \textbf{41}:293--302
+\par
+\textbf{LeBauer, D.~S.} and K.~K. Treseder. 2008. Nitrogen Limitation of Net Primary Productivity in
+Terrestrial Ecosystems is Globally Distributed. \textit{Ecology}, \textbf{89}(2): 371--379
+\par
+Okano, Y., K.~R. Hirstova, C.~M. Leutenegger, L.~E. Jackson, R.~F. Denison, B. Gebreyesus, \textbf{D.~S.
+LeBauer}, and K.~M. Scow. (2004) Effects of ammonium on the population size of ammonia-oxidizing
+bacteria in soil- Application of real-time PCR. \textit{Appl. Environ. Microb.}, \textbf{70}:1008--1016
+\par
+\setlength{\parindent}{0em}
+\par\bigskip
+\clearpage
+%\textbf{iii. (b). FIVE ADDITIONAL PUBLICATIONS}
+%($^{*}$graduate student, $^{\dagger}$post-doc)
+%\setlength{\parindent}{0em}
+%\par\bigskip
+
+
+\csznote{
+% Likely potential papers listed in reverse chronological order
+% Leave only the juicy ones, say, second author or better
+% Copy relevant article from here to above, depending on proposal context
+} % end \csznote
+\setlength{\parindent}{0em}
+\par\medskip
+
+\csznote{
+(d) Synergistic Activities
+A list of up to five examples that demonstrate the broader impact of
+the individual's professional and scholarly activities that focuses on
+the integration and transfer of knowledge as well as its creation.
+Examples could include, among others: innovations in teaching and
+training (e.g., development of curricular materials and pedagogical
+methods); contributions to the science of learning; development and/or
+refinement of research tools; computation methodologies, and
+algorithms for problem-solving; development of databases to support
+research and education; broadening the participation of groups
+underrepresented in science, mathematics, engineering and technology;
+and service to the scientific and engineering community outside of the
+individual's immediate organization.
+} % end csznote
+
+\textbf{iv. SYNERGISTIC ACTIVITIES}
+\begin{enumerate*}
+%\item Developer, Predictive Ecosystem Carbon Analyzier (PECAn), 2009--present
+\item Developer, Biofuel Ecophysiological Traits and Yields database (BETY-db), 2009--present
+\item Reviewer, Geophys. Res. Lett., Ecology, Plant Soil, Appl. Soil Ecology
+\item Judge, California State Science Fair 2006--2009
+\item Graduate Student Representative, Dept. of Earth System Science, UCI, 2006--2007
+\item Author (with O.~S. Isikhuemhen), Growing Pleurotus tuberregium. In: Oyster Mushroom Cultivation, 270-281. MushWorld. Seoul, Korea 2004
+\end{enumerate*}
+
+\csznote{
+Collaborators and Co-Editors. A list of all persons in alphabetical
+order (including their current organizational affiliations) who are
+currently, or who have been collaborators or co-authors with the
+individual on a project, book, article, report, abstract or paper
+during the 48 months preceding the submission of this proposal. Also
+include those individuals who are currently or have been co-editors of
+a journal, compendium, or conference proceedings during the 24 months
+preceding the submission of the proposal. If there are no
+collaborators or co-editors to report, this should be so indicated. 
+} % end csznote
+\textbf{v. (a) COLLABORATORS (past 48~months) \& CO-EDITORS (past 24~months)}
+\par\smallskip
+S.~D. Allison (UCI),
+W.~S. Harpole (Iowa~SU),
+M.~R. Ofrecio (UCI), 
+R. Reyes (UCI),
+E.~G. Seabloom (Oregon~SU),
+A.~M. Ta (UCI),
+T.~M. Tran (UCI),
+D. Wang (UIUC)\\
+\par\medskip
+
+\textbf{v. (b) GRADUATE AND POSTDOCTORAL ADVISORS}
+\par\smallskip
+M.~C. Dietze (UIUC),
+L.~E. Jackson (UCD),
+K.~M. Scow (UCD),
+K.~K. Treseder (UCI)\\
+\par\medskip
+
+\textbf{v. (c) THESIS ADVISOR AND POSTGRADUATE SCHOLAR SPONSOR}
+\par\smallskip
+%Chair or Co-Chair of Thesis Committee: 
+graduate students advised: 0\\
+postdoctoral scholars sponsered: 0\\
+
+
+\end{document}
