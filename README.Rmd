@@ -1,8 +1,6 @@
 # Vita
 
-Paradoxically, my vita is not here. But everything required to build it is.
-
-This is an R package for automatically building my academic CV.  It's based on the idea that content and style should be separate and that a person might want different CVs for different purposes.  Inspiration came from [Kieran Healy](https://github.com/kjhealy/kjh-vita) and for the formatting of the CV itself, [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for the use of Biblatex to manage the publications list, and [James Keirstead's jk-vita repository](https://github.com/jkeirstead/jk-vita) from which this one is forked.
+My vita is in this repository ([dlebauer-full-vita.pdf](https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf), but the primary purpose of this repository is to manage the content and the R code to automatically build my academic CV. The R package is based on the idea that content and style should be separate and that a person might want different CVs for different purposes. This repository is a fork from [James Keirstead](https://github.com/jkeirstead) who was in turn inspired by [Kieran Healy](https://github.com/kjhealy/kjh-vita),  and for the formatting of the CV itself, [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for the use of Biblatex to manage the publications list, and [James Keirstead's jk-vita repository](https://github.com/jkeirstead/jk-vita) from which this one is forked.
 
 ## Project layout
 
