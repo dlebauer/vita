@@ -1,0 +1,64 @@
+\documentclass[english, 9pt, a4paper]{article}
+\usepackage{dl-vita}
+
+\makeauthorbold{LeBauer}
+
+% ------------------------------------------------------------------------------
+% Personal information
+% ------------------------------------------------------------------------------
+\title{}
+\name{David LeBauer}
+\postnoms{PhD}
+\address{University of Illinois\\Carl R Woese Institute for Genomic Biology\\1206 West Gregory Drive\\\vspace{-0.04in}\addfontfeature{Numbers={Proportional, Lining}}Urbana, Illinois, 61801}
+\www{davidlebauer.com}
+\email{dlebauer@illinois.edu}
+\tel{(217) 300-0266}
+\subject{agriculture, ecology, biogeochemistry}
+
+% ------------------------------------------------------------------------------
+% Publications info
+% ------------------------------------------------------------------------------
+\bibliography{papers}
+\addtocategory{monographs}{lebauer2013ffb}
+\addtocategory{papers}{lebauer2016byt, hart2016ten, AndersonTeixeira2016cdm, zhu2015pis, wang2015pbm, davis2015tsl, davis2014llf, wang2013pys, dietze2013oic, lebauer2013tpd, lebauer2010ldr, wang2010qrc, allison2009lln, lebauer2008nln, okano2004art, dietze2014qat, wang2013est}
+\addtocategory{conferences}{kooper2013ecological, lin2015hwd}
+\addtocategory{inpress}{}
+\addtocategory{submitted}{jaiswal2017bse, black2017rvd}
+\addtocategory{software}{betydb, pecan, biocro, ghgvc}
+\addtocategory{chapters}{isikhuemhen2004gpt}
+
+\begin{document}
+\maketitle
+
+\section*{Education}
+\input{education}
+
+\section*{Employment}
+\input{posts}
+
+\begin{publications}
+\printbib{monographs}
+\printbib{papers}
+\printbib{conferences}
+\printbib{inpress}
+\printbib{submitted}
+\section{Other}\printbib{software}
+\printbib{chapters}
+\end{publications}
+
+\section*{Grants}
+\input{grants}
+
+\section*{Awards}
+\input{awards}
+
+\section*{Invited talks}
+\input{talks}
+
+\section*{Service}
+\input{service}
+
+\section*{Teaching}
+\input{teaching}
+
+\end{document}
