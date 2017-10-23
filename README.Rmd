@@ -16,6 +16,16 @@ The project consists of:
    as scripts for inserting version control information
    
 
+## Dependencies
+
+* latex, latexmk, xelatex
+* R
+
+```sh
+apt-get update
+apt-get install texlive-xelatex latexmk fonts-font-awesome texlive-bibtex-extra biber
+```
+
 ## Install
 
 ```{r eval = FALSE}

@@ -19,6 +19,8 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - jaiswal2017bse
+    - black2017rvd
     - lebauer2016byt
     - hart2016ten
     - AndersonTeixeira2016cdm
@@ -40,9 +42,7 @@ publications:
       - kooper2013ecological
       - lin2015hwd
     inpress:
-      - black2017rvd
     submitted:
-      - jaiswal2017bse
     software:
       - betydb
       - pecan
