@@ -8,3 +8,4 @@ myCV.sty <- system.file("style/dl-vita.sty", package = "vita")
 generate_cv(content = myCV.yaml,
             style = myCV.sty,
             outdir = "outdir")
+

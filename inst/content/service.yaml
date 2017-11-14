@@ -1,8 +1,20 @@
 service:
   - context: Academic
     roles:
-      - start: 2012
+      - start: 2015
         end: present
+        title: Undergraduate Student Mentor
+        entity: Students Pushing Innovation Program, National Center For Supercomputing Applications
+      - start: 2015
+        end: 2016
+        title: Reviewer
+        entity: EarthCube Architecture Conceptual Design
+      - start: 2014
+        end: 2016
+        title: Graduate Student Summer Intern Mentor
+        entity: Program for Interdisciplinary and Industrial Internships at Illinois
+      - start: 2012
+        end: 2016
         title: Campus Representative
         entity: National Ecological Observatory Network (NEON)
       - start: 2009
@@ -30,21 +42,37 @@ service:
         entity: Sigma Xi, Scientists in the Classroom
   - context: Workshops
     roles:
-      - date: March 2014
-        role: Workshop Chair and Co-Organizer
-        title: Advancing Software for Ecological Forecasting
-        location: Urbana, IL
-        website: http://conferences.igb.illinois.edu/ecological_forecasting/
-      - date: August 2014
-        role: Symposium Co-Organizer
-        title: Challenges and Advances in Statistical Software For Ecology.
-        location: Ecological Society of America Annual Meetings, Sacramento, CA
-        website: http://eco.confex.com/eco/2014/webprogram/Session9692.html
+      - date: February 2016
+        role: Workshop Co-organizer
+        title: "Using TERRA REF phenotyping data"
+        location: Phenome 2017, Tucson, AZ
+      - date: January 2016
+        role: Invited Participant
+        title: "Moving Field Phenomics From Theory to Practice"
+        location: US-UK Phenomics Workshop, Maricopa, AZ
+      - date: October 2016
+        role: Invited Participant
+        title: "Plant Science Cyberinfrastructure Initiative"
+        location: Plant Science Research Network, Washington, DC
+      - date: August 2016
+        role: Session Co-Organizer
+        title: "Hacking Ecology 2.0, a showcase of open tools for data-driven ecology"
+        location: Ecological Society of America Annual Meetings, Fort Lauderdale, FL
       - date: November 2014
         role: Workshop Co-Organizer
         title: Soil Carbon Cycle Super-Modeling
         location: Biosphere 2, Oracle, AZ
         website: http://soil-metamodel.github.io/
+      - date: August 2014
+        role: Symposium Co-Organizer
+        title: Challenges and Advances in Statistical Software For Ecology.
+        location: Ecological Society of America Annual Meetings, Sacramento, CA
+        website: http://eco.confex.com/eco/2014/webprogram/Session9692.html
+      - date: March 2014
+        role: Workshop Chair and Co-Organizer
+        title: Advancing Software for Ecological Forecasting
+        location: Urbana, IL
+        website: http://conferences.igb.illinois.edu/ecological_forecasting/
   - context: Grant Reviews
     roles:
       - role: US National Science Foundation
@@ -52,38 +80,48 @@ service:
     roles:
     - role: Applied Soil Ecology
     - role: Ecology
-    - role: Ecology Letters               
-    - role: Ecological Applications  
+    - role: Ecology Letters
+    - role: Ecological Applications
     - role: Global Change Biology
-    - role: Global Change Biology 
-    - role: Bioenergy
+    - role: Global Change Biology - Bioenergy
     - role: Geophysical Research Letters
+    - role: Journal of Geophysical Research
+    - role: Journal of Geophysical Research - Biogeosciences
     - role: Nature Climate Change
+    - role: Nature Scientific Reports
     - role: New Phytologist
     - role: Plant Soil
   - context: Consultancy
     roles:
-      - role: Global Change Solutions, LLC #2011 - present
-      - role: British Petroleum Lignocellulosic Biofuels #2011 - present
-      - role: Wildflower Organics, Dawsonville, GA #1999-2000
-      - role: Crabtree Valley Farms, Chatanooga, TN #2000
-      - role: Sustenance Farm, Bear Creek, NC #1999
+      - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"
+        start: 2015
+        end: 2016
+      - role: "Global Change Solutions, LLC, Urbana, IL"
+        start: 2011
+        end: 2014
+      - role: Wildflower Organics, Dawsonville, GA
+        start: 1999
+        end: 2000
+      - role: Crabtree Valley Farms, Chatanooga, TN
+        start: 2000
+      - role: Sustenance Farm, Bear Creek, NC
+        start: 1999
 
-## Log of Reviews (incomplete) 
+## Log of Reviews (incomplete)
 ## APSOIL
 # APSOIL-D-09-00091R1
 # APSOIL-D-09-00379
 # APSOIL-D-11-00166
 # APSOIL-D-12-00268R1
 ## https://mail.google.com/mail/ca/u/0/#search/Thank+you+for+the+review+of+APSOIL
-## Ecology 
+## Ecology
 # 07-1104
 # 08-0792
 # 09-0935
 # 10-1558
 # 11-1398
-# https://mail.google.com/mail/ca/u/0/#search/#22Review+Received+by+Ecology#22 
-## GRL 
+# https://mail.google.com/mail/ca/u/0/#search/#22Review+Received+by+Ecology#22
+## GRL
 # #2008GL033983
 ## New Phytologist
 # NPH-MS-2012-14400

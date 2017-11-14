@@ -1,0 +1,288 @@
+\documentclass[english]{tufte-handout}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage{babel}
+\usepackage{todonotes}
+\usepackage{enumitem}
+\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+% Tell Latex not to have widows / orphans http://tex.stackexchange.com/a/30409/1783
+\usepackage[all]{nowidow}
+
+%%% Margins
+% For US letter paper
+\geometry{
+  left=2cm, % left margin
+  bottom=2cm,
+  top=2cm}
+
+%%% Sections
+% change section spacing https://groups.google.com/forum/#!topic/tufte-latex/b5Aj7sWeaBU
+\titlespacing*{\section}{-0.5em}{8pt}{5pt} 
+\titlespacing*{\subsection}{-0.5em}{8pt}{5pt} 
+
+%http://tex.stackexchange.com/a/4387/1783
+\providecommand\mynewthought[1]{%
+   \addvspace{0.5em}%1.0\baselineskip} plus 0.5ex minus 0.2ex}%
+   \noindent\hspace{-0.5em}\textsc{#1} % small caps text out
+}
+
+\makeatletter
+\title[LeBauer Research Statement]{Research Statement}
+\author{David LeBauer}
+\date{\today}
+\makeatother
+
+\begin{document}
+\maketitle
+
+\begin{fullwidth}
+
+\vspace{1.15em}
+
+\begin{abstract}
+
+
+% Technological advances in breeding and crop production systems have the ability to produce more food using fewer resources. 
+% Indeed, we can engineer adaptive and resilient agroecosystems that produce food and fuel while improving the environment.
+% However, these advances require collaborative, synthetic research supported by the encoding and transfer of information.
+
+% I develop and apply new data resources and analytical tools that that encode scientific understanding and extract new knowledge by applying detailed mechanistic understanding to systems-level applications.
+% This work requires collaboration with science and industry in agriculture, biology, computer science, statistics, math, and engineering.
+
+% \mynewthought{Over the next five years I plan to improve the computing and simulation platforms} that I will need to achieve my longer term objectives.
+
+% \mynewthought{Within the next fifteen years} I will integrate my research into tools that engineers can use to design entirely new food productions systems.
+% The result will be software to support the design and analysis of food production systems, much like the physics-based computer-aided-design (CAD) systems used by architects and engineers today.
+
+%As science becomes increasingly specialized, the systems we study not.
+\mynewthought{My research combines} data synthesis with mechanistic modeling to evaluate processes that drive functioning in agricultural ecosystems.
+ The motivation for my work is to improve the efficiency, productivity, and sustainability of intensively managed agricultural ecosystems.
+ To do this, I combine observations and conceptual models to identify systems-level processes necessary to quantify and predict ecosystem dynamics.
+ I use simulation models to encode and evaluate conceptual models, statistics to synthesize data and evaluate our understanding.
+ These techniques enable prediction and optimization, and ultimately the design of adaptive and resilient agricultural ecosystems.
+ 
+ A core component of my work is the development of new computational tools.
+ Unlike familiar statistical tests, these tools confront systems-level hypotheses based on mechanistic understanding with observations.
+ One of my goals is to train scientists who can use simulation models as fluently as I was trained to use ANOVA.
+ This will enable management and engineering of agricultural systems to optimize over a larger and more mechanistic domain of science. 
+ Future applications of my research and software will include not only analysis and prediction, but the design of new plants and ecosystems using multi-objective optimization.
+
+% \mynewthought{During my scientific career, I plan to}
+%  discover and apply biogeochemical and biophysical mechanisms to support sustainable agriculture, develop tools required to design and forecast the output of agricultural systems, and support synthetic and collaborative research across many domains.
+%   This work will require collaboration with science and industry in agriculture, biology, computer science, statistics, math, and engineering.
+
+%%%In the next five years ...
+
+ % My research will use models to capture system dynamics and constrain our interpretation of data with scientific understanding.
+ % Because the instruments used to measure these processes are diverse in implementation and assumptions, it is not possible to compare the fluxes and pools that have been measured.
+ % Models can 1) constrain budgets within physical, chemical, and biological constraints and 2) simulate the data generating process in addition to the underlying biophysical processes. 
+ % In this way, I use models and data to triangulate scientific understanding and predictability of the underlying processes.
+
+ % In addition, farmers have information and insights that may not be apparent to researchers but that can be communicated through text, images, and instruments.
+
+%%%%In the next fifteen years ... 
+% In the near term, I am interested in improving our ability to simulate and optimize agroecosystems by combining what we have and will observe with what we know about the underlying mechanisms. This approach has broad application to a range of emerging agronomic techniques, including the increasing rate and diversity of sensor data and the intensification of food production systems, on farms as well as within urban landscapes and enclosed ecological systems. 
+
+  % Improving our knowledge of how ecosystems function allows us to evaluate sustainability and at the same time to optimize the performance of agricultural systems. 
+  % New tools of data acquisition and analysis make it possible to simultaneously address a broad spectrum of ecosystem functions impacted by agronomic management decisions. 
+  % In particular, these tools enable our understanding of controls on carbon and nutrient flows within ecosystems.
+  % As a result, it is possible to predict crop demand for resources that limit productivity across fields and regions, and then it will be possible to optimize the supply and timing of resource availability.
+
+%% what is needed and why
+% I am advancing the current state of the art in agricultural and ecological prediction by 1) using simulation models to evaluate conceptual models of ecosystem functioning; 2) developing methods to quantify, propagate, and address uncertainty through targeted study; and 3) sharing and building on existing data resources and computational tools.
+% I will collaborate with plant physiologists, ecosystem ecologists, computer scientists,  applied mathematicians, and engineers.
+
+% This component of my research develops and integrates mechanistic models that simulate below-ground biological processes, including the physiology of symbionts and decomposers. 
+%  This domain is an active area of synthesis and model improvement because we know the mechanistic foundations but lack a systems-level predictive model that outperforms empirical models such as the pool and flux approach used by DayCent, RothC, and most other soil biogeochemsitry simulators.
+%  More rigorous model-data synthesis techniques that I have developed, as well as new approaches to dynamical modeling, make the below-ground component of the crop system an interesting and promising avenue of research. 
+\end{abstract}
+
+\section{Previous Research}
+
+\mynewthought{As a graduate student I used field and laboratory experiments} to investigate ecological and biogeochemical dynamics.
+ Using microcosms (glass jars and vials), I found fertilization increases nitrifier abundance (Okano et al, 2004), that increasing fungal species number increases enzyme activity and decomposition rate (LeBauer 2010), and that nitrogen stimulates decomposition (Allison et al., 2009).
+ In grasslands and prairies I have measured the influence of nitrogen on ecosystem carbon balance (LeBauer 2008) and have evaluated the ecophysiological traits of woody plant species that influence productivity and water use (Wang et al 2010).
+ One limitation of such isolated experimental research is the lack of a coherent framework in which I could quantitatively build on previous and contribute to subsequent research.  
+
+\mynewthought{I began more synthetic research} to evaluate global patterns of nitrogen limitation of primary productivity (LeBauer and Treseder, 2008). 
+ This study used meta-analysis to scale results from previous field experiments to quantify the strength of nitrogen limitation and the interaction of nitrogen limitation with soil and climate.
+ I found that plant growth is limited by nitrogen in most ecosystems, even tropical forests, and that moisture, temperature, soil, and plant communities affect the strength of nitrogen limitation (LeBauer and Treseder, 2008).
+ As a postdoc, I decided to develop more flexible and comprehensive methods of combining scientific understanding and observation.
+
+ \mynewthought{As a postdoctoral researcher I developed a new framework} that combines data synthesis, simulation modeling, and expert knowledge.
+ This framework uses Bayesian methods, and makes it possible to continuously update scientific understanding with new data, and to identify which data to collect.
+ The Predictive Ecosystem Analyzer (PEcAn) is an analytic engine that combines methods from geophysics, statistics, and computer science into a suite of software libraries that synthesize data and predict ecosystem functions.
+ The Biofuel Ecophysiological Traits and Yields database (BETYdb) hosts plant trait, yield, and ecosystem functioning data from previous studies and ongoing research; it also tracks PEcAn's inputs, outputs, and provenance. 
+
+ PEcAn encapsulates a suite of scientifically rigorous methods that substantially improve inferential power by leveraging large data sets and mechanistic understanding.
+ First, it combines meta-analysis and inverse methods to link model parameters directly to what we know and can observe.
+ Because parameters are first set by meta-analysis and expert knowledge, model predictions are constrained by scientific understanding. 
+ Data informed predictions provide guidance for further research and functions that can be optimized for diverse aims.
+
+  PEcAn uses systems-level understanding that is encoded in mechanistic and empirical models. 
+  These models link data generated at very different temporal and spatial scales, from instantaneous photosynthesis to regional yields (LeBauer et al, 2013, Davidson et al 2013, Wang et al 2014).
+  
+  PEcAn uses data to parameterize, infer, and constrain ecosystem simulation models while verifying the consistency of our conceptual understanding with observations.
+  I developed PEcAn to encapsulate these analyses within a reproducible workflow that enables users to build on existing research and to use available data comprehensively.
+  My prediction of switchgrass yield (LeBauer et al, 2013) was the first use of expert knowldege and meta-analysis to parameterize a simulation model and quantify data needs. 
+
+  PEcAn also makes it easier to re-run and modify analyses.
+  For example, I worked with a team of eight researchers including grad students and postdocs independently studying different ecosystems. 
+  Most had deep knowledge of biophysical systems but lacked the training in probability, math, and/or computing required to perform a fairly straight-forward analysis of well known concepts.
+ The group applied my analysis of Switchgrass production (LeBauer et al 2013) to seventeen plant functional types across six biomes (Dietze et al, 2014) to identify processes that control plant growth rates as well as data limitations that constrain predictive accuracy.
+
+ When I arrived at the University of Illinois in 2009, it to me and my peers months to learn how to execute a meaningful run of an ecosystem or crop model.
+ Using PEcAn, it takes a few minutes.
+ Most analyses for the cross-biome synthesis were completed in a few months.
+
+ \mynewthought{The Biofuel Ecophysiological Traits and Yields database (BETYdb)} helps researchers collect, harmonize, distribute, and use previously published results, new data, and expert knowledge.
+ BETYdb's web portal (www.betydb.org) allows users to interactively discover, download, and enter data.
+ Additionally, BETYdb provides data to configure, parameterize, and track the provenance of PEcAn workflows.
+ 
+ \mynewthought{Together, PEcAn and BETYdb support collaborative science} and are increasingly recognized and used for teaching and research by the ecological and agricultural research communities.
+The websites, computer code, and data associated with PEcAn and BETYdb receive thousands of visits each month and have been downloaded more than a thousand times. 
+In addition, PEcAn and BETYdb have attracted millions of dollars in funding from NSF, DOE, and EBI; contributors have included students, faculty, programmers, and researchers.
+ To support this community, BETYdb has become a network of federated databases that run and exchange data across five institutions.
+ BETYdb was also the first database accessed by the rOpenSci's 'traits' package. %\sidenote{github.com/ropensci/traits/issues/3}.
+   
+% \begin{itemize}
+% \item 900 total Downloads from PEcAn archives (400 from Ideals http://hdl.handle.net/2142/34655 and NCSA Virtual Machine http://isda.ncsa.illinois.edu/download/stats.php?project=PEcAn)
+% \item 1000 visits / month to BETYdb.org, 350 visits / month to pecanproject.org
+% \item 400 unique / 3000 total visits / month to PEcAn and BETYdb repositories on GitHub
+% \item Source code for PEcAn / BETYdb have been cloned 57 / 15 times on GitHub
+% \end{itemize}
+ 
+\section{Ongoing and Future Research Directions}
+
+
+\subsection{Curating and Learning from Data} 
+
+ I am developing protocols for sharing data that support synthetic research to meet the increasingly high expectations of the scientific community, publishers, funding agencies, and institutions.
+ The University of Illinois is a leader in the field of information science and reproducible research, and I work closely with librarians and GSLIS faculty.
+ I do this work to enable new scientific discovery.
+
+ For example, I am currently curating and distributing unparalleled data resources collected through SoyFACE, the EBI energy farm, and the RIPE project.
+ This work enables discovery by making information accessible for cumulative analysis.
+ I use these data to parameterize, evaluate, and improve simulations of yield, carbon gain, and water use by food and bioenergy crops, and BETYdb makes these data accessible in a consistent format that combines published summaries and primary data from independent research studies.
+
+\mynewthought{I was recently funded to develop a platform that will use sensors mounted on tractors, robots and drones} to scan large fields for exceptional individuals in breeding trials.
+ The Department of Energy Advanced Research Projects Agency - Energy (ARPA-E) will fund me to develop a new informatics and computing platform as well as new algorithms for synthesizing these data.
+
+This work will build on and extend the scope of BETYdb and PEcAn and will support a broad scope of research activity encompassing breeding, robotics, and sensing.
+Our platform will provide raw data, derived phenotypes, and predictions of yield potential and stress tolerance of thousands of genotypes with high frequency.
+ Researchers will use these data to quantify the information content provided by sensors, and this will help determine the frequency and mode of deployment.
+ The intent of this platform is to provide a 'reference dataset' for all of the research projects funded by the program, as well as public access to these data.
+ These relationships among genomics, phenomics, and physiology will support more effective use of the remote sensing data increasingly captured by satellites, drones, phones, tractors, and robots.
+ Beyond breeding, these data will support fundamental and transformative research required to simulate the mechanistic relationships among genes, enzymes, organisms, and ecosystems.
+ 
+
+
+\mynewthought{New Modeling Approaches:}
+ I will also develop more flexible modeling approaches within an overarching, hierarchical framework that would simultaneously accommodate alternative mechanistic hypotheses about the underlying mechanisms that control nutrient cycling.
+ This will develop new methods to simultaneously fit and test competing hypotheses formulated as simulation models as well as dynamically account for the scale, context dependence, and plausibility of independent mechanisms.
+ A sufficiently flexible model would be capable of representing processes at different scales and contexts, enabling it to simulate diverse food production systems and components, from enzymes to farms.
+
+ Plants in Silico (PSi) is an Illinois-led initiative to develop next-generation modeling frameworks to support multi-scale modeling of plants and ecosystems.
+ I will design, apply, and validate PSi as part of my ongoing research aimed at the simulation of ecological interactions among plants and microbial communities.
+ PSi will support collaboration across disciplines and institutes by providing a community platform, component library, and modular cross-scale infrastructure for plant simulation (Xu et al 2015).
+ My collaborators at UIUC include many faculty from Plant Sciences, ECE, Math, and NCSA on a new approach to crop modeling that extending the principles of modularity, extensiblity, and software as a tool for collaboration.
+ One application of PSi will be to couple it with ACME, DOE's new earth system model that will demonstrate the use of a principled and modern software design.
+
+\subsection{Funding and Collaborators}
+   
+ The National Science Foundation's Office of Cyberinfrastructure supports my research throught the Advances in Bioinformatics Infrastructure program. 
+ As a postdoc I co-authored an ``innovation award'' with my advisor as PI to support a postdoc in our group, a programmer from NCSA, and a meteorologist from the University of Wisconsin to transition PEcAn and BETYdb into a community platform for model-data synthesis (LeBauer et al, 2013).
+ The success we supported by the innovation award enabled us to successfully obtain a development award on which I am Co-I.
+ This award will broaden the PEcAn user community by doubling the number of supported ecosystem simulation models, adding new data sources, and new applications for PEcAn in research and education.
+
+ I will tap into the increasing funding opportunities for the curation of data and development of cyberinfrastructure.
+ For example, I am contributing to the effort to establish one of NSF's regional big data hubs at NCSA.
+ Furthermore, NSF's EarthCube project supports development and integration of software for the earth sciences.
+
+ Indeed, NCSA is interested in supporting collaborations across campus.
+ Faculty fellowships provide of the key mechanisms for this, and I was awarded a fellowship in 2014.
+ NCSA also supports collaboration by contributing to new faculty start-up packages, and I will request such support if hired.
+
+ In addition to federal funding, I seek support from private foundations and industry. 
+ The Gordon and Betty Moore and Bill Foundation has a data-driven science initiative with a mission to support scientists like myself.
+ Both the Moore and the Bill and Melinda Gates Foundations fund environmental conservation, food security, and data-driven science.
+
+ My research is relevant to the emerging industry of high-tech and big-data agriculture.
+ This industry is active in UI's Research Park; John Deere, Caterpillar, Agrible, and Dow Agrosciences have offices here, while Monsanto and Climate Corporation are located in St. Louis and Chicago. 
+ I would collaborate with local small businesses to target SBIR and STTR awards. I have recently joined Agrible as a scientific advisor, and they are interested in directly funding my research.
+ Microsoft Research is also developing agricultural decision support tools, and committed to provide a public portal to phenotype data and computing pipelines generated by the ARPA-E TERRA phenotyping platform.
+
+\section{Conclusion}
+
+\mynewthought{We have the opportunity to improve the efficiency and stability of agricultural and other managed ecosystems}.
+ This opportunity will benefit from the development and application of scientific knowledge to increase the productivity, health, and services of agricultural ecosystems.
+  Collaboration will be the key to success. 
+  My role is to build bridges and infrastructure that is required to understand and predict the dynamics of these systems.
+ In the near term, I will develop methods to both simulate and optimize agroecosystems by combining what we have and will observe with what we know about the underlying mechanisms. 
+
+ In addition to deriving knowledge by combining data from heterogeneous sources and scales, I develop tools that integrate mechanistic understanding, empirical observations to integrate the emerging streams of 'big data' that coming online and being developed. 
+
+ Collaborative and applied research will increase the probability that there will be enough food and water for the earth's growing population. 
+ I have the opportunity to work across multiple domains at the University of Illinois, and this has allowed my research to leverage campus strengths in agriculture, plant sciences, computing, engineering, library sciences, and meteorology. 
+
+\end{fullwidth}
+
+\end{document}
+
+%\marginnote{
+%\textsc{Software Glossary}
+%\\
+%\textbf{PEcAn} the Predictive Ecosystem Analyzer: an integrated toolbox for ecological computation.
+%\\
+%\textbf{BETYdb} the Biofuel Ecophysiological Traits and Yields database: a database of plant traits, crop yields, model I/O, and workflow provenance.
+%\\
+%\textbf{ECRVC} the Ecosystem Climate Regulating Value Calculator: computes global warming potential metric to quantify the effects of land use change. %(http://www.ecosystemservicescalc.org/)
+%\\
+%\textbf{BioCro} a mechanistic model of crop yields and ecosystem services that scales from enzymes to ecosystems.
+%}
+
+
+
+
+% \mynewthought{notes}
+% \begin{itemize}
+% \item Bayesian inference seems complicated, though it is more intuitive, flexible enough to formally model assumptions %(rather than be restricted by them as in classical statistics
+% , and modern software makes it easier (and possible) to use.
+% \item Modular, coupled code / 'super model'; hierarchical Bayes
+% \item The Virtual Plant - opportunity for a collaborative platform; proposal to develop modular, interoperable, and data-driven tools to support ecological prediction, with a robust validation framework for extension and applications. 
+% \item High throughput phenotyping - natural and valuable application of emerging data resouces.
+% \item Meta analysis, Variance Partitioning, Data Assimilation 
+% \item multi-variate meta-analysis that account for parameter covariances improve our ability to infer processes that are either difficult to measure or unobservable.
+% \item Benchmarking
+% \end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%
+%% Soil Meta-model
+%%%%%%%%%%%%%%%%%%
+%  Models of soil nutrient cycling are largely empirical. 
+% Though mechanisms are known, none clearly provide better predictive power than the empirical pool and flux approximations pioneered by DayCent. 
+% However, the specific submodels (or equations) used to describe these components may differ greatly among models or ecosystems. 
+
+% I have been working with a community of microbial ecologists and statisticians to develop a new framework that will simultaneously and dynamically fit alternative hypotheses of microbial physiology and soil biogeochemistry.
+
+
+%  Models of soil nutrient cycling are largely empirical. 
+% Though mechanisms are known, none clearly provide better predictive power than the empirical pool and flux approximations pioneered by DayCent. 
+% However, the specific submodels (or equations) used to describe these components may differ greatly between models or ecosystems. 
+
+% I am developing a more flexible modeling approach would simultaneously accommodate alternative mechanistic hypotheses about the underlying mechanisms that control nutrient cycling within an overarching, hierarchical modeling framework.
+% The objective of this work is to develop new methods of simulation in order to simultaneously fit and test competing hypotheses and build a model that accounts for the scale and context dependence of independent mechanisms.
+
+% I have been working with a community of microbial ecologists and statisticians to develop a new framework that will simultaneously and dynamically fit alternative hypotheses of microbial physiology and soil biogeochemistry.
+ 
+% New models will be integrated into the recently proposed Plants in Silico (PSi) framework initiative led by Steve Long (Xu et al, 2015).
+% Psi seeks to establish a next-generation modeling framework to support multi-scale modeling of plants and ecosystems.
+% Like PEcAn, this project will require diverse research groups and independent sources of funding.
+
+% A sufficiently flexible model would be capable of representing processes at different scales and contexts, including hydroponics, urban gardens, intensive indoor and enclosed systems. 
+% Two specific foci of my modeling will be to evaluate the capacity of 1) decomposers to mine protein-rich food from agricultural and municiple waste and 2) decomposers, symbionts, and plants to develop a more synchronized time course of resource supply and demand mediated by fungi and bacteria. 

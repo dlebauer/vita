@@ -27,7 +27,7 @@ process_yaml <- function(section,
     f <- paste0("format_", section)
     lines <- eval(call(f, data))
 
-    if (file.exists(output)) file.remove(output)
+    if (file.exists(output)) file.remove(output, showWarnings = FALSE)
     invisible(lapply(lines, write, file=output, append=TRUE))
 
 }
@@ -79,7 +79,7 @@ generate_cv <- function(content, style, outdir="output") {
     if (!file.exists(content))
         stop(sprintf("Unable to find content file '%s'", content))
 
-    message("Processing YAML files...", appendLF=FALSE)
+    message("Processing YAML files...", appendLF = FALSE)
     config <- yaml.load_file(content)
 
     ## Start with the document header
@@ -105,6 +105,7 @@ generate_cv <- function(content, style, outdir="output") {
 
     ## Then add the other sections
     config_fn <- function(x){
+      print(x$file)
         if (x$file=="BIBTEX") {
             ## INSERT Publications
             c("\\begin{publications}",
@@ -169,7 +170,7 @@ generate_cv <- function(content, style, outdir="output") {
                       collapse="")
     outfile <- file.path(outdir, outfile)
     if(file.exists(outfile)) file.remove(outfile, showWarnings = FALSE)
-    invisible(lapply(lines, write, file=outfile, append=TRUE))
+    invisible(lapply(lines, write, file = outfile, append = TRUE))
     message("done")
 
     ## Build the pdf
@@ -241,7 +242,7 @@ format_grants <- function(l) {
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
-        if (x$start==x$end) {
+        if (x$start == x$end) {
             with(x, sprintf("\\ind %s. %s, %s. %s (%s).\n",
                             start, title, funder, role, value))
         } else {
@@ -261,7 +262,7 @@ format_awards <- function(l) {
     tmp <- tmp[ord]
 
     lines <- lapply(tmp, function(x) {
-        if (x$start==x$end) {
+        if (x$start == x$end) {
             with(x, sprintf("\\ind %s. %s, %s.\n",
                             start, title, other))
         } else {
@@ -272,8 +273,6 @@ format_awards <- function(l) {
 
     return(lines)
 }
-
-
 format_service <- function(l) {
     tmp <- l[[1]]
 
@@ -281,17 +280,25 @@ format_service <- function(l) {
         topline <- list()
         topline <- sprintf("\\subsection*{%s}\n", x$context)
         roles <- list()
-        if(x$context == "Departmental"){
+        if(x$context == "Academic"){
             for(i in 1:length(x$roles)){
                 r <- x$roles[[i]]
-                roles[[i]] <- paste0("\\ind ", r$start, "--", r$end, ". ", r$title, ". ",  r$entity, ". \n")
+                roles[[i]] <- paste0("\\ind ", r$start,
+                                    ifelse(!is.null(r$end), paste0("--", r$end), ""),
+                                     ". ", r$title, ". ",  r$entity, ". \n")
             }
         } else if (grepl("Workshops", x$context)) {
             for(i in 1:length(x$roles)){
                 r <- x$roles[[i]]
                 roles[[i]] <- paste0("\\ind ", r$date, ". ", r$role, ". ",  r$title, ". ", r$location, ". \n")
             }
-            
+
+        } else if (x$context == "Consultancy") {
+            for(i in 1:length(x$roles)){
+                r <- x$roles[[i]]
+                roles[[i]] <- paste0("\\ind ", r$start, ifelse(!is.null(r$end), paste0("--", r$end), ""), ". ", r$role,"\n")
+            }
+
         } else {
             roles[[1]] <- paste(unlist(x$roles), collapse = ", ")
         }

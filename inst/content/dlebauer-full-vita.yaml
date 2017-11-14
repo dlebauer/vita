@@ -6,11 +6,11 @@ person:
   postnoms: PhD
   tel: (217) 300-0266
   email: dlebauer@illinois.edu
-  web: dlebauerlab.org
-  subject: "agriculture, ecology, biogeochemistry, ecoinformatics"
+  web: "davidlebauer.com"
+  subject: "agriculture, ecology, biogeochemistry"
   address:
     line1: University of Illinois
-    line2: Institute for Genomic Biology
+    line2: Carl R Woese Institute for Genomic Biology
     line3: 1206 West Gregory Drive
     postcode: Urbana, Illinois, 61801
 publications:
@@ -19,8 +19,13 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
-    - wang2015pbm
+    - jaiswal2017bse
+    - black2017rvd
+    - lebauer2016byt
+    - hart2016ten
+    - AndersonTeixeira2016cdm
     - zhu2015pis
+    - wang2015pbm
     - davis2015tsl
     - davis2014llf
     - wang2013pys
@@ -33,6 +38,11 @@ publications:
     - okano2004art
     - dietze2014qat
     - wang2013est
+    conferences:
+      - kooper2013ecological
+      - lin2015hwd
+    inpress:
+    submitted:
     software:
       - betydb
       - pecan
@@ -40,22 +50,19 @@ publications:
       - ghgvc
     chapters:
       - isikhuemhen2004gpt
-    conferences:
-      - kooper2013ecological
-      - lin2015hwd
 sections:
-  - title: Employment
-    file: posts.yaml
   - title: Education
     file: education.yaml
+  - title: Employment
+    file: posts.yaml
   - title: # This field is unused
     file: BIBTEX
-  - title: Invited talks
-    file: talks.yaml
   - title: Grants
     file: grants.yaml
   - title: Awards
     file: awards.yaml
+  - title: Invited talks
+    file: talks.yaml
   - title: Service
     file: service.yaml
   - title: Teaching

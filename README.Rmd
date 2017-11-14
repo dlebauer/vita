@@ -1,9 +1,8 @@
 # Vita
 
-Paradoxically, my vita is not here. But everything required to build it is.
+My vita is in this repository ([dlebauer-full-vita.pdf](https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf)), but the primary purpose of this repository is to manage the content and the R code to automatically build my academic CV. The R package is based on the idea that content and style should be separate and that a person might want different CVs for different purposes. 
 
-This is an R package for automatically building my academic CV.  It's based on the idea that content and style should be separate and that a person might want different CVs for different purposes.  Inspiration came from [Kieran Healy](https://github.com/kjhealy/kjh-vita) and for the formatting of the CV itself, [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for the use of Biblatex to manage the publications list, and [James Keirstead's jk-vita repository](https://github.com/jkeirstead/jk-vita) from which this one is forked.
-
+This repository is a fork from [James Keirstead](https://github.com/jkeirstead) who in turn credits [Kieran Healy](https://github.com/kjhealy/kjh-vita) and [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for formatting and the use of Bibtex, respectively.
 ## Project layout
 
 The project consists of:
@@ -16,6 +15,16 @@ The project consists of:
  * a `style` directory that contains the overall LaTeX style, as well
    as scripts for inserting version control information
    
+
+## Dependencies
+
+* latex, latexmk, xelatex
+* R
+
+```sh
+apt-get update
+apt-get install texlive-xelatex latexmk fonts-font-awesome texlive-bibtex-extra biber
+```
 
 ## Install
 
@@ -62,25 +71,4 @@ Creating a new CV is relatively simple.
 ./write_cv.R
 ```
 
-Which contains:
-
-```{r eval = FALSE}
-# Load the required libraries
-install()
-library(vita)
-
-myCV.yaml <-  system.file("content/dlebauer-full-vita.yaml", package = "vita")
-myCV.sty <- system.file("style/dl-vita.sty", package = "vita")
-#debugonce(generate_cv)
-generate_cv(content = myCV.yaml,
-            style = myCV.sty,
-            outdir = "outdir")
-```	   
-
-
-   The compiling process will build a PDF and place it in the
-   specified output directory.  Compilation uses xelatex and biber so
-   make sure these are installed on your system.  If the compilation
-   if successful, then the source files will be deleted leaving only
-   the finished PDF.  If unsuccessful, all of the source files are
-   left so you can try to patch things up manually.
+Although the output goes in `/output` I also check in an up to date version of my CV in the root direcotry ([dlebauer-full-vita.pdf](https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf)). 

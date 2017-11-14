@@ -1,7 +1,62 @@
 talks:
+  - year: 2017
+    title: "Panelist."
+    event: "Agricultural Data Integration: From Genomics to Unmanned Systems. Institute of Mathematics and its Applications, University of Minnesota"
+    city: "Minneapolis, MN"
+    month: October
+  - year: 2017
+    title: "TERRA REF Data and Computing Infrastructure"
+    event: "DARPA Data Driven Discovery of Models (D3M) Fall Hackathon and Evaluation Dry-Run"
+    city: "Arlington, VA"
+    month: October
+  - year: 2017
+    title: "TERRA REF Data and Computing Infrastructure."
+    event: "ARPA-E Joint TERRA and ROOTS  Annual Meeting"
+    city: "Saint Louis, MO"
+    month: September
+  - year: 2017
+    title: "Software and Data as Scaffolds for Integrative Science."
+    event:  "College of Agriculture, Purdue University"
+    city: "West Lafayette, IN"
+    month: August
+  - year: 2017
+    title: "A Meteoroligcal Data Format That Makes Research Easier and Will Work for Imaging Sensors."
+    event: "Phenome 2017"
+    city: "Tucson, AZ"
+    month: February
+  - year: 2016 #July 7 http://plantimaging.cast.uark.edu/
+    title: "Building Open Access Data, Computing, and Software Infrastructure for High Throughput Phenomics"
+    event: "Plant Imaginge Consortium Annual Meeting, University of Arkansas"
+    city: Fayetteville, AK
+    month: July
+  - year: 2016 #https://illinois.edu/calendar/detail/772/33229248
+    title: "An open access crop observatory and computing platform for plant breeding"
+    event: "ROGER Users Meeting, National Center for Supercomputing Applications"
+    city: Urbana, IL
+    month: May
+  - year: 2016 #https://pecanproject.github.io/pecan_workshop.html
+    title: "Uncertainty Analysis in the Predictive Ecosystem Analyzer (PEcAn)"
+    event: "PEcAn 2 Terrestrial Model Informatics Workshop, Boston University"
+    city: Boston, MA
+    month: May
+  - year: 2016 #April 7, 2016 http://intlprograms.aces.illinois.edu/content/international-food-security-illinois-symposium-april-7-8-2016
+    title: "Opportunities to Improve Cropping Systems with Data"
+    event: "International Food Security at Illinois Symposium: Using Big Data to Improve International Food Security, University of Illinois"
+    city: Urbana, IL
+    month: April
+  - year: 2016 #April 5, 2016 http://www.nationaldataservice.org/get_involved/events/NDS5/index.html
+    title: "Demonstration of The TERRA Phenotyping Reference Platform"
+    event: "5th National Data Service Consortium Workshop"
+    city: Chapel Hill, NC
+    month: April
+  - year: 2015
+    title: "An open-access platform for quantification of plant traits from big sensor data"
+    event: Informatics for Reproducibility in Earth and Environmental Science Research, American Geophysical Union
+    city: San Francisco, CA
+    month: December
   - year: 2015
     title: "Software for Ecological Inference and Prediction: What We Have and What We Need"
-    event: Developing, Maintaining, and Employing Large Computational Frameworks in the Ecological Sciences
+    event: Developing, Maintaining, and Employing Large Computational Frameworks in the Ecological Sciences. Statistical and Applied Mathematical Sciences Institute
     city: Durham, NC
     month: April
   - year: 2014
@@ -10,13 +65,13 @@ talks:
     city: Piracicaba, Brazil
     month: August
   - year: 2014
-    title: PEcAn: A probabilistic modeling workflow for deterministic models 
+    title: "PEcAn: A probabilistic modeling workflow for deterministic models"
     event: FACE-IT Workshop, Computation Institute, University of Chicago
     city: Chicago, IL
   - year: 2013
     title: Modeling Bioenergy Feedstock Productivity and Ecosystem Services
     event: Global Bioenergy Crop Modeling Workshop, Oak Ridge National Laborator
-    city: Oak Ridge, TN 
+    city: Oak Ridge, TN
   - year: 2013
     title: Reducing uncertainty through data-driven model development
     event: "Uncertainty Analysis: A Critical Step in Ecological Synthesis, Organized Oral Session, Ecological Society of America Meetings"

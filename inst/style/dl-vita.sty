@@ -17,7 +17,7 @@
 \usepackage[compact,small,sf,bf]{titlesec}
 \usepackage{marvosym}
 \usepackage{fontawesome}
-\usepackage{marginnote}%\reversemarginpar %marginnotes on left 
+\usepackage{marginnote}%\reversemarginpar %marginnotes on left
 %\usepackage{smallcaps}
 %% ------------------------------------------------------------------------
 %%  Git version tracking
@@ -134,10 +134,10 @@
 
   \bigskip
   %% Name
-  
+
 
   \flushleft{\Large\scshape{\@title\ \@name}} {\Large \textsc{, \@postnoms}}\\
-  
+
   \begin{minipage}[t]{3.6in}
     \flushright{\footnotesize \@address}
   \end{minipage}
@@ -147,7 +147,7 @@
     {\footnotesize   \texttt{\@email}} \\
     {\footnotesize   \texttt{\@www}}
   \end{minipage}
- 
+
 
 }
 
@@ -197,7 +197,7 @@
 %% ------------------------------------------------------------------------
 %%   Bibliography formatting
 %% ------------------------------------------------------------------------
-%% documentation: 
+%% documentation:
 %% http://ctan.mirrorcatalogs.com/macros/latex/exptl/biblatex/doc/biblatex.pdf
 \usepackage[
  sorting = ydnt,%rev. chronological; use ynt for chronological
@@ -235,18 +235,18 @@
 
 % Bibliography categories
 \def\makebibcategory#1#2{\DeclareBibliographyCategory{#1}\defbibheading{#1}{\subsection*{#2}}}
-\makebibcategory{monographs}{Monograph}
+\makebibcategory{monographs}{Monographs}
 \makebibcategory{books}{Books}
 \makebibcategory{papers}{Journal articles}
 \makebibcategory{inpress}{in press}
 \makebibcategory{chapters}{Book chapter}
-\makebibcategory{conferences}{Conference Proceedings}
 \makebibcategory{software}{Software}
 \makebibcategory{techreports}{Unpublished working papers}
 \makebibcategory{bookreviews}{Book reviews}
+\makebibcategory{conferences}{Conference proceedings}
 \makebibcategory{editorials}{Editorials}
 \makebibcategory{phd}{PhD thesis}
-\makebibcategory{subpapers}{Submitted papers}
+\makebibcategory{submitted}{Submitted papers}
 \makebibcategory{curpapers}{Current projects}
 \makebibcategory{other}{Reviews, software \& other writing}
 
