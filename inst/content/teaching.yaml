@@ -1,16 +1,12 @@
 teaching:
   - start: 2015 
     title: Software Carpentry Instructor
-  - start: 2015
-    title: Cultivating Shiitake on Logs, Land Connection Workshop
-  - start: 2013
-    end: present
-    title: Ecology for Food Producers, Common Ground Food Cooperative 
   - start: 2013
     end: present
     title: PEcAn Software Training, Ecological Society of America Meetings 
   - start: 2009
     title: Global Change Biology, California Summer School for Science and Math
+    url: "https://www.openwetware.org/wiki/ESSCOSMOS"
   - start: 2008
     title: TA, Experimental Biology Laboratory, UC at Irvine
     url: "https://sites.google.com/site/bio100lwlab14/"
