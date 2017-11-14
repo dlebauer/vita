@@ -23,7 +23,8 @@ The project consists of:
 
 ```sh
 apt-get update
-apt-get install texlive-xelatex latexmk fonts-font-awesome texlive-bibtex-extra biber
+apt-get install -y texlive-xetex latexmk fonts-font-awesome texlive-bibtex-extra biber fonts-inconsolata
+fc-cache -fv
 ```
 
 ## Install

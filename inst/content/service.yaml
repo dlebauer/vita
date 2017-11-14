@@ -93,6 +93,9 @@ service:
     - role: Plant Soil
   - context: Consultancy
     roles:
+      - role: "Senior Scientific Advisor, Agrible, Inc., Champaign, Il"
+        start: 2015
+        end: present
       - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"
         start: 2015
         end: 2016
