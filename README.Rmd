@@ -24,7 +24,7 @@ The project consists of:
 ```sh
 apt-get update
 apt-get install -y texlive-xetex latexmk fonts-font-awesome texlive-bibtex-extra biber fonts-inconsolata
-sudo fc-cache -fv
+fc-cache -fv
 ```
 
 ## Install
