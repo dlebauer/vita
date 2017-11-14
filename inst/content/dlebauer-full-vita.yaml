@@ -44,6 +44,7 @@ publications:
     inpress:
     submitted:
     software:
+      - terraref
       - betydb
       - pecan
       - biocro
@@ -63,10 +64,10 @@ sections:
     file: awards.yaml
   - title: Invited talks
     file: talks.yaml
-  - title: Service
-    file: service.yaml
   - title: Teaching
     file: teaching.yaml
+  - title: Service
+    file: service.yaml
 #  - title: PhD Students
 #    file: students.yaml
 #  - title: Affiliations
