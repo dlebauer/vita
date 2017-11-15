@@ -1,16 +1,16 @@
 @article{jaiswal2017bse,
   author = {Jaiswal, Deepak and Larsen, Soren and De Souza, Amanda and LeBauer, David S and Miguez, Fernando E and Sparovek, Gerd and Buckeridge, Marcos S and Bollero, German and Long, Steven P},
-  title = {{Brazilian Sugarcane Ethanol Could Offset 14\% of Global Oil Use and 6\% of Net Emissions by 2045}},
-  year = {\textit{submitted}},
-  doi = {},
-  journal = {}
+  title = {{Brazilian Sugarcane Ethanol As an Expandable Green Alternative to Crude Oil Use}},
+  year = {2017},
+  doi = {10.1038/NCLIMATE3410},
+  journal = {Nature Climate Change}
 }
 @article{black2017rvd,
   author = {Black, Christopher K and Masters, Michael D. and LeBauer, David S. and Anderson-Teixeira, Kristina J. and DeLucia, Evan H.},
   title = {{Root volume distribution of maturing perennial grasses revealed by correcting for minirhizotron surface effects}},
-  year = {\textit{submitted}},
-  doi = {},
-  journal = {}
+  year = {2017},
+  doi = {10.1007/s11104-017-3333-7},
+  journal = {Plant and Soil}
 }
 @article{lebauer2016byt,
   author = {LeBauer, David S and Kooper, Rob and Long, Steven P and Mulrooney, Patrick J and Rohde, Scott and Wang, Dan and Dietze, Michael C},
@@ -347,40 +347,85 @@
   organization = {ASABE},
 }
 
-@misc{betydb,
-  title =	 {Biofuel Ecophysiological Traits and Yields database (BETYdb)},
-%  url =		 {https://betydb.org},
-  DOI =		 {10.5281/zenodo.14099},
+
+@software{terraref,
+  author = {David LeBauer and Max Burnette and Craig Willis and Zongyang Li and Robert Pless and Solmaz Hajmohammadi and Scott Rohde and TERRA REF contributors},
+  title = {TERRA Reference Phenotyping Platform database and computing pipeline (\url{terraref.org})},
+  year = 2017,
+  howpublished = {code: \url{github.com/terraref}},
+%  url = {terraref.org},
+  version = {1.0 beta}
+  }
+@software{betydb,
   author =	 {Rohde, Scott and Mulroony, Patrick and Kooper, Rob
-                  and Crott, Carl and Shirk, Andrew and LeBauer,
-                  David S},
-  year =	 {2015}
+                  and Crott, Carl and Shirk, Andrew and LeBauer, David S},
+  title =	 {Biofuel Ecophysiological Traits and Yields database (BETYdb, betydb.org)},
+  year =	 {2017},
+  version = {4.18},
+  howpublished = {code: \url{github.com/pecanproject/bety}},
+%  url =		 {betydb.org},
+  DOI =		 {10.5281/zenodo.832983}
+ % note = "Database network and web interface to harmonize heterogeneous plant, ecosystem, and agronomic data. Supports meta-analysis, simulation modeling, and synchronization. Currently in use by six research teams."
 }
 
-@misc{pecan,
-  title =	 {Predictive Ecosystem Analyzer (PEcAn)},
-%  url =		 {https://pecanproject.org},
-  doi =		 {10.5281/zenodo.14632},
-  author =	 {David S. LeBauer and Rob Kooper and Michael Dietze and
-                  Betsy Cowdery and Shawn P. Serbin},
-  year =	 {2015}
+@software{pecan,
+  author =	 {David LeBauer and
+                  Michael Dietze and
+                  Rob Kooper and
+                  Alexey Shiklomanov and
+                  Betsy Cowdery and
+                  Istem Fer and
+                  Anthony Gardella and
+                  Ben Bond-Lamberty and
+                  Shawn P. Serbin and
+                  Ann Raiho and
+                  Anne Thomas and
+                  Chris Black and
+                  James Simkins and
+                  Ankur Desai and
+                  Josh Mantooth and
+                  Aman Kumar and
+                  Liam Burke and
+                  Afshin Pourmokhtarian and
+                  Christy Rollinson and
+                  Shubham Agarwal and
+                  Brady Hardiman and
+                  Martin De Kauwe and
+                  Tess McCabe and
+                  Tony Cohen and
+                  Tony Viskari and
+                  Yan Zhao and
+                  Jing Xia},
+   title   = {Predictive Ecosystem Analyzer (PEcAn, \url{pecanproject.org})},
+   year    = {2017},
+   doi     = {10.5281/zenodo.1003756},
+   version = {1.5.1},
+%   url = {pecanproject.org},
+   howpublished = {code: \url{github.com/pecanproject/pecan}}
+%   note = "Ecoinformatics toolbox for model-data synthesis, analysis, and prediction. Integrates observations with scientific understanding of crop and ecosystem functioning as an iterative, directed learning process. Increased efficiency of science over 100x by overcoming technical obstacles. Used by many crop and ecosystem modeling groups.",
 }
 
-@misc{biocro,
-%  url =		 {http://github.com/ebimodeling/biocro},
+@software{biocro,
+%  url =		 {github.com/ebimodeling/biocro},
   title =	 {BioCro Crop Productivity and Ecosystem Service
                   Simulation Model},
-  DOI =		 {10.5281/zenodo.15859},
+ DOI =		 {10.5281/zenodo.15859},
   author =	 {Fernando E Miguez and Deepak Jaiswal and David S LeBauer
-                  and Dan Wang},
-  year =	 {2015}
+                  and Dan Wang and Justin McGrath},
+  year =	 {2015},
+  version = {0.93},
+  howpublished = {code: \url{github.com/ebimodeling/biocro}}
+%  note = "Dynamical simulation model combining physics, chemistry and physiological processes to predict crop growth and water use. "
 }
 
-@misc{ghgvc,
-  title =	 {Ecosystem Climate Regulation Services Calculator},
-%  url =		 {http://www.ecosystemservicescalc.org/},
+@software{ghgvc,
+  title =	 {Ecosystem Climate Regulation Services Calculator (\url{www.ecosystemservicescalc.org})},
+%  url =		 {},
   DOI =		 {10.5281/zenodo.12319},
   author =	 {Anderson-Teixeira, Kristina and DeLucia, Evan and
-                  Carl Crott and David S LeBauer and Scott Rohde},
-  year =	 {2014}
+                  Carl Crott and David S LeBauer and Scott Rohde and Nicholas Potter and Jay Dorsey},
+  year =	 {2015},
+  version = {1.0},
+  howpublished = {code: \url{github.com/ebimodeling/ghgvc}}
+%  note = "Web interface and R package to compute biophysical and biogeochemical impacts ofland use change."
 }

@@ -19,6 +19,8 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - jaiswal2017bse
+    - black2017rvd
     - lebauer2016byt
     - hart2016ten
     - AndersonTeixeira2016cdm
@@ -40,10 +42,9 @@ publications:
       - kooper2013ecological
       - lin2015hwd
     inpress:
-      - black2017rvd
     submitted:
-      - jaiswal2017bse
     software:
+      - terraref
       - betydb
       - pecan
       - biocro
@@ -63,10 +64,10 @@ sections:
     file: awards.yaml
   - title: Invited talks
     file: talks.yaml
-  - title: Service
-    file: service.yaml
   - title: Teaching
     file: teaching.yaml
+  - title: Service
+    file: service.yaml
 #  - title: PhD Students
 #    file: students.yaml
 #  - title: Affiliations
