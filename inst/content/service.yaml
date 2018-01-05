@@ -42,11 +42,20 @@ service:
         entity: Sigma Xi, Scientists in the Classroom
   - context: Workshops
     roles:
-      - date: February 2016
-        role: Workshop Co-organizer
+      - date: February 2018
+        role: Co-organizer
+        title: "Big Data Driven Agriculture: Advances, Challenges & Opportunities"
+        location: USDA NIFA-FACT, Alexandria, VA
+        website: https://www.datadrivenag.org/
+      - date: November 2017
+        role: Invited participant
+        title: "The Subterranean Macroscope: Sensor Networks for Understanding, Modeling, and Managing Soil Processes"
+        location: NSF, Chicago, IL
+      - date: February 2017
+        role: Co-organizer, lead instructor
         title: "Using TERRA REF phenotyping data"
         location: Phenome 2017, Tucson, AZ
-      - date: January 2016
+      - date: January 2017
         role: Invited Participant
         title: "Moving Field Phenomics From Theory to Practice"
         location: US-UK Phenomics Workshop, Maricopa, AZ
@@ -82,6 +91,7 @@ service:
     - role: Ecology
     - role: Ecology Letters
     - role: Ecological Applications
+    - role: Frontiers in Plant Science (Review Editor)
     - role: Global Change Biology
     - role: Global Change Biology - Bioenergy
     - role: Geophysical Research Letters
@@ -128,3 +138,5 @@ service:
 # #2008GL033983
 ## New Phytologist
 # NPH-MS-2012-14400
+## Global Change Biology 
+# GCB-17-1694
