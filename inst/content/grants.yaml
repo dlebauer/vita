@@ -5,6 +5,12 @@ grants:
     funder: "FAPESP (Fundacao de Amparo a Pesquisa do Estado de Sao Paulo)"
     role: Co-PI
     value: '\$200k'
+  - start: 2016
+    end: 2019
+    title: TERRA REF Computing and Storage
+    funder: "National Center for Supercomputing Applications: Blue Waters project and CyberGIS Center"
+    role: PI
+    value: '~\$1m: 2m CPU-hours, 1 PB online and 5 PB tape storage'
   - start: 2015
     end: 2019
     title: A Reference Phenotyping System for Energy Sorghum

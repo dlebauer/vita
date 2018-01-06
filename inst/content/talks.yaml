@@ -1,5 +1,11 @@
 talks:
   - year: 2018
+    month: February
+    title: "TBD"
+    event: Center for Sustainable Resource Science, RIKEN Yokohama Campus
+    city: "Yokohama, Japan"
+  - year: 2018
+    month: February
     title: "Research, Development, and Training in Digital Agriculture with the TERRA REF Open Access Data and Computing Pipeline"
     event: "Data driven crop design technology. Institute of Mathematics for Industry, Kyushu University"
     city: "Fukuoka, Japan"
