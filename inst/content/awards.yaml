@@ -1,15 +1,15 @@
 awards:
   - start: 2017
     end: 2017
-    title: Outstanding SPIN Mentor
-    other: National Center for Supercomputing Applications 
+    title: "Outstanding Students Pushing Innovation (SPIN) Mentor"
+    other: National Center for Supercomputing Applications
   - start: 2014
-    end: present
-    title: Faculty Fellow
+    end: 2015
+    title: "NCSA Fellowship"
     other: National Center for Supercomputing Applications (\$25k)
   - start: 2006
     end: 2006
-    title: Mildred E. Mathias Graduate Research Grant, UC Natural Reserve System 
+    title: Mildred E. Mathias Graduate Research Grant, UC Natural Reserve System
     other: Decomposition responses to nitrogen in a California grassland (\$1k)
     url: "http://nrs.ucop.edu/grants/mathias/mathias_05.htm"
   - start: 2005
@@ -26,7 +26,7 @@ awards:
     other: Duke University Department of Biology
   - start: 1998
     end: 1998
-    title: Benenson Award in the Arts 
+    title: Benenson Award in the Arts
     other: Duke University (\$1.5k)
   - start: 1997
     end: 1997

@@ -3,10 +3,10 @@ posts:
     roles:
       - start: 2012
         end: present
-        title: Research Scientist, Carl R. Woese Institute for Genomic Biology
-      - start: 2012
-        end: 2015
-        title: Scientific Research Manager, Ecosystem Modeling Program, Energy Biosciences Institute
+        title: "Research Scientist, Carl R. Woese Institute for Genomic Biology\\newline
+        \\hspace{0.3cm} Scientific Research Manager, Energy Biosciences Institute Feedstock Productivity and Ecosystem Services Modeling Program (2012--2015)\\newline
+        \\hspace{0.3cm} Fellow, National Center for Supercomputing Applications(2014--present)\\newline
+        \\hspace{0.3cm} Adjunct, Department of Agriculture and Biological Engineering (2017--present)"
       - start: 2009
         end: 2012
         title: Postdoctoral Researcher, Energy Biosciences Institute
