@@ -44,7 +44,7 @@ service:
     roles:
       - date: February 2018
         role: Co-organizer
-        title: "Big Data Driven Agriculture: Advances, Challenges & Opportunities"
+        title: "Big Data Driven Agriculture: Advances, Challenges, and Opportunities"
         location: USDA NIFA-FACT, Alexandria, VA
         website: https://www.datadrivenag.org/
       - date: November 2017

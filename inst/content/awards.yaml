@@ -16,10 +16,10 @@ awards:
     end: 2007
     title: Graduate Fellowship
     other: Kearney Soil Science Foundation (\$34k)
-  - start: 2004
-    end: 2005
-    title: Graduate Fellowship
-    other: UC Irvine Department of Earth System Science (\$32k)
+#  - start: 2004
+#    end: 2005
+#    title: Graduate Fellowship
+#    other: UC Irvine Department of Earth System Science (\$32k)
   - start: 1998
     end: 1998
     title: Honors in Ecology and Graduation with Distinction
@@ -28,7 +28,7 @@ awards:
     end: 1998
     title: Benenson Award in the Arts
     other: Duke University (\$1.5k)
-  - start: 1997
-    end: 1997
-    title: Undergraduate Research Support
-    other: Duke University (\$400)
+ # - start: 1997
+ #   end: 1997
+ #   title: Undergraduate Research Support
+ #   other: Duke University (\$400)

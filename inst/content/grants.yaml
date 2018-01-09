@@ -7,10 +7,10 @@ grants:
     value: '\$200k'
   - start: 2016
     end: 2019
-    title: TERRA REF Computing and Storage
+    title: TERRA REF Computing and Storage Allocation
     funder: "National Center for Supercomputing Applications: Blue Waters project and CyberGIS Center"
     role: PI
-    value: '~\$1m: 2m CPU-hours, 1 PB online and 5 PB tape storage'
+    value: '\$1m+ in computing resources' #computing and storage  $\sim$2m CPU-hours, 1 PB online storage and 5 PB tape storage.'
   - start: 2015
     end: 2019
     title: A Reference Phenotyping System for Energy Sorghum
