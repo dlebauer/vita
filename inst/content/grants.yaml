@@ -26,9 +26,14 @@ grants:
   - start: 2015
     end: 2019
     title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
-    role: Co-Investigator
+    role: Co-I
     funder: "NSF Division of Biological Infrastructure Award 1458021"
-    value: ''
+    value: '\$0'
+  - start: 2014
+    title: "Advancing Software for Ecological Forecasting (Workshop)"
+    role: Chair and Co-PI
+    funder: "Microsoft Research Connections, Carl R Woese Institute for Genomic Biology, DOE RCN Forecast"
+    value: '\$30k'
   - start: 2012
     end: 2015
     title: Feedstock and Ecosystem Service Modeling Program
@@ -40,7 +45,7 @@ grants:
     title: Model-data synthesis and forecasting across the upper Midwest; Partitioning uncertainty and environmental heterogeneity in ecosystem carbon.
     funder: NSF Advances in Bioinformatics Infrastructure
     role: Co-author
-    value: ''
+    value: '\$770k'
 
 #\textit{Grassland Carbon Dynamics along Nitrogen and Depth Gradients}  \years{2005-2007}\\
 #Kearney Soil Science Foundation Graduate Student Fellowship: \34,000 \\
