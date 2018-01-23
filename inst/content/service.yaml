@@ -81,7 +81,6 @@ service:
         role: Workshop Chair and Co-Organizer
         title: Advancing Software for Ecological Forecasting
         location: Urbana, IL
-        website: http://conferences.igb.illinois.edu/ecological_forecasting/
   - context: Grant Reviews
     roles:
       - role: US National Science Foundation
