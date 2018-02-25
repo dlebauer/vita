@@ -1,7 +1,7 @@
 grants:
   - start: 2016
     end: 2019
-    title: "Global	Sustainable	Bioenergy	Initiative: Geospatial and environmental analysis of pastureland	intensification	for bioenergy"
+    title: "Global Sustainable Bioenergy Initiative: Geospatial and environmental analysis of pastureland intensification for bioenergy"
     funder: "FAPESP (Fundacao de Amparo a Pesquisa do Estado de Sao Paulo)"
     role: Co-PI
     value: '\$200k'
@@ -30,6 +30,7 @@ grants:
     funder: "NSF Division of Biological Infrastructure Award 1458021"
     value: '\$0'
   - start: 2014
+    end: 2014
     title: "Advancing Software for Ecological Forecasting (Workshop)"
     role: Chair and Co-PI
     funder: "Microsoft Research Connections, Carl R Woese Institute for Genomic Biology, DOE RCN Forecast"

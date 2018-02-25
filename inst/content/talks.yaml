@@ -1,13 +1,13 @@
 talks:
   - year: 2018
     month: February
-    title: "TBD"
+    title: "Open Software, Data, and Computing Frameworks to Advance High Throughput Phenomics and Agricultural Forecasting"
     event: Center for Sustainable Resource Science, RIKEN Yokohama Campus
     city: "Yokohama, Japan"
   - year: 2018
     month: February
-    title: "Research, Development, and Training in Digital Agriculture with the TERRA REF Open Access Data and Computing Pipeline"
-    event: "Data driven crop design technology. Institute of Mathematics for Industry, Kyushu University"
+    title: "Open Software, Data, and Computing Frameworks to Advance High Throughput Phenomics and Agricultural Forecasting"
+    event: "Data driven crop design technology. Institute of Mathematics for Industry, Kyushu University" #https://www.imi.kyushu-u.ac.jp/eng/events/view/1351
     city: "Fukuoka, Japan"
   - year: 2017
     title: "Panelist"
