@@ -9,6 +9,11 @@ talks:
     title: "Open Software, Data, and Computing Frameworks to Advance High Throughput Phenomics and Agricultural Forecasting"
     event: "Data driven crop design technology. Institute of Mathematics for Industry, Kyushu University" #https://www.imi.kyushu-u.ac.jp/eng/events/view/1351
     city: "Fukuoka, Japan"
+  - year: 2018
+    month: February
+    title: "Software and Data as Scaffolds for Integrative Science"
+    event: "Department of Agricultural and Biological Engineering, University of Arizona"
+    city: "Tucson, AZ"
   - year: 2017
     title: "Panelist"
     event: "Agricultural Data Integration: From Genomics to Unmanned Systems. Institute of Mathematics and its Applications, University of Minnesota"
