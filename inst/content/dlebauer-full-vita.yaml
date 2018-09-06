@@ -19,6 +19,7 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - teixiera2018fgd
     - jaiswal2017bse
     - black2017rvd
     - lebauer2016byt
@@ -39,12 +40,12 @@ publications:
     - dietze2014qat
     - wang2013est
     conferences:
-      - kooper2013ecological
+      - burnette2018terra
       - lin2015hwd
+      - kooper2013ecological
     inpress:
     submitted:
       - dietze2018nme
-      - teixiera2018fgd
     software:
       - terraref
       - betydb

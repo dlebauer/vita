@@ -21,10 +21,25 @@ The project consists of:
 * latex, latexmk, xelatex
 * R
 
+### Ubuntu
+
 ```sh
 apt-get update
 apt-get install -y texlive-xetex latexmk fonts-font-awesome texlive-bibtex-extra biber fonts-inconsolata
 fc-cache -fv
+```
+
+### OSX
+
+for missing fonts `brew cask search fontname`
+
+```
+brew cask install \
+   font-fontawesome \ 
+   font-tex-gyre-pagella \
+   font-tex-gyre-heros
+sudo tlmgr install vc # for version stamp 
+   
 ```
 
 ## Install
