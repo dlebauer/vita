@@ -19,10 +19,11 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - selby2019bap
+    - lebauer2018byt
     - teixiera2018fgd
     - jaiswal2017bse
     - black2017rvd
-    - lebauer2016byt
     - hart2016ten
     - AndersonTeixeira2016cdm
     - zhu2015pis
@@ -45,7 +46,6 @@ publications:
       - kooper2013ecological
     inpress:
     submitted:
-      - dietze2018nme
     software:
       - terraref
       - betydb
