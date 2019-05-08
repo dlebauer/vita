@@ -41,9 +41,11 @@ publications:
     - dietze2014qat
     - wang2013est
     conferences:
-      - burnette2018terra
-      - lin2015hwd
-      - kooper2013ecological
+    - burnette2018terra
+    - lin2015hwd
+    - kooper2013ecological
+    letters:
+    - jaiswal2019rba
     inpress:
     submitted:
     software:
