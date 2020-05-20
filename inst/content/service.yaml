@@ -1,6 +1,10 @@
 service:
   - context: Academic
     roles:
+      - start: 2017
+        end: present
+        title: Google Summer of Code Mentor
+        entity: PEcAn Project
       - start: 2015
         end: present
         title: Undergraduate Student Mentor
@@ -120,6 +124,8 @@ service:
         start: 1999
 
 ## Log of Reviews (incomplete)
+# PNAS
+# Plant Phenomics
 ## APSOIL
 # APSOIL-D-09-00091R1
 # APSOIL-D-09-00379
