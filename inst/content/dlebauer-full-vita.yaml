@@ -10,8 +10,8 @@ person:
   subject: "agriculture, ecology, biogeochemistry"
   address:
     line1: The University of Arizona
-    line2: Carl R Woese Institute for Genomic Biology
-    line3: 1206 West Gregory Drive
+    line2: Bioscience Research Laboratories
+    line3: 1230 N Cherry Ave
     postcode: Tucson, Arizona, 85721
 publications:
   bib_file: papers.bib
