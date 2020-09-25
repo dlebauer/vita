@@ -2,14 +2,14 @@
 person:
   first_name: David
   last_name: LeBauer
-  title: ''
+  title: 'Director of Data Sciences, Arizona Experiment Station'
   postnoms: PhD
   tel: (520) 621-4381
   email: dlebauer@arizona.edu
   web: "davidlebauer.com"
   subject: "agriculture, ecology, biogeochemistry"
   address:
-    line1: University of Arizona
+    line1: The University of Arizona
     line2: Carl R Woese Institute for Genomic Biology
     line3: 1206 West Gregory Drive
     postcode: Tucson, Arizona, 85721
