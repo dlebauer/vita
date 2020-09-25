@@ -4,15 +4,15 @@ person:
   last_name: LeBauer
   title: ''
   postnoms: PhD
-  tel: (217) 300-0266
-  email: dlebauer@illinois.edu
+  tel: (520) 621-4381
+  email: dlebauer@arizona.edu
   web: "davidlebauer.com"
   subject: "agriculture, ecology, biogeochemistry"
   address:
-    line1: University of Illinois
+    line1: University of Arizona
     line2: Carl R Woese Institute for Genomic Biology
     line3: 1206 West Gregory Drive
-    postcode: Urbana, Illinois, 61801
+    postcode: Tucson, Arizona, 85721
 publications:
   bib_file: papers.bib
   sections:
