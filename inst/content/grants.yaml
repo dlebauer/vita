@@ -1,4 +1,16 @@
 grants:
+  - start: 2019
+    end: 2022
+    title: "The Agricultural Research Data Network (ARDN)"
+    funder: "USDA-NIFA"
+    role: Co-PI
+    value: '\$75k of \$500k'
+  - start: 2018
+    end: 2021
+    title: "SENTINEL: SENsing Threats In Natural Environments using Ligand-receptor modules"
+    funder: "DARPA"
+    role: Co-PI
+    value: '\$731k of \~$10m'
   - start: 2016
     end: 2019
     title: "Global Sustainable Bioenergy Initiative: Geospatial and environmental analysis of pastureland intensification for bioenergy"

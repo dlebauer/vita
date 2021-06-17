@@ -45,8 +45,7 @@ sudo tlmgr install vc # for version stamp
 ## Install
 
 ```{r eval = FALSE}
-library(devtools)
-install_github("dlebauer/vita")
+devtools::install()
 ```
 
 ## How to build a CV
