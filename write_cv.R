@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-#devtools::install()
+devtools::install(dependencies = FALSE)
 library(vita)
 myCV.yaml <-  system.file("content/dlebauer-full-vita.yaml", package = "vita")
 myCV.sty <- system.file("style/dl-vita.sty", package = "vita")

@@ -1,6 +1,10 @@
 service:
   - context: Academic
     roles:
+      - start: 2021
+        end: 2020
+        title: Member
+        entity: Data Science Resources and Training Steering Committee
       - start: 2017
         end: present
         title: Google Summer of Code Mentor
@@ -46,6 +50,10 @@ service:
         entity: Sigma Xi, Scientists in the Classroom
   - context: Workshops
     roles:
+      - date: February 2019
+        role: Organizer
+        title: PEcAn Project Hackathon
+        location: Santa Rita Experimental Range, Green Valley, Arizona
       - date: February 2018
         role: Co-organizer
         title: "Big Data Driven Agriculture: Advances, Challenges, and Opportunities"
@@ -88,6 +96,7 @@ service:
   - context: Grant Reviews
     roles:
       - role: US National Science Foundation
+      - role: Foundation for Food and Agricultural Research
   - context: Journal Reviewer
     roles:
     - role: Applied Soil Ecology
@@ -98,17 +107,21 @@ service:
     - role: Global Change Biology
     - role: Global Change Biology - Bioenergy
     - role: Geophysical Research Letters
+    - role: Global Ecology and Biogeography
     - role: Journal of Geophysical Research
     - role: Journal of Geophysical Research - Biogeosciences
     - role: Nature Climate Change
     - role: Nature Scientific Reports
+    - role: Open Data Journal for Agricultural Research
+    - role: Plants, People, Planet
+    - role: Proceedings of the National Academy of Sciences of the United States of America
     - role: New Phytologist
     - role: Plant Soil
   - context: Consultancy
     roles:
       - role: "Senior Scientific Advisor, Agrible, Inc., Champaign, Il"
         start: 2015
-        end: present
+        end: 2018
       - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"
         start: 2015
         end: 2016

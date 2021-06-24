@@ -25,7 +25,7 @@ The project consists of:
 
 ```sh
 apt-get update
-apt-get install -y texlive-xetex latexmk fonts-font-awesome texlive-bibtex-extra biber fonts-inconsolata
+apt-get install -y texlive-xetex latexmk fonts-font-awesome libxml2-dev texlive-bibtex-extra biber fonts-inconsolata libcurl4-openssl-dev libssl-dev 
 fc-cache -fv
 ```
 
@@ -86,4 +86,4 @@ Creating a new CV is relatively simple.
 ./write_cv.R
 ```
 
-Although the output goes in `/output` I also check in an up to date version of my CV in the root direcotry ([dlebauer-full-vita.pdf](https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf)). 
+Although the output goes in `/output` I also check in an up to date version of my CV in the root directory ([dlebauer-full-vita.pdf](https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf)). 

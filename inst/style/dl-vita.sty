@@ -26,8 +26,8 @@
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
 %% See vc manual to compile with xelatex -enable-write18 vita
-\immediate\write18{vc.sh}
-\input{vc}
+%\immediate\write18{vc.sh}
+%\input{vc}
 
 %% ------------------------------------------------------------------------
 %% Fonts and colours
@@ -243,6 +243,7 @@
 \makebibcategory{inpress}{in press}
 \makebibcategory{chapters}{Book chapter}
 \makebibcategory{software}{Software}
+\makebibcategory{data}{Data}
 \makebibcategory{techreports}{Unpublished working papers}
 \makebibcategory{bookreviews}{Book reviews}
 \makebibcategory{conferences}{Conference proceedings}
@@ -320,3 +321,15 @@
     {\addcomma\space}
   }
 }
+
+%https://stackoverflow.com/a/54793888/199217
+% \newfontfamily{\FA}{FontAwesome Regular}
+% \newfontfamily{\FAFR}{Font Awesome 5 Free Regular}
+% \newfontfamily{\FAFS}{Font Awesome 5 Free Solid}
+% \newfontfamily{\FAB}{Font Awesome 5 Brands Regular}
+%
+% \def\faEmail{{\FAFR \symbol{"F0E0}}} % Email
+% \def\faPhone{\FAFS \symbol{"F095}} % Phone
+% \def\faLinkedin{\FAB \symbol{"F08C}} % Linkedin
+% \def\faGithub{\FAB \symbol{"F09B}} % Github
+% \def\faStackOverflow{\FAB \symbol{"F16C}} % StackOverflow

@@ -2,7 +2,7 @@
 person:
   first_name: David
   last_name: LeBauer
-  title: 'Director of Data Science, Division of Agriculture, Life and Veterinary Sciences, and Cooperative Extension'
+  title: ''
   postnoms: PhD
   tel: (560) 621-4381
   email: dlebauer@arizona.edu
@@ -46,14 +46,15 @@ publications:
     - dietze2014qat
     - wang2013est
     conferences:
-    - pistorius2020exosphere
+    - pistorius2020
     - Schnaufer2020
     - burnette2018terra
     - lin2015hwd
     - kooper2013ecological
     data:
-    - LeBauer2020
-    - teixiera2018fgd
+      - david2021globawheat
+      - LeBauer2020
+      - teixiera2018fgd
     letters:
     - jaiswal2019rba
     inpress:
