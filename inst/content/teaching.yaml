@@ -1,12 +1,14 @@
 teaching:
+  - start: 2021
+    title: Open Science Synthesis for the Delta Science Program, National Center for Ecological Analysis and Synthesis. Davis, CA
   - start: 2017
-    title: Data Science in Modern Agriculture (Seminar), University of Illinois Department of Agricultural and Biological Engineering, Urbana, IL
+    title: Data Science in Modern Agriculture (Graduate Seminar), University of Illinois Department of Agricultural and Biological Engineering, Urbana, IL
   - start: 2017
     title: "Instructor, Computational Mathematics Bootcamp, Program for Interdisciplinary and Industrial Internships at Illinois, Urbana, IL. \\url{pi4-uiuc.github.io/2017-bootcamp}"
   - start: 2017
     title: "Instructor, Advanced Phenomics Workshop, Purdue University Departments of Agronomy and Agricultural and Biological Engineering, West Lafayette, IN."
-  - start: 2017
-    end: present
+  - start: 2015
+    end: 2018
     title: "Instructor, Urbana Math Circle, Urbana, IL. \\url{urbanamathcircle.blogspot.com}"
   - start: 2015
     end: present

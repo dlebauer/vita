@@ -19,6 +19,9 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - mpanga2021olm
+    - sagan2021data
+    - davis2021epg
     - sahneh2021
     - ely2021
     - field2020
@@ -46,6 +49,7 @@ publications:
     - dietze2014qat
     - wang2013est
     conferences:
+    - lebauer2021does
     - pistorius2020
     - Schnaufer2020
     - burnette2018terra
