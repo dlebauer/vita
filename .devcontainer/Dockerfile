@@ -21,6 +21,7 @@ RUN apt-get update \
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends texlive-xetex latexmk \
+    && apt-get -y install --no-install-recommends \
+    texlive-xetex latexmk gawk \
     fonts-font-awesome libxml2-dev texlive-bibtex-extra biber \
     fonts-inconsolata libcurl4-openssl-dev libssl-dev fc-cache -fv
