@@ -56,6 +56,7 @@ publications:
     - lin2015hwd
     - kooper2013ecological
     data:
+      - lebauer2021olmdata 
       - david2021globawheat
       - LeBauer2020
       - teixiera2018fgd
@@ -63,6 +64,7 @@ publications:
     - jaiswal2019rba
     inpress:
     submitted:
+      - toddbrown2022
     software:
       - terraref
       - betydb

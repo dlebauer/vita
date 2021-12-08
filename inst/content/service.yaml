@@ -2,7 +2,11 @@ service:
   - context: Academic
     roles:
       - start: 2021
-        end: 2020
+        end: present
+        title: Organizing Committee
+        entity: North American Plant Phenotyping Network Conference
+      - start: 2020
+        end: present
         title: Member
         entity: Data Science Resources and Training Steering Committee
       - start: 2017
@@ -52,8 +56,9 @@ service:
     roles:
       - date: February 2019
         role: Organizer
-        title: PEcAn Project Hackathon
+        title: PEcAn+CLM Coupling and Beyond Workshop and Hackathon
         location: Santa Rita Experimental Range, Green Valley, Arizona
+        website: https://sites.google.com/email.arizona.edu/pecan2019hack/home
       - date: February 2018
         role: Co-organizer
         title: "Big Data Driven Agriculture: Advances, Challenges, and Opportunities"
@@ -67,6 +72,10 @@ service:
         role: Co-organizer, lead instructor
         title: "Using TERRA REF phenotyping data"
         location: Phenome 2017, Tucson, AZ
+      - date: February 2017
+        role: Co-organizer
+        title: "Phenome 2017 post-conference hackathon"
+        location: University of Arizona, Tucson, AZ
       - date: January 2017
         role: Invited Participant
         title: "Moving Field Phenomics From Theory to Practice"
@@ -79,6 +88,7 @@ service:
         role: Session Co-Organizer
         title: "Hacking Ecology 2.0, a showcase of open tools for data-driven ecology"
         location: Ecological Society of America Annual Meetings, Fort Lauderdale, FL
+        website: https://sites.google.com/email.arizona.edu/pecan2019hack/home
       - date: November 2014
         role: Workshop Co-Organizer
         title: Soil Carbon Cycle Super-Modeling
@@ -93,8 +103,10 @@ service:
         role: Workshop Chair and Co-Organizer
         title: Advancing Software for Ecological Forecasting
         location: Urbana, IL
+        website: https://www.slideshare.net/dlebauer/agenda-33017953
   - context: Grant Reviews
     roles:
+      - role: United States Department of Agriculture
       - role: US National Science Foundation
       - role: Foundation for Food and Agricultural Research
   - context: Journal Reviewer
@@ -111,8 +123,8 @@ service:
     - role: Journal of Geophysical Research
     - role: Journal of Geophysical Research - Biogeosciences
     - role: Nature Climate Change
-    - role: Nature Scientific Reports
     - role: Open Data Journal for Agricultural Research
+    - role: Nature Scientific Reports
     - role: Plants, People, Planet
     - role: Proceedings of the National Academy of Sciences of the United States of America
     - role: New Phytologist

@@ -1,4 +1,8 @@
 awards:
+  - start: 2021
+    end: 2021
+    title: "Best Paper"
+    other: "7th workshop on Computer Vision in Plant Phenotyping and Agriculture. ICCV 2021"
   - start: 2017
     end: 2017
     title: "Outstanding Students Pushing Innovation (SPIN) Mentor"

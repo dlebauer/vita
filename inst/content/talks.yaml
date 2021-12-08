@@ -1,4 +1,19 @@
 talks:
+  - year: 2020
+    month: January
+    title: "Software to Streamline Sharing of Agricultural Algorithms and Data"
+    event: Challenges and Opportunities in Plant Science Data Management workshop, Plant and Animal Genome Conference
+    city: "San Diego, CA"
+  - year: 2019
+    month: March
+    title: "Agriculture in the Digital Age: Challenges and Opportunities"
+    event: Department of Electrical and Computer Engineering Seminar
+    city: "Gainesville, FL"
+  - year: 2019
+    month: January
+    title: "Vocabularies, APIs, and Formats for Heterogeneous High Throughput Crop Phenotyping Data"
+    event: Interoperability and Federation Across Bioinformatic Platforms and Resources, Plant and Animal Genome Conference
+    city: "San Diego, CA"
   - year: 2018
     month: February
     title: "Open Software, Data, and Computing Frameworks to Advance High Throughput Phenomics and Agricultural Forecasting"
