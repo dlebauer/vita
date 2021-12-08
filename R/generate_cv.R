@@ -133,7 +133,7 @@ generate_cv <- function(content, style, outdir="output") {
     lines <- c("\\documentclass[english, 9pt, a4paper]{article}",
                sprintf("\\usepackage{%s}", file_path_sans_ext(basename(style))),
                "",
-               sprintf("\\makeauthorbold{%s}", config$person$last_name),
+               sprintf("\\makeauthorbold{%s}", "LeBauer}{David}{S"),
                "",
                section_break("Personal information"),
                header,
