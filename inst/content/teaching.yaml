@@ -1,9 +1,13 @@
 teaching:
   - start: 2021
     title: Open Science Synthesis for the Delta Science Program, National Center for Ecological Analysis and Synthesis. Davis, CA
+  - start: 2018
+    end: present
+    title: CCT Data Science Workshops. \\url{datascience.cals.arizona.edu/workshops}
   - start: 2017
     title: Data Science in Modern Agriculture (Graduate Seminar), University of Illinois Department of Agricultural and Biological Engineering, Urbana, IL
   - start: 2017
+    end: 2018
     title: "Instructor, Computational Mathematics Bootcamp, Program for Interdisciplinary and Industrial Internships at Illinois, Urbana, IL. \\url{pi4-uiuc.github.io/2017-bootcamp}"
   - start: 2017
     title: "Instructor, Advanced Phenomics Workshop, Purdue University Departments of Agronomy and Agricultural and Biological Engineering, West Lafayette, IN."
@@ -14,7 +18,7 @@ teaching:
     end: present
     title: Software Carpentry Instructor
   - start: 2015
-    title: Instructor, Cultivating Shiitake on Logs, Land Connection Workshop, Urbana, IL
+    title: Instructor, Shiitake Cultivation on Logs, The Land Connection, Urbana, IL
 #  - start: 2013
 #    end: presnet
 #    title: Ecology for Food Producers, Common Ground Food Cooperative

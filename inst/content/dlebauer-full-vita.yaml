@@ -19,6 +19,7 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - toddbrown2022
     - mpanga2021olm
     - sagan2021data
     - davis2021epg
@@ -56,15 +57,15 @@ publications:
     - lin2015hwd
     - kooper2013ecological
     data:
+      - lebauer2022dfe
       - lebauer2021olmdata 
       - david2021globawheat
-      - LeBauer2020
+      - lebauer2020tra
       - teixiera2018fgd
     letters:
     - jaiswal2019rba
     inpress:
     submitted:
-      - toddbrown2022
     software:
       - terraref
       - betydb
@@ -73,19 +74,24 @@ publications:
       - ghgvc
     chapters:
       - isikhuemhen2004gpt
+    misc:
+      - lebauer2020tar
+      - lebauer2015scl
+      - tu2011data
+
 sections:
-  - title: Education
-    file: education.yaml
   - title: Employment
     file: posts.yaml
+  - title: Education
+    file: education.yaml
   - title: # This field is unused
     file: BIBTEX
+  - title: Invited talks
+    file: talks.yaml
   - title: Grants
     file: grants.yaml
   - title: Awards
     file: awards.yaml
-  - title: Invited talks
-    file: talks.yaml
   - title: Teaching
     file: teaching.yaml
   - title: Service

@@ -1,8 +1,10 @@
 degrees:
   - degree: PhD Earth System Science
     year: 2008
-    university: University of California at Irvine
-  - degree: MS Ecology, Agriculture conc.
+    university: "University of California at Irvine"
+    thesis: "'Carbon Balance of Ecosystems Under Nitrogen Enrichment'.
+    advisor: Dr. Kathleen Treseder"
+  - degree: MS Ecology, Agriculture concentration
     year: 2003
     university: University of California at Davis
   - degree: BS Biology

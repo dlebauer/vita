@@ -221,11 +221,11 @@ format_education <- function(l) {
         post <- ""
 
         if ("thesis" %in% names(x))
-            post <- paste0(post, sprintf("\\emph{%s}", x$thesis))
+            post <- paste0(post, "thesis: ", sprintf("%s", x$thesis))
 
 
-        if ("award" %in% names (x))
-            post <- paste0(post, sprintf("%s", x$award))
+        if ("advisor" %in% names (x))
+            post <- paste0(post, "advisor: ", sprintf("%s", x$advisor))
 
         if (nchar(post)>0) post <- paste0(post, ".")
 

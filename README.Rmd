@@ -3,6 +3,9 @@
 My vita is in this repository ([dlebauer-full-vita.pdf](https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf)), but the primary purpose of this repository is to manage the content and the R code to automatically build my academic CV. The R package is based on the idea that content and style should be separate and that a person might want different CVs for different purposes. 
 
 This repository is a fork from [James Keirstead](https://github.com/jkeirstead) who in turn credits [Kieran Healy](https://github.com/kjhealy/kjh-vita) and [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for formatting and the use of Bibtex, respectively.
+
+This has a lot of hacks. I don't recommend using this repository as a starting point for a new CV. There are many new, more flexible, and better looking approaches. But if you really want to fiddle around, please migrate this to one of the newer approaches!
+
 ## Project layout
 
 The project consists of:
@@ -25,7 +28,7 @@ The project consists of:
 
 ```sh
 apt-get update
-apt-get install -y texlive-xetex latexmk fonts-font-awesome libxml2-dev texlive-bibtex-extra biber fonts-inconsolata libcurl4-openssl-dev libssl-dev 
+apt-get install -y texlive-xetex texlive-luatex latexmk fonts-font-awesome libxml2-dev texlive-bibtex-extra biber fonts-inconsolata libcurl4-openssl-dev libssl-dev 
 fc-cache -fv
 ```
 
@@ -61,7 +64,7 @@ Creating a new CV is relatively simple.
      
    * In the `publications` section, each of the named sections must
      correspond to a declared biblatex section in the style file,
-     e.g. `jk-vita.sty`.
+     e.g. `dl-vita.sty`.
 	   
    * In the `sections` section, the file field should contain the
      name of a YAML file describing that section's content.  **There
@@ -73,7 +76,7 @@ Creating a new CV is relatively simple.
      function.
 
 4) Define a style file.  At the moment, only LaTeX formats are
-   supported so modify the `jk-vita.sty` file as appropriate.  The
+   supported so modify the `dl-vita.sty` file as appropriate.  The
    most important lines in here have to do with the formatting of the
    publications using biblatex, but there are also settings for fonts,
    colours, and other details.

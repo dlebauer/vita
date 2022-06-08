@@ -3,6 +3,10 @@ service:
     roles:
       - start: 2021
         end: present
+        title: Co-organizer
+        entity: University of Arizona Drone Day \\url{drones.arizona.edu/ua-drone-day-2022}
+      - start: 2021
+        end: present
         title: Organizing Committee
         entity: North American Plant Phenotyping Network Conference
       - start: 2020
@@ -131,7 +135,7 @@ service:
     - role: Plant Soil
   - context: Consultancy
     roles:
-      - role: "Senior Scientific Advisor, Agrible, Inc., Champaign, Il"
+      - role: "Agrible, Inc., Champaign, Il" #Senior Scientific Advisor 
         start: 2015
         end: 2018
       - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"

@@ -1,4 +1,16 @@
 grants:
+  - start: 2022
+    end: 2023
+    title: Broadening Diversity in the North American Plant Phenotyping Network 
+    funder: "Agricultural Genome to Phenome Initiative (AG2PI)" 
+    value: \$15k
+    role: PI
+  - start: 2021
+    end: 2022
+    title: "Empowering High-Throughput Phenotyping using Unoccupied Aerial Vehicles (UAVs)"
+    funder: "Agricultural Genome to Phenome Initiative (AG2PI)" 
+    value: \$20k
+    role: co-PI
   - start: 2021
     end: 2022
     title: Evaluating High Bandwidth Satellite Communications for Data Intensive Agriculture
@@ -41,12 +53,12 @@ grants:
     funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
     role: Co-PI
     value: '\$132k of \$3.4m' #"\131,906 of \3,444,962"
-  - start: 2015
-    end: 2019
-    title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
-    role: Co-I
-    funder: "NSF Division of Biological Infrastructure Award 1458021"
-    value: '\$0'
+#  - start: 2015
+#    end: 2019
+#    title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
+#    role: Co-I
+#    funder: "NSF Division of Biological Infrastructure Award 1458021"
+#    value: '\$0'
   - start: 2014
     end: 2014
     title: "Advancing Software for Ecological Forecasting (Workshop)"
