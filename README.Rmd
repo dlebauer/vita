@@ -37,11 +37,13 @@ fc-cache -fv
 for missing fonts `brew cask search fontname`
 
 ```
-brew cask install \
-   font-fontawesome \ 
-   font-tex-gyre-pagella \
-   font-tex-gyre-heros
+brew install gawk
+brew install --cask font-fontawesome
+brew install --cask font-tex-gyre-pagella
+brew install --cask font-tex-gyre-heros
 sudo tlmgr install vc # for version stamp 
+sudo tlmgr install fontawesome
+
    
 ```
 

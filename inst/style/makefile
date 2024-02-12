@@ -29,7 +29,7 @@ all: dlebauer-full-vita.pdf
 # missing file reference and interactively asking you for an alternative.
 
 dlebauer-full-vita.pdf: dlebauer-full-vita.tex
-	latexmk -pdf -pdflatex="xelatex" dlebauer-full-vita.tex
+	latexmk -f -pdf -pdflatex="xelatex" dlebauer-full-vita.tex
 
 clean:
 	latexmk -CA
