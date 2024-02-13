@@ -2,23 +2,23 @@ service:
   - context: Academic
     roles:
       - start: 2021
-        end: present
+        end: 2021
         title: Co-organizer
         entity: University of Arizona Drone Day \\url{drones.arizona.edu/ua-drone-day-2022}
       - start: 2021
-        end: present
+        end: 2022
         title: Organizing Committee
         entity: North American Plant Phenotyping Network Conference
       - start: 2020
-        end: present
+        end: 2023
         title: Member
-        entity: Data Science Resources and Training Steering Committee
+        entity: University of Arizona Data Science Resources and Training Steering Committee
       - start: 2017
         end: present
         title: Google Summer of Code Mentor
         entity: PEcAn Project
       - start: 2015
-        end: present
+        end: 2018
         title: Undergraduate Student Mentor
         entity: Students Pushing Innovation Program, National Center For Supercomputing Applications
       - start: 2015
@@ -135,7 +135,7 @@ service:
     - role: Plant Soil
   - context: Consultancy
     roles:
-      - role: "Agrible, Inc., Champaign, Il" #Senior Scientific Advisor 
+      - role: "Agrible, Inc., Champaign, Il" #Senior Scientific Advisor
         start: 2015
         end: 2018
       - role: "Smithsonian Institution, CTFS -- ForestGEO Ecosystems and Climate Initiative, Falls Curch, Va"
@@ -172,5 +172,5 @@ service:
 # #2008GL033983
 ## New Phytologist
 # NPH-MS-2012-14400
-## Global Change Biology 
+## Global Change Biology
 # GCB-17-1694
