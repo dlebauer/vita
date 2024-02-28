@@ -2,7 +2,6 @@ service:
   - context: Academic
     roles:
       - start: 2021
-        end: 2021
         title: Co-organizer
         entity: University of Arizona Drone Day \\url{drones.arizona.edu/ua-drone-day-2022}
       - start: 2021
@@ -44,11 +43,11 @@ service:
       - start: 2006
         end: 2007
         title: Graduate Student Representative
-        entity: UCI Department of Earth System Science
+        entity: UC Irvine Department of Earth System Science
       - start: 2005
         end: 2006
         title: Graduate Student Seminar Organizer
-        entity: UCI Department of Earth System Science
+        entity: UC Irvine Department of Earth System Science
       - start: 2003
         title: Project Mentor
         entity: FARMS Leadership, Inc. and Sacramento Public Schools

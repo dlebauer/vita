@@ -1,4 +1,9 @@
 talks:
+  - year: 2023
+    month: January
+    title: Building a Data Science Support Team \href{https://youtu.be/sEjROAmK1OI?si=gEbRjnvN7_NJZNll}{(YouTube)}
+    event: "Case Studies in Data Science, UCSD Masters of Advanced Studies Data Science and Engineering Program"
+    city: "San Diego, CA"
   - year: 2020
     month: January
     title: "Software to Streamline Sharing of Agricultural Algorithms and Data"

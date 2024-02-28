@@ -38,12 +38,11 @@ for missing fonts `brew cask search fontname`
 
 ```
 brew install gawk
-brew install --cask font-fontawesome
 brew install --cask font-tex-gyre-pagella
 brew install --cask font-tex-gyre-heros
 sudo tlmgr install vc # for version stamp 
-sudo tlmgr install fontawesome
-
+# install font inconsolata
+sudo tlmgr install inconsolata
    
 ```
 
