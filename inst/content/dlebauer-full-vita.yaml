@@ -3,16 +3,16 @@ person:
   first_name: David
   last_name: LeBauer
   title: ''
-  postnoms: PhD
+  postnoms: Ph.D.
   tel: (760) 468-8621
-  email: dlebauer@arizona.edu
-  web: "datascience.cals.arizona.edu"
+  email: dlebauer@gmail.com
+  web: "davidlebauer.com"
   subject: "agriculture, ecology, biogeochemistry"
   address:
-    line1: University of Arizona
-    line2: 207 Bioscience Research Labs
-    line3: 1230 N Cherry Ave
-    postcode: Tucson, AZ 85716
+    line1: 2911 E Canyon Bend St.
+    line2: Tucson, AZ 85716
+    line3: \phantom{}
+    postcode: \phantom{}
 publications:
   bib_file: papers.bib
   sections:
@@ -81,6 +81,7 @@ publications:
     chapters:
       - isikhuemhen2004gpt
     misc:
+      - lebauer2023cct
       - osti_2204420
       - lebauer2020tar
       - lebauer2015scl

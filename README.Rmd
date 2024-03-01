@@ -4,7 +4,7 @@ My vita is in this repository ([dlebauer-full-vita.pdf](https://github.com/dleba
 
 This repository is a fork from [James Keirstead](https://github.com/jkeirstead) who in turn credits [Kieran Healy](https://github.com/kjhealy/kjh-vita) and [Rob Hyndman](http://robjhyndman.com/research/cv.sty) for formatting and the use of Bibtex, respectively.
 
-This has a lot of hacks. I don't recommend using this repository as a starting point for a new CV. There are many new, more flexible, and better looking approaches. But if you really want to fiddle around, please migrate this to one of the newer approaches!
+This has a lot of hacks. I don't recommend using this repository as a starting point for a new CV.
 
 ## Project layout
 
