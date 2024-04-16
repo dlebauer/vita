@@ -19,6 +19,7 @@ publications:
     monographs:
     - lebauer2013ffb
     papers:
+    - lachowiec2024aou
     - wheeler2024psp
     - meredith2023amf
     - roy2023edo
@@ -63,11 +64,14 @@ publications:
     - lin2015hwd
     - kooper2013ecological
     data:
-      - lebauer2022dfe
-      - lebauer2021olmdata
-      - david2021globawheat
-      - lebauer2020tra
-      - teixiera2018fgd
+    - lachowiec2024dac
+    - lebauer2022dfe
+    - lebauer2021olmdata
+    - david2021globawheat
+    - lebauer2020tra
+    - teixiera2018fgd
+    - lebauer2016dcn
+    - lebauer2010bet
     letters:
     - jaiswal2019rba
     inpress:
@@ -81,7 +85,7 @@ publications:
     chapters:
       - isikhuemhen2004gpt
     misc:
-      - lebauer2023cct
+      - riemer2024cds
       - osti_2204420
       - lebauer2020tar
       - lebauer2015scl

@@ -1,8 +1,13 @@
 posts:
+  - employer: The LeBauer Approach, LLC
+    roles:
+      - start: Mar 2024
+        end: present
+        title: Owner and Principal Scientist
   - employer: Indigo Ag
     roles:
       - start: Feb 2023
-        end: Feb 2023
+        end: Feb 2024
         title: "Staff Scientist and Technical Lead"
   - employer: University of Arizona
     roles:
