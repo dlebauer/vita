@@ -1,4 +1,10 @@
 grants:
+  - start: 2024
+    end: 2026
+    title: California Cropland Carbon Monitoring and Modeling Framework
+    funder: "California Air Resources Board"
+    value: \$1.3m
+    role: co-PI, Modeling Workflow Lead, Project Manager
   - start: 2022
     end: 2023
     title: Broadening Diversity in the North American Plant Phenotyping Network 
@@ -39,7 +45,7 @@ grants:
     end: 2019
     title: TERRA REF Computing and Storage Allocation
     funder: "National Center for Supercomputing Applications: Blue Waters project and CyberGIS Center"
-    role: PI
+    role: PI, Data and Computing Pipeline Lead
     value: '\$1m+ in computing resources' #computing and storage  $\sim$2m CPU-hours, 1 PB online storage and 5 PB tape storage.'
   - start: 2015
     end: 2019

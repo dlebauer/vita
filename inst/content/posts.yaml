@@ -3,17 +3,23 @@ posts:
     roles:
       - start: Mar 2024
         end: present
-        title: Owner and Principal Scientist
+        title: "Owner and Principal Scientist\\\\
+        \\hspace{1em} Modeling Lead and Project Manager, California Cropland Measurement and Modeling Framework (Sept 2024–present)\\\\
+        \\hspace{1em} Scientific Advisor, Varaha Climate AG (Jun 2024–present)"
   - employer: Indigo Ag
     roles:
       - start: Feb 2023
         end: Feb 2024
-        title: "Staff Scientist and Technical Lead"
+        title: "Staff Scientist and Technical Lead, Model Validation and Calibration"
   - employer: University of Arizona
     roles:
       - start: July 2018
         end: Jan 2023
         title: "Director of Data Science for the Division of Agriculture, Life and Veterinary Sciences and Cooperative Extension"
+      - start: Jan 2024
+        end: present
+        title: "Associate Data Scientist and Former Director of Data Science"
+
   - employer: University of Illinois at Urbana-Champaign
     roles:
       - start: Aug 2012
