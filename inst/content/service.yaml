@@ -125,12 +125,14 @@ service:
     - role: Global Ecology and Biogeography
     - role: Journal of Geophysical Research
     - role: Journal of Geophysical Research - Biogeosciences
+    - role: Journal of Open Source Software
+    - role: Journal of Open Source Education
     - role: Nature Climate Change
-    - role: Open Data Journal for Agricultural Research
     - role: Nature Scientific Reports
+    - role: New Phytologist
+    - role: Open Data Journal for Agricultural Research
     - role: Plants, People, Planet
     - role: Proceedings of the National Academy of Sciences of the United States of America
-    - role: New Phytologist
     - role: Plant Soil
   - context: Consultancy
     roles:
