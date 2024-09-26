@@ -1,6 +1,18 @@
 \documentclass[a4paper,10pt]{article}
 
-\usepackage[margin=0.75in]{geometry}
+%% Draft watermark 
+%\usepackage{draftwatermark}
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{1}
+%\SetWatermarkColor[gray]{0.9}
+
+
+% Margins
+\usepackage[margin=0.25in]{geometry}
+%Tweak a bit the top margin
+\addtolength{\voffset}{-1.3cm}
+%and the left 
+\addtolength{\hoffset}{-1.3cm}
 
 %A Few Useful Packages
 \usepackage{marvosym}
@@ -18,6 +30,9 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
+
+
+
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
@@ -27,16 +42,13 @@ SmallCapsFont = Fontin-SmallCaps.otf,
 BoldFont = Fontin-Bold.otf,
 ItalicFont = Fontin-Italic.otf
 ]
-{Fontin.otf}
+{Fontin-Regular.otf}
 %%%
 
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-\addtolength{\voffset}{-1.3cm}
-
 
 %-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
@@ -68,139 +80,168 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------TITLE-------------
 \par{\centering
-		{\Huge David LeBauer, Ph.D.
-	}\bigskip\par}
+		{\Large David LeBauer, Ph.D.
+	}\bigskip\par} 
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Information
-\section{Personal Data}
-
-\begin{tabular}{rl}
+%\section{Personal Data}
+\vspace{-1.5em}
+\begin{center}
+    2911 E Canyon Bend St, Tucson, AZ, 85716; 760-468-8621; dlebauer@gmail.com%\\
+%    \href{https://github.com/dlebauer}{github.com/dlebauer}\\
+%    \textsc{cv:}    \href{https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf}{dlebauer-full-vita.pdf}\\    
+\end{center}
+\vspace{1em}
+%\begin{tabular}{rl}
 %    \textsc{Place and Date of Birth:} & Someplace, Italy  | dd Month 1912 \\
-    \textsc{Address:}   & 2911 E Canyon Bend St, Tucson, AZ \\
-    \textsc{Phone:}     & 919-275-0360\\
-    \textsc{email:}     &   
-        \href{mailto:dlebauer@gmail.com}{dlebauer@gmail.com}\\
-    \textsc{github:}    &     
-        \href{https://github.com/dlebauer}{github.com/dlebauer}\\
-    \textsc{cv:}        &
-        \href{https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf}{dlebauer-full-vita.pdf}
+%    \textsc{Address:}   & 2911 E Canyon Bend St, Tucson, AZ \\
+%    \textsc{Phone:}     & 760-460-8621\\
+%    \textsc{email:}     &   
+%        \href{mailto:dlebauer@gmail.com}{dlebauer@gmail.com}\\
+%    \textsc{github:}    &     
+%        \href{https://github.com/dlebauer}{github.com/dlebauer}\\
+%    \textsc{cv:}        &
+%        \href{https://github.com/dlebauer/vita/raw/master/dlebauer-full-vita.pdf}{dlebauer-full-vita.pdf}
 
-\end{tabular}
+%\end{tabular}
 
 %Scientist with over ten years of experience developing methods to make the best use of available information and technology in pursuit of more productive and sustainable agriculture and more efficient science. I use software and code as a shared infrastructure to formally integrate knowledge and observations across domains to create new scientific insights.
-I am a scientist with over twenty years of research experience, and over ten as a project lead and manager. 
-I develop methods for more productive, sustainable agriculture through more efficient research and use software, data, and collaboration to integrate knowledge across domains.
-
+%I am a scientist with over twenty five years of research experience, including over ten as a team lead and manager.
+%My goal is to develop methods for more productive, sustainable agriculture through more efficient research and use of software, data, and collaboration to integrate knowledge across domains.
+%Section: Education
+\section{Education}
+\begin{tabular}{rp{13cm}}	
+2008 & \textbf{Ph.D.} Earth System Science, University of California at Irvine\\
+%& \small Thesis: "Carbon Balance Under Nitrogen Enrichment", advisor: Dr. Kathleen Treseder\\
+%&\footnotesize{Quantified nitrogen limitation of plant growth globally.}\\
+%&\small Demonstrated nitrogen limits plant growth almost everywhere; linked fungal diversity to decomposition; explored nitrogen impacts on savanna ecology and carbon cycling.\\
+ 2001 & \textbf{M.S.} Ecology, Agriculture, University of California at Davis \\
+% &\small Quantified microbial response to nitrogen, tomato response to mycorrhizae.\\
+1998 & \textbf{B.S.} Biology with honors, Ecology concentration, Duke University \\
+\end{tabular}
 %Section: Work Experience at the top
 \section{Selected Work Experience}
 
+\vspace{1em}
 
-\begin{tabular}{lp{11cm}}
+Mar 2024--present \textbf{Owner and Principal Scientist}, The LeBauer Approach, LLC
 
-2019$\rightarrow$ & \textsc{Director of Data Science}, \textbf{Division of Agriculture Life Sciences, Cooperative Extension, University of Arizona}\\
-& \footnotesize{Started a data science program for the division with a mission of enabling data intensive research. Supervised a team of 4-6 research software engineers and data scientists; collaborated on multiple multi-instituional and interdisciplinary research teams; wrote proposals, supervised many small research projects, provided on demand training and support.}\\
-\multicolumn{2}{c}{} \\
+\begin{itemize}
+    \item Modeling Lead and Project Manager, California Cropland Measurement and Modeling Framework (Sept 2024–present).
+    \item Scientific Advisor, Varaha Climate AG (Jun 2024–present).
+    \item Scientific consultant.
+\end{itemize}
 
-2015$\rightarrow$ & \textsc{Senior Scientific Advisor}, \textbf{Agrible, Inc}\\
-& \footnotesize{Designed, prototyped, and consulted on analyses of crop data and simulation models used to predict yields, to inform sustainable farm and supply chain management. }\\
-\multicolumn{2}{c}{} \\
+Feb 2023--Feb 2024. \textbf{Staff Scientist and Technical Lead}, Indigo Ag
 
+\begin{itemize}
+\item Technical lead for team that calibrated, validated, and wrote report following Climate Action Reserve Soil Enrichment Protocol to support generation of verified carbon credits. Wrote science requirements for automated model calibration and validation.
+\item Harmonized an extensive calibration and validation dataset of observed soil carbon, greenhouse gas fluxes, and yields; migrated dataset to a relational geospatial database.
+\end{itemize}
 
-2015--2018 & \textsc{Senior Scientific Advisor}, \textbf{Agrible, Inc}\\
-& \footnotesize{Designed, prototyped, and consulted on analyses of crop data and simulation models used to predict yields, to inform sustainable farm and supply chain management. }\\
-\multicolumn{2}{c}{} \\
+Jul 2019--Jan 2023. \textbf{Director of Data Science}, University of Arizona Division of Agriculture, Life and Veterinary Sciences, and Cooperative Extension
 
-2012--2018 & \textsc{Research Scientist and Technical Manager},  \textbf{University of Illinois} \\
-& \small \emph{TERRA Reference - Data and Computing Pipeline (2015$\rightarrow$)}\\
-&\footnotesize{Was awarded \$1.7m from the DOE %plus computing and six petabytes of storage from NCSA 
-to design and implement a pipeline for advance sensor based plant observation data stream. Supervised three full time and ten part time programmers. Coordinated development of software and data products across six collaborating research groups representing diverse domains across genomics, physiology, breeding, remote sensing, computer vision, and robotics. Coordinated feedback form end users, an advisory committee, and industry partners.
-}\\
- & \emph{EBI Ecosystem Modeling Program (2012-2015)}\\
-& \footnotesize{Developed, led research program, and trained scientists with a \$600k annual budget that supported three postdocs, one research programmer, a project manager, and dozens of part-time student employees. Led development and applications of simulation, statistical, and informatics software (PEcAn, BETYdb, and BioCro)}\\
-\multicolumn{2}{c}{} \\
-2009-2012 & \textsc{Postdoctoral Researcher}, \textbf{University of Illinois}\\
-& \footnotesize{Created, implemented (as PEcAn and BETYdb), and distributed a new software platform for synthetic research.}\\\
-\textsc{} & \\
-\multicolumn{2}{c}{} \\
+\begin{itemize}
+\item Founded and built a data science support team comprising 4-6 data scientists and software engineers to provide research support for the Division of Agriculture, Life Science, and Cooperative Extension at the University of Arizona. \href{https://datascience.cct.arizona.edu}{datascience.cct.arizona.edu} 
+\item Facilitated cross-disciplinary, collaborative research projects through data curation, statistical guidance, grant writing, workshops, and translation of research priorities across domains.
+\item Developed and launched a data science incubator program, leveraging institutional funds to provide researchers with technical support for data intensive projects with outcomes that include: producing preliminary results; upgrading scientific software; publishing papers, data, and code; creating data visualization dashboards and analysis pipelines: \href{https://datascience.cct.arizona.edu/incubator}{datascience.cct.arizona.edu/incubator}
+\item Developed long term vision and five year plan to support team with core USDA Hatch funding alongside over \$2m in extramural funding to support modeling, computing, and informatics projects from ARPA-E, DARPA, USDA, and NSF.
+\item{Associate Data Scientist (2023--present}
+\end{itemize}
 
 
-\end{tabular}
+Jun 2015-- Jul 2018 (part time). \textbf{Senior Scientific Advisor}, Agrible, Inc
 
 
-%Section: Education
-\section{Education}
-\begin{tabular}{rp{11cm}}	
-2008 & \textsc{Ph.D. in Earth System Science}, \textbf{University of California at Irvine}\\
-& \small Thesis: "Carbon Balance Under Nitrogen Enrichment", advisor: Dr. Kathleen Treseder\\
-%&\footnotesize{Quantified nitrogen limitation of plant growth globally.}\\
-&\small Demonstrated nitrogen limits plant growth almost everywhere; linked fungal diversity to decomposition; explored nitrogen impacts on savannah ecology and carbon cycling\\
- 2001 & \textsc{M.S. Ecology, Agriculture}, \textbf{University of California at Davis} \\
- &\small Quantified microbial response to nitrogen, tomato response to mycorrhizae.\\
-1998 & \textsc{B.S. Biology with honors, Ecology concentration}, \textbf{Duke University} \\
-\end{tabular}
+\begin{itemize}
+\item Designed and implemented analyses of yield data used to inform seed choice.
+\item Consulted with software engineers and scientists  develop, analyze, and apply a crop model to inform and optimize farms and supply chains. Taught quantification and propagation of uncertainty in crop models, including soil physical properties and advised on implementation of these methods.
+\end{itemize}
+
+Jul 2012-- Jul 2018. \textbf{Research Scientist}, University of Illinois
+
+\phantom{xxx}2015--2019 \emph{\textbf{Data and Computing Pipeline Lead}, TERRA-REF}
+\begin{itemize}
+\item Awarded \$1.7m from the DOE plus over \$1m in computing and storage from NSF-funded computing resources to lead a team of three full time and ten part time programmers in the design and implementation of a pipeline of a cutting edge sensor based plant observation data stream.
+\item Coordinated development of software and data products across six collaborating research groups representing diverse domains across genomics, physiology, breeding, remote sensing, computer vision, and robotics. Obtained and integrated feedback from end users, an advisory committee, and industry partners into data products and metadata standards.
+\item Published the world’s largest public domain agricultural data set including over 1PB of sensor, trait, and genomics data.
+\end{itemize}
+
+\phantom{xxx}2012-2015 \textbf{Scientific Manager}, EBI Ecosystem Modeling Program
+\begin{itemize}
+\item Managed scientific research program that predicted yield potential, yield stability, and environmental impacts of bioenergy feedstock production.
+\item Responsible for writing proposals and administering a \$600k annual budget that supported research across four faculty, three postdocs, one research programmer, a project manager, multiple contractors, and dozens of part-time student employees.
+\item Led development and application of simulation, statistical, and informatics software.
+\end{itemize}
+
+
+Aug 2009-Jul 2012. \textbf{Postdoctoral Researcher}, University of Illinois
+
+\begin{itemize}
+\item Created, implemented (as PEcAn), and distributed a new software platform and database to support synthesis of ecophysiological and yield data and model-data synthesis.
+\item Developed protocol and database, and designed a UI to support efficient extraction of data from literature by teams of scientists and technicians.  
+\end{itemize}
+
+
 
 %Section: Software
-\section{Software Projects}
+\section{Selected Data \& Software Projects}
+\vspace{0.5em}
+\begin{tabular}{lp{0.85\textwidth}}
 
-\begin{tabular}{rp{11cm}}
-TERRA REF:&TERRA Reference Phenotyping Platform\\
-& \small \textit{Creator \& lead}\\
-& \small Computing pipeline, reference data products, and cloud environments advancing the use of technology to improve crops and agriculture. Data and metadata products that adopt existing conventions and implement new ones that promote interoperability.\\
-& \small web: \href{http://www.terraref.org}{terraref.org}; code:  \href{https://github.com/terraref}{github.com/terraref}\\
-\multicolumn{2}{c}{} \\
 PEcAn:&The Predictive Ecosystem Analyzer\\
-& \small \textit{Creator, developer, \& lead}\\
-& \small Ecoinformatics toolbox for model-data synthesis, analysis, and prediction. Integrates observations with scientific understanding of crop and ecosystem functioning as an iterative, directed learning process. Increased efficiency of science over 100x by overcoming technical obstacles. Used by many crop and ecosystem modeling groups.\\
-& \small web:\href{http://www.pecanproject.org}{pecanproject.org};  code:\href{https://github.com/PecanProject/pecan}{github.com/PecanProject/pecan}\\
-\multicolumn{2}{c}{} \\
+& \small \textit{Creator, developer, \& co-PI 2009-present:} Ecoinformatics toolbox for model-data synthesis, analysis, and prediction. Integrates observations with scientific understanding of crop and ecosystem functioning as an iterative, directed learning process. Skills: R package development, Bayesian statistics, ecosystem modeling, high performance computing, mentoring. web:\href{http://www.pecanproject.org}{pecanproject.org};  code:\href{https://github.com/PecanProject/pecan}{github.com/PecanProject/pecan}\vspace{0.5em}\\
 BETYdb:&Biofuel Ecophysiological Traits and Yields database\\
-& \small \textit{Creator \& development lead}\\
-& \small{Database network and web interface to harmonize heterogeneous plant, ecosystem, and agronomic data. Supports meta-analysis, simulation modeling, and synchronization across research teams; currently used for data management by six research teams.}\\
-& \small web: \href{http://www.betydb.org}{betydb.org}; code:  \href{https://github.com/PecanProject/bety}{github.com/PecanProject/bety}\\
-\multicolumn{2}{c}{} \\
+& \small \textit{Creator \& development lead 2009-present:} Database network and web interface to harmonize heterogeneous plant, ecosystem, and agronomic data. Supports meta-analysis, simulation modeling, and synchronization among six research teams. Skills: SQL, PostGIS, UI design, APIs, networking, data management  web: \href{http://www.betydb.org}{betydb.org}; code:  \href{https://github.com/PecanProject/bety}{github.com/PecanProject/bety}\vspace{0.5em}\\
+TERRA REF:&TERRA Reference Phenotyping Platform\\
+& \small \textit{Lead, data and computing pipeline, 2015-2019:} Computing pipeline, reference data products, and cloud environments advancing the use of technology to improve crops and agriculture through high-througput phenotyping.
+Skills: project management, cloud computing, API development, data standards, Python, MongoDB, netCDF, high performance computing. web: \href{http://www.terraref.org}{terraref.org}; code:  \href{https://github.com/terraref}{github.com/terraref}\vspace{0.5em}\\
 BioCro:&Bioenergy Crop simulator\\
-& \small \textit{Development lead}\\
-& \small Dynamical simulation model combining physics, chemistry and physiological processes to predict crop growth and water use. Development lead\\
-&\small code: \href{https://github.com/ebimodeling/biocro}{github.com/ebimodeling/biocro}\\
-\multicolumn{2}{c}{} \\
+& \small \textit{Development lead 2013-2015:} Dynamical simulation model combining physics, chemistry and physiological processes to predict crop growth and water use. Skills: R, GitHub, ecophysiology, project management, software architecture, netCDF, high performance computing. code: \href{https://github.com/ebimodeling/biocro}{github.com/ebimodeling/biocro}\vspace{0.5em}\\
+
 GHGVC:& Ecosystem Climate Regulation Services Calculator.\\
-& \small \textit{Development lead}\\
-& \footnotesize Web interface and R package to compute biophysicaland biogeochemical impacts of land use change.\\
-& \small web: \href{https://www.ecosystemservicescalc.org}{www.ecosystemservicescalc.org}; code: \href{https://github.com/ebimodeling/ghgvc}{github.com/ebimodeling/ghgvc}%; R package: \href{https://github.com/ebimodeling/ghgvcR}{github.com/ebimodeling/ghgvcR}
-\\\
+& \small \textit{Development lead 2013-2017:} Web interface and R package to compute biophysical and biogeochemical impacts of land use change. %web: \href{https://www.ecosystemservicescalc.org}{www.ecosystemservicescalc.org}; 
+code: \href{https://github.com/ebimodeling/ghgvc}{github.com/ebimodeling/ghgvc}%; R package: \href{https://github.com/ebimodeling/ghgvcR}{github.com/ebimodeling/ghgvcR}
+\\
 
 \end{tabular}
 
-%Section: Key Publications
-%\section{Key Publications}
-%\begin{tabular}{rl}
-%2017 & BETYdb: a yield, trait, and ecosystem service database applied to %second-generation bioenergy feedstock production\\
-%2013 & Facilitating feedbacks between field measurements and ecosystem %models, Ecological Monographs \\
-%2008 & Nitrogen Limitation of Net Primary Productivity is Globally Distributed, Ecology \\
+% Section: Key Publications
+\section{Notable Publications}
+\begin{tabular}{rl}
+2020 & What does TERRA-REF’s high resolution, multi sensor plant sensing public domain data offer \\
+     & the Computer Vision Community? Proc. IEEE/CVF  International Conference on
+Computer Vision \\ & \href{https://repository.arizona.edu/handle/10150/663361}{doi: 10.1109/iccvw54120.2021.00162}\\
+2017 & BETYdb: a yield, trait, and ecosystem service database applied to second-generation bioenergy \\       
+     &  feedstock production. Global Change Biology-Bioenergy \href{https://doi.org/10.1111/gcbb.12420}{doi: 10.1111/gcbb.12420}\\
+2013 & Facilitating feedbacks between field measurements and ecosystem models. Ecological Monographs \\ & \href{https://doi.org/10.1890/12-0137.1}{doi: 10.1890/12-0137.1}\\
+2008 & Nitrogen limitation of net primary productivity is globally distributed. Ecology \href{https://doi.org/10.1890/06-2057.1}{doi: 10.1890/06-2057.1}%: 1600 CrossRef citations;  \\
 
 
-%\end{tabular}
+\end{tabular}
 
 
 %Section: Honors and Awards 
-%\section{Honors and Awards}
-%\begin{tabular}{rl}
-%2014 & Faculty Fellow, National Center for Supercomputing Applications %\\
-%2007 & Graduate Student Representative, Department of Earth System %Science\\
-%2005 & Graduate Fellow, Kearney Soil Science Foundation\\
-
-%\end{tabular}
-
-\section{Skills}
-\begin{tabular}{rp{11cm}}
-General:& Agile project management, grant writing, communication, certified Software and Data Carpentry Instructor \\
-Lab and Field:& Soil science, plant physiology, gas flux, ecology, biochemistry, microbiology\\
-Data: & Visualization, harmonization, interoperability, relational, geospatial, and raster databases \\
-Analysis: & Experimental design, crop and ecosystem simulation, regression, hierarchical Bayesian methods, reproducible research \\ 
-Software:& R, SQL, bash\\
-
+\section{Honors and Awards}
+\begin{tabular}{rl}
+2023 & Equity, Inclusion, and Diversity Award. North American Plant Phenotyping Network\\
+2021 & Best Paper, 7th workshop on Computer Vision in Plant Phenotyping and Agriculture, ICCV 2021  \\
+2017 & Outstanding Mentor, Students Pushing Innovation program at NCSA \\ 
+2014 & Faculty Fellow, National Center for Supercomputing Applications \\
+2007 & Graduate Student Representative, Department of Earth System Science\\
+2005 & Graduate Fellow, Kearney Soil Science Foundation\\
+1998 & Benenson Award in the Arts\\
 \end{tabular}
 
+%\section{Skills}
+%\begin{tabular}{rp{13cm}}
+%General:& Agile project management, grant writing, communication, data management, training \\
+%Lab and Field:& Soil science, plant physiology, gas flux, ecology, biochemistry, microbiology\\
+%Data: & Visualization, harmonization, interoperability, relational, geospatial, nosql and array databases; database and API design; metadata standards\\
+%Analysis: & Experimental design, crop and ecosystem simulation, forecasting, frequentist and Bayesian regression and modeling, reproducible research\\
+%Software:& R, SQL, PostGIS, bash, git, NetCDF; have led software projects using these languages and Python, Ruby on Rails, Fortran, C++, MongoDB\\
+
+%\end{tabular}
 
 \end{document}
