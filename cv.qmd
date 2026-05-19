@@ -1,0 +1,30 @@
+---
+title: "David LeBauer — Curriculum Vitae"
+author: "David LeBauer"
+format:
+  latex:
+    template: templates/cv.tex
+    cite-method: biblatex
+  pdf:
+    template: templates/cv.tex
+    cite-method: biblatex
+    pdf-engine: xelatex
+    keep-tex: true
+    geometry:
+      - margin=0.9in
+metadata-files:
+  - content/person.yaml
+  - content/positions.yaml
+  - content/education.yaml
+  - content/publications.yaml
+  - content/talks.yaml
+  - content/grants.yaml
+  - content/awards.yaml
+  - content/teaching.yaml
+  - content/service.yaml
+  - content/students.yaml
+  - content/cv.yaml
+bibliography: content/papers.bib
+---
+
+<!-- The layout is handled entirely by templates/cv.tex -->

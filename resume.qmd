@@ -1,0 +1,25 @@
+---
+title: "David LeBauer — Resume"
+author: "David LeBauer"
+format:
+  pdf:
+    template: templates/resume-two-col.tex
+    pdf-engine: tectonic
+    mainfont: ""
+    sansfont: ""
+    monofont: ""
+    geometry:
+      - margin=0.8in
+    fontsize: 10pt
+    colorlinks: true
+metadata-files:
+  - content/person.yaml
+  - content/positions.yaml
+  - content/projects.yaml
+  - content/notable-publications.yaml
+  - content/awards.yaml
+  - content/education.yaml
+  - content/resume.yaml
+---
+
+<!-- Two-column layout driven by templates/resume-two-col.tex -->

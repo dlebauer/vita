@@ -1,0 +1,50 @@
+awards:
+  - start: 2023
+    end: 2023
+    title: "Equity, Inclusion, and Diversity Award"
+    other: "North American Plant Phenotyping Network"
+    resume: true
+  - start: 2021
+    end: 2021
+    title: "Best Paper"
+    other: "7th workshop on Computer Vision in Plant Phenotyping and Agriculture. ICCV 2021"
+    resume: true
+  - start: 2017
+    end: 2017
+    title: "Outstanding Students Pushing Innovation (SPIN) Mentor"
+    other: National Center for Supercomputing Applications
+    resume: true
+  - start: 2014
+    end: 2015
+    title: "NCSA Fellowship"
+    other: National Center for Supercomputing Applications (\$25k)
+    resume: true
+  - start: 2006
+    end: 2006
+    title: Mildred E. Mathias Graduate Research Grant, UC Natural Reserve System
+    other: Decomposition responses to nitrogen in a California grassland (\$1k)
+    url: "http://nrs.ucop.edu/grants/mathias/mathias_05.htm"
+    resume: false
+  - start: 2005
+    end: 2007
+    title: Graduate Fellowship
+    other: Kearney Soil Science Foundation (\$34k)
+    resume: true
+#  - start: 2004
+#    end: 2005
+#    title: Graduate Fellowship
+#    other: UC Irvine Department of Earth System Science (\$32k)
+  - start: 1998
+    end: 1998
+    title: Honors in Ecology and Graduation with Distinction
+    other: Duke University Department of Biology
+    resume: true
+  - start: 1998
+    end: 1998
+    title: Benenson Award in the Arts
+    other: Duke University (\$1.5k)
+    resume: true
+ # - start: 1997
+ #   end: 1997
+ #   title: Undergraduate Research Support
+ #   other: Duke University (\$400)

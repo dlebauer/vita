@@ -1,0 +1,21 @@
+cv:
+  title: Curriculum Vitae
+  sections:
+    - id: positions
+      title: Employment
+    - id: education
+      title: Education
+    - id: publications
+      title: Publications
+    - id: talks
+      title: Invited talks
+    - id: grants
+      title: Grants
+    - id: awards
+      title: Awards
+    - id: teaching
+      title: Teaching
+    - id: service
+      title: Service
+    - id: students
+      title: Students

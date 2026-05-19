@@ -1,0 +1,14 @@
+resume:
+  title: Resume
+  summary: Scientist with over ten years of experience developing methods to make the best use of available information and technology in pursuit of more productive and sustainable agriculture and more efficient science.
+  sections:
+    - id: experience
+      title: Selected Work Experience
+    - id: projects
+      title: Selected Data & Software Projects
+    - id: publications
+      title: Notable Publications
+    - id: awards
+      title: Honors and Awards
+    - id: education
+      title: Education

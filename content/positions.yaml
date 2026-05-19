@@ -1,0 +1,130 @@
+positions:
+  - organization: The LeBauer Approach, LLC
+    resume: true
+    resume_role:
+      title: Owner and Principal Scientist
+      start: Mar 2024
+      end: present
+      details:
+        - Modeling Lead and Project Manager, California Cropland Measurement and Modeling Framework (Sept 2024–present).
+        - Scientific Advisor, Varaha Climate AG (Jun 2024–present).
+        - Scientific consultant.
+    roles:
+      - title: Owner and Principal Scientist
+        start: Mar 2024
+        end: present
+        details:
+          - Modeling Lead and Project Manager, California Cropland Measurement and Modeling Framework (Sept 2024–present).
+          - Scientific Advisor, Varaha Climate AG (Jun 2024–present).
+          - Scientific consultant.
+
+  - organization: Indigo Ag
+    resume: true
+    resume_role:
+      title: Staff Scientist and Technical Lead, Model Validation and Calibration
+      start: Feb 2023
+      end: Feb 2024
+      details:
+        - Technical lead for team that calibrated, validated, and wrote report following Climate Action Reserve Soil Enrichment Protocol to support generation of verified carbon credits.
+        - Wrote science requirements for automated model calibration and validation.
+        - Harmonized calibration and validation datasets of observed soil carbon, greenhouse gas fluxes, and yields; migrated dataset to a relational geospatial database.
+    roles:
+      - title: Staff Scientist and Technical Lead, Model Validation and Calibration
+        start: Feb 2023
+        end: Feb 2024
+        details:
+          - Technical lead for team that calibrated, validated, and wrote report following Climate Action Reserve Soil Enrichment Protocol to support generation of verified carbon credits.
+          - Wrote science requirements for automated model calibration and validation.
+          - Harmonized calibration and validation datasets of observed soil carbon, greenhouse gas fluxes, and yields; migrated dataset to a relational geospatial database.
+
+  - organization: University of Arizona, Division of Agriculture, Life and Veterinary Sciences, and Cooperative Extension
+    resume: true
+    resume_role:
+      title: Director of Data Science
+      start: Jul 2018
+      end: Jan 2023
+      details:
+        - Founded and built a data science support team comprising 4–6 data scientists and software engineers to provide research support for the Division of Agriculture, Life Science, and Cooperative Extension.
+        - Facilitated cross-disciplinary, collaborative research projects through data curation, statistical guidance, grant writing, workshops, and translation of research priorities across domains.
+        - Developed and launched a data science incubator program with outcomes that include preliminary results, upgraded scientific software, published papers, data, and code, and data visualization dashboards and analysis pipelines.
+        - Developed long-term vision and five-year plan using core USDA Hatch funding alongside over \$2m in extramural funding to support modeling, computing, and informatics projects from ARPA-E, DARPA, USDA, and NSF.
+    roles:
+      - title: Adjunct Data Scientist
+        start: Feb 2023
+        end: present
+        details: []
+      - title: Director of Data Science
+        start: Jul 2018
+        end: Jan 2023
+        details:
+          - Founded and built a data science support team comprising 4–6 data scientists and software engineers to provide research support for the Division of Agriculture, Life Science, and Cooperative Extension.
+          - Facilitated cross-disciplinary, collaborative research projects through data curation, statistical guidance, grant writing, workshops, and translation of research priorities across domains.
+          - Developed and launched a data science incubator program with outcomes that include preliminary results, upgraded scientific software, published papers, data, and code, and data visualization dashboards and analysis pipelines.
+          - Developed long-term vision and five-year plan using core USDA Hatch funding alongside over \$2m in extramural funding to support modeling, computing, and informatics projects from ARPA-E, DARPA, USDA, and NSF.
+
+  - organization: Agrible, Inc. (part-time)
+    resume: true
+    resume_role:
+      title: Senior Scientific Advisor
+      start: Jun 2015
+      end: Jul 2018
+      details:
+        - Designed and implemented analyses of yield data used to inform seed choice.
+        - Consulted with software engineers and scientists to develop, analyze, and apply a crop model to inform and optimize farms and supply chains.
+        - Taught quantification and propagation of uncertainty in crop models, including soil physical properties, and advised on implementation of these methods.
+    roles:
+      - title: Senior Scientific Advisor
+        start: Jun 2015
+        end: Jul 2018
+        details:
+          - Designed and implemented analyses of yield data used to inform seed choice.
+          - Consulted with software engineers and scientists to develop, analyze, and apply a crop model to inform and optimize farms and supply chains.
+          - Taught quantification and propagation of uncertainty in crop models, including soil physical properties, and advised on implementation of these methods.
+
+  - organization: University of Illinois at Urbana-Champaign
+    resume: true
+    resume_role:
+      title: Research Scientist, Carl R. Woese Institute for Genomic Biology
+      start: Aug 2012
+      end: Jun 2018
+      details:
+        - Data and Computing Pipeline Lead, TERRA-REF (2015–2019).
+        - Managed Energy Biosciences Institute modeling program (2012–2015) with \$600k annual budget and multi-institution team.
+        - Created and distributed PEcAn platform and database for ecophysiological and yield data synthesis; postdoctoral researcher (2009–2012).
+    roles:
+      - title: Research Scientist, Carl R. Woese Institute for Genomic Biology
+        start: Aug 2012
+        end: Jun 2018
+        details:
+          - Data and Computing Pipeline Lead, TERRA-REF (2015–2019).
+          - Awarded \$1.7m from DOE plus over \$1m in computing and storage from NSF-funded resources to lead a team of three full-time and ten part-time programmers for a sensor-based plant observation data stream.
+          - Coordinated development of software and data products across six collaborating research groups across genomics, physiology, breeding, remote sensing, computer vision, and robotics.
+          - Integrated feedback from end users, an advisory committee, and industry partners into data products and metadata standards.
+          - Published a public domain agricultural data set exceeding 1 PB of sensor, trait, and genomics data.
+      - title: Scientific Manager, EBI Ecosystem Modeling Program
+        start: Aug 2012
+        end: Jul 2015
+        details:
+          - Managed research program predicting yield potential, yield stability, and environmental impacts of bioenergy feedstock production.
+          - Wrote proposals and administered a \$600k annual budget supporting four faculty, three postdocs, one research programmer, a project manager, contractors, and student employees.
+          - Led development and application of simulation, statistical, and informatics software.
+      - title: Postdoctoral Researcher, Energy Biosciences Institute
+        start: Aug 2009
+        end: Jul 2012
+        details:
+          - Created, implemented (as PEcAn), and distributed a software platform and database to support synthesis of ecophysiological and yield data and model–data synthesis.
+          - Developed protocol and database, and designed a UI to support efficient extraction of data from literature by teams of scientists and technicians.
+
+  - organization: North Carolina Agricultural and Technical State University
+    roles:
+      - title: Lab Manager, Mushroom Biology and Fungal Biotechnology Laboratory
+        start: Jun 2003
+        end: Jul 2004
+        details: []
+
+  - organization: Duke University
+    roles:
+      - title: Laboratory and Field Technician, Biogeochemistry and Community Ecology Labs
+        start: Jun 1996
+        end: Jul 2001
+        details: []

@@ -1,0 +1,32 @@
+projects:
+  - name: PEcAn
+    role: Creator, developer, and co-PI (2009–present)
+    description: Ecoinformatics toolbox for model–data synthesis, analysis, and prediction integrating observations with understanding of crop and ecosystem functioning as an iterative learning process.
+    skills: R package development; Bayesian statistics; ecosystem modeling; high-performance computing; mentoring
+    web: http://www.pecanproject.org
+    code: https://github.com/PecanProject/pecan
+
+  - name: BETYdb
+    role: Creator and development lead (2009–present)
+    description: Database network and web interface to harmonize heterogeneous plant, ecosystem, and agronomic data for meta-analysis, simulation modeling, and synchronization among research teams.
+    skills: SQL; PostGIS; UI design; APIs; networking; data management
+    web: http://www.betydb.org
+    code: https://github.com/PecanProject/bety
+
+  - name: TERRA REF
+    role: Lead, data and computing pipeline (2015–2019)
+    description: Computing pipeline, reference data products, and cloud environments advancing high-throughput phenotyping for crop improvement.
+    skills: Project management; cloud computing; API development; data standards; Python; MongoDB; netCDF; high-performance computing
+    web: http://www.terraref.org
+    code: https://github.com/terraref
+
+  - name: BioCro
+    role: Development lead (2013–2015)
+    description: Dynamical simulation model combining physics, chemistry, and physiological processes to predict crop growth and water use.
+    skills: R; GitHub; ecophysiology; project management; software architecture; netCDF; high-performance computing
+    code: https://github.com/ebimodeling/biocro
+
+  - name: GHGVC
+    role: Development lead (2013–2017)
+    description: Web interface and R package to compute biophysical and biogeochemical impacts of land use change.
+    code: https://github.com/ebimodeling/ghgvc

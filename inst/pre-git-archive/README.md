@@ -1,1 +1,0 @@
-## Note: CV has moved to http://github.com/dlebauer/vita

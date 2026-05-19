@@ -1,0 +1,16 @@
+project:
+  type: default
+  output-dir: output
+  render:
+    - cv.qmd
+    - resume.qmd
+
+format:
+  pdf:
+    pdf-engine: tectonic
+    mainfont: "Latin Modern Roman"
+    sansfont: "Latin Modern Sans"
+    monofont: "Latin Modern Mono"
+    colorlinks: true
+    fontsize: 10pt
+    toc: false

@@ -1,0 +1,180 @@
+% Two-column resume template for Quarto (main column + sidebar)
+\documentclass[10pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else
+  \usepackage{fontspec}
+  $if(mainfont)$\setmainfont{$mainfont$}$endif$
+  $if(sansfont)$\setsansfont{$sansfont$}$endif$
+  $if(monofont)$\setmonofont{$monofont$}$endif$
+\fi
+
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$else$
+\usepackage[margin=0.8in]{geometry}
+$endif$
+
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{microtype}
+\usepackage{xstring}
+
+\definecolor{accent}{HTML}{2F4A6D}
+\definecolor{textgray}{HTML}{1C1C1C}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=textgray,
+  urlcolor=accent,
+  citecolor=textgray,
+  filecolor=textgray,
+$if(title-meta)$  pdftitle={$title-meta$},$endif$
+$if(author-meta)$  pdfauthor={$author-meta$},$endif$
+  pdfcreator={}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\Urlmuskip=0mu plus 2mu\relax
+\setcounter{secnumdepth}{0}
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, partopsep=0pt, parsep=0pt, itemsep=2pt}
+
+\titleformat{\section}
+  {\large\bfseries\scshape\color{accent}}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\section}{0pt}{0.15em}{0.35em}
+
+\newcommand{\DisplayURL}[1]{%
+  \begingroup
+  \StrSubstitute{#1}{https://}{}[\temp]%
+  \StrSubstitute{\temp}{http://}{}[\temp]%
+  \href{#1}{\footnotesize\nolinkurl{\temp}}%
+  \endgroup}
+
+\begin{document}
+\pagestyle{empty}
+\color{textgray}
+
+% Header
+{\huge\bfseries $person.name$}$if(person.postnoms)$ {\Large $person.postnoms$}$endif$\par
+$if(person.title)$\vspace{0.15em}{\large\textsc{$person.title$}}\par$endif$
+$if(person.subject)$\vspace{0.1em}{\normalsize\itshape $person.subject$}\par$endif$
+
+\vspace{0.7em}
+\columnratio{0.7}
+\setlength{\columnsep}{1.15cm}
+\begin{paracol}{2}
+
+% Main column
+$if(resume.summary)$
+\section*{Summary}
+$resume.summary$
+$endif$
+
+$if(positions)$
+\section*{Experience}
+$for(positions)$
+$if(positions.resume)$
+\textbf{$positions.resume_role.title$} \hfill {\small $positions.resume_role.start$--$positions.resume_role.end$}\par
+{\itshape $positions.organization$}\par
+$if(positions.resume_role.details)$
+\begin{itemize}
+$for(positions.resume_role.details)$\item $positions.resume_role.details$
+$endfor$
+\end{itemize}
+$endif$
+\vspace{0.5em}
+$endif$
+$endfor$
+$endif$
+
+$if(projects)$
+\section*{Selected Data \& Software}
+$for(projects)$
+\textbf{$projects.name$} \hfill {\small $projects.role$}\par
+$projects.description$\par
+$if(projects.skills)${\scriptsize\textit{Skills:} $projects.skills$}\par$endif$
+$if(projects.web)$\DisplayURL{$projects.web$}$endif$ $if(projects.web)$\quad$endif$$if(projects.code)$\DisplayURL{$projects.code$}$endif$\par
+\vspace{0.65em}
+$endfor$
+$endif$
+
+$if(degrees)$
+\section*{Education}
+$for(degrees)$
+\textbf{$degrees.degree$}, $degrees.university$ \hfill {\small $degrees.year$}\par
+$if(degrees.thesis)${\scriptsize Thesis: $degrees.thesis$}\par$endif$
+\vspace{0.25em}
+$endfor$
+$endif$
+
+$if(notable_publications)$
+\section*{Selected Publications}
+\begin{itemize}[leftmargin=1em]
+$for(notable_publications)$
+\item {\small\textbf{$notable_publications.year$}} $notable_publications.citation$$if(notable_publications.link)$ --- \DisplayURL{$notable_publications.link$}$endif$
+$endfor$
+\end{itemize}
+$endif$
+
+\switchcolumn
+{\small
+\raggedright
+$if(person)$
+\section*{Contact}
+\begin{tabular}{@{}l@{}}
+$if(person.address.line1)$$person.address.line1$$endif$
+$if(person.address.line2)$\\ $person.address.line2$$endif$
+$if(person.address.line3)$\\ $person.address.line3$$endif$
+$if(person.tel)$\\ $person.tel$$endif$
+$if(person.email)$\\ \href{mailto:$person.email$}{$person.email$}$endif$
+$if(person.web)$\\ \DisplayURL{$person.web$}$endif$
+\end{tabular}
+$endif$
+
+$if(resume.summary)$\vspace{0.4em}$endif$
+$if(person.subject)$
+\section*{Focus}
+$person.subject$
+$endif$
+
+$if(awards)$
+\section*{Honors \& Awards}
+\begin{itemize}[leftmargin=0.75em]
+$for(awards)$
+$if(awards.resume)$
+\item \textbf{$awards.start$$if(awards.end)$--$awards.end$$endif$}: $awards.title$\\{\footnotesize $awards.other$}
+$endif$
+$endfor$
+\end{itemize}
+$endif$
+
+$if(projects)$
+\section*{Key Capabilities}
+\begin{itemize}[leftmargin=0.75em]
+$for(projects)$
+$if(projects.skills)$
+\item \textbf{$projects.name$}: {\footnotesize $projects.skills$}
+$endif$
+$endfor$
+\end{itemize}
+$endif$
+}
+
+\end{paracol}
+
+\end{document}

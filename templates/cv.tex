@@ -1,0 +1,184 @@
+% Pandoc template for full CV (Quarto)
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\usepackage{enumitem}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{etoolbox}
+\usepackage{csquotes}
+\usepackage[style=authoryear,backend=biber,sorting=none,maxbibnames=99,doi=true,url=true]{biblatex}
+
+$if(publications.bib_file)$
+\addbibresource{$publications.bib_file$}
+$endif$
+
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{3em}
+\setstretch{1.05}
+\urlstyle{same}
+
+\setlist[itemize]{leftmargin=1.4em, topsep=0.2em, parsep=0pt, partopsep=0pt, itemsep=0.2em}
+\newlist{cvlist}{itemize}{1}
+\setlist[cvlist]{label={},leftmargin=1.6em,itemsep=0.25em,topsep=0.2em,parsep=0pt,partopsep=0pt}
+\newlist{cvdesc}{description}{1}
+\setlist[cvdesc]{leftmargin=6.2em,labelwidth=5em,labelsep=0.6em,itemsep=0.25em,topsep=0.2em}
+
+\titlespacing*{\section}{0pt}{0.9em}{0.45em}
+\titleformat{\section}{\Large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\bfseries}{}{0pt}{}
+
+\setlength{\bibhang}{1.5em}
+\setlength{\bibitemsep}{0.25em}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{\LARGE\bfseries $person.name$$if(person.postnoms)$, $person.postnoms$$endif$}\par
+$if(person.title)$\vspace{0.25em}{\large\itshape $person.title$}\par$endif$
+
+\vspace{0.5em}
+{\small
+$if(person.address.line1)$$person.address.line1$$endif$$if(person.address.line2)$ \\ $person.address.line2$$endif$
+$if(person.address.line3)$ \\ $person.address.line3$$endif$\\
+$if(person.tel)$$person.tel$$endif$ $if(person.email)$\quad \href{mailto:$person.email$}{$person.email$}$endif$ $if(person.web)$\quad \href{$person.web$}{\nolinkurl{$person.web$}}$endif$
+}
+
+$if(cv.title)$\vspace{0.8em}\hrule\vspace{0.8em}$endif$
+
+$if(positions)$
+\section{Employment}
+$for(positions)$
+\textbf{$positions.organization$}\par
+$for(positions.roles)$
+{\itshape $positions.roles.title$} \hfill {\small $positions.roles.start$--$positions.roles.end$}\par
+$if(positions.roles.details)$
+\begin{cvlist}
+$for(positions.roles.details)$\item $positions.roles.details$
+$endfor$
+\end{cvlist}
+$endif$
+$endfor$
+\vspace{0.5em}
+$endfor$
+$endif$
+
+$if(degrees)$
+\section{Education}
+\begin{cvdesc}
+$for(degrees)$
+\item[$degrees.year$] \textbf{$degrees.degree$}, $degrees.university$
+$if(degrees.thesis)$\\ Thesis: $degrees.thesis$$endif$
+$if(degrees.advisor)$\\ Advisor: $degrees.advisor$$endif$
+$endfor$
+\end{cvdesc}
+$endif$
+
+$if(publications.categories)$
+\section{Publications}
+$for(publications.categories)$
+$if(publications.categories.items)$
+\subsection*{$publications.categories.label$}
+\begin{refsection}
+\nocite{$for(publications.categories.items)$$publications.categories.items$$sep$, $endfor$}
+\printbibliography[heading=none]
+\end{refsection}
+\vspace{0.6em}
+$endif$
+$endfor$
+$endif$
+
+$if(talks)$
+\section{Invited talks}
+\begin{cvdesc}
+$for(talks)$
+\item[$talks.year$] $talks.title$. $talks.event$$if(talks.city)$, $talks.city$$endif$$if(talks.month)$, $talks.month$$endif$.
+$endfor$
+\end{cvdesc}
+$endif$
+
+$if(grants)$
+\section{Grants}
+\begin{cvdesc}
+$for(grants)$
+\item[$grants.start$--$grants.end$] $grants.title$. $grants.funder$. $if(grants.role)$Role: $grants.role$.$endif$ $if(grants.value)$($grants.value$)$endif$
+$endfor$
+\end{cvdesc}
+$endif$
+
+$if(awards)$
+\section{Awards}
+\begin{cvdesc}
+$for(awards)$
+\item[$awards.start$$if(awards.end)$--$awards.end$$endif$] $awards.title$. $awards.other$
+$endfor$
+\end{cvdesc}
+$endif$
+
+$if(teaching)$
+\section{Teaching}
+\begin{cvdesc}
+$for(teaching)$
+\item[$teaching.start$$if(teaching.end)$--$teaching.end$$endif$] $teaching.title$
+$endfor$
+\end{cvdesc}
+$endif$
+
+$if(service)$
+\section{Service}
+$for(service)$
+\subsection*{$service.context$}
+$if(service.roles)$
+\ifstrequal{$service.context$}{Grant Reviews}{
+\begin{cvlist}
+$for(service.roles)$
+\item $service.roles.role$
+$endfor$
+\end{cvlist}
+}{
+\ifstrequal{$service.context$}{Journal Reviewer}{
+\begin{cvlist}
+$for(service.roles)$
+\item $service.roles.role$
+$endfor$
+\end{cvlist}
+}{
+\ifstrequal{$service.context$}{Consultancy}{
+\begin{cvdesc}
+$for(service.roles)$
+\item[$service.roles.start$$if(service.roles.end)$--$service.roles.end$$endif$] $service.roles.role$
+$endfor$
+\end{cvdesc}
+}{
+\begin{cvdesc}
+$for(service.roles)$
+$if(service.roles.date)$
+\item[$service.roles.date$] $service.roles.role$. $if(service.roles.title)$$service.roles.title$$endif$$if(service.roles.location)$, $service.roles.location$$endif$.
+$elseif(service.roles.start)$
+\item[$service.roles.start$$if(service.roles.end)$--$service.roles.end$$endif$] $if(service.roles.title)$$service.roles.title$$endif$$if(service.roles.entity)$, $service.roles.entity$$endif$$if(service.roles.role)$, $service.roles.role$$endif$.
+$endif$
+$endfor$
+\end{cvdesc}
+}
+}
+}
+$endif$
+$endfor$
+$endif$
+
+$if(students)$
+\section{Students}
+\begin{cvdesc}
+$for(students)$
+\item[$students.start$--$students.end$] $students.name$, \emph{$students.title$}
+$if(students.note)$\\ $students.note$$endif$
+$endfor$
+\end{cvdesc}
+$endif$
+
+\end{document}

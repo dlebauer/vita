@@ -1,0 +1,96 @@
+grants:
+  - start: 2024
+    end: 2026
+    title: California Cropland Carbon Monitoring and Modeling Framework
+    funder: "California Air Resources Board"
+    value: \$1.3m
+    role: co-PI, Modeling Workflow Lead, Project Manager
+  - start: 2022
+    end: 2023
+    title: Broadening Diversity in the North American Plant Phenotyping Network 
+    funder: "Agricultural Genome to Phenome Initiative (AG2PI)" 
+    value: \$15k
+    role: PI
+  - start: 2021
+    end: 2022
+    title: "Empowering High-Throughput Phenotyping using Unoccupied Aerial Vehicles (UAVs)"
+    funder: "Agricultural Genome to Phenome Initiative (AG2PI)" 
+    value: \$20k
+    role: co-PI
+  - start: 2021
+    end: 2022
+    title: Evaluating High Bandwidth Satellite Communications for Data Intensive Agriculture
+    funder: "Yuma Center for Desert Agriculture Small Grants Program"
+    role: PI
+    value: \$20k
+  - start: 2019
+    end: 2022
+    title: "The Agricultural Research Data Network (ARDN)"
+    funder: "USDA-NIFA"
+    role: Co-PI
+    value: '\$75k of \$500k'
+  - start: 2018
+    end: 2021
+    title: "SENTINEL: SENsing Threats In Natural Environments using Ligand-receptor modules"
+    funder: "DARPA"
+    role: Co-PI
+    value: '\$731k of ~\$10m'
+  - start: 2016
+    end: 2019
+    title: "Global Sustainable Bioenergy Initiative: Geospatial and environmental analysis of pastureland intensification for bioenergy"
+    funder: "FAPESP (Fundacao de Amparo a Pesquisa do Estado de Sao Paulo)"
+    role: Co-PI
+    value: '\$200k'
+  - start: 2016
+    end: 2019
+    title: TERRA REF Computing and Storage Allocation
+    funder: "National Center for Supercomputing Applications: Blue Waters project and CyberGIS Center"
+    role: PI, Data and Computing Pipeline Lead
+    value: '\$1m+ in computing resources' #computing and storage  $\sim$2m CPU-hours, 1 PB online storage and 5 PB tape storage.'
+  - start: 2015
+    end: 2019
+    title: A Reference Phenotyping System for Energy Sorghum
+    funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
+    role: Co-PI
+    value: '\$1.7m of \$8.4m' #8,421,417
+  - start: 2015
+    end: 2017
+    title: TERRA-MEPP (Mobile Energy-crop Phenotyping Platform)
+    funder: "U.S. Department of Energy: Advanced Research Projects Agency - Energy (ARPA-E)"
+    role: Co-PI
+    value: '\$132k of \$3.4m' #"\131,906 of \3,444,962"
+#  - start: 2015
+#    end: 2019
+#    title: "The PEcAn Project: A Community Platform for Ecological Forecasting"
+#    role: Co-I
+#    funder: "NSF Division of Biological Infrastructure Award 1458021"
+#    value: '\$0'
+  - start: 2014
+    end: 2014
+    title: "Advancing Software for Ecological Forecasting (Workshop)"
+    role: Chair and Co-PI
+    funder: "Microsoft Research Connections, Carl R Woese Institute for Genomic Biology, DOE RCN Forecast"
+    value: '\$30k'
+  - start: 2012
+    end: 2015
+    title: Feedstock and Ecosystem Service Modeling Program
+    role: Lead author and program manager  #with Stephen Long (PI), Evan DeLucia, and Carl Bernacchi
+    funder: Energy Biosciences Institute
+    value: '\$2.5m' # 2,460,000"
+  - start: 2011
+    end: 2014
+    title: Model-data synthesis and forecasting across the upper Midwest; Partitioning uncertainty and environmental heterogeneity in ecosystem carbon.
+    funder: NSF Advances in Bioinformatics Infrastructure
+    role: Co-author
+    value: '\$770k'
+
+#\textit{Grassland Carbon Dynamics along Nitrogen and Depth Gradients}  \years{2005-2007}\\
+#Kearney Soil Science Foundation Graduate Student Fellowship: \34,000 \\
+
+#\textit{Decomposition responses to nitrogen in a California grassland} \years{2006}\\
+#NRS Mildred E. Mathias Graduate Student Research Grant Program: \1,000  \\
+
+#\textit{Graduate Fellowship} \years{2004-2005}\\
+#UCI Department of Earth System Science: \$32,000\\
+
+#\textit{Establishment of a landscaped mushroom garden}  \years{1998} \\ Duke University Benenson Award in the Arts: \$1,500

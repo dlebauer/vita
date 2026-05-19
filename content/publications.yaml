@@ -1,0 +1,90 @@
+publications:
+  bib_file: content/papers.bib
+  categories:
+    - id: monographs
+      label: Monographs
+      items:
+        - lebauer2013ffb
+    - id: papers
+      label: Journal articles
+      items:
+        - lachowiec2024aou
+        - wheeler2024psp
+        - meredith2023amf
+        - roy2023edo
+        - lebauer2023ird
+        - ely2023edu
+        - toddbrown2022
+        - matias2022bfa
+        - mpanga2021olm
+        - sagan2021data
+        - davis2021epg
+        - sahneh2021
+        - ely2021
+        - field2020
+        - maimaitijiang2020
+        - fer2020beyond
+        - selby2019bap
+        - babaeian2019
+        - lebauer2018byt
+        - jaiswal2017bse
+        - black2017rvd
+        - hart2016ten
+        - AndersonTeixeira2016cdm
+        - zhu2015pis
+        - wang2015pbm
+        - davis2015tsl
+        - davis2014llf
+        - wang2013pys
+        - dietze2013oic
+        - lebauer2013tpd
+        - lebauer2010ldr
+        - wang2010qrc
+        - allison2009lln
+        - lebauer2008nln
+        - okano2004art
+        - dietze2014qat
+        - wang2013est
+    - id: conferences
+      label: Conference proceedings
+      items:
+        - lebauer2021does
+        - pistorius2020
+        - Schnaufer2020
+        - burnette2018terra
+        - lin2015hwd
+        - kooper2013ecological
+    - id: data
+      label: Data
+      items:
+        - lachowiec2024dac
+        - lebauer2022dfe
+        - lebauer2021olmdata
+        - david2021globawheat
+        - lebauer2020tra
+        - teixiera2018fgd
+        - lebauer2016dcn
+        - lebauer2010bet
+    - id: software
+      label: Software
+      items:
+        - terraref
+        - betydb
+        - pecan
+        - biocro
+        - ghgvc
+    - id: letters
+      label: Letters
+      items:
+        - jaiswal2019rba
+    - id: chapters
+      label: Book chapter
+      items:
+        - isikhuemhen2004gpt
+    - id: misc
+      label: Miscellaneous
+      items:
+        - riemer2024cds
+        - lebauer2020tar
+        - lebauer2015scl
+        - tu2011data

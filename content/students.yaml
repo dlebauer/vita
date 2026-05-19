@@ -1,0 +1,19 @@
+students:
+  - level: Undergraduate
+    start: 2009
+    end: 2009
+    name: Sen Lu
+    title: Meta-analysis of nitrogen fertilization effects on productivity over time.
+    note: Independent Study
+  - level: Undergraduate
+    start: 2008
+    end: 2008
+    name: Elizabeth Chandler
+    title: Minimally invasive monitoring of grassland carbon inputs in a long term nitrogen addition experiment.
+    note: "Kearney Undergraduate Fellowship ($3,000); faculty advisor Sue Trumbore"
+  - level: Undergraduate
+    start: 2007
+    end: 2007
+    name: Elizabeth Chandler
+    title: The Effects of Nitrogen Addition at Different Stages of Decomposition (UCI Honors Thesis)
+    note: "Kearney Undergraduate Fellowship ($3,000); faculty advisor Kathleen Treseder"

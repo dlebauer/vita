@@ -1,0 +1,13 @@
+notable_publications:
+  - year: 2020
+    citation: "What does TERRA-REF’s high resolution, multi sensor plant sensing public domain data offer the Computer Vision Community? Proc. IEEE/CVF International Conference on Computer Vision. doi: 10.1109/iccvw54120.2021.00162"
+    link: https://repository.arizona.edu/handle/10150/663361
+  - year: 2017
+    citation: "BETYdb: a yield, trait, and ecosystem service database applied to second-generation bioenergy feedstock production. Global Change Biology - Bioenergy. doi: 10.1111/gcbb.12420"
+    link: https://doi.org/10.1111/gcbb.12420
+  - year: 2013
+    citation: "Facilitating feedbacks between field measurements and ecosystem models. Ecological Monographs. doi: 10.1890/12-0137.1"
+    link: https://doi.org/10.1890/12-0137.1
+  - year: 2008
+    citation: "Nitrogen limitation of net primary productivity is globally distributed. Ecology. doi: 10.1890/06-2057.1"
+    link: https://doi.org/10.1890/06-2057.1

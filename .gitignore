@@ -2,6 +2,8 @@
 *.out
 *.aux
 vc.tex
+/cv.tex
+/cv.pdf.md
 *.bak
 js/
 bak/
@@ -12,9 +14,14 @@ bak/
 *.run.xml
 !templates/vita.tex
 */output/*
+output/
 outdir/*
 TODO.org
 .Rproj.user
 .Rhistory
 .RData
 history.txt
+
+/.quarto/
+
+**/*.quarto_ipynb

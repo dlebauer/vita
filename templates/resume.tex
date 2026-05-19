@@ -1,0 +1,97 @@
+% Pandoc template for short resume (Quarto)
+\documentclass[10pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{xstring}
+
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, parsep=0pt, partopsep=0pt, itemsep=1pt}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{6pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+
+\newcommand{\DisplayURL}[1]{%
+  \begingroup
+  \StrSubstitute{#1}{https://}{}[\temp]%
+  \StrSubstitute{\temp}{http://}{}[\temp]%
+  \href{#1}{\texttt{\temp}}%
+  \endgroup}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+{\LARGE $person.name$ $if(person.postnoms)$, $person.postnoms$$endif$}\\[0.4em]
+$if(person.address.line1)$$person.address.line1$$endif$; $if(person.address.line2)$$person.address.line2$; $endif$$if(person.tel)$$person.tel$; $endif$$if(person.email)$\href{mailto:$person.email$}{$person.email$}; $endif$$if(person.web)$\DisplayURL{$person.web$}$endif$
+\end{center}
+
+$if(resume.summary)$
+\vspace{0.4em}
+{\small $resume.summary$}
+$endif$
+
+$if(positions)$
+\section{Selected Work Experience}
+$for(positions)$
+$if(positions.resume)$
+\textbf{$positions.resume_role.start$--$positions.resume_role.end$} \textbf{$positions.resume_role.title$}, $positions.organization$\par
+$if(positions.resume_role.details)$
+\begin{itemize}
+$for(positions.resume_role.details)$\item $positions.resume_role.details$
+$endfor$
+\end{itemize}
+$endif$
+$endif$
+$endfor$
+$endif$
+
+$if(projects)$
+\section{Selected Data \& Software Projects}
+$for(projects)$
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}p{0.68\linewidth}r}
+\textbf{$projects.name$} & {\small $projects.role$} \\
+\end{tabular*}
+\noindent $projects.description$\par
+$if(projects.skills)$\noindent\textit{Skills:} {\small $projects.skills$}\par$endif$
+$if(projects.web)$\noindent\DisplayURL{$projects.web$}$endif$ $if(projects.code)$\quad|\quad\DisplayURL{$projects.code$}$endif$
+\vspace{0.8em}
+$endfor$
+$endif$
+
+$if(notable_publications)$
+\section{Notable Publications}
+\begin{tabular}{rp{0.8\linewidth}}
+$for(notable_publications)$
+$notable_publications.year$ & $notable_publications.citation$\\
+$endfor$
+\end{tabular}
+$endif$
+
+$if(awards)$
+\section{Honors and Awards}
+\begin{tabular}{rp{0.8\linewidth}}
+$for(awards)$
+$if(awards.resume)$
+$awards.start$$if(awards.end)$--$awards.end$$endif$ & $awards.title$. $awards.other$\\
+$endif$
+$endfor$
+\end{tabular}
+$endif$
+
+$if(degrees)$
+\section{Education}
+\begin{tabular}{rp{0.8\linewidth}}
+$for(degrees)$
+$degrees.year$ & \textbf{$degrees.degree$}, $degrees.university$\\
+$endfor$
+\end{tabular}
+$endif$
+
+\end{document}

@@ -1,0 +1,12 @@
+person:
+  name: David LeBauer
+  postnoms: Ph.D.
+  title: ""
+  subject: agriculture, ecology, biogeochemistry
+  email: david@davidlebauer.com
+  tel: "(760) 468-8621"
+  web: https://davidlebauer.com
+  address:
+    line1: 2911 E Canyon Bend St.
+    line2: Tucson, AZ 85716
+    line3: ""
